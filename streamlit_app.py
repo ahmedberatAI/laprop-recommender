@@ -17,11 +17,12 @@ from typing import Iterable, Optional, Tuple
 import pandas as pd
 import streamlit as st
 
-from laprop.config.rules import USAGE_OPTIONS, DEV_PRESETS
+from laprop.config.rules import USAGE_OPTIONS, DEV_PRESETS, GAMING_TITLE_SCORES
 from laprop.config.settings import DATA_FILES
 from laprop.processing.clean import clean_data
 from laprop.processing.read import _get_domain_counts, load_data
 from laprop.recommend.engine import get_recommendations
+from laprop.app.cli import normalize_and_complete_preferences
 
 
 SOURCE_OPTIONS = ["amazon", "incehesap", "vatan"]
@@ -30,6 +31,12 @@ SOURCE_PATTERNS = {
     "incehesap": "incehesap",
     "vatan": "vatanbilgisayar.com",
 }
+FOLLOWUP_KEYS = [
+    "fu_gaming_titles",
+    "fu_productivity_profile",
+    "fu_design_profiles",
+    "fu_dev_mode",
+]
 
 st.set_page_config(page_title="Laprop Recommender", page_icon="💻", layout="wide")
 
@@ -213,10 +220,6 @@ usage_label_to_key = {label: key for key, label in usage_items}
 selected_label = st.sidebar.selectbox("Usage preset", usage_labels, index=0)
 selected_key = usage_label_to_key.get(selected_label, "productivity")
 
-dev_mode = None
-if selected_key == "dev":
-    dev_mode = st.sidebar.selectbox("Dev preset", list(DEV_PRESETS.keys()), index=0)
-
 min_price_default, max_price_default = _price_bounds(data_df)
 if min_price_default <= 0 or max_price_default <= 0 or min_price_default == max_price_default:
     min_price_default, max_price_default = 10000, 80000
@@ -256,6 +259,90 @@ if data_df is not None and ("gpu_norm" in _safe_columns(data_df) or "gpu" in _sa
         ["Any", "Integrated only", "Dedicated only"],
         horizontal=False,
     )
+
+st.sidebar.divider()
+st.sidebar.subheader("🔎 Kullanıma özel sorular")
+if st.sidebar.button("Reset follow-ups"):
+    for key in FOLLOWUP_KEYS:
+        if key in st.session_state:
+            del st.session_state[key]
+    st.sidebar.success("Follow-up answers reset.")
+
+if selected_key == "gaming":
+    if "fu_gaming_titles" not in st.session_state:
+        st.session_state["fu_gaming_titles"] = []
+    game_titles = list(GAMING_TITLE_SCORES.keys())
+    st.sidebar.multiselect(
+        "Oynamak istediğiniz oyunlar",
+        options=game_titles,
+        default=st.session_state.get("fu_gaming_titles", []),
+        key="fu_gaming_titles",
+    )
+    selected_titles = st.session_state.get("fu_gaming_titles", [])
+    if selected_titles:
+        needed = max(GAMING_TITLE_SCORES[t] for t in selected_titles)
+        threshold = max(6.0, needed)
+        st.sidebar.caption(f"GPU eşiği yaklaşık: {threshold:.1f}")
+    else:
+        st.sidebar.caption("GPU eşiği varsayılan: 6.0")
+
+elif selected_key == "productivity":
+    prod_options = {
+        "office": "Ofis işleri / doküman düzenleme / sunum",
+        "data": "Veri yoğun işler (Excel, analiz, raporlama)",
+        "light_dev": "Hafif yazılım geliştirme",
+        "multitask": "Çoklu görev (çok pencere / çok monitör)",
+    }
+    if "fu_productivity_profile" not in st.session_state:
+        st.session_state["fu_productivity_profile"] = "office"
+    st.sidebar.selectbox(
+        "Üretkenlik profili",
+        options=list(prod_options.keys()),
+        format_func=lambda k: prod_options.get(k, k),
+        key="fu_productivity_profile",
+    )
+
+elif selected_key == "design":
+    design_options = {
+        "graphic": "Grafik tasarım / fotoğraf (Photoshop, Illustrator, Figma)",
+        "video": "Video düzenleme / motion (Premiere, After Effects, DaVinci)",
+        "3d": "3D modelleme / render (Blender, Maya, 3ds Max, C4D)",
+        "cad": "Mimari / teknik çizim (AutoCAD, Revit, Solidworks)",
+    }
+    if "fu_design_profiles" not in st.session_state:
+        st.session_state["fu_design_profiles"] = ["graphic"]
+    st.sidebar.multiselect(
+        "Tasarım alanları",
+        options=list(design_options.keys()),
+        default=st.session_state.get("fu_design_profiles", []),
+        format_func=lambda k: design_options.get(k, k),
+        key="fu_design_profiles",
+    )
+    st.sidebar.caption("Seçimler GPU/RAM ipuçlarını otomatik ayarlar.")
+
+elif selected_key == "dev":
+    dev_labels = {
+        "web": "Web/Backend",
+        "ml": "Veri/ML",
+        "mobile": "Mobil (Android/iOS)",
+        "gamedev": "Oyun Motoru / 3D",
+        "general": "Genel CS",
+    }
+    dev_keys = [k for k in dev_labels.keys() if k in DEV_PRESETS]
+    if not dev_keys:
+        dev_keys = list(DEV_PRESETS.keys())
+    if "fu_dev_mode" not in st.session_state:
+        st.session_state["fu_dev_mode"] = "general" if "general" in dev_keys else dev_keys[0]
+    st.sidebar.selectbox(
+        "Yazılım geliştirme profili",
+        options=dev_keys,
+        format_func=lambda k: dev_labels.get(k, k),
+        key="fu_dev_mode",
+    )
+    if st.session_state.get("fu_dev_mode") == "ml":
+        st.sidebar.info("Not: ML için NVIDIA/CUDA uyumu genelde kritik.")
+else:
+    st.sidebar.info("Bu kullanım türü için ek soru yok.")
 
 st.sidebar.divider()
 st.sidebar.subheader("Output")
@@ -309,10 +396,26 @@ with left_col:
                     "usage_key": selected_key,
                     "usage_label": selected_label,
                 }
-                if dev_mode:
-                    preferences["dev_mode"] = dev_mode
+                if selected_key == "gaming":
+                    preferences["gaming_titles"] = st.session_state.get("fu_gaming_titles", [])
+                    if not preferences["gaming_titles"]:
+                        preferences["min_gpu_score_required"] = 6.0
+                elif selected_key == "productivity":
+                    preferences["productivity_profile"] = st.session_state.get(
+                        "fu_productivity_profile", "office"
+                    )
+                elif selected_key == "design":
+                    preferences["design_profiles"] = st.session_state.get(
+                        "fu_design_profiles", ["graphic"]
+                    )
+                elif selected_key == "dev":
+                    preferences["dev_mode"] = st.session_state.get("fu_dev_mode", "general")
                 if screen_range is not None:
                     preferences["screen_max"] = float(screen_range[1])
+                try:
+                    preferences = normalize_and_complete_preferences(preferences)
+                except Exception:
+                    pass
                 results = get_recommendations(filtered, preferences, top_n=int(top_n))
                 st.session_state["results"] = results
                 if results.empty:
