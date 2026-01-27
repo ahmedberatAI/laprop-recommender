@@ -1,0 +1,36 @@
+{
+  "start_url": "https://www.vatanbilgisayar.com/notebook/",
+  "list_pages_visited": 60,
+  "total_links_extracted": 708,
+  "total_unique_product_urls": 198,
+  "detail_pages_fetched": 198,
+  "rows_written": 171,
+  "dropped": {
+    "not_product_url": 0,
+    "name_notebook": 0,
+    "missing_price": 0,
+    "parse_failed": 0,
+    "duplicate": 27
+  },
+  "missing_counts": {
+    "name": 0,
+    "price": 0,
+    "screen_size": 0,
+    "ssd": 0,
+    "cpu": 1,
+    "ram": 0,
+    "os": 0,
+    "gpu": 0
+  },
+  "completeness_pct": {
+    "name": 100.0,
+    "price": 100.0,
+    "screen_size": 100.0,
+    "ssd": 100.0,
+    "cpu": 99.41520467836257,
+    "ram": 100.0,
+    "os": 100.0,
+    "gpu": 100.0
+  },
+  "errors": []
+}

@@ -1,0 +1,381 @@
+{
+  "row_count": 264,
+  "fix_counts": {
+    "ram": 42,
+    "gpu": 43,
+    "cpu": 55,
+    "ssd": 39
+  },
+  "fix_examples": {
+    "ram": [
+      {
+        "row_index": 1,
+        "url": "https://www.incehesap.com/msi-vector-16-hx-ai-a2xwgg-021tr-ultra-9-275hx-32gb-ddr5-rtx5070-gddr7-8gb-1tb-ssd-16-0-qhd-240hz-w11-fiyati-81643/",
+        "name": "MSI VECTOR 16 HX AI A2XWGG-021TR ULTRA 9 275HX 32GB DDR5 RTX5070 GDDR7 8GB 1TB SSD 16.0 QHD+ 240Hz W11 MSI VECTOR 16 HX AI A2XWGG-021TR ULTRA 9 275HX 32GB DDR5 RTX5070 GDDR7 8GB 1TB SSD 16.0 QHD+ 240Hz W11 - incehesap.com MSI VECTOR 16 HX AI A2XWGG-021TR ULTRA 9 275HX 32GB DDR5 RTX5070 GDDR7 8GB 1TB SSD 16.0 QHD+ 240Hz W11 - incehesap.com",
+        "before": 96,
+        "after": 32,
+        "reason": "replaced_with_title_96_to_32"
+      },
+      {
+        "row_index": 2,
+        "url": "https://www.incehesap.com/msi-cyborg-15-a13ve-1479xtr-i7-13620h-16gb-ddr5-512gb-rtx4050-6gb-gddr6-15-6-144hz-freedos-full-hd-gaming-notebook-fiyati-75665/",
+        "name": "MSI Cyborg 15 A13VE-1479XTR i7-13620H 16GB DDR5 512GB RTX4050 6GB GDDR6 15.6″ 144Hz FreeDOS Full HD Gaming (Oyuncu) Notebook MSI Cyborg 15 A13VE-1479XTR i7-13620H 16GB DDR5 512GB RTX4050 6GB GDDR6 15.6'' 144Hz FreeDOS Full HD Gaming (Oyuncu) Notebook - incehesap.com MSI Cyborg 15 A13VE-1479XTR i7-13620H 16GB DDR5 512GB RTX4050 6GB GDDR6 15.6'' 144Hz FreeDOS Full HD Gaming (Oyuncu) Notebook - incehesap.com",
+        "before": 64,
+        "after": 16,
+        "reason": "replaced_with_title_64_to_16"
+      },
+      {
+        "row_index": 3,
+        "url": "https://www.incehesap.com/msi-nb-vector-17-hx-ai-a2xwhg-081tr-ultra-9-275hx-32gb-ddr5-rtx5070ti-gddr7-12gb-2tb-ssd-17-0-qhd-240hz-w11-fiyati-80786/",
+        "name": "MSI NB VECTOR 17 HX AI A2XWHG-081TR ULTRA 9 275HX 32GB DDR5 RTX5070TI GDDR7 12GB 2TB SSD 17.0 QHD+ 240Hz W11 MSI NB VECTOR 17 HX AI A2XWHG-081TR ULTRA 9 275HX 32GB DDR5 RTX5070TI GDDR7 12GB 2TB SSD 17.0 QHD+ 240Hz W11 - incehesap.com MSI NB VECTOR 17 HX AI A2XWHG-081TR ULTRA 9 275HX 32GB DDR5 RTX5070TI GDDR7 12GB 2TB SSD 17.0 QHD+ 240Hz W11 - incehesap.com",
+        "before": 96,
+        "after": 32,
+        "reason": "replaced_with_title_96_to_32"
+      },
+      {
+        "row_index": 13,
+        "url": "https://www.incehesap.com/msi-katana-17-hx-b14wfk-248xtr-i7-14650hx-16gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-17-3-240hz-freedos-gaming-notebook-fiyati-85211/",
+        "name": "MSI KATANA 17 HX B14WFK-248XTR I7-14650HX 16GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 17.3″ 240HZ FREEDOS GAMING NOTEBOOK MSI KATANA 17 HX B14WFK-248XTR I7-14650HX 16GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 17.3 240HZ FREEDOS GAMING NOTEBOOK - incehesap.com MSI KATANA 17 HX B14WFK-248XTR I7-14650HX 16GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 17.3 240HZ FREEDOS GAMING NOTEBOOK - incehesap.com",
+        "before": 96,
+        "after": 16,
+        "reason": "replaced_with_title_96_to_16"
+      },
+      {
+        "row_index": 14,
+        "url": "https://www.incehesap.com/msi-cyborg-15-b13wekg-613xtr-i7-13620h-16gb-ddr5-rtx5050-gddr7-8gb-1tb-ssd-15-6-fhd-144hz-freedos-notebook-fiyati-85154/",
+        "name": "MSI CYBORG 15 B13WEKG‑613XTR I7‑13620H 16GB DDR5 RTX5050 GDDR7 8GB 1TB SSD 15.6″ FHD 144HZ FREEDOS NOTEBOOK MSI CYBORG 15 B13WEKG‑613XTR I7‑13620H 16GB DDR5 RTX5050 GDDR7 8GB 1TB SSD 15.6 FHD 144HZ FREEDOS NOTEBOOK - incehesap.com MSI CYBORG 15 B13WEKG‑613XTR I7‑13620H 16GB DDR5 RTX5050 GDDR7 8GB 1TB SSD 15.6 FHD 144HZ FREEDOS NOTEBOOK - incehesap.com",
+        "before": 96,
+        "after": 16,
+        "reason": "replaced_with_title_96_to_16"
+      }
+    ],
+    "gpu": [
+      {
+        "row_index": 3,
+        "url": "https://www.incehesap.com/msi-nb-vector-17-hx-ai-a2xwhg-081tr-ultra-9-275hx-32gb-ddr5-rtx5070ti-gddr7-12gb-2tb-ssd-17-0-qhd-240hz-w11-fiyati-80786/",
+        "name": "MSI NB VECTOR 17 HX AI A2XWHG-081TR ULTRA 9 275HX 32GB DDR5 RTX5070TI GDDR7 12GB 2TB SSD 17.0 QHD+ 240Hz W11 MSI NB VECTOR 17 HX AI A2XWHG-081TR ULTRA 9 275HX 32GB DDR5 RTX5070TI GDDR7 12GB 2TB SSD 17.0 QHD+ 240Hz W11 - incehesap.com MSI NB VECTOR 17 HX AI A2XWHG-081TR ULTRA 9 275HX 32GB DDR5 RTX5070TI GDDR7 12GB 2TB SSD 17.0 QHD+ 240Hz W11 - incehesap.com",
+        "before": "gtx5070",
+        "after": "rtx 5070 ti",
+        "reason": "replaced_with_title_rtx 5070_to_rtx 5070 ti"
+      },
+      {
+        "row_index": 7,
+        "url": "https://www.incehesap.com/lenovo-thinkpad-e16-21sr006rtx-u7-255h-16gb-ssd-512gb-ssd-16-fdos-fiyati-85136/",
+        "name": "LENOVO THINKPAD E16 21SR006RTX U7-255H 16GB SSD 512GB SSD 16″ FDOS LENOVO THINKPAD E16 21SR006RTX U7-255H 16GB SSD 512GB SSD 16 FDOS - incehesap.com LENOVO THINKPAD E16 21SR006RTX U7-255H 16GB SSD 512GB SSD 16 FDOS - incehesap.com",
+        "before": "intel arc",
+        "after": "unknown",
+        "reason": "unparsed_gpu"
+      },
+      {
+        "row_index": 18,
+        "url": "https://www.incehesap.com/hp-elitebook-1040-g10-c9xw4at-u7-155h-16gb-1tb-ssd-14-w11pro-fiyati-85661/",
+        "name": "HP ELITEBOOK 1040 G10 C9XW4AT U7-155H 16GB 1TB SSD 14″ W11PRO HP ELITEBOOK 1040 G10 C9XW4AT U7-155H 16GB 1TB SSD 14 W11PRO - incehesap.com HP ELITEBOOK 1040 G10 C9XW4AT U7-155H 16GB 1TB SSD 14 W11PRO - incehesap.com",
+        "before": "intel arc",
+        "after": "unknown",
+        "reason": "unparsed_gpu"
+      },
+      {
+        "row_index": 20,
+        "url": "https://www.incehesap.com/hp-elitebook-1040-g11-c9xw6at-u7-155h-32gb-1tb-ssd-14-w11pro-fiyati-85656/",
+        "name": "HP ELITEBOOK 1040 G11 C9XW6AT U7-155H 32GB 1TB SSD 14″ W11PRO HP ELITEBOOK 1040 G11 C9XW6AT U7-155H 32GB 1TB SSD 14 W11PRO - incehesap.com HP ELITEBOOK 1040 G11 C9XW6AT U7-155H 32GB 1TB SSD 14 W11PRO - incehesap.com",
+        "before": "intel arc",
+        "after": "unknown",
+        "reason": "unparsed_gpu"
+      },
+      {
+        "row_index": 21,
+        "url": "https://www.incehesap.com/hp-elitebook-x360-1040-9g0j9et-u7-155u-16gb-1tb-ssd-13-4-touch-w11pro-fiyati-85671/",
+        "name": "HP ELITEBOOK X360 1040 9G0J9ET U7-155U 16GB 1TB SSD 13.4″ TOUCH W11PRO HP ELITEBOOK X360 1040 9G0J9ET U7-155U 16GB 1TB SSD 13.4 TOUCH W11PRO - incehesap.com HP ELITEBOOK X360 1040 9G0J9ET U7-155U 16GB 1TB SSD 13.4 TOUCH W11PRO - incehesap.com",
+        "before": "intel arc",
+        "after": "unknown",
+        "reason": "unparsed_gpu"
+      }
+    ],
+    "cpu": [
+      {
+        "row_index": 7,
+        "url": "https://www.incehesap.com/lenovo-thinkpad-e16-21sr006rtx-u7-255h-16gb-ssd-512gb-ssd-16-fdos-fiyati-85136/",
+        "name": "LENOVO THINKPAD E16 21SR006RTX U7-255H 16GB SSD 512GB SSD 16″ FDOS LENOVO THINKPAD E16 21SR006RTX U7-255H 16GB SSD 512GB SSD 16 FDOS - incehesap.com LENOVO THINKPAD E16 21SR006RTX U7-255H 16GB SSD 512GB SSD 16 FDOS - incehesap.com",
+        "before": "u7-255h",
+        "after": "ultra7-255h",
+        "reason": "normalized_cpu"
+      },
+      {
+        "row_index": 10,
+        "url": "https://www.incehesap.com/lenovo-thinkbook-21u00013tx-r9-8940hx-32gb-1tb-ssd-8gb-rtx5060-16-freedos-notebook-fiyati-85143/",
+        "name": "LENOVO THINKBOOK 21U00013TX R9-8940HX 32GB 1TB SSD 8GB RTX5060 16″ FREEDOS NOTEBOOK LENOVO THINKBOOK 21U00013TX R9-8940HX 32GB 1TB SSD 8GB RTX5060 16 FREEDOS NOTEBOOK - incehesap.com LENOVO THINKBOOK 21U00013TX R9-8940HX 32GB 1TB SSD 8GB RTX5060 16 FREEDOS NOTEBOOK - incehesap.com",
+        "before": "r9-8940hx",
+        "after": "ryzen 9 8940hx",
+        "reason": "normalized_cpu"
+      },
+      {
+        "row_index": 17,
+        "url": "https://www.incehesap.com/hp-mws-zbook-8-b30hges-u7-255h-16gb-1tb-ssd-4gb-rtx-500-16-w11pro-fiyati-85596/",
+        "name": "HP MWS ZBOOK 8 B30HGES U7-255H 16GB 1TB SSD 4GB RTX 500 16″ W11PRO HP MWS ZBOOK 8 B30HGES U7-255H 16GB 1TB SSD 4GB RTX 500 16 W11PRO - incehesap.com HP MWS ZBOOK 8 B30HGES U7-255H 16GB 1TB SSD 4GB RTX 500 16 W11PRO - incehesap.com",
+        "before": "u7-255h",
+        "after": "ultra7-255h",
+        "reason": "normalized_cpu"
+      },
+      {
+        "row_index": 18,
+        "url": "https://www.incehesap.com/hp-elitebook-1040-g10-c9xw4at-u7-155h-16gb-1tb-ssd-14-w11pro-fiyati-85661/",
+        "name": "HP ELITEBOOK 1040 G10 C9XW4AT U7-155H 16GB 1TB SSD 14″ W11PRO HP ELITEBOOK 1040 G10 C9XW4AT U7-155H 16GB 1TB SSD 14 W11PRO - incehesap.com HP ELITEBOOK 1040 G10 C9XW4AT U7-155H 16GB 1TB SSD 14 W11PRO - incehesap.com",
+        "before": "u7-155h",
+        "after": "ultra7-155h",
+        "reason": "normalized_cpu"
+      },
+      {
+        "row_index": 20,
+        "url": "https://www.incehesap.com/hp-elitebook-1040-g11-c9xw6at-u7-155h-32gb-1tb-ssd-14-w11pro-fiyati-85656/",
+        "name": "HP ELITEBOOK 1040 G11 C9XW6AT U7-155H 32GB 1TB SSD 14″ W11PRO HP ELITEBOOK 1040 G11 C9XW6AT U7-155H 32GB 1TB SSD 14 W11PRO - incehesap.com HP ELITEBOOK 1040 G11 C9XW6AT U7-155H 32GB 1TB SSD 14 W11PRO - incehesap.com",
+        "before": "u7-155h",
+        "after": "ultra7-155h",
+        "reason": "normalized_cpu"
+      }
+    ],
+    "ssd": [
+      {
+        "row_index": 88,
+        "url": "https://www.incehesap.com/lenovo-v15-g4-83a10096tr-i5-13420h-8gb-512gb-ssd-15-6-full-hd-freedos-notebook-fiyati-72591/",
+        "name": "Lenovo V15 G4 83A10096TR i5-13420H 8GB 512GB SSD 15.6″ Full HD FreeDOS Notebook Lenovo V15 G4 83A10096TR i5-13420H 8GB 512GB SSD 15.6 Full HD FreeDOS Notebook - incehesap.com Lenovo V15 G4 83A10096TR i5-13420H 8GB 512GB SSD 15.6 Full HD FreeDOS Notebook - incehesap.com",
+        "before": 2280,
+        "after": 512,
+        "reason": "replaced_formfactor_2280_with_512"
+      },
+      {
+        "row_index": 106,
+        "url": "https://www.incehesap.com/lenovo-v15-g4-iru-ih3-i5-13420h-24gb-512gb-ssd-15-6-full-hd-freedos-notebook-fiyati-85029/",
+        "name": "Lenovo V15 G4 IRU IH3 i5-13420H 24GB 512GB SSD 15.6″ Full HD FreeDOS Notebook Lenovo V15 G4 IRU IH3 i5-13420H 24GB 512GB SSD 15.6 Full HD FreeDOS Notebook - incehesap.com Lenovo V15 G4 IRU IH3 i5-13420H 24GB 512GB SSD 15.6 Full HD FreeDOS Notebook - incehesap.com",
+        "before": 2280,
+        "after": 512,
+        "reason": "replaced_formfactor_2280_with_512"
+      },
+      {
+        "row_index": 107,
+        "url": "https://www.incehesap.com/lenovo-v15-g4-iru-ih1-i5-13420h-16gb-512gb-ssd-15-6-full-hd-freedos-notebook-fiyati-85025/",
+        "name": "Lenovo V15 G4 IRU IH1 i5-13420H 16GB 512GB SSD 15.6″ Full HD FreeDOS Notebook Lenovo V15 G4 IRU IH1 i5-13420H 16GB 512GB SSD 15.6 Full HD FreeDOS Notebook - incehesap.com Lenovo V15 G4 IRU IH1 i5-13420H 16GB 512GB SSD 15.6 Full HD FreeDOS Notebook - incehesap.com",
+        "before": 2280,
+        "after": 512,
+        "reason": "replaced_formfactor_2280_with_512"
+      },
+      {
+        "row_index": 115,
+        "url": "https://www.incehesap.com/15iax9-83gs00rytr-fiyati-83348/",
+        "name": "LENOVO LOQ 15IAX9 83GS00RYTR i5-12600HX 24GB 1TB SSD 6GB RTX4050 FDOS LENOVO LOQ 15IAX9 83GS00RYTR i5-12600HX 24GB 1TB SSD 6GB RTX4050 FDOS - incehesap.com LENOVO LOQ 15IAX9 83GS00RYTR i5-12600HX 24GB 1TB SSD 6GB RTX4050 FDOS - incehesap.com",
+        "before": 2242,
+        "after": 1024,
+        "reason": "replaced_formfactor_2242_with_1024"
+      },
+      {
+        "row_index": 160,
+        "url": "https://www.incehesap.com/lenovo-v15-g3-82tv009ctx-ih2-ryzen-7-5825u-24gb-1tb-ssd-15-6-full-hd-freedos-notebook-fiyati-79404/",
+        "name": "Lenovo V15 G3 82TV009CTX IH2 Ryzen 7 5825U 24GB 1TB SSD 15.6″ Full HD FreeDOS Notebook Lenovo V15 G3 82TV009CTX IH2 Ryzen 7 5825U 24GB 1TB SSD 15.6″ Full HD FreeDOS Notebook - incehesap.com Lenovo V15 G3 82TV009CTX IH2 Ryzen 7 5825U 24GB 1TB SSD 15.6″ Full HD FreeDOS Notebook - incehesap.com",
+        "before": 2242,
+        "after": 1024,
+        "reason": "replaced_formfactor_2242_with_1024"
+      }
+    ]
+  },
+  "top_fix_reasons": {
+    "ssd": [
+      [
+        "replaced_formfactor_2242_with_512",
+        17
+      ],
+      [
+        "replaced_formfactor_2242_with_1024",
+        11
+      ],
+      [
+        "replaced_formfactor_2280_with_1024",
+        5
+      ],
+      [
+        "replaced_formfactor_2280_with_512",
+        4
+      ],
+      [
+        "replaced_formfactor_2242_with_256",
+        2
+      ]
+    ],
+    "ram": [
+      [
+        "replaced_with_title_96_to_32",
+        18
+      ],
+      [
+        "replaced_with_title_64_to_16",
+        13
+      ],
+      [
+        "replaced_with_title_96_to_16",
+        7
+      ],
+      [
+        "replaced_with_title_64_to_32",
+        2
+      ],
+      [
+        "replaced_with_title_24_to_16",
+        1
+      ],
+      [
+        "replaced_with_title_24_to_8",
+        1
+      ]
+    ],
+    "cpu": [
+      [
+        "normalized_cpu",
+        36
+      ],
+      [
+        "upgraded_generic_ryzen 7_to_ryzen 7 7730u",
+        4
+      ],
+      [
+        "upgraded_generic_ryzen 7_to_ryzen 7 5825u",
+        3
+      ],
+      [
+        "upgraded_generic_ryzen 5_to_ryzen 5 6600u",
+        2
+      ],
+      [
+        "upgraded_generic_ryzen 5_to_ryzen 5 7530u",
+        2
+      ],
+      [
+        "upgraded_generic_ryzen 5_to_ryzen 5 7520u",
+        2
+      ],
+      [
+        "upgraded_generic_ryzen 7_to_ryzen 7 7435hs",
+        2
+      ],
+      [
+        "replaced_with_title_i5-13420h_to_i7-1355u",
+        1
+      ],
+      [
+        "upgraded_generic_ryzen 5_to_ryzen 5 7535hs",
+        1
+      ],
+      [
+        "upgraded_generic_ryzen 7_to_ryzen 7 7840hs",
+        1
+      ]
+    ],
+    "gpu": [
+      [
+        "unparsed_gpu",
+        37
+      ],
+      [
+        "filled_missing_with_integrated",
+        3
+      ],
+      [
+        "replaced_with_title_rtx 5070_to_rtx 5070 ti",
+        1
+      ],
+      [
+        "filled_missing_with_rtx 5000",
+        1
+      ],
+      [
+        "filled_missing_with_rtx 3500",
+        1
+      ]
+    ]
+  },
+  "input_csv": "incehesap_laptops.csv",
+  "output_csv": "incehesap_laptops_fixed.csv",
+  "generated_at": "2026-01-22T22:40:40Z",
+  "missing_invalid_before": {
+    "price": {
+      "missing": 0,
+      "invalid": 0
+    },
+    "screen_size": {
+      "missing": 0,
+      "invalid": 0
+    },
+    "ssd": {
+      "missing": 0,
+      "invalid": 39
+    },
+    "ram": {
+      "missing": 0,
+      "invalid": 0
+    },
+    "cpu": {
+      "missing": 0,
+      "invalid": 0
+    },
+    "gpu": {
+      "missing": 0,
+      "invalid": 0
+    }
+  },
+  "missing_invalid_after": {
+    "price": {
+      "missing": 0,
+      "invalid": 0
+    },
+    "screen_size": {
+      "missing": 0,
+      "invalid": 0
+    },
+    "ssd": {
+      "missing": 0,
+      "invalid": 0
+    },
+    "ram": {
+      "missing": 0,
+      "invalid": 0
+    },
+    "cpu": {
+      "missing": 0,
+      "invalid": 0
+    },
+    "gpu": {
+      "missing": 0,
+      "invalid": 37
+    }
+  },
+  "invalid_examples_after": {
+    "gpu": {
+      "count": 37,
+      "examples": [
+        {
+          "url": "https://www.incehesap.com/lenovo-thinkpad-e16-21sr006rtx-u7-255h-16gb-ssd-512gb-ssd-16-fdos-fiyati-85136/",
+          "name": "LENOVO THINKPAD E16 21SR006RTX U7-255H 16GB SSD 512GB SSD 16″ FDOS LENOVO THINKPAD E16 21SR006RTX U7-255H 16GB SSD 512GB SSD 16 FDOS - incehesap.com LENOVO THINKPAD E16 21SR006RTX U7-255H 16GB SSD 512GB SSD 16 FDOS - incehesap.com",
+          "gpu": "unknown"
+        },
+        {
+          "url": "https://www.incehesap.com/hp-elitebook-1040-g10-c9xw4at-u7-155h-16gb-1tb-ssd-14-w11pro-fiyati-85661/",
+          "name": "HP ELITEBOOK 1040 G10 C9XW4AT U7-155H 16GB 1TB SSD 14″ W11PRO HP ELITEBOOK 1040 G10 C9XW4AT U7-155H 16GB 1TB SSD 14 W11PRO - incehesap.com HP ELITEBOOK 1040 G10 C9XW4AT U7-155H 16GB 1TB SSD 14 W11PRO - incehesap.com",
+          "gpu": "unknown"
+        },
+        {
+          "url": "https://www.incehesap.com/hp-elitebook-1040-g11-c9xw6at-u7-155h-32gb-1tb-ssd-14-w11pro-fiyati-85656/",
+          "name": "HP ELITEBOOK 1040 G11 C9XW6AT U7-155H 32GB 1TB SSD 14″ W11PRO HP ELITEBOOK 1040 G11 C9XW6AT U7-155H 32GB 1TB SSD 14 W11PRO - incehesap.com HP ELITEBOOK 1040 G11 C9XW6AT U7-155H 32GB 1TB SSD 14 W11PRO - incehesap.com",
+          "gpu": "unknown"
+        },
+        {
+          "url": "https://www.incehesap.com/hp-elitebook-x360-1040-9g0j9et-u7-155u-16gb-1tb-ssd-13-4-touch-w11pro-fiyati-85671/",
+          "name": "HP ELITEBOOK X360 1040 9G0J9ET U7-155U 16GB 1TB SSD 13.4″ TOUCH W11PRO HP ELITEBOOK X360 1040 9G0J9ET U7-155U 16GB 1TB SSD 13.4 TOUCH W11PRO - incehesap.com HP ELITEBOOK X360 1040 9G0J9ET U7-155U 16GB 1TB SSD 13.4 TOUCH W11PRO - incehesap.com",
+          "gpu": "unknown"
+        },
+        {
+          "url": "https://www.incehesap.com/lenovo-thinkpad-x9-14-21qa002ktx-u7-258v-32gb-1tb-ssd-14-w11pro-notebook-fiyati-86609/",
+          "name": "LENOVO THINKPAD X9-14 21QA002KTX U7-258V 32GB 1TB SSD 14″ W11PRO Notebook LENOVO THINKPAD X9-14 21QA002KTX U7-258V 32GB 1TB SSD 14 W11PRO Notebook - incehesap.com LENOVO THINKPAD X9-14 21QA002KTX U7-258V 32GB 1TB SSD 14 W11PRO Notebook - incehesap.com",
+          "gpu": "unknown"
+        }
+      ]
+    }
+  },
+  "self_checks": []
+}

@@ -1,0 +1,5 @@
+2026-01-19 01:30:46,140 | INFO | Start | max_pages=50 workers=8 fast_mode=False min_delay=0.70s timeout=20s
+2026-01-19 01:30:46,140 | INFO | Proxies file not found at C:\Users\HUAWE\OneDrive - Ankara Üniversitesi\Masaüstü\recommender_2\proxies.txt (proxy mode disabled)
+2026-01-19 01:30:51,042 | WARNING | List page 1 failed (blocked): https://www.epey.com/laptop/
+2026-01-19 01:30:51,043 | WARNING | List page 1: no html, stopping pagination
+2026-01-19 01:30:51,044 | INFO | No pending product urls to process

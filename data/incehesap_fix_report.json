@@ -1,0 +1,289 @@
+{
+  "row_count": 121,
+  "fix_counts": {
+    "ssd": 81,
+    "cpu": 121,
+    "gpu": 70
+  },
+  "fix_examples": {
+    "ssd": [
+      {
+        "row_index": 0,
+        "url": "https://www.incehesap.com/hp-probook-4-g1ah-cv0e7at-r5-220-8gb-512gb-ssd-16-freedos-notebook-fiyati-86820/",
+        "name": "HP PROBOOK 4 G1AH CV0E7AT R5-220 8GB 512GB SSD 16″ FREEDOS NOTEBOOK",
+        "before": null,
+        "after": 512,
+        "reason": "filled_missing_with_512"
+      },
+      {
+        "row_index": 1,
+        "url": "https://www.incehesap.com/dell-vostro-n3409pvnb3530u-i5-1334u-8-gb-512-gb-ssd-iris-xe-graphics-15-6-full-hd-notebook-fiyati-78259/",
+        "name": "Dell Vostro N3409PVNB3530U i5-1334U 8 GB 512 GB SSD Iris Xe Graphics 15.6″ Full HD Notebook",
+        "before": null,
+        "after": 512,
+        "reason": "filled_missing_with_512"
+      },
+      {
+        "row_index": 2,
+        "url": "https://www.incehesap.com/hp-250-g10-b2ph1es-ci7-1355u-16gb-512gb-ob-ssd-15-6-freedos-notebook-fiyati-85139/",
+        "name": "HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
+        "before": null,
+        "after": 512,
+        "reason": "filled_missing_with_512"
+      },
+      {
+        "row_index": 3,
+        "url": "https://www.incehesap.com/hp-probook-450-g10-725s4ea-i7-1355u-32gb-1tb-ssd-15-6-w11pro-fiyati-86892/",
+        "name": "HP PROBOOK 450 G10 725S4EA i7-1355U 32GB 1TB SSD 15.6″ W11PRO NOTEBOOK",
+        "before": null,
+        "after": 1024,
+        "reason": "filled_missing_with_1024"
+      },
+      {
+        "row_index": 4,
+        "url": "https://www.incehesap.com/hp-probook-450-g10-725q0ea-i7-1355u-16gb-512gb-ssd-15-6-w11pro-full-hd-notebook-fiyati-78211/",
+        "name": "HP PROBOOK 450 G10 725Q0EA i7-1355U 16GB 512GB SSD 15.6″ W11PRO Full HD Notebook",
+        "before": null,
+        "after": 512,
+        "reason": "filled_missing_with_512"
+      }
+    ],
+    "cpu": [
+      {
+        "row_index": 0,
+        "url": "https://www.incehesap.com/hp-probook-4-g1ah-cv0e7at-r5-220-8gb-512gb-ssd-16-freedos-notebook-fiyati-86820/",
+        "name": "HP PROBOOK 4 G1AH CV0E7AT R5-220 8GB 512GB SSD 16″ FREEDOS NOTEBOOK",
+        "before": "HP PROBOOK 4 G1AH CV0E7AT R5-220 8GB 512GB SSD 16″ FREEDOS NOTEBOOK",
+        "after": "hp probook 4 g1ah cv0e7at r5-220 8gb 512gb ssd 16\" freedos notebook",
+        "reason": "normalized_cpu"
+      },
+      {
+        "row_index": 1,
+        "url": "https://www.incehesap.com/dell-vostro-n3409pvnb3530u-i5-1334u-8-gb-512-gb-ssd-iris-xe-graphics-15-6-full-hd-notebook-fiyati-78259/",
+        "name": "Dell Vostro N3409PVNB3530U i5-1334U 8 GB 512 GB SSD Iris Xe Graphics 15.6″ Full HD Notebook",
+        "before": "Dell Vostro N3409PVNB3530U i5-1334U 8 GB 512 GB SSD Iris Xe Graphics 15.6″ Full HD Notebook",
+        "after": "i5-1334u",
+        "reason": "normalized_cpu"
+      },
+      {
+        "row_index": 2,
+        "url": "https://www.incehesap.com/hp-250-g10-b2ph1es-ci7-1355u-16gb-512gb-ob-ssd-15-6-freedos-notebook-fiyati-85139/",
+        "name": "HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
+        "before": "HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
+        "after": "i7-1355u",
+        "reason": "normalized_cpu"
+      },
+      {
+        "row_index": 3,
+        "url": "https://www.incehesap.com/hp-probook-450-g10-725s4ea-i7-1355u-32gb-1tb-ssd-15-6-w11pro-fiyati-86892/",
+        "name": "HP PROBOOK 450 G10 725S4EA i7-1355U 32GB 1TB SSD 15.6″ W11PRO NOTEBOOK",
+        "before": "HP PROBOOK 450 G10 725S4EA i7-1355U 32GB 1TB SSD 15.6″ W11PRO NOTEBOOK",
+        "after": "i7-1355u",
+        "reason": "normalized_cpu"
+      },
+      {
+        "row_index": 4,
+        "url": "https://www.incehesap.com/hp-probook-450-g10-725q0ea-i7-1355u-16gb-512gb-ssd-15-6-w11pro-full-hd-notebook-fiyati-78211/",
+        "name": "HP PROBOOK 450 G10 725Q0EA i7-1355U 16GB 512GB SSD 15.6″ W11PRO Full HD Notebook",
+        "before": "HP PROBOOK 450 G10 725Q0EA i7-1355U 16GB 512GB SSD 15.6″ W11PRO Full HD Notebook",
+        "after": "i7-1355u",
+        "reason": "normalized_cpu"
+      }
+    ],
+    "gpu": [
+      {
+        "row_index": 0,
+        "url": "https://www.incehesap.com/hp-probook-4-g1ah-cv0e7at-r5-220-8gb-512gb-ssd-16-freedos-notebook-fiyati-86820/",
+        "name": "HP PROBOOK 4 G1AH CV0E7AT R5-220 8GB 512GB SSD 16″ FREEDOS NOTEBOOK",
+        "before": "HP PROBOOK 4 G1AH CV0E7AT R5-220 8GB 512GB SSD 16″ FREEDOS NOTEBOOK",
+        "after": "unknown",
+        "reason": "unparsed_gpu"
+      },
+      {
+        "row_index": 2,
+        "url": "https://www.incehesap.com/hp-250-g10-b2ph1es-ci7-1355u-16gb-512gb-ob-ssd-15-6-freedos-notebook-fiyati-85139/",
+        "name": "HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
+        "before": "HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
+        "after": "unknown",
+        "reason": "unparsed_gpu"
+      },
+      {
+        "row_index": 3,
+        "url": "https://www.incehesap.com/hp-probook-450-g10-725s4ea-i7-1355u-32gb-1tb-ssd-15-6-w11pro-fiyati-86892/",
+        "name": "HP PROBOOK 450 G10 725S4EA i7-1355U 32GB 1TB SSD 15.6″ W11PRO NOTEBOOK",
+        "before": "HP PROBOOK 450 G10 725S4EA i7-1355U 32GB 1TB SSD 15.6″ W11PRO NOTEBOOK",
+        "after": "unknown",
+        "reason": "unparsed_gpu"
+      },
+      {
+        "row_index": 4,
+        "url": "https://www.incehesap.com/hp-probook-450-g10-725q0ea-i7-1355u-16gb-512gb-ssd-15-6-w11pro-full-hd-notebook-fiyati-78211/",
+        "name": "HP PROBOOK 450 G10 725Q0EA i7-1355U 16GB 512GB SSD 15.6″ W11PRO Full HD Notebook",
+        "before": "HP PROBOOK 450 G10 725Q0EA i7-1355U 16GB 512GB SSD 15.6″ W11PRO Full HD Notebook",
+        "after": "unknown",
+        "reason": "unparsed_gpu"
+      },
+      {
+        "row_index": 6,
+        "url": "https://www.incehesap.com/hp-elitebook-650-g10-b2pk5es-i5-1335u-16gb-512gb-ssd-15-6-freedos-notebook-fiyati-83324/",
+        "name": "HP ELITEBOOK 650 G10 B2PK5ES i5-1335U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
+        "before": "HP ELITEBOOK 650 G10 B2PK5ES i5-1335U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
+        "after": "unknown",
+        "reason": "unparsed_gpu"
+      }
+    ]
+  },
+  "top_fix_reasons": {
+    "ssd": [
+      [
+        "filled_missing_with_512",
+        53
+      ],
+      [
+        "filled_missing_with_1024",
+        20
+      ],
+      [
+        "filled_missing_with_2048",
+        3
+      ],
+      [
+        "filled_missing_with_4096",
+        3
+      ],
+      [
+        "filled_missing_with_256",
+        2
+      ]
+    ],
+    "ram": [],
+    "cpu": [
+      [
+        "normalized_cpu",
+        121
+      ]
+    ],
+    "gpu": [
+      [
+        "unparsed_gpu",
+        56
+      ],
+      [
+        "replaced_integrated_with_rtx 4050",
+        4
+      ],
+      [
+        "replaced_integrated_with_rtx 5070",
+        2
+      ],
+      [
+        "replaced_integrated_with_rtx 5090",
+        2
+      ],
+      [
+        "replaced_integrated_with_rtx 3500",
+        2
+      ],
+      [
+        "replaced_integrated_with_rtx 5080",
+        2
+      ],
+      [
+        "replaced_integrated_with_rtx 5000",
+        1
+      ],
+      [
+        "replaced_integrated_with_rtx 3050",
+        1
+      ]
+    ]
+  },
+  "input_csv": "data/incehesap_laptops_raw.csv",
+  "output_csv": "data/incehesap_laptops.csv",
+  "generated_at": "2026-01-27T14:42:23Z",
+  "missing_invalid_before": {
+    "price": {
+      "missing": 0,
+      "invalid": 0
+    },
+    "screen_size": {
+      "missing": 121,
+      "invalid": 0
+    },
+    "ssd": {
+      "missing": 121,
+      "invalid": 0
+    },
+    "ram": {
+      "missing": 8,
+      "invalid": 0
+    },
+    "cpu": {
+      "missing": 0,
+      "invalid": 0
+    },
+    "gpu": {
+      "missing": 0,
+      "invalid": 0
+    }
+  },
+  "missing_invalid_after": {
+    "price": {
+      "missing": 0,
+      "invalid": 0
+    },
+    "screen_size": {
+      "missing": 121,
+      "invalid": 0
+    },
+    "ssd": {
+      "missing": 40,
+      "invalid": 0
+    },
+    "ram": {
+      "missing": 8,
+      "invalid": 0
+    },
+    "cpu": {
+      "missing": 0,
+      "invalid": 0
+    },
+    "gpu": {
+      "missing": 0,
+      "invalid": 56
+    }
+  },
+  "invalid_examples_after": {
+    "gpu": {
+      "count": 56,
+      "examples": [
+        {
+          "url": "https://www.incehesap.com/hp-probook-4-g1ah-cv0e7at-r5-220-8gb-512gb-ssd-16-freedos-notebook-fiyati-86820/",
+          "name": "HP PROBOOK 4 G1AH CV0E7AT R5-220 8GB 512GB SSD 16″ FREEDOS NOTEBOOK",
+          "gpu": "unknown"
+        },
+        {
+          "url": "https://www.incehesap.com/hp-250-g10-b2ph1es-ci7-1355u-16gb-512gb-ob-ssd-15-6-freedos-notebook-fiyati-85139/",
+          "name": "HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
+          "gpu": "unknown"
+        },
+        {
+          "url": "https://www.incehesap.com/hp-probook-450-g10-725s4ea-i7-1355u-32gb-1tb-ssd-15-6-w11pro-fiyati-86892/",
+          "name": "HP PROBOOK 450 G10 725S4EA i7-1355U 32GB 1TB SSD 15.6″ W11PRO NOTEBOOK",
+          "gpu": "unknown"
+        },
+        {
+          "url": "https://www.incehesap.com/hp-probook-450-g10-725q0ea-i7-1355u-16gb-512gb-ssd-15-6-w11pro-full-hd-notebook-fiyati-78211/",
+          "name": "HP PROBOOK 450 G10 725Q0EA i7-1355U 16GB 512GB SSD 15.6″ W11PRO Full HD Notebook",
+          "gpu": "unknown"
+        },
+        {
+          "url": "https://www.incehesap.com/hp-elitebook-650-g10-b2pk5es-i5-1335u-16gb-512gb-ssd-15-6-freedos-notebook-fiyati-83324/",
+          "name": "HP ELITEBOOK 650 G10 B2PK5ES i5-1335U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
+          "gpu": "unknown"
+        }
+      ]
+    }
+  },
+  "self_checks": []
+}

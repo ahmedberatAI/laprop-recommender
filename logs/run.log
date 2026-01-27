@@ -1,0 +1,41 @@
+{"ts": "2026-01-20T21:25:13.159210Z", "level": "WARNING", "logger": "epey_scraper", "message": "blocked", "taskName": null, "url": "https://www.epey.com/robots.txt", "status": 403, "attempt": 0, "blocked_count": 1, "backoff_s": 1.8449331909572644}
+{"ts": "2026-01-20T21:25:16.511923Z", "level": "WARNING", "logger": "epey_scraper", "message": "blocked", "taskName": null, "url": "https://www.epey.com/robots.txt", "status": 403, "attempt": 1, "blocked_count": 2, "backoff_s": 2.0900749034743193}
+{"ts": "2026-01-20T21:25:18.879665Z", "level": "WARNING", "logger": "epey_scraper", "message": "blocked", "taskName": null, "url": "https://www.epey.com/robots.txt", "status": 403, "attempt": 2, "blocked_count": 3, "backoff_s": 2.9523355942714016}
+{"ts": "2026-01-20T21:25:22.102750Z", "level": "WARNING", "logger": "epey_scraper", "message": "blocked", "taskName": null, "url": "https://www.epey.com/robots.txt", "status": 403, "attempt": 3, "blocked_count": 4, "backoff_s": 3.680437878619812}
+{"ts": "2026-01-20T21:25:25.785034Z", "level": "INFO", "logger": "epey_scraper", "message": "list_page_fetch", "taskName": null, "page": 1, "url": "https://www.epey.com/laptop/"}
+{"ts": "2026-01-20T21:25:26.039094Z", "level": "WARNING", "logger": "epey_scraper", "message": "blocked", "taskName": null, "url": "https://www.epey.com/laptop/", "status": 403, "attempt": 0, "blocked_count": 5, "backoff_s": 1.0358258235534494}
+{"ts": "2026-01-20T21:25:27.378057Z", "level": "WARNING", "logger": "epey_scraper", "message": "blocked", "taskName": null, "url": "https://www.epey.com/laptop/", "status": 403, "attempt": 1, "blocked_count": 6, "backoff_s": 1.821092180149042}
+{"ts": "2026-01-20T21:25:29.475193Z", "level": "WARNING", "logger": "epey_scraper", "message": "blocked", "taskName": null, "url": "https://www.epey.com/laptop/", "status": 403, "attempt": 2, "blocked_count": 7, "backoff_s": 2.3890797562417196}
+{"ts": "2026-01-20T21:25:33.135950Z", "level": "WARNING", "logger": "epey_scraper", "message": "blocked", "taskName": null, "url": "https://www.epey.com/laptop/", "status": 403, "attempt": 3, "blocked_count": 8, "backoff_s": 4.278468596794393}
+{"ts": "2026-01-20T21:45:29.803882Z", "level": "INFO", "logger": "epey_scraper", "message": "backend_choice", "taskName": null, "url": "https://www.epey.com/robots.txt", "backend": "requests", "mode": "auto"}
+{"ts": "2026-01-20T21:45:30.106630Z", "level": "WARNING", "logger": "epey_scraper", "message": "blocked", "taskName": null, "url": "https://www.epey.com/robots.txt", "status": 403, "attempt": 0, "blocked_count": 1, "backoff_s": 1.2584011196997693}
+{"ts": "2026-01-20T21:45:31.369304Z", "level": "INFO", "logger": "epey_scraper", "message": "switch_to_playwright", "taskName": null, "url": "https://www.epey.com/robots.txt", "status": 403}
+{"ts": "2026-01-20T21:57:10.189054Z", "level": "INFO", "logger": "epey_scraper", "message": "backend_choice", "taskName": null, "url": "https://www.epey.com/robots.txt", "backend": "requests", "mode": "auto"}
+{"ts": "2026-01-20T21:57:10.501435Z", "level": "WARNING", "logger": "epey_scraper", "message": "blocked", "taskName": null, "url": "https://www.epey.com/robots.txt", "status": 403, "attempt": 0, "blocked_count": 1, "backoff_s": 1.2748988001148331}
+{"ts": "2026-01-20T21:57:11.777456Z", "level": "INFO", "logger": "epey_scraper", "message": "switch_to_playwright", "taskName": null, "url": "https://www.epey.com/robots.txt", "status": 403}
+{"ts": "2026-01-20T21:57:16.908738Z", "level": "ERROR", "logger": "epey_scraper", "message": "bot_challenge", "taskName": null, "url": "https://www.epey.com"}
+{"ts": "2026-01-20T21:57:16.909047Z", "level": "WARNING", "logger": "epey_scraper", "message": "robots_fetch_failed", "taskName": null, "mode": "strict"}
+{"ts": "2026-01-20T21:57:27.471889Z", "level": "INFO", "logger": "epey_scraper", "message": "backend_choice", "taskName": null, "url": "https://www.epey.com/robots.txt", "backend": "requests", "mode": "auto"}
+{"ts": "2026-01-20T21:57:27.756151Z", "level": "WARNING", "logger": "epey_scraper", "message": "blocked", "taskName": null, "url": "https://www.epey.com/robots.txt", "status": 403, "attempt": 0, "blocked_count": 1, "backoff_s": 1.1698304442630354}
+{"ts": "2026-01-20T21:57:28.937156Z", "level": "INFO", "logger": "epey_scraper", "message": "switch_to_playwright", "taskName": null, "url": "https://www.epey.com/robots.txt", "status": 403}
+{"ts": "2026-01-20T21:57:31.392815Z", "level": "ERROR", "logger": "epey_scraper", "message": "bot_challenge", "taskName": null, "url": "https://www.epey.com"}
+{"ts": "2026-01-20T21:57:31.393036Z", "level": "WARNING", "logger": "epey_scraper", "message": "robots_fetch_failed", "taskName": null, "mode": "strict"}
+{"ts": "2026-01-20T22:31:17.089010Z", "level": "INFO", "logger": "epey_scraper", "message": "backend_choice", "taskName": null, "url": "https://www.epey.com/robots.txt", "backend": "requests", "mode": "auto"}
+{"ts": "2026-01-20T22:31:17.398177Z", "level": "WARNING", "logger": "epey_scraper", "message": "blocked", "taskName": null, "url": "https://www.epey.com/robots.txt", "status": 403, "attempt": 0, "blocked_count": 1, "backoff_s": 1.188976441098299}
+{"ts": "2026-01-20T22:31:18.587893Z", "level": "INFO", "logger": "epey_scraper", "message": "switch_to_playwright", "taskName": null, "url": "https://www.epey.com/robots.txt", "status": 403}
+{"ts": "2026-01-20T22:31:23.334850Z", "level": "ERROR", "logger": "epey_scraper", "message": "bot_challenge", "taskName": null, "url": "https://www.epey.com"}
+{"ts": "2026-01-20T22:31:23.335144Z", "level": "WARNING", "logger": "epey_scraper", "message": "robots_fetch_failed", "taskName": null, "mode": "strict"}
+{"ts": "2026-01-20T23:03:11.120757Z", "level": "WARNING", "logger": "epey_scraper", "message": "blocked", "taskName": null, "url": "https://www.epey.com", "status": 403, "attempt": 0, "blocked_count": 1, "backoff_s": 1.09153210166455}
+{"ts": "2026-01-20T23:03:12.213304Z", "level": "INFO", "logger": "epey_scraper", "message": "backend_choice", "taskName": null, "url": "https://www.epey.com/robots.txt", "backend": "requests", "mode": "requests"}
+{"ts": "2026-01-20T23:03:12.503467Z", "level": "WARNING", "logger": "epey_scraper", "message": "blocked", "taskName": null, "url": "https://www.epey.com/robots.txt", "status": 403, "attempt": 0, "blocked_count": 2, "backoff_s": 1.435849583560284}
+{"ts": "2026-01-20T23:03:13.942000Z", "level": "INFO", "logger": "epey_scraper", "message": "stage_transition", "taskName": null, "stage": "requests", "status": "failed", "reason": "no_response_or_blocked"}
+{"ts": "2026-01-20T23:03:13.942463Z", "level": "INFO", "logger": "epey_scraper", "message": "backend_choice", "taskName": null, "url": "https://www.epey.com/robots.txt", "backend": "playwright", "mode": "playwright"}
+{"ts": "2026-01-20T23:03:16.100227Z", "level": "INFO", "logger": "epey_scraper", "message": "interactive_auth_start", "taskName": null, "url": "https://www.epey.com"}
+{"ts": "2026-01-20T23:03:16.100598Z", "level": "INFO", "logger": "epey_scraper", "message": "interactive_auth_start", "taskName": null, "url": "https://www.epey.com"}
+{"ts": "2026-01-20T23:06:21.169027Z", "level": "ERROR", "logger": "epey_scraper", "message": "interactive_auth_timeout", "taskName": null, "url": "https://www.epey.com"}
+{"ts": "2026-01-20T23:06:21.169851Z", "level": "INFO", "logger": "epey_scraper", "message": "stage_transition", "taskName": null, "stage": "playwright", "status": "failed", "reason": "no_response_or_blocked"}
+{"ts": "2026-01-20T23:06:21.170746Z", "level": "WARNING", "logger": "epey_scraper", "message": "robots_fetch_failed", "taskName": null, "mode": "strict"}
+{"ts": "2026-01-21T12:04:31.388628Z", "level": "INFO", "logger": "epey_scraper", "message": "output_written", "taskName": null, "path": "data\\catalog.jsonl", "records": 0}
+{"ts": "2026-01-21T12:04:31.389968Z", "level": "INFO", "logger": "epey_scraper", "message": "output_written", "taskName": null, "path": "data\\run_report.json"}
+{"ts": "2026-01-21T12:05:15.979821Z", "level": "INFO", "logger": "epey_scraper", "message": "output_written", "taskName": null, "path": "data\\catalog.jsonl", "records": 0}
+{"ts": "2026-01-21T12:05:15.980855Z", "level": "INFO", "logger": "epey_scraper", "message": "output_written", "taskName": null, "path": "data\\run_report.json"}
