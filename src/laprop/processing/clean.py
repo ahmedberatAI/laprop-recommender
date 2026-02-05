@@ -30,6 +30,8 @@ from .normalize import (
 from .validate import validate_record
 from .read import _standardize_columns
 from ..recommend.engine import get_cpu_score, get_gpu_score
+from ..utils.console import safe_print
+
 def clean_ram_value(ram_str):
     """RAM değerini düzgün temizle"""
     if pd.isna(ram_str):
@@ -146,7 +148,7 @@ def extract_brand(name):
 
 def clean_data(df):
     """Veriyi temizle - OS tespiti + başlıktan normalize parsing"""
-    print("\n🔧 Veriler temizleniyor...")
+    safe_print("\n🔧 Veriler temizleniyor...")
 
     df = _standardize_columns(df)
 
@@ -167,7 +169,7 @@ def clean_data(df):
             df = df.loc[~vatan_mask | product_mask].copy()
             removed = before - len(df)
             if removed > 0:
-                print(f"Vatan filter: removed {removed} non-product rows")
+                safe_print(f"Vatan filter: removed {removed} non-product rows")
 
     # Marka çıkar
     df['brand'] = df['name'].apply(extract_brand)
@@ -347,7 +349,7 @@ def clean_data(df):
     df['cpu_score'] = df['cpu_score'].fillna(5.0)
     df['gpu_score'] = df['gpu_score'].fillna(3.0)
 
-    print("\nData quality report")
+    safe_print("\nData quality report")
     if 'url' in df.columns:
         def _infer_vendor(url: Any) -> str:
             u = str(url or "").lower()
@@ -371,21 +373,21 @@ def clean_data(df):
         screen_missing = df.loc[mask, 'screen_size'].isna().mean() * 100
         ram_missing = df.loc[mask, 'ram_gb'].isna().mean() * 100
         ssd_missing = df.loc[mask, 'ssd_gb'].isna().mean() * 100
-        print(
+        safe_print(
             f"  {vendor}: rows={total}, "
             f"missing screen={screen_missing:.1f}%, "
             f"ram={ram_missing:.1f}%, "
             f"ssd={ssd_missing:.1f}%"
         )
 
-    print(
+    safe_print(
         f"  implausible_ssd_count={implausible_ssd_count}, "
         f"invalid_ssd_count={invalid_ssd_count}"
     )
-    print(
+    safe_print(
         f"  ssd_overrides_small_to_large={ssd_overrides_small_to_large}, "
         f"ssd_swap_fixes={ssd_swap_fixes}"
     )
 
-    print(f"✅ Temizleme tamamlandı: {len(df)} laptop")
+    safe_print(f"✅ Temizleme tamamlandı: {len(df)} laptop")
     return df

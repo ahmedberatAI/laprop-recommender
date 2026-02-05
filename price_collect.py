@@ -20,6 +20,7 @@ from urllib.parse import quote_plus, urljoin, urlparse
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
+import unicodedata
 
 try:
     from bs4 import BeautifulSoup
@@ -28,20 +29,7 @@ try:
 except Exception:
     BS4_AVAILABLE = False
 
-from epey_scraper import (
-    WarningCollector,
-    build_model_key,
-    normalize_brand,
-    normalize_cpu,
-    normalize_gpu,
-    normalize_label,
-    normalize_whitespace,
-    parse_price_try,
-    parse_ram_gb,
-    parse_screen_size_inch,
-    parse_storage_gb,
-    strip_accents,
-)
+from laprop.processing import normalize as lap_norm
 
 
 DEFAULT_HEADERS = {
@@ -50,6 +38,140 @@ DEFAULT_HEADERS = {
     "Accept-Language": "tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7",
     "Connection": "keep-alive",
 }
+
+BRAND_HINTS = {
+    "lenovo",
+    "hp",
+    "dell",
+    "asus",
+    "acer",
+    "msi",
+    "apple",
+    "samsung",
+    "casper",
+    "monster",
+    "huawei",
+    "lg",
+    "toshiba",
+    "xiaomi",
+}
+
+
+class WarningCollector:
+    def __init__(self) -> None:
+        self.messages: List[str] = []
+
+    def add(self, message: str) -> None:
+        if message:
+            self.messages.append(message)
+
+
+def strip_accents(text: Optional[str]) -> str:
+    if not text:
+        return ""
+    normalized = unicodedata.normalize("NFKD", str(text))
+    return "".join(ch for ch in normalized if not unicodedata.combining(ch))
+
+
+def normalize_whitespace(text: Optional[str]) -> str:
+    if not text:
+        return ""
+    return " ".join(str(text).strip().split())
+
+
+def normalize_label(text: Optional[str]) -> str:
+    if not text:
+        return ""
+    cleaned = strip_accents(text).lower()
+    cleaned = re.sub(r"[^a-z0-9]+", " ", cleaned)
+    return " ".join(cleaned.split())
+
+
+def normalize_brand(brand_raw: Optional[str], title_raw: Optional[str]) -> Optional[str]:
+    if brand_raw:
+        return normalize_label(brand_raw)
+    title = normalize_label(title_raw)
+    for hint in BRAND_HINTS:
+        if hint in title:
+            return hint
+    return None
+
+
+def parse_price_try(raw: Optional[str], warnings: WarningCollector, context: str) -> Optional[float]:
+    if not raw:
+        return None
+    cleaned = re.sub(r"[^\d.,]", "", str(raw))
+    if not cleaned:
+        warnings.add(f"{context}: empty price")
+        return None
+    try:
+        if "." in cleaned and "," in cleaned:
+            cleaned = cleaned.replace(".", "").replace(",", ".")
+        elif "," in cleaned:
+            cleaned = cleaned.replace(",", ".")
+        return float(cleaned)
+    except ValueError:
+        warnings.add(f"{context}: invalid price '{raw}'")
+        return None
+
+
+def parse_ram_gb(title_raw: str, warnings: WarningCollector) -> Optional[int]:
+    return lap_norm.parse_ram_gb(title_raw)
+
+
+def parse_storage_gb(title_raw: str, warnings: WarningCollector, field_name: str) -> Optional[int]:
+    return lap_norm.parse_ssd_gb(title_raw)
+
+
+def parse_screen_size_inch(title_raw: str, warnings: WarningCollector) -> Optional[float]:
+    return lap_norm.parse_screen_size(title_raw)
+
+
+def normalize_cpu(title_raw: str) -> Tuple[Optional[str], Optional[str], Optional[str]]:
+    brand = normalize_brand(None, title_raw)
+    cpu_model = lap_norm.normalize_cpu(title_raw, brand)
+    return None, None, cpu_model
+
+
+def _infer_gpu_vendor(model: str) -> Optional[str]:
+    if not model:
+        return None
+    lowered = strip_accents(model).lower()
+    if lowered.startswith("rtx") or lowered.startswith("gtx") or lowered.startswith("mx"):
+        return "nvidia"
+    if lowered.startswith("rx") or lowered.startswith("radeon"):
+        return "amd"
+    if lowered.startswith("arc") or lowered.startswith("iris") or lowered.startswith("intel"):
+        return "intel"
+    if "apple" in lowered or lowered.startswith("m"):
+        return "apple"
+    return None
+
+
+def normalize_gpu(title_raw: str) -> Tuple[Optional[str], Optional[str]]:
+    brand = normalize_brand(None, title_raw)
+    gpu_model = lap_norm.normalize_gpu(title_raw, brand)
+    return _infer_gpu_vendor(gpu_model or ""), gpu_model
+
+
+def build_model_key(features: Dict[str, Any]) -> Tuple[Optional[str], Optional[str]]:
+    brand = normalize_label(features.get("brand_norm"))
+    model = normalize_label(features.get("model_family_raw"))
+    if not brand or not model:
+        weak = f"{brand}::{model}".strip(":") or None
+        return None, weak
+    parts = [
+        brand,
+        model,
+        normalize_label(features.get("cpu_model_norm")),
+        normalize_label(features.get("gpu_model_norm")),
+        str(features.get("ram_gb") or ""),
+        str(features.get("storage_ssd_gb") or ""),
+        str(features.get("screen_size_inch") or ""),
+    ]
+    strong = "::".join(p for p in parts if p)
+    weak = f"{brand}::{model}"
+    return strong or None, weak or None
 
 SOURCE_CONFIG = {
     "amazon": {

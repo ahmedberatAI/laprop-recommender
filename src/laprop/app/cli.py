@@ -24,6 +24,8 @@ from ..recommend.engine import (
     calculate_score,
 )
 from ..recommend.scenarios import SCENARIOS
+from ..utils.console import safe_print
+
 def _prompt_design_details() -> dict:
     """
     Kullanıcıya tasarım alan(lar)ını çoklu seçimle sorar.
@@ -34,8 +36,8 @@ def _prompt_design_details() -> dict:
         'design_min_ram_hint': 32
       }
     """
-    print("\n🎨 Tasarım profili (birden çok seçebilirsiniz)")
-    print("-" * 40)
+    safe_print("\n🎨 Tasarım profili (birden çok seçebilirsiniz)")
+    safe_print("-" * 40)
     options = {
         1: ('graphic', "Grafik tasarım / fotoğraf (Photoshop, Illustrator, Figma)"),
         2: ('video',   "Video düzenleme / motion (Premiere, After Effects, DaVinci)"),
@@ -43,9 +45,9 @@ def _prompt_design_details() -> dict:
         4: ('cad',     "Mimari / teknik çizim (AutoCAD, Revit, Solidworks)")
     }
     for k, (_, desc) in options.items():
-        print(f"{k}. {desc}")
+        safe_print(f"{k}. {desc}")
 
-    print("\nBirden fazla seçim için virgül kullanın (örn: 1,3). Boş bırakılırsa 1 (Grafik) kabul edilir.")
+    safe_print("\nBirden fazla seçim için virgül kullanın (örn: 1,3). Boş bırakılırsa 1 (Grafik) kabul edilir.")
     raw = input("Seçimleriniz: ").strip()
 
     chosen_keys = []
@@ -82,8 +84,8 @@ def _prompt_design_details() -> dict:
     }
 
 def _prompt_productivity_details() -> dict:
-    print("\n📈 Üretkenlik profili")
-    print("-" * 30)
+    safe_print("\n📈 Üretkenlik profili")
+    safe_print("-" * 30)
     opts = {
         1: ('office', "Ofis işleri / doküman düzenleme / sunum"),
         2: ('data', "Veri yoğun işler (Excel, analiz, raporlama)"),
@@ -91,7 +93,7 @@ def _prompt_productivity_details() -> dict:
         4: ('multitask', "Çoklu görev (çok pencere / çok monitör)")
     }
     for k, (_, desc) in opts.items():
-        print(f"{k}. {desc}")
+        safe_print(f"{k}. {desc}")
 
     profile = 'office'
     try:
@@ -105,12 +107,12 @@ def _prompt_productivity_details() -> dict:
 
 def _prompt_gaming_titles() -> list:
     """CLI: 10 oyunu numaralı listeyle gösterir, kullanıcıdan seçim alır."""
-    print("\n🎮 Oyun listesi (gelecekte oynamak istediklerinizi seçin)")
+    safe_print("\n🎮 Oyun listesi (gelecekte oynamak istediklerinizi seçin)")
     titles = list(GAMING_TITLE_SCORES.keys())
     for i, t in enumerate(titles, 1):
-        print(f"{i}. {t}  (gpu_score ≥ {GAMING_TITLE_SCORES[t]:.1f})")
+        safe_print(f"{i}. {t}  (gpu_score ≥ {GAMING_TITLE_SCORES[t]:.1f})")
 
-    print("\nBirden fazla seçim için virgül kullanın (örn: 1,3,7).")
+    safe_print("\nBirden fazla seçim için virgül kullanın (örn: 1,3,7).")
     raw = input("Seçimleriniz: ").strip()
     chosen = []
     if raw:
@@ -238,11 +240,11 @@ def run_simulation(
             f.write(json.dumps(out, ensure_ascii=False) + "\n")
 
     total = len(scenarios)
-    print(f"Simülasyon bitti: {total} senaryo | sonuç bulunan: {ok_cnt}/{total}")
-    print(f"Çıktı: {out_path}")
-    print(f"Simulation vatan recs: {vatan_rec_total}")
+    safe_print(f"Simülasyon bitti: {total} senaryo | sonuç bulunan: {ok_cnt}/{total}")
+    safe_print(f"Çıktı: {out_path}")
+    safe_print(f"Simulation vatan recs: {vatan_rec_total}")
     if vatan_rec_total == 0:
-        print("Warning: vatan domain recommendations count is 0")
+        safe_print("Warning: vatan domain recommendations count is 0")
 
 def detect_budget(text: str) -> Tuple[Optional[float], Optional[float]]:
     """Serbest metinden bütçe aralığını yakalamaya çalışır."""
@@ -542,7 +544,7 @@ def ask_missing_preferences(p: dict) -> dict:
                     return val
             except ValueError:
                 pass
-            print("Lütfen geçerli bir sayı girin.")
+            safe_print("Lütfen geçerli bir sayı girin.")
 
     min_b = p.get('min_budget')
     max_b = p.get('max_budget')
@@ -553,23 +555,23 @@ def ask_missing_preferences(p: dict) -> dict:
         max_b = ask_float("Maksimum bütçe (TL): ")
 
     if min_b is not None and max_b is not None and min_b > max_b:
-        print("Uyarı: Minimum bütçe maksimumdan büyük, yer değiştirildi.")
+        safe_print("Uyarı: Minimum bütçe maksimumdan büyük, yer değiştirildi.")
         min_b, max_b = max_b, min_b
 
     p['min_budget'] = float(min_b)
     p['max_budget'] = float(max_b)
 
     if not p.get('usage_key'):
-        print("\nKullanım amacını seçin:")
+        safe_print("\nKullanım amacını seçin:")
         for k, (_, label) in USAGE_OPTIONS.items():
-            print(f"{k}. {label}")
+            safe_print(f"{k}. {label}")
         while True:
             sel = input("Seçiminiz (1-5): ").strip()
             if sel.isdigit() and int(sel) in USAGE_OPTIONS:
                 p['usage_key'] = USAGE_OPTIONS[int(sel)][0]
                 p['usage_label'] = USAGE_OPTIONS[int(sel)][1]
                 break
-            print("Geçersiz seçim, tekrar deneyin.")
+            safe_print("Geçersiz seçim, tekrar deneyin.")
     else:
         normalize_and_complete_preferences(p)
 
@@ -598,7 +600,7 @@ def ask_missing_preferences(p: dict) -> dict:
     elif usage_key == 'dev':
         auto_dev = p.pop('_dev_mode_auto', False)
         if not p.get('dev_mode') or auto_dev:
-            print("\nYazılım geliştirme profili")
+            safe_print("\nYazılım geliştirme profili")
             dev_opts = {
                 1: ('web', 'Web/Backend'),
                 2: ('ml', 'Veri/ML'),
@@ -607,7 +609,7 @@ def ask_missing_preferences(p: dict) -> dict:
                 5: ('general', 'Genel CS')
             }
             for i, (_, label) in dev_opts.items():
-                print(f"{i}. {label}")
+                safe_print(f"{i}. {label}")
             while True:
                 sel = input("Seçiminiz (1-5, boş=genel): ").strip()
                 if not sel:
@@ -616,13 +618,13 @@ def ask_missing_preferences(p: dict) -> dict:
                 if sel.isdigit() and int(sel) in dev_opts:
                     p['dev_mode'] = dev_opts[int(sel)][0]
                     break
-                print("Geçersiz seçim, tekrar deneyin.")
+                safe_print("Geçersiz seçim, tekrar deneyin.")
 
     return p
 
 def get_user_preferences_free_text() -> dict:
     """Serbest metinle tercih toplama akışı."""
-    print("\nİhtiyacını tek cümlede yaz (örn: 35-55k, oyun + okul, 15.6, RTX 4060 olsun, pil önemli)")
+    safe_print("\nİhtiyacını tek cümlede yaz (örn: 35-55k, oyun + okul, 15.6, RTX 4060 olsun, pil önemli)")
     raw = input("Tercihin: ").strip()
 
     prefs = parse_free_text_to_preferences(raw)
@@ -649,30 +651,30 @@ def get_user_preferences_free_text() -> dict:
         extra_parts.append(f"tasarım={', '.join(prefs['design_profiles'])}")
 
     extra = f", {', '.join(extra_parts)}" if extra_parts else ""
-    print(f"\nAnladığım: bütçe={budget_summary}, amaç={usage_label}{extra}")
+    safe_print(f"\nAnladığım: bütçe={budget_summary}, amaç={usage_label}{extra}")
 
     if not prefs.get('usage_key'):
-        print("Amaç net değil, birkaç soru soracağım.")
+        safe_print("Amaç net değil, birkaç soru soracağım.")
 
     prefs = ask_missing_preferences(prefs)
 
     if prefs.get('usage_key') == 'dev' and prefs.get('dev_mode') == 'ml':
-        print("Not: ML için NVIDIA/CUDA uyumu genelde kritik.")
+        safe_print("Not: ML için NVIDIA/CUDA uyumu genelde kritik.")
 
     prefs['show_breakdown'] = globals().get('preferences', {}).get('show_breakdown', False)
     return prefs
 
 def get_user_preferences():
     """Kullanıcıdan tercihlerini al"""
-    print("\n" + "=" * 60)
-    print("💻 LAPTOP ÖNERİ – Tercihler".center(60))
-    print("=" * 60)
+    safe_print("\n" + "=" * 60)
+    safe_print("💻 LAPTOP ÖNERİ – Tercihler".center(60))
+    safe_print("=" * 60)
 
     preferences = {}
 
     # Bütçe
-    print("\n💰 BÜTÇE BİLGİLERİ")
-    print("-" * 30)
+    safe_print("\n💰 BÜTÇE BİLGİLERİ")
+    safe_print("-" * 30)
 
     while True:
         try:
@@ -680,23 +682,23 @@ def get_user_preferences():
             max_budget = float(input("Maksimum bütçe (TL): "))
 
             if min_budget <= 0 or max_budget <= 0:
-                print("⚠️ Bütçe 0'dan büyük olmalı!")
+                safe_print("⚠️ Bütçe 0'dan büyük olmalı!")
                 continue
             if min_budget > max_budget:
-                print("⚠️ Minimum bütçe maksimumdan büyük olamaz!")
+                safe_print("⚠️ Minimum bütçe maksimumdan büyük olamaz!")
                 continue
 
             preferences['min_budget'] = min_budget
             preferences['max_budget'] = max_budget
             break
         except ValueError:
-            print("⚠️ Lütfen geçerli bir sayı girin!")
+            safe_print("⚠️ Lütfen geçerli bir sayı girin!")
 
     # Kullanım amacı
-    print("\n🎯 KULLANIM AMACI")
-    print("-" * 30)
+    safe_print("\n🎯 KULLANIM AMACI")
+    safe_print("-" * 30)
     for k, (_, label) in USAGE_OPTIONS.items():
-        print(f"{k}. {label}")
+        safe_print(f"{k}. {label}")
 
     while True:
         try:
@@ -707,11 +709,11 @@ def get_user_preferences():
                 break
         except:
             pass
-        print("⚠️ Geçersiz seçim, tekrar deneyin.")
+        safe_print("⚠️ Geçersiz seçim, tekrar deneyin.")
     # Kullanım amacı seçildikten sonra:
     if preferences['usage_key'] == 'dev':
-        print("\n🔧 Yazılım geliştirme profili")
-        print("-" * 30)
+        safe_print("\n🔧 Yazılım geliştirme profili")
+        safe_print("-" * 30)
         dev_opts = {
             1: ('web', '🌐 Web/Backend'),
             2: ('ml', '📊 Veri/ML'),
@@ -720,7 +722,7 @@ def get_user_preferences():
             5: ('general', '🧰 Genel CS')
         }
         for i, (_, label) in dev_opts.items():
-            print(f"{i}. {label}")
+            safe_print(f"{i}. {label}")
         while True:
             try:
                 sel = int(input("Seçiminiz (1-5): ").strip())
@@ -729,7 +731,7 @@ def get_user_preferences():
                     break
             except:
                 pass
-            print("⚠️ Geçersiz seçim, tekrar deneyin.")
+            safe_print("⚠️ Geçersiz seçim, tekrar deneyin.")
     elif preferences.get('usage_key') == 'gaming':
         picked = _prompt_gaming_titles()
         if picked:
@@ -737,7 +739,7 @@ def get_user_preferences():
             needed = max(GAMING_TITLE_SCORES[t] for t in picked)
             # Gaming genel alt eşiği olan 6.0 ile birleşik eşik:
             preferences['min_gpu_score_required'] = max(6.0, needed)
-            print(f"\n🧮 Oyun eşiği ayarlandı → min gpu_score: {preferences['min_gpu_score_required']:.1f}")
+            safe_print(f"\n🧮 Oyun eşiği ayarlandı → min gpu_score: {preferences['min_gpu_score_required']:.1f}")
         else:
             # Seçim yapmazsa varsayılan gaming filtresine (6.0) devam
             preferences['gaming_titles'] = []
@@ -804,64 +806,64 @@ def display_recommendations(recommendations, preferences):
     avg_score = recommendations.attrs.get('avg_score', 0)
     price_range = recommendations.attrs.get('price_range', (0, 0))
 
-    print("\n" + "=" * 60)
+    safe_print("\n" + "=" * 60)
     title = "🏆 ÖNERİLER"
     if usage_lbl:
         title += f" – {usage_lbl}"
-    print(title.center(60))
-    print("=" * 60)
+    safe_print(title.center(60))
+    safe_print("=" * 60)
 
-    print(f"\n📊 Ortalama Skor: {avg_score:.1f}/100")
-    print(f"💰 Fiyat Aralığı: {price_range[0]:,.0f} - {price_range[1]:,.0f} TL")
-    print("-" * 60)
+    safe_print(f"\n📊 Ortalama Skor: {avg_score:.1f}/100")
+    safe_print(f"💰 Fiyat Aralığı: {price_range[0]:,.0f} - {price_range[1]:,.0f} TL")
+    safe_print("-" * 60)
 
     for i, (_, lap) in enumerate(recommendations.iterrows(), 1):
-        print(f"\n{i}. {lap.get('name', '(isimsiz)')}")
-        print("-" * 60)
+        safe_print(f"\n{i}. {lap.get('name', '(isimsiz)')}")
+        safe_print("-" * 60)
 
         # Temel bilgiler
-        print(f"💰 Fiyat: {lap['price']:,.0f} TL")
-        print(f"⭐ Puan: {lap['score']:.1f}/100")
+        safe_print(f"💰 Fiyat: {lap['price']:,.0f} TL")
+        safe_print(f"⭐ Puan: {lap['score']:.1f}/100")
 
         # Skor detayı (opsiyonel - debug için)
         if preferences.get('show_breakdown', False):
-            print(f"   📈 Detay: {lap.get('score_breakdown', '')}")
+            safe_print(f"   📈 Detay: {lap.get('score_breakdown', '')}")
 
         # Donanım bilgileri
-        print(f"🏷️ Marka: {str(lap.get('brand', '')).title()}")
-        print(f"💻 CPU: {lap.get('cpu', 'Belirtilmemiş')} (Skor: {lap.get('cpu_score', 0):.1f})")
-        print(f"🎮 GPU: {lap.get('gpu', 'Belirtilmemiş')} (Skor: {lap.get('gpu_score', 0):.1f})")
-        print(f"💾 RAM: {lap.get('ram_gb', 0):.0f} GB")
-        print(f"💿 SSD: {lap.get('ssd_gb', 0):.0f} GB")
-        print(f"📺 Ekran: {lap.get('screen_size', 0):.1f}\"")
-        print(f"🖥️ OS: {lap.get('os', 'FreeDOS')}")
+        safe_print(f"🏷️ Marka: {str(lap.get('brand', '')).title()}")
+        safe_print(f"💻 CPU: {lap.get('cpu', 'Belirtilmemiş')} (Skor: {lap.get('cpu_score', 0):.1f})")
+        safe_print(f"🎮 GPU: {lap.get('gpu', 'Belirtilmemiş')} (Skor: {lap.get('gpu_score', 0):.1f})")
+        safe_print(f"💾 RAM: {lap.get('ram_gb', 0):.0f} GB")
+        safe_print(f"💿 SSD: {lap.get('ssd_gb', 0):.0f} GB")
+        safe_print(f"📺 Ekran: {lap.get('screen_size', 0):.1f}\"")
+        safe_print(f"🖥️ OS: {lap.get('os', 'FreeDOS')}")
 
         # Link
         if 'url' in lap and pd.notna(lap['url']):
-            print(f"🔗 Link: {lap['url']}")
+            safe_print(f"🔗 Link: {lap['url']}")
 
 def inspect_data(df):
     """Veri inceleme ve debug - Geliştirilmiş (GPU model sayımları eklendi)"""
-    print("\n📊 VERİ İNCELEME")
-    print("-" * 60)
-    print(f"Toplam kayıt: {len(df)}")
-    print(f"Kolonlar: {', '.join(df.columns)}")
+    safe_print("\n📊 VERİ İNCELEME")
+    safe_print("-" * 60)
+    safe_print(f"Toplam kayıt: {len(df)}")
+    safe_print(f"Kolonlar: {', '.join(df.columns)}")
 
     # Marka dağılımı
-    print("\n🏷️ Marka Dağılımı:")
+    safe_print("\n🏷️ Marka Dağılımı:")
     brand_counts = df['brand'].value_counts()
     for brand, count in brand_counts.head(10).items():
-        print(f"  {brand.title()}: {count} laptop")
+        safe_print(f"  {brand.title()}: {count} laptop")
 
     if 'price' in df.columns:
-        print(f"\n💰 Fiyat Dağılımı:")
-        print(f"  Min: {df['price'].min():,.0f} TL")
-        print(f"  Max: {df['price'].max():,.0f} TL")
-        print(f"  Ortalama: {df['price'].mean():,.0f} TL")
-        print(f"  Medyan: {df['price'].median():,.0f} TL")
+        safe_print(f"\n💰 Fiyat Dağılımı:")
+        safe_print(f"  Min: {df['price'].min():,.0f} TL")
+        safe_print(f"  Max: {df['price'].max():,.0f} TL")
+        safe_print(f"  Ortalama: {df['price'].mean():,.0f} TL")
+        safe_print(f"  Medyan: {df['price'].median():,.0f} TL")
 
         # Fiyat aralıklarını göster
-        print(f"\n💵 Fiyat Aralıkları:")
+        safe_print(f"\n💵 Fiyat Aralıkları:")
         price_ranges = [
             (0, 20000, "0-20K"),
             (20000, 30000, "20K-30K"),
@@ -875,51 +877,51 @@ def inspect_data(df):
             count = len(df[(df['price'] >= min_p) & (df['price'] < max_p)])
             if count > 0:
                 pct = (count / len(df)) * 100
-                print(f"  {label}: {count} laptop ({pct:.1f}%)")
+                safe_print(f"  {label}: {count} laptop ({pct:.1f}%)")
 
     # RAM dağılımı
     if 'ram_gb' in df.columns:
-        print(f"\n💾 RAM Dağılımı:")
+        safe_print(f"\n💾 RAM Dağılımı:")
         ram_counts = df['ram_gb'].value_counts().sort_index()
         for ram, count in ram_counts.items():
-            print(f"  {ram:.0f} GB: {count} laptop")
+            safe_print(f"  {ram:.0f} GB: {count} laptop")
 
     # GPU skor dağılımı
     if 'gpu' in df.columns:
-        print("\n🧮 GPU Model Sayımları (detaylı):")
+        safe_print("\n🧮 GPU Model Sayımları (detaylı):")
         gpu_norm = df['gpu'].apply(normalize_gpu_model)
         counts = gpu_norm.value_counts()
 
         total = counts.sum()
         integ = counts[counts.index.str.contains(r'iGPU|Integrated', case=False, regex=True)].sum()
         disc = total - integ
-        print(f"  Toplam: {total} | Integrated: {integ} | Discrete: {disc}")
+        safe_print(f"  Toplam: {total} | Integrated: {integ} | Discrete: {disc}")
 
         # Model bazında tam liste
         for model, c in counts.items():
-            print(f"  - {model}: {c}")
+            safe_print(f"  - {model}: {c}")
 
     # Örnek kayıtlar
-    print(f"\n📝 Örnek Kayıtlar (ilk 3):")
+    safe_print(f"\n📝 Örnek Kayıtlar (ilk 3):")
     cols_to_show = ['name', 'price', 'brand', 'cpu_score', 'gpu_score', 'ram_gb', 'ssd_gb']
     available_cols = [c for c in cols_to_show if c in df.columns]
     sample_df = df[available_cols].head(3)
     for i, row in sample_df.iterrows():
-        print(f"\n  Laptop {i + 1}:")
+        safe_print(f"\n  Laptop {i + 1}:")
         for col in available_cols:
             val = row[col]
             if col == 'price':
-                print(f"    {col}: {val:,.0f} TL")
+                safe_print(f"    {col}: {val:,.0f} TL")
             elif col == 'name':
-                print(f"    {col}: {str(val)[:50]}...")
+                safe_print(f"    {col}: {str(val)[:50]}...")
             else:
-                print(f"    {col}: {val}")
+                safe_print(f"    {col}: {val}")
 
     # =============================
     # YENİ: GPU MODEL SAYIMLARI
     # =============================
     if 'gpu' in df.columns:
-        print("\n🧮 GPU Model Sayımları (normalize edilmiş):")
+        safe_print("\n🧮 GPU Model Sayımları (normalize edilmiş):")
         gpu_norm = df['gpu'].apply(normalize_gpu_model)
         counts = gpu_norm.value_counts()
 
@@ -927,49 +929,49 @@ def inspect_data(df):
         total = counts.sum()
         integ = counts[counts.index.str.contains(r'\(iGPU\)|Integrated', case=False, regex=True)].sum()
         disc = total - integ
-        print(f"  Toplam: {total} | Integrated: {integ} | Discrete: {disc}")
+        safe_print(f"  Toplam: {total} | Integrated: {integ} | Discrete: {disc}")
 
         # Tam liste (çok uzun olursa yine de tamamını göster diyor)
         for model, c in counts.items():
-            print(f"  - {model}: {c}")
+            safe_print(f"  - {model}: {c}")
     else:
-        print("\nℹ️ 'gpu' kolonu bulunamadı; GPU model sayımı atlandı.")
+        safe_print("\nℹ️ 'gpu' kolonu bulunamadı; GPU model sayımı atlandı.")
 
 def save_data(df, filename='laptop_data_export.csv'):
     """Veriyi CSV olarak kaydet"""
     try:
         filepath = BASE_DIR / filename
         df.to_csv(filepath, index=False, encoding='utf-8-sig')
-        print(f"\n✅ Veri kaydedildi: {filepath}")
-        print(f"   {len(df)} kayıt")
+        safe_print(f"\n✅ Veri kaydedildi: {filepath}")
+        safe_print(f"   {len(df)} kayıt")
     except Exception as e:
-        print(f"\n❌ Kayıt hatası: {e}")
+        safe_print(f"\n❌ Kayıt hatası: {e}")
 
 def inspect_scrapers_separately():
     """Her scraper'ın verilerini ayrı ayrı analiz eder"""
-    print("\n" + "=" * 60)
-    print("SCRAPER VERİLERİ DETAYLI ANALİZ")
-    print("=" * 60)
+    safe_print("\n" + "=" * 60)
+    safe_print("SCRAPER VERİLERİ DETAYLI ANALİZ")
+    safe_print("=" * 60)
 
     scraper_files = {
         "Amazon": BASE_DIR / "amazon_laptops.csv",
     }
 
     for name, filepath in scraper_files.items():
-        print(f"\n{'─' * 60}")
-        print(f"📊 {name.upper()}")
-        print(f"{'─' * 60}")
+        safe_print(f"\n{'─' * 60}")
+        safe_print(f"📊 {name.upper()}")
+        safe_print(f"{'─' * 60}")
 
         if not filepath.exists():
-            print(f"❌ Dosya bulunamadı: {filepath}")
+            safe_print(f"❌ Dosya bulunamadı: {filepath}")
             continue
 
         try:
             df = pd.read_csv(filepath, encoding='utf-8')
 
             # Temel bilgiler
-            print(f"\n✓ Toplam kayıt: {len(df)}")
-            print(f"✓ Kolonlar: {', '.join(df.columns)}")
+            safe_print(f"\n✓ Toplam kayıt: {len(df)}")
+            safe_print(f"✓ Kolonlar: {', '.join(df.columns)}")
 
             # Fiyat analizi
             if 'price' in df.columns:
@@ -977,36 +979,36 @@ def inspect_scrapers_separately():
                 valid_prices = df['price_clean'].dropna()
 
                 if len(valid_prices) > 0:
-                    print(f"\n💰 Fiyat İstatistikleri:")
-                    print(f"  • Geçerli fiyat: {len(valid_prices)}/{len(df)}")
-                    print(f"  • Min: {valid_prices.min():,.0f} TL")
-                    print(f"  • Max: {valid_prices.max():,.0f} TL")
-                    print(f"  • Ortalama: {valid_prices.mean():,.0f} TL")
-                    print(f"  • Medyan: {valid_prices.median():,.0f} TL")
+                    safe_print(f"\n💰 Fiyat İstatistikleri:")
+                    safe_print(f"  • Geçerli fiyat: {len(valid_prices)}/{len(df)}")
+                    safe_print(f"  • Min: {valid_prices.min():,.0f} TL")
+                    safe_print(f"  • Max: {valid_prices.max():,.0f} TL")
+                    safe_print(f"  • Ortalama: {valid_prices.mean():,.0f} TL")
+                    safe_print(f"  • Medyan: {valid_prices.median():,.0f} TL")
                 else:
-                    print(f"\n⚠️ Geçerli fiyat bulunamadı!")
+                    safe_print(f"\n⚠️ Geçerli fiyat bulunamadı!")
 
             # RAM dağılımı
             if 'ram' in df.columns:
                 df['ram_clean'] = df['ram'].apply(clean_ram_value)
-                print(f"\n💾 RAM Dağılımı:")
+                safe_print(f"\n💾 RAM Dağılımı:")
                 ram_counts = df['ram_clean'].value_counts().sort_index()
                 for ram, count in ram_counts.items():
-                    print(f"  • {ram} GB: {count} laptop")
+                    safe_print(f"  • {ram} GB: {count} laptop")
 
             # GPU analizi
             if 'gpu' in df.columns:
-                print(f"\n🎮 GPU Dağılımı:")
+                safe_print(f"\n🎮 GPU Dağılımı:")
                 gpu_counts = df['gpu'].value_counts().head(10)
                 for gpu, count in gpu_counts.items():
-                    print(f"  • {str(gpu)[:40]}: {count}")
+                    safe_print(f"  • {str(gpu)[:40]}: {count}")
 
             # CPU analizi
             if 'cpu' in df.columns:
-                print(f"\n🔧 CPU Dağılımı (İlk 10):")
+                safe_print(f"\n🔧 CPU Dağılımı (İlk 10):")
                 cpu_counts = df['cpu'].value_counts().head(10)
                 for cpu, count in cpu_counts.items():
-                    print(f"  • {str(cpu)[:40]}: {count}")
+                    safe_print(f"  • {str(cpu)[:40]}: {count}")
 
             score_scenarios = [
                 {
@@ -1067,7 +1069,7 @@ def inspect_scrapers_separately():
                     ].copy()
 
                     if budget_filtered.empty:
-                        print(f"\n⭐ Ortalama Puan ({label}): bulunamadı")
+                        safe_print(f"\n⭐ Ortalama Puan ({label}): bulunamadı")
                         continue
 
                     filtered = filter_by_usage(budget_filtered, score_prefs['usage_key'], score_prefs)
@@ -1076,7 +1078,7 @@ def inspect_scrapers_separately():
                     filtered = filtered.drop_duplicates(subset=['name', 'price'], keep='first')
 
                     if filtered.empty:
-                        print(f"\n⭐ Ortalama Puan ({label}): bulunamadı")
+                        safe_print(f"\n⭐ Ortalama Puan ({label}): bulunamadı")
                         continue
 
                     scores = []
@@ -1084,34 +1086,34 @@ def inspect_scrapers_separately():
                         score, _ = calculate_score(row, score_prefs)
                         scores.append(score)
                     avg_score = float(sum(scores) / len(scores))
-                    print(f"\n⭐ Ortalama Puan ({label}): {avg_score:.1f}/100")
+                    safe_print(f"\n⭐ Ortalama Puan ({label}): {avg_score:.1f}/100")
             except Exception as e:
-                print(f"\n⚠️ Ortalama puan hesaplanamadı: {e}")
+                safe_print(f"\n⚠️ Ortalama puan hesaplanamadı: {e}")
 
             # OS dağılımı
             if 'os' in df.columns:
-                print(f"\n💻 İşletim Sistemi:")
+                safe_print(f"\n💻 İşletim Sistemi:")
                 os_counts = df['os'].value_counts()
                 for os, count in os_counts.items():
-                    print(f"  • {os}: {count}")
+                    safe_print(f"  • {os}: {count}")
 
             # Örnek kayıtlar
-            print(f"\n📝 Örnek Kayıtlar (İlk 2):")
+            safe_print(f"\n📝 Örnek Kayıtlar (İlk 2):")
             sample_cols = ['name', 'price', 'cpu', 'gpu', 'ram']
             available = [c for c in sample_cols if c in df.columns]
             for i, row in df[available].head(2).iterrows():
-                print(f"\n  [{i + 1}]")
+                safe_print(f"\n  [{i + 1}]")
                 for col in available:
                     val = row[col]
                     if col == 'name':
-                        print(f"    {col}: {str(val)[:50]}...")
+                        safe_print(f"    {col}: {str(val)[:50]}...")
                     else:
-                        print(f"    {col}: {val}")
+                        safe_print(f"    {col}: {val}")
 
         except Exception as e:
-            print(f"❌ Okuma hatası: {e}")
+            safe_print(f"❌ Okuma hatası: {e}")
 
-    print(f"\n{'=' * 60}")
+    safe_print(f"\n{'=' * 60}")
 
 def main():
     import argparse
@@ -1123,9 +1125,9 @@ def main():
                         help='Serbest metin (akıllı) modu varsayılan olsun')
     args = parser.parse_args()
 
-    print("=" * 60)
-    print("🚀 GELİŞTİRİLMİŞ LAPTOP ÖNERİ SİSTEMİ v2.0")
-    print("=" * 60)
+    safe_print("=" * 60)
+    safe_print("🚀 GELİŞTİRİLMİŞ LAPTOP ÖNERİ SİSTEMİ v2.0")
+    safe_print("=" * 60)
 
     # Debug modu
     global preferences
@@ -1146,21 +1148,21 @@ def main():
 
     # Ana döngü
     while True:
-        print("\n" + "=" * 60)
-        print("ANA MENÜ")
-        print("=" * 60)
-        print("1. 🎯 Laptop önerisi al (klasik soru-cevap)")
-        print("2. 🤖 Laptop önerisi al (serbest metin / akıllı)")
-        print("3. 📊 Veri durumunu incele")
-        print("4. 📋 Scraper verilerini ayrı ayrı incele")  # YENİ
-        print("5. 💾 Veriyi CSV olarak kaydet")
-        print("6. 🔄 Veriyi güncelle (Scraper çalıştır)")
-        print("7. 🔍 Debug modunu aç/kapa")
-        print("8. 🧪 Simülasyonu aktifleştir (100 senaryo)")
-        print("9. ❌ Çıkış")
+        safe_print("\n" + "=" * 60)
+        safe_print("ANA MENÜ")
+        safe_print("=" * 60)
+        safe_print("1. 🎯 Laptop önerisi al (klasik soru-cevap)")
+        safe_print("2. 🤖 Laptop önerisi al (serbest metin / akıllı)")
+        safe_print("3. 📊 Veri durumunu incele")
+        safe_print("4. 📋 Scraper verilerini ayrı ayrı incele")  # YENİ
+        safe_print("5. 💾 Veriyi CSV olarak kaydet")
+        safe_print("6. 🔄 Veriyi güncelle (Scraper çalıştır)")
+        safe_print("7. 🔍 Debug modunu aç/kapa")
+        safe_print("8. 🧪 Simülasyonu aktifleştir (100 senaryo)")
+        safe_print("9. ❌ Çıkış")
 
         if prefer_free_text:
-            print("Not: --nl aktif, serbest metin modu varsayılan.")
+            safe_print("Not: --nl aktif, serbest metin modu varsayılan.")
 
         choice = input("\nSeçiminiz (1-9): ").strip()
         if not choice and prefer_free_text:
@@ -1205,12 +1207,12 @@ def main():
             df = load_data(use_cache=False)
             if df is not None:
                 df = clean_data(df)
-                print("✅ Veriler güncellendi!")
+                safe_print("✅ Veriler güncellendi!")
 
         elif choice == '7':
             preferences['show_breakdown'] = not preferences.get('show_breakdown', False)
             status = "açık" if preferences['show_breakdown'] else "kapalı"
-            print(f"\n🔍 Debug modu {status}")
+            safe_print(f"\n🔍 Debug modu {status}")
             input("\nDevam etmek için Enter'a basın...")
 
         elif choice == '8':
@@ -1218,8 +1220,8 @@ def main():
             input("\nDevam etmek icin Enter'a basin...")
 
         elif choice == '9':
-            print("\n👋 İyi günler!")
+            safe_print("\n👋 İyi günler!")
             break
 
         else:
-            print("\n⚠️ Geçersiz seçim!")
+            safe_print("\n⚠️ Geçersiz seçim!")

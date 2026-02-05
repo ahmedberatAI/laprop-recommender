@@ -16,6 +16,8 @@ from ..config.rules import (
 )
 from ..processing.normalize import sanitize_ram
 from ..processing.read import _get_domain_counts
+from ..utils.console import safe_print
+
 def get_cpu_score(cpu_text):
     """Geliştirilmiş CPU skorlama"""
     if pd.isna(cpu_text):
@@ -647,7 +649,7 @@ def filter_by_usage(df, usage_key, preferences):
 
     # Sonuç çok az kaldıysa, mantıklı bir gevşetme uygula
     if len(filtered) < 5 and len(df) > 5:
-        print(f"⚠️ Filtreleme çok katı ({len(filtered)} ürün kaldı), kriterler gevşetiliyor...")
+        safe_print(f"⚠️ Filtreleme çok katı ({len(filtered)} ürün kaldı), kriterler gevşetiliyor...")
         if usage_key == 'gaming':
             return df[df['gpu_score'] >= 5.0]         # GPU eşiğini 6.0 → 5.0
         elif usage_key == 'portability':
@@ -673,13 +675,13 @@ def get_recommendations(df, preferences, top_n=5):
     ].copy()
 
     if budget_filtered.empty:
-        print("\n❌ Bütçenize uygun laptop bulunamadı!")
+        safe_print("\n❌ Bütçenize uygun laptop bulunamadı!")
         close_options = df[
             (df['price'] >= preferences['min_budget'] * 0.9) &
             (df['price'] <= preferences['max_budget'] * 1.1)
         ]
         if not close_options.empty:
-            print(f"💡 İpucu: Bütçenizi %10 artırıp/azaltırsanız {len(close_options)} seçenek var.")
+            safe_print(f"💡 İpucu: Bütçenizi %10 artırıp/azaltırsanız {len(close_options)} seçenek var.")
         return pd.DataFrame()
 
     # 1.1) Opsiyonel ekran üst sınırı
@@ -706,11 +708,11 @@ def get_recommendations(df, preferences, top_n=5):
         before_cnt = len(filtered)
         filtered = filtered[filtered['gpu_score'] >= min_gpu]
         after_cnt = len(filtered)
-        print(f"🧮 Oyun eşiği uygulanıyor → min gpu_score: {min_gpu:.1f} "
+        safe_print(f"🧮 Oyun eşiği uygulanıyor → min gpu_score: {min_gpu:.1f} "
               f"(kalan: {after_cnt}/{before_cnt})")
         if filtered.empty:
-            print("❌ Seçtiğiniz oyun(lar) için GPU eşiğini karşılayan cihaz bulunamadı.")
-            print("💡 İpucu: Bütçeyi artırmayı veya oyun listesindeki hedefleri yeniden seçmeyi deneyin.")
+            safe_print("❌ Seçtiğiniz oyun(lar) için GPU eşiğini karşılayan cihaz bulunamadı.")
+            safe_print("💡 İpucu: Bütçeyi artırmayı veya oyun listesindeki hedefleri yeniden seçmeyi deneyin.")
             return pd.DataFrame()
 
     # 3) Duplikasyonları temizle
@@ -719,7 +721,7 @@ def get_recommendations(df, preferences, top_n=5):
     filtered = filtered.drop_duplicates(subset=['name', 'price'], keep='first')
 
     if filtered.empty:
-        print("\n❌ Filtrelerden sonra uygun cihaz kalmadı.")
+        safe_print("\n❌ Filtrelerden sonra uygun cihaz kalmadı.")
         return pd.DataFrame()
 
     # Final RAM sanity filter for impossible values (>64GB).
@@ -761,7 +763,7 @@ def get_recommendations(df, preferences, top_n=5):
     if not result_df.empty:
         if 'url' in result_df.columns:
             counts = _get_domain_counts(result_df['url'])
-            print(
+            safe_print(
                 "URL domains: "
                 f"amazon={counts['amazon']}, vatan={counts['vatan']}, incehesap={counts['incehesap']} "
                 f"(total={len(result_df)})"

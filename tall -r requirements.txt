@@ -1,0 +1,163 @@
+warning: in the working copy of 'streamlit_app.py', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/streamlit_app.py b/streamlit_app.py[m
+[1mindex 4ec3973..1cca692 100644[m
+[1m--- a/streamlit_app.py[m
+[1m+++ b/streamlit_app.py[m
+[36m@@ -17,11 +17,12 @@[m [mfrom typing import Iterable, Optional, Tuple[m
+ import pandas as pd[m
+ import streamlit as st[m
+ [m
+[31m-from laprop.config.rules import USAGE_OPTIONS, DEV_PRESETS[m
+[32m+[m[32mfrom laprop.config.rules import USAGE_OPTIONS, DEV_PRESETS, GAMING_TITLE_SCORES[m
+ from laprop.config.settings import DATA_FILES[m
+ from laprop.processing.clean import clean_data[m
+ from laprop.processing.read import _get_domain_counts, load_data[m
+ from laprop.recommend.engine import get_recommendations[m
+[32m+[m[32mfrom laprop.app.cli import normalize_and_complete_preferences[m
+ [m
+ [m
+ SOURCE_OPTIONS = ["amazon", "incehesap", "vatan"][m
+[36m@@ -30,6 +31,12 @@[m [mSOURCE_PATTERNS = {[m
+     "incehesap": "incehesap",[m
+     "vatan": "vatanbilgisayar.com",[m
+ }[m
+[32m+[m[32mFOLLOWUP_KEYS = [[m
+[32m+[m[32m    "fu_gaming_titles",[m
+[32m+[m[32m    "fu_productivity_profile",[m
+[32m+[m[32m    "fu_design_profiles",[m
+[32m+[m[32m    "fu_dev_mode",[m
+[32m+[m[32m][m
+ [m
+ st.set_page_config(page_title="Laprop Recommender", page_icon="💻", layout="wide")[m
+ [m
+[36m@@ -213,10 +220,6 @@[m [musage_label_to_key = {label: key for key, label in usage_items}[m
+ selected_label = st.sidebar.selectbox("Usage preset", usage_labels, index=0)[m
+ selected_key = usage_label_to_key.get(selected_label, "productivity")[m
+ [m
+[31m-dev_mode = None[m
+[31m-if selected_key == "dev":[m
+[31m-    dev_mode = st.sidebar.selectbox("Dev preset", list(DEV_PRESETS.keys()), index=0)[m
+[31m-[m
+ min_price_default, max_price_default = _price_bounds(data_df)[m
+ if min_price_default <= 0 or max_price_default <= 0 or min_price_default == max_price_default:[m
+     min_price_default, max_price_default = 10000, 80000[m
+[36m@@ -257,6 +260,90 @@[m [mif data_df is not None and ("gpu_norm" in _safe_columns(data_df) or "gpu" in _sa[m
+         horizontal=False,[m
+     )[m
+ [m
+[32m+[m[32mst.sidebar.divider()[m
+[32m+[m[32mst.sidebar.subheader("🔎 Kullanıma özel sorular")[m
+[32m+[m[32mif st.sidebar.button("Reset follow-ups"):[m
+[32m+[m[32m    for key in FOLLOWUP_KEYS:[m
+[32m+[m[32m        if key in st.session_state:[m
+[32m+[m[32m            del st.session_state[key][m
+[32m+[m[32m    st.sidebar.success("Follow-up answers reset.")[m
+[32m+[m
+[32m+[m[32mif selected_key == "gaming":[m
+[32m+[m[32m    if "fu_gaming_titles" not in st.session_state:[m
+[32m+[m[32m        st.session_state["fu_gaming_titles"] = [][m
+[32m+[m[32m    game_titles = list(GAMING_TITLE_SCORES.keys())[m
+[32m+[m[32m    st.sidebar.multiselect([m
+[32m+[m[32m        "Oynamak istediğiniz oyunlar",[m
+[32m+[m[32m        options=game_titles,[m
+[32m+[m[32m        default=st.session_state.get("fu_gaming_titles", []),[m
+[32m+[m[32m        key="fu_gaming_titles",[m
+[32m+[m[32m    )[m
+[32m+[m[32m    selected_titles = st.session_state.get("fu_gaming_titles", [])[m
+[32m+[m[32m    if selected_titles:[m
+[32m+[m[32m        needed = max(GAMING_TITLE_SCORES[t] for t in selected_titles)[m
+[32m+[m[32m        threshold = max(6.0, needed)[m
+[32m+[m[32m        st.sidebar.caption(f"GPU eşiği yaklaşık: {threshold:.1f}")[m
+[32m+[m[32m    else:[m
+[32m+[m[32m        st.sidebar.caption("GPU eşiği varsayılan: 6.0")[m
+[32m+[m
+[32m+[m[32melif selected_key == "productivity":[m
+[32m+[m[32m    prod_options = {[m
+[32m+[m[32m        "office": "Ofis işleri / doküman düzenleme / sunum",[m
+[32m+[m[32m        "data": "Veri yoğun işler (Excel, analiz, raporlama)",[m
+[32m+[m[32m        "light_dev": "Hafif yazılım geliştirme",[m
+[32m+[m[32m        "multitask": "Çoklu görev (çok pencere / çok monitör)",[m
+[32m+[m[32m    }[m
+[32m+[m[32m    if "fu_productivity_profile" not in st.session_state:[m
+[32m+[m[32m        st.session_state["fu_productivity_profile"] = "office"[m
+[32m+[m[32m    st.sidebar.selectbox([m
+[32m+[m[32m        "Üretkenlik profili",[m
+[32m+[m[32m        options=list(prod_options.keys()),[m
+[32m+[m[32m        format_func=lambda k: prod_options.get(k, k),[m
+[32m+[m[32m        key="fu_productivity_profile",[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32melif selected_key == "design":[m
+[32m+[m[32m    design_options = {[m
+[32m+[m[32m        "graphic": "Grafik tasarım / fotoğraf (Photoshop, Illustrator, Figma)",[m
+[32m+[m[32m        "video": "Video düzenleme / motion (Premiere, After Effects, DaVinci)",[m
+[32m+[m[32m        "3d": "3D modelleme / render (Blender, Maya, 3ds Max, C4D)",[m
+[32m+[m[32m        "cad": "Mimari / teknik çizim (AutoCAD, Revit, Solidworks)",[m
+[32m+[m[32m    }[m
+[32m+[m[32m    if "fu_design_profiles" not in st.session_state:[m
+[32m+[m[32m        st.session_state["fu_design_profiles"] = ["graphic"][m
+[32m+[m[32m    st.sidebar.multiselect([m
+[32m+[m[32m        "Tasarım alanları",[m
+[32m+[m[32m        options=list(design_options.keys()),[m
+[32m+[m[32m        default=st.session_state.get("fu_design_profiles", []),[m
+[32m+[m[32m        format_func=lambda k: design_options.get(k, k),[m
+[32m+[m[32m        key="fu_design_profiles",[m
+[32m+[m[32m    )[m
+[32m+[m[32m    st.sidebar.caption("Seçimler GPU/RAM ipuçlarını otomatik ayarlar.")[m
+[32m+[m
+[32m+[m[32melif selected_key == "dev":[m
+[32m+[m[32m    dev_labels = {[m
+[32m+[m[32m        "web": "Web/Backend",[m
+[32m+[m[32m        "ml": "Veri/ML",[m
+[32m+[m[32m        "mobile": "Mobil (Android/iOS)",[m
+[32m+[m[32m        "gamedev": "Oyun Motoru / 3D",[m
+[32m+[m[32m        "general": "Genel CS",[m
+[32m+[m[32m    }[m
+[32m+[m[32m    dev_keys = [k for k in dev_labels.keys() if k in DEV_PRESETS][m
+[32m+[m[32m    if not dev_keys:[m
+[32m+[m[32m        dev_keys = list(DEV_PRESETS.keys())[m
+[32m+[m[32m    if "fu_dev_mode" not in st.session_state:[m
+[32m+[m[32m        st.session_state["fu_dev_mode"] = "general" if "general" in dev_keys else dev_keys[0][m
+[32m+[m[32m    st.sidebar.selectbox([m
+[32m+[m[32m        "Yazılım geliştirme profili",[m
+[32m+[m[32m        options=dev_keys,[m
+[32m+[m[32m        format_func=lambda k: dev_labels.get(k, k),[m
+[32m+[m[32m        key="fu_dev_mode",[m
+[32m+[m[32m    )[m
+[32m+[m[32m    if st.session_state.get("fu_dev_mode") == "ml":[m
+[32m+[m[32m        st.sidebar.info("Not: ML için NVIDIA/CUDA uyumu genelde kritik.")[m
+[32m+[m[32melse:[m
+[32m+[m[32m    st.sidebar.info("Bu kullanım türü için ek soru yok.")[m
+[32m+[m
+ st.sidebar.divider()[m
+ st.sidebar.subheader("Output")[m
+ top_n = st.sidebar.slider("Top N", min_value=5, max_value=50, value=10, step=1)[m
+[36m@@ -309,10 +396,26 @@[m [mwith left_col:[m
+                     "usage_key": selected_key,[m
+                     "usage_label": selected_label,[m
+                 }[m
+[31m-                if dev_mode:[m
+[31m-                    preferences["dev_mode"] = dev_mode[m
+[32m+[m[32m                if selected_key == "gaming":[m
+[32m+[m[32m                    preferences["gaming_titles"] = st.session_state.get("fu_gaming_titles", [])[m
+[32m+[m[32m                    if not preferences["gaming_titles"]:[m
+[32m+[m[32m                        preferences["min_gpu_score_required"] = 6.0[m
+[32m+[m[32m                elif selected_key == "productivity":[m
+[32m+[m[32m                    preferences["productivity_profile"] = st.session_state.get([m
+[32m+[m[32m                        "fu_productivity_profile", "office"[m
+[32m+[m[32m                    )[m
+[32m+[m[32m                elif selected_key == "design":[m
+[32m+[m[32m                    preferences["design_profiles"] = st.session_state.get([m
+[32m+[m[32m                        "fu_design_profiles", ["graphic"][m
+[32m+[m[32m                    )[m
+[32m+[m[32m                elif selected_key == "dev":[m
+[32m+[m[32m                    preferences["dev_mode"] = st.session_state.get("fu_dev_mode", "general")[m
+                 if screen_range is not None:[m
+                     preferences["screen_max"] = float(screen_range[1])[m
+[32m+[m[32m                try:[m
+[32m+[m[32m                    preferences = normalize_and_complete_preferences(preferences)[m
+[32m+[m[32m                except Exception:[m
+[32m+[m[32m                    pass[m
+                 results = get_recommendations(filtered, preferences, top_n=int(top_n))[m
+                 st.session_state["results"] = results[m
+                 if results.empty:[m

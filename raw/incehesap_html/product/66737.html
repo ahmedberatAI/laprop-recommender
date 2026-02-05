@@ -111,29 +111,6 @@
         <!-- End Google Tag Manager (noscript) -->
     
     
-    <div class="relative w-full aspect-[640/90] lg:aspect-auto lg:h-16" x-data='{
-            activeKey: 0,
-            bars: [{"id":231,"aciklama":"Gaming Geceleri 2026","url":"\/gaming-geceleri\/","image":"\/resim\/topbars\/6967a0598192d4.37049106_lmhioqnejpfkg.webp","image_expanded":null,"image_mobile":"\/resim\/topbars\/6967a059f24303.27076063_hfjlenimpgqko.webp","image_mobile_expanded":null,"bg":"\/resim\/topbars\/6967a059d76b90.77928746_njklipmhqogef.webp","baslangic_tarihi":"2026-01-23T06:00:00.000000Z","bitis_tarihi":"2026-01-23T23:00:00.000000Z","eklenme_tarihi":"2026-01-14T13:55:37.000000Z","duzenleme_tarihi":"2026-01-23T06:05:16.000000Z","ekleyen_id":301640,"duzenleyen_id":301640,"expandable":null,"test_mode":false,"bar_olmayan_sayfalarda_goster":true,"kategori_id":[],"marka_id":[],"urun_id":[],"keyword":null,"gosterilecek_sayfalar":[],"show_mobil_app":1},{"id":228,"aciklama":"Hesapl\u0131 Ocak Kampanyas\u0131","url":"\/hesapli-ocak","image":"\/resim\/topbars\/69660df3e429e4.84788541_lonipehqfjgkm.webp","image_expanded":null,"image_mobile":"\/resim\/topbars\/69660df4563cf6.80352070_lphmkinoqgefj.webp","image_mobile_expanded":null,"bg":"\/resim\/topbars\/69660f1f6bca12.66607833_klqhgimofepjn.webp","baslangic_tarihi":"2026-01-13T09:00:00.000000Z","bitis_tarihi":"2026-01-31T20:59:00.000000Z","eklenme_tarihi":"2026-01-13T09:18:43.000000Z","duzenleme_tarihi":"2026-01-13T09:23:43.000000Z","ekleyen_id":301640,"duzenleyen_id":301640,"expandable":null,"test_mode":false,"bar_olmayan_sayfalarda_goster":true,"kategori_id":[],"marka_id":[],"urun_id":[],"keyword":null,"gosterilecek_sayfalar":[],"show_mobil_app":0}],
-            init() {
-                setInterval(() => {
-                    if (this.activeKey >= this.bars.length) {
-                        this.activeKey = 0;
-                    } else {
-                        this.activeKey = (this.activeKey + 1) % this.bars.length;
-                    }
-                }, 5000);
-            }
-        }'>
-        <template x-for="(item, key) in bars">
-            <a x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" :style="item.bg ? 'background-image: url('+item.bg+')' : ''" x-show="key == activeKey" :href="item.url" class="absolute w-full flex justify-center aspect-[640/90] lg:aspect-auto" :style="item.css" :title="item.aciklama">
-                <picture>
-                    <source media="(max-width: 1023px)" :srcset="item.image_mobile" width="768" height="90">
-                    <source media="(min-width: 1024px)" :srcset="item.image" width="1903" height="64">
-                    <img :src="item.image" class="object-contain lg:object-none h-full lg:h-16" :alt="item.aciklama">
-                </picture>
-            </a>
-        </template>
-    </div>
 
 <div x-data="{showSearch : false}">
     <div class="relative border-b-gray-300 bg-white lg:border-b">
@@ -397,29 +374,6 @@
 </div>
 
 
-    <div class="relative w-full aspect-[640/90] lg:aspect-auto lg:h-12 " x-data='{
-            activeKey: 0,
-            bars: [{"id":144,"baslik":"Paraf Kart ile Yapaca\u011f\u0131n\u0131z Al\u0131\u015fveri\u015flerde 1500\u20ba e varan ParafPara Pe\u015fin fiyat\u0131na 3 Taksit","icerik_url":"https:\/\/www.incehesap.com\/icerik\/paraf-kart-ile-yapacaginiz-alisverislerde-pesin-fiyatina-3-taksit-ve-1500tl-parafpara\/","banner_default":"\/resim\/banka\/6955094a64e7c0.70193677_lgohijpmkfqen.webp","banner_mobile":"\/resim\/banka\/6955094a916218.55968593_ngkjqeolmpifh.webp","css":"background: #044f93"}],
-            init() {
-                setInterval(() => {
-                    if (this.activeKey >= this.bars.length) {
-                        this.activeKey = 0;
-                    } else {
-                        this.activeKey = (this.activeKey + 1) % this.bars.length;
-                    }
-                }, 12000);
-            }
-        }'>
-        <template x-for="(item, key) in bars">
-            <a x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" x-show="key == activeKey" :href="item.icerik_url" class="absolute w-full flex justify-center" :style="item.css" :title="item.baslik">
-                <picture>
-                    <source media="(max-width: 1023px)" :srcset="item.banner_mobile" width="768" height="90">
-                    <source media="(min-width: 1024px)" :srcset="item.banner_default" width="1903" height="48">
-                    <img :src="item.banner_default" class="object-contain lg:object-none h-full lg:h-12" :alt="item.baslik">
-                </picture>
-            </a>
-        </template>
-    </div>
 
     <main class="bg-top bg-no-repeat relative flex-1" >
 
@@ -461,7 +415,7 @@
 
 <script>
     dataLayer.push({ ecommerce: null });
-    window.dataLayer.push({"event":"view_item","ecommerce":{"currency":"TRY","value":16199,"items":[{"id":66737,"item_id":66737,"item_name":"AMD Ryzen 7 7800X3D 4.20GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202412\/676d1de77918a0.07327168_gqjmolnfepkih_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-7-7800x3d-4-20ghz-8-cekirdek-96mb-onbellek-soket-am5-tray-islemci-fiyati-66737\/","price":16199,"quantity":1,"index":0,"item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"}]}});
+    window.dataLayer.push({"event":"view_item","ecommerce":{"currency":"TRY","value":17869,"items":[{"id":66737,"item_id":66737,"item_name":"AMD Ryzen 7 7800X3D 4.20GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202412\/676d1de77918a0.07327168_gqjmolnfepkih_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-7-7800x3d-4-20ghz-8-cekirdek-96mb-onbellek-soket-am5-tray-islemci-fiyati-66737\/","price":17869,"quantity":1,"index":0,"item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"}]}});
 </script><div class="container space-y-5 pb-5">
     
 
@@ -470,21 +424,21 @@
 
 <div hidden>
     <meta itemprop="priceCurrency" content="TRY" />
-    <meta itemprop="price" content="16199.00" />
+    <meta itemprop="price" content="17869.00" />
     <div itemprop="offers" itemtype="https://schema.org/AggregateOffer" itemscope>
         <link itemprop="itemCondition" href="https://schema.org/NewCondition" />
         <meta itemprop="availability" content="https://schema.org/InStock" />
-        <meta itemprop="lowPrice" content="16199" />
-        <meta itemprop="highPrice" content="19215.96" />
+        <meta itemprop="lowPrice" content="17869" />
+        <meta itemprop="highPrice" content="19280.08" />
         <meta itemprop="priceCurrency" content="TRY" />
         <meta itemprop="offerCount" content="1" />
     </div>
             <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             Rated <span itemprop="ratingValue">5</span>/5
-            based on <span itemprop="reviewCount">121</span> customer reviews
+            based on <span itemprop="reviewCount">122</span> customer reviews
         </div>
     
-    <meta itemprop="description" content="AMD Ryzen 7 7800X3D 4.20GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci Fiyatı : 16,199.00 TRY." />
+    <meta itemprop="description" content="AMD Ryzen 7 7800X3D 4.20GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci Fiyatı : 17,869.00 TRY." />
 
     
             <div itemprop="review" itemtype="https://schema.org/Review" itemscope>
@@ -497,7 +451,7 @@
             </div>
         </div>
     
-            <meta itemprop="gtin14" content="7800X3D" />
+            <meta itemprop="gtin14" content="4477885522112" />
     
             <meta itemprop="sku" content="ACAC4AMD0077" />
     
@@ -510,12 +464,12 @@
 <div>
     <div class="swiper singleSwiperAuto">
         <div class="swiper-wrapper">
-            <div class="swiper-slide [&:nth-child(1n)]:bg-lime-500 [&:nth-child(2n)]:bg-sky-400 [&:nth-child(3n)]:bg-orange-500 text-white font-semibold text-center p-2 lg:p-3 text-xs lg:text-lg">Maximum Karta Peşin Fiyatına 3 Taksit</div><div class="swiper-slide [&:nth-child(1n)]:bg-lime-500 [&:nth-child(2n)]:bg-sky-400 [&:nth-child(3n)]:bg-orange-500 text-white font-semibold text-center p-2 lg:p-3 text-xs lg:text-lg">Paraf Karta Peşin Fiyatına 3 Taksit</div><script>var abtests='749'</script>
+            <div class="swiper-slide [&:nth-child(1n)]:bg-lime-500 [&:nth-child(2n)]:bg-sky-400 [&:nth-child(3n)]:bg-orange-500 text-white font-semibold text-center p-2 lg:p-3 text-xs lg:text-lg">Paraf Karta Peşin Fiyatına 3 Taksit</div><script>var abtests='749'</script>
 	        </div>
     </div>
 
-    <div data-product='{"name":"AMD Ryzen 7 7800X3D 4.20GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci","id":66737,"price":16199,"category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"review_count":121,"rating":4.9339,"tags":"Günün Fırsatı,Çok Satıyor","item_list_name":"Ürün Detay","position":1,"location":null,"event":"product_view"}'
-        data-gaitem='{"id":66737,"item_id":66737,"item_name":"AMD Ryzen 7 7800X3D 4.20GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci","item_brand":"AMD","image":"https://www.incehesap.com/resim/urun/202412/676d1de77918a0.07327168_gqjmolnfepkih_500.webp","url":"https://www.incehesap.com/amd-ryzen-7-7800x3d-4-20ghz-8-cekirdek-96mb-onbellek-soket-am5-tray-islemci-fiyati-66737/","price":16199,"quantity":1,"index":0,"item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"}'
+    <div data-product='{"name":"AMD Ryzen 7 7800X3D 4.20GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci","id":66737,"price":17869,"category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"review_count":122,"rating":4.9344,"tags":"Günün Fırsatı,Çok Satıyor","item_list_name":"Ürün Detay","position":1,"location":null,"event":"product_view"}'
+        data-gaitem='{"id":66737,"item_id":66737,"item_name":"AMD Ryzen 7 7800X3D 4.20GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci","item_brand":"AMD","image":"https://www.incehesap.com/resim/urun/202412/676d1de77918a0.07327168_gqjmolnfepkih_500.webp","url":"https://www.incehesap.com/amd-ryzen-7-7800x3d-4-20ghz-8-cekirdek-96mb-onbellek-soket-am5-tray-islemci-fiyati-66737/","price":17869,"quantity":1,"index":0,"item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"}'
         x-intersect.once="$dispatch('product-shown');"
         class="prod grid grid-cols-1 justify-start gap-x-px border-l border-r border-b drop-shadow-sm lg:grid-cols-2 mb-5 bg-neutral-200" x-data="{
                             id: 66737,
@@ -770,16 +724,16 @@
                     <div class="flex items-end gap-x-3 pt-5">
                         <!-- <span class="font-semibold !leading-none md:text-xl">Tek Çekim / Havale:</span> -->
                         <div class="price whitespace-nowrap text-2xl font-semibold !leading-none tracking-tight text-orange-500 md:text-4xl">
-                            16.199 TL                        </div>
+                            17.869 TL                        </div>
                     </div>
 
                     <!-- taksit -->
                     <div class="text-sm leading-none mt-2">
                                                     <div class="inline-flex items-center">
                                 <img src="/assets/img/card-blue.webp" alt="card">
-                                <p class="ml-2"><span class="font-semibold">1.783 TL</span>'den başlayan taksit <span class="font-semibold cursor-pointer" @click="document.querySelector('#tabs').scrollIntoView( true ); $dispatch('select-tab', 'Ödeme Seçenekleri')">seçenekleri</span></p>
+                                <p class="ml-2"><span class="font-semibold">1.967 TL</span>'den başlayan taksit <span class="font-semibold cursor-pointer" @click="document.querySelector('#tabs').scrollIntoView( true ); $dispatch('select-tab', 'Ödeme Seçenekleri')">seçenekleri</span></p>
                             </div>
-                                                <div>Maximum ve Paraf Karta Peşin Fiyatına 3 Taksit (5.400 TL x 3)</div>
+                                                <div>Maximum ve Paraf Karta Peşin Fiyatına 3 Taksit (5.956 TL x 3)</div>
                     </div>
 
                     <!-- ogrenci indirimi -->
@@ -787,7 +741,7 @@
 
                 <!-- puan -->
                                     <p class="bg-white px-5 leading-tight lg:order-6 text-xs">
-                        Ürünü aldığınızda <span class="font-semibold text-orange-500">134,99 TL</span>
+                        Ürünü aldığınızda <span class="font-semibold text-orange-500">148,91 TL</span>
                         değerinde puan kazanacaksınız
                     </p>
                 
@@ -836,7 +790,7 @@
                 <div class="grid grid-cols-2 gap-3 bg-white xl:grid-cols-4 px-5">
                     <div class="col-span-full bg-gray-50 py-1 inline-flex items-center space-x-2 text-sm font-semibold text-neutral-500">
                                                     <img src="/assets/img/product/rush.webp" alt="kargo">
-                                                <span><span class="text-neutral-700">1 saat 59 dakika</span> içerisinde sipariş ver, en geç 1 gün içinde kargoda!</span>
+                                                <span>Şimdi sipariş ver, en geç 1 gün içinde kargoda!</span>
                     </div>
                                                                         <div class="col-span-2 xl:col-span-2 justify-between flex h-16 items-center justify-center rounded border p-3">
                                 <div>
@@ -938,7 +892,7 @@
                                                                             <svg class="text-amber-400 w-4 fill-current" viewBox="0 0 576 512">
                                             <use href="/assets/img/svg/sprite.svg#star"></use>
                                         </svg>
-                                                                        <span class="px-3 text-sm font-semibold text-neutral-500">Yorum (121)</span>
+                                                                        <span class="px-3 text-sm font-semibold text-neutral-500">Yorum (122)</span>
                                 </button>
                                 <button @click='$dispatch("show-review-modal", {"status":false,"title":"Giriş yapın","text":"Yorum yapabilmek için giriş yapmanız gerekli.","icon":"error"})' class="px-3 text-sm font-semibold text-neutral-500 hover:text-orange-500">
                                     Yorum yap                                </button>
@@ -1130,7 +1084,7 @@
                                     </tr>
                                                                     <tr>
                                         <th class="text-sm lg:text-base w-28 lg:w-48">Bellek Türleri</th>
-                                        <td class="text-sm lg:text-base break-all">DDR5 5200MHz, DDR4 3600MHz</td>
+                                        <td class="text-sm lg:text-base break-all">DDR4 3600MHz, DDR5 5200MHz</td>
                                     </tr>
                                                                     <tr>
                                         <th class="text-sm lg:text-base w-28 lg:w-48">Max. Bellek Boyutu</th>
@@ -1222,7 +1176,7 @@
                                     </tr>
                                                                     <tr>
                                         <th class="text-sm lg:text-base w-28 lg:w-48">Bellek Türleri</th>
-                                        <td class="text-sm lg:text-base break-all">DDR5 5200MHz, DDR4 3600MHz</td>
+                                        <td class="text-sm lg:text-base break-all">DDR4 3600MHz, DDR5 5200MHz</td>
                                     </tr>
                                                                     <tr>
                                         <th class="text-sm lg:text-base w-28 lg:w-48">Max. Bellek Boyutu</th>
@@ -1253,8 +1207,8 @@
     <div x-data='{
         selectedTurIndex: 0,
         turler: [
-            {"adi": "Bireysel", kartlar: [{"color":"#FFB71B","logo":"axess-light","kart_adi":"Axess","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":16199,"taksit_fiyat":16199},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":17161.775611823286,"taksit_fiyat":8580.887805911643},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":17508.646779074796,"taksit_fiyat":5836.215593024932},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":17869.829012686158,"taksit_fiyat":4467.457253171539},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":18244.171640950557,"taksit_fiyat":3648.8343281901116},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":18636.677404509894,"taksit_fiyat":3106.112900751649},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":19046.44326866549,"taksit_fiyat":2720.920466952213},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":19474.633325318588,"taksit_fiyat":2434.3291656648234},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":19922.518755380643,"taksit_fiyat":2213.6131950422937},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":20391.49043303122,"taksit_fiyat":2039.149043303122},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":20883.073353100423,"taksit_fiyat":1898.4612139182202},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":21398.94319682959,"taksit_fiyat":1783.2452664024659}}},{"color":"#782A90","logo":"world-light","kart_adi":"Worldcard-Yap\u0131kredi","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":16199,"taksit_fiyat":16199},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":17179.976667727224,"taksit_fiyat":8589.988333863612},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":17527.591430426313,"taksit_fiyat":5842.530476808771},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":17889.56377691883,"taksit_fiyat":4472.390944229707},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":18264.74236103281,"taksit_fiyat":3652.948472206562},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":18658.143284957383,"taksit_fiyat":3109.690547492897},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":19068.864037669216,"taksit_fiyat":2724.123433952745},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":19498.07414540202,"taksit_fiyat":2437.2592681752526},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":19947.050855805934,"taksit_fiyat":2216.338983978437},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":20417.191832619108,"taksit_fiyat":2041.7191832619108},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":20910.02968891184,"taksit_fiyat":1900.9117899010764},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":21427.248677248677,"taksit_fiyat":1785.6040564373898}}},{"color":"#EB008B","logo":"maximum-light","kart_adi":"Maximum","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":16199,"taksit_fiyat":16199},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":17083.948534064544,"taksit_fiyat":8541.974267032272},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":16199,"taksit_fiyat":5399.666666666667},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":17793.277680140596,"taksit_fiyat":4448.319420035149},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":18168.461193360254,"taksit_fiyat":3633.6922386720507},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":18587.492828456685,"taksit_fiyat":3097.9154714094475},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":19001.759530791787,"taksit_fiyat":2714.537075827398},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":19458.258258258258,"taksit_fiyat":2432.2822822822823},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":19910.275319567354,"taksit_fiyat":2212.2528132852617}}},{"color":"#00633a","logo":"bonus-light","kart_adi":"Bonus","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":16199,"taksit_fiyat":16199},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":17170.871316514735,"taksit_fiyat":8585.435658257367},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":17365.994854202403,"taksit_fiyat":5788.664951400801},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":17879.690949227373,"taksit_fiyat":4469.922737306843},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":18254.451205769667,"taksit_fiyat":3650.8902411539334},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":18387.060158910328,"taksit_fiyat":3064.510026485055},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":19057.64705882353,"taksit_fiyat":2722.5210084033615},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":19486.34668591363,"taksit_fiyat":2435.793335739204},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":19934.777258183607,"taksit_fiyat":2214.9752509092896}}},{"color":"#1665A1","logo":"qnb-light","kart_adi":"CardFinans","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":16199,"taksit_fiyat":16199},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":17161.775611823286,"taksit_fiyat":8580.887805911643},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":17508.646779074796,"taksit_fiyat":5836.215593024932},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":17869.829012686158,"taksit_fiyat":4467.457253171539},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":18244.171640950557,"taksit_fiyat":3648.8343281901116},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":18636.677404509894,"taksit_fiyat":3106.112900751649},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":19046.44326866549,"taksit_fiyat":2720.920466952213},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":19474.633325318588,"taksit_fiyat":2434.3291656648234},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":19922.518755380643,"taksit_fiyat":2213.6131950422937},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":20391.49043303122,"taksit_fiyat":2039.149043303122},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":20883.073353100423,"taksit_fiyat":1898.4612139182202},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":21398.94319682959,"taksit_fiyat":1783.2452664024659}}},{"color":"#EC6608","logo":"advantage-light","kart_adi":"Advantage","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":16199,"taksit_fiyat":16199},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":17161.775611823286,"taksit_fiyat":8580.887805911643},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":17508.646779074796,"taksit_fiyat":5836.215593024932},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":17869.829012686158,"taksit_fiyat":4467.457253171539},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":18244.171640950557,"taksit_fiyat":3648.8343281901116},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":18636.677404509894,"taksit_fiyat":3106.112900751649},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":19046.44326866549,"taksit_fiyat":2720.920466952213},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":19474.633325318588,"taksit_fiyat":2434.3291656648234},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":19922.518755380643,"taksit_fiyat":2213.6131950422937},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":20391.49043303122,"taksit_fiyat":2039.149043303122},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":20883.073353100423,"taksit_fiyat":1898.4612139182202},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":21398.94319682959,"taksit_fiyat":1783.2452664024659}}},{"color":"#00B1DD","logo":"paraf-light","kart_adi":"Paraf","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":16199,"taksit_fiyat":16199},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":17100.17945740526,"taksit_fiyat":8550.08972870263},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":16199,"taksit_fiyat":5399.666666666667},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":17806.969330548534,"taksit_fiyat":4451.742332637134},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":18182.73655853631,"taksit_fiyat":3636.5473117072625},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":18574.704735695446,"taksit_fiyat":3095.7841226159076},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":18983.944685339273,"taksit_fiyat":2711.9920979056105},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":19413.950143815913,"taksit_fiyat":2426.743767976989},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":19861.451692005885,"taksit_fiyat":2206.8279657784315}}},{"color":"#E11931","logo":"bankkart-light","kart_adi":"Bankkart Combo","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":16199,"taksit_fiyat":16199},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":17051.578947368424,"taksit_fiyat":8525.789473684212},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":17352.972683449385,"taksit_fiyat":5784.324227816462},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":17669.066317626526,"taksit_fiyat":4417.2665794066315},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":17994.890024439013,"taksit_fiyat":3598.978004887803},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":18343.335975540707,"taksit_fiyat":3057.222662590118},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":18686.12296689353,"taksit_fiyat":2669.4461381276474},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":19062.13226641563,"taksit_fiyat":2382.7665333019536},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":19432.581573896354,"taksit_fiyat":2159.175730432928}}},{"color":"#00633a","logo":"kuveyt-light","kart_adi":"Sa\u011flam Kart","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":16199,"taksit_fiyat":16199},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":17078.545071164997,"taksit_fiyat":8539.272535582499},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":17395.833333333332,"taksit_fiyat":5798.61111111111},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":17721.255880100645,"taksit_fiyat":4430.313970025161},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":18063.113291703834,"taksit_fiyat":3612.622658340767},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":18414.23212458793,"taksit_fiyat":3069.0386874313213},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":18783.627087198514,"taksit_fiyat":2683.3752981712164},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":19163.61055246658,"taksit_fiyat":2395.4513190583225},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":19564.009661835746,"taksit_fiyat":2173.7788513150826}}}]},
-            {"adi": "Ticari", kartlar: [{"color":"#00633a","logo":"bonus-light","kart_adi":"Garanti Miles TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":16199,"taksit_fiyat":16199},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":17170.871316514735,"taksit_fiyat":8585.435658257367},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":17365.994854202403,"taksit_fiyat":5788.664951400801},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":17879.690949227373,"taksit_fiyat":4469.922737306843}}},{"color":"#00633a","logo":"kuveyt-light","kart_adi":"Kuveyt T\u00fcrk (TCR)","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":16199,"taksit_fiyat":16199},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":17078.545071164997,"taksit_fiyat":8539.272535582499},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":17395.833333333332,"taksit_fiyat":5798.61111111111},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":17721.255880100645,"taksit_fiyat":4430.313970025161},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":18063.113291703834,"taksit_fiyat":3612.622658340767},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":18414.23212458793,"taksit_fiyat":3069.0386874313213},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":18783.627087198514,"taksit_fiyat":2683.3752981712164},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":19163.61055246658,"taksit_fiyat":2395.4513190583225},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":19564.009661835746,"taksit_fiyat":2173.7788513150826},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":19976.56924404982,"taksit_fiyat":1997.656924404982},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":20412.046370967742,"taksit_fiyat":1855.6405791788857},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":20861.558274307794,"taksit_fiyat":1738.4631895256496}}},{"color":"#EB008B","logo":"maximum-light","kart_adi":"Maximum TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":16199,"taksit_fiyat":16199},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":17083.948534064544,"taksit_fiyat":8541.974267032272},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":16199,"taksit_fiyat":5399.666666666667},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":17793.277680140596,"taksit_fiyat":4448.319420035149},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":18168.461193360254,"taksit_fiyat":3633.6922386720507},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":18587.492828456685,"taksit_fiyat":3097.9154714094475}}},{"color":"#00B1DD","logo":"paraf-light","kart_adi":"Paraf TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":16199,"taksit_fiyat":16199},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":17100.17945740526,"taksit_fiyat":8550.08972870263},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":16199,"taksit_fiyat":5399.666666666667},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":17806.969330548534,"taksit_fiyat":4451.742332637134},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":18182.73655853631,"taksit_fiyat":3636.5473117072625},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":18574.704735695446,"taksit_fiyat":3095.7841226159076},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":18983.944685339273,"taksit_fiyat":2711.9920979056105},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":19413.950143815913,"taksit_fiyat":2426.743767976989}}},{"color":"#1665A1","logo":"qnb-light","kart_adi":"CardFinans TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":16199,"taksit_fiyat":16199},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":17161.775611823286,"taksit_fiyat":8580.887805911643},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":17508.646779074796,"taksit_fiyat":5836.215593024932},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":17869.829012686158,"taksit_fiyat":4467.457253171539},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":18244.171640950557,"taksit_fiyat":3648.8343281901116},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":18636.677404509894,"taksit_fiyat":3106.112900751649}}},{"color":"#EC6608","logo":"advantage-light","kart_adi":"Advantage TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":16199,"taksit_fiyat":16199},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":17161.775611823286,"taksit_fiyat":8580.887805911643},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":17508.646779074796,"taksit_fiyat":5836.215593024932},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":17869.829012686158,"taksit_fiyat":4467.457253171539},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":18244.171640950557,"taksit_fiyat":3648.8343281901116},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":18636.677404509894,"taksit_fiyat":3106.112900751649}}},{"color":"#E11931","logo":"bankkart-light","kart_adi":"Bankkart Combo TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":16199,"taksit_fiyat":16199},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":17051.578947368424,"taksit_fiyat":8525.789473684212},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":17352.972683449385,"taksit_fiyat":5784.324227816462}}}]},
+            {"adi": "Bireysel", kartlar: [{"color":"#FFB71B","logo":"axess-light","kart_adi":"Axess","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":17869,"taksit_fiyat":17869},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":18931.030829537027,"taksit_fiyat":9465.515414768513},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":19313.661910938175,"taksit_fiyat":6437.887303646058},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":19712.07942636514,"taksit_fiyat":4928.019856591285},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":20125.014078161956,"taksit_fiyat":4025.002815632391},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":20557.98435342844,"taksit_fiyat":3426.3307255714067},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":21009.994121105232,"taksit_fiyat":3001.4277315864615},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":21482.327482567925,"taksit_fiyat":2685.2909353209907},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":21976.386668306484,"taksit_fiyat":2441.8207409229426},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":22493.70594159114,"taksit_fiyat":2249.370594159114},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":23035.96751321387,"taksit_fiyat":2094.1788648376246},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":23605.019815059444,"taksit_fiyat":1967.084984588287}}},{"color":"#782A90","logo":"world-light","kart_adi":"Worldcard-Yap\u0131kredi","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":17869,"taksit_fiyat":17869},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":18951.108282956837,"taksit_fiyat":9475.554141478418},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":19334.559619130057,"taksit_fiyat":6444.853206376686},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":19733.84870237438,"taksit_fiyat":4933.462175593595},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":20147.70549103619,"taksit_fiyat":4029.541098207238},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":20581.66321124165,"taksit_fiyat":3430.277201873608},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":21034.72630959388,"taksit_fiyat":3004.9609013705544},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":21508.184882041405,"taksit_fiyat":2688.5231102551757},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":22003.447851249846,"taksit_fiyat":2444.827539027761},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":22522.056970002523,"taksit_fiyat":2252.2056970002523},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":23065.702852717182,"taksit_fiyat":2096.8820775197437},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":23636.243386243386,"taksit_fiyat":1969.6869488536156}}},{"color":"#EB008B","logo":"maximum-light","kart_adi":"Maximum","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":17869,"taksit_fiyat":17869},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":18845.180341700063,"taksit_fiyat":9422.590170850031},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":17869,"taksit_fiyat":5956.333333333333},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":19627.636203866434,"taksit_fiyat":4906.909050966608},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":20041.498429789146,"taksit_fiyat":4008.2996859578293},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":20503.729202524384,"taksit_fiyat":3417.288200420731},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":20960.703812316715,"taksit_fiyat":2994.386258902388},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":21464.264264264264,"taksit_fiyat":2683.033033033033},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":21962.881022615536,"taksit_fiyat":2440.3201136239486}}},{"color":"#00633a","logo":"bonus-light","kart_adi":"Bonus","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":17869,"taksit_fiyat":17869},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":18941.064235743055,"taksit_fiyat":9470.532117871528},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":19156.30360205832,"taksit_fiyat":6385.43453401944},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":19722.958057395143,"taksit_fiyat":4930.739514348786},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":20136.353391931487,"taksit_fiyat":4027.2706783862973},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":20282.633371169126,"taksit_fiyat":3380.4388951948545},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":21022.352941176472,"taksit_fiyat":3003.1932773109247},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":21495.248406110913,"taksit_fiyat":2686.906050763864},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":21989.908934285013,"taksit_fiyat":2443.323214920557}}},{"color":"#1665A1","logo":"qnb-light","kart_adi":"CardFinans","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":17869,"taksit_fiyat":17869},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":18931.030829537027,"taksit_fiyat":9465.515414768513},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":19313.661910938175,"taksit_fiyat":6437.887303646058},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":19712.07942636514,"taksit_fiyat":4928.019856591285},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":20125.014078161956,"taksit_fiyat":4025.002815632391},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":20557.98435342844,"taksit_fiyat":3426.3307255714067},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":21009.994121105232,"taksit_fiyat":3001.4277315864615},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":21482.327482567925,"taksit_fiyat":2685.2909353209907},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":21976.386668306484,"taksit_fiyat":2441.8207409229426},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":22493.70594159114,"taksit_fiyat":2249.370594159114},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":23035.96751321387,"taksit_fiyat":2094.1788648376246},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":23605.019815059444,"taksit_fiyat":1967.084984588287}}},{"color":"#EC6608","logo":"advantage-light","kart_adi":"Advantage","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":17869,"taksit_fiyat":17869},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":18931.030829537027,"taksit_fiyat":9465.515414768513},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":19313.661910938175,"taksit_fiyat":6437.887303646058},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":19712.07942636514,"taksit_fiyat":4928.019856591285},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":20125.014078161956,"taksit_fiyat":4025.002815632391},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":20557.98435342844,"taksit_fiyat":3426.3307255714067},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":21009.994121105232,"taksit_fiyat":3001.4277315864615},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":21482.327482567925,"taksit_fiyat":2685.2909353209907},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":21976.386668306484,"taksit_fiyat":2441.8207409229426},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":22493.70594159114,"taksit_fiyat":2249.370594159114},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":23035.96751321387,"taksit_fiyat":2094.1788648376246},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":23605.019815059444,"taksit_fiyat":1967.084984588287}}},{"color":"#00B1DD","logo":"paraf-light","kart_adi":"Paraf","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":17869,"taksit_fiyat":17869},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":18863.08455610683,"taksit_fiyat":9431.542278053415},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":17869,"taksit_fiyat":5956.333333333333},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":19642.7393646257,"taksit_fiyat":4910.684841156425},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":20057.245482096754,"taksit_fiyat":4011.449096419351},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":20489.62274968467,"taksit_fiyat":3414.9371249474448},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":20941.052384858784,"taksit_fiyat":2991.5789121226835},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":21415.388302972195,"taksit_fiyat":2676.9235378715243},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":21909.024031387937,"taksit_fiyat":2434.3360034875486}}},{"color":"#E11931","logo":"bankkart-light","kart_adi":"Bankkart Combo","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":17869,"taksit_fiyat":17869},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":18809.473684210527,"taksit_fiyat":9404.736842105263},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":19141.938939475094,"taksit_fiyat":6380.646313158365},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":19490.619546247817,"taksit_fiyat":4872.654886561954},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":19850.033325927572,"taksit_fiyat":3970.0066651855145},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":20234.40154002944,"taksit_fiyat":3372.4002566715735},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":20612.52739647018,"taksit_fiyat":2944.6467709243116},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":21027.300541303837,"taksit_fiyat":2628.4125676629797},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":21435.940499040305,"taksit_fiyat":2381.771166560034}}},{"color":"#00633a","logo":"kuveyt-light","kart_adi":"Sa\u011flam Kart","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":17869,"taksit_fiyat":17869},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":18839.219820769635,"taksit_fiyat":9419.609910384817},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":19189.21821305842,"taksit_fiyat":6396.406071019473},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":19548.18947598731,"taksit_fiyat":4887.047368996828},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":19925.289919714538,"taksit_fiyat":3985.0579839429074},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":20312.606570421733,"taksit_fiyat":3385.434428403622},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":20720.08348794063,"taksit_fiyat":2960.011926848661},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":21139.240506329115,"taksit_fiyat":2642.4050632911394},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":21580.917874396135,"taksit_fiyat":2397.879763821793}}}]},
+            {"adi": "Ticari", kartlar: [{"color":"#00633a","logo":"bonus-light","kart_adi":"Garanti Miles TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":17869,"taksit_fiyat":17869},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":18941.064235743055,"taksit_fiyat":9470.532117871528},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":19156.30360205832,"taksit_fiyat":6385.43453401944},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":19722.958057395143,"taksit_fiyat":4930.739514348786}}},{"color":"#00633a","logo":"kuveyt-light","kart_adi":"Kuveyt T\u00fcrk (TCR)","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":17869,"taksit_fiyat":17869},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":18839.219820769635,"taksit_fiyat":9419.609910384817},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":19189.21821305842,"taksit_fiyat":6396.406071019473},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":19548.18947598731,"taksit_fiyat":4887.047368996828},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":19925.289919714538,"taksit_fiyat":3985.0579839429074},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":20312.606570421733,"taksit_fiyat":3385.434428403622},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":20720.08348794063,"taksit_fiyat":2960.011926848661},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":21139.240506329115,"taksit_fiyat":2642.4050632911394},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":21580.917874396135,"taksit_fiyat":2397.879763821793},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":22036.009372302382,"taksit_fiyat":2203.6009372302383},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":22516.3810483871,"taksit_fiyat":2046.9437316715544},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":23012.234385061172,"taksit_fiyat":1917.6861987550976}}},{"color":"#EB008B","logo":"maximum-light","kart_adi":"Maximum TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":17869,"taksit_fiyat":17869},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":18845.180341700063,"taksit_fiyat":9422.590170850031},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":17869,"taksit_fiyat":5956.333333333333},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":19627.636203866434,"taksit_fiyat":4906.909050966608},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":20041.498429789146,"taksit_fiyat":4008.2996859578293},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":20503.729202524384,"taksit_fiyat":3417.288200420731}}},{"color":"#00B1DD","logo":"paraf-light","kart_adi":"Paraf TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":17869,"taksit_fiyat":17869},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":18863.08455610683,"taksit_fiyat":9431.542278053415},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":17869,"taksit_fiyat":5956.333333333333},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":19642.7393646257,"taksit_fiyat":4910.684841156425},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":20057.245482096754,"taksit_fiyat":4011.449096419351},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":20489.62274968467,"taksit_fiyat":3414.9371249474448},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":20941.052384858784,"taksit_fiyat":2991.5789121226835},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":21415.388302972195,"taksit_fiyat":2676.9235378715243}}},{"color":"#1665A1","logo":"qnb-light","kart_adi":"CardFinans TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":17869,"taksit_fiyat":17869},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":18931.030829537027,"taksit_fiyat":9465.515414768513},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":19313.661910938175,"taksit_fiyat":6437.887303646058},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":19712.07942636514,"taksit_fiyat":4928.019856591285},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":20125.014078161956,"taksit_fiyat":4025.002815632391},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":20557.98435342844,"taksit_fiyat":3426.3307255714067}}},{"color":"#EC6608","logo":"advantage-light","kart_adi":"Advantage TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":17869,"taksit_fiyat":17869},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":18931.030829537027,"taksit_fiyat":9465.515414768513},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":19313.661910938175,"taksit_fiyat":6437.887303646058},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":19712.07942636514,"taksit_fiyat":4928.019856591285},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":20125.014078161956,"taksit_fiyat":4025.002815632391},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":20557.98435342844,"taksit_fiyat":3426.3307255714067}}},{"color":"#E11931","logo":"bankkart-light","kart_adi":"Bankkart Combo TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":17869,"taksit_fiyat":17869},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":18809.473684210527,"taksit_fiyat":9404.736842105263},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":19141.938939475094,"taksit_fiyat":6380.646313158365}}}]},
         ]
     }'>
 
@@ -1283,7 +1237,7 @@
                                 </thead>
                                 <tbody>
                                     <template x-for="taksit in kart.taksitler">
-                                        <tr x-bind:class="(taksit.taksit_sayisi > 1 && Math.round(taksit.toplam_fiyat) == 16199) ? 'font-semibold' : ''">
+                                        <tr x-bind:class="(taksit.taksit_sayisi > 1 && Math.round(taksit.toplam_fiyat) == 17869) ? 'font-semibold' : ''">
                                             <td>
                                                 <span x-text="taksit.taksit_sayisi"></span>
                                                 <span x-text="taksit.arti_taksit ? '+ ' + taksit.arti_taksit : ''"></span>
@@ -1303,7 +1257,7 @@
                     TEK ÇEKİM / HAVALE / EFT
                 </div>
                 <div class="flex flex-1 flex-col items-center justify-center px-5">
-                    <p>16.199 TL</p>
+                    <p>17.869 TL</p>
                     <img src="/assets/img/product/taksit-atm.png" class="object-contain" alt="Tek Çekim">
                 </div>
             </div>
@@ -1693,30 +1647,30 @@
     </p>
 </div> -->        </template>
     </div>
-</div>        <div class="card relative" x-data="{ items: [] }" x-intersect.full.once='$dispatch("viewItemList", {"event":"view_item_list","ecommerce":{"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","items":[{"id":66737,"item_id":66737,"item_name":"AMD Ryzen 7 7800X3D 4.20GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202412\/676d1de77918a0.07327168_gqjmolnfepkih_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-7-7800x3d-4-20ghz-8-cekirdek-96mb-onbellek-soket-am5-tray-islemci-fiyati-66737\/","price":16199,"quantity":1,"index":0,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":76603,"item_id":76603,"item_name":"AMD Ryzen 7 9800X3D 4.70GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202412\/67583ce66022a8.23281091_qpohljnmefikg_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-7-9800x3d-4-70ghz-soket-am5-tray-islemci-fiyati-76603\/","price":22999,"quantity":1,"index":1,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":68806,"item_id":68806,"item_name":"AMD Ryzen 7 5700X 3.40GHz 8 Çekirdek 36MB Önbellek Soket AM4 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202312\/65797dfa3b8212.94403502_fiemplhonqjgk_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-7-5700x-3-40ghz-soket-am4-tray-islemci-fiyati-68806\/","price":8259,"quantity":1,"index":2,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":71627,"item_id":71627,"item_name":"AMD Ryzen 5 5500 3.60GHz (Max 4.2GHz) 6 Çekirdek 16MB Önbellek Soket AM4 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202408\/66b0af9acabfe8.42889878_konjhfqpmgeli_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-5-5500-3-60ghz-soket-am4-tray-islemci-fiyati-71627\/","price":4159,"quantity":1,"index":3,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":79452,"item_id":79452,"item_name":"AMD Ryzen 9 9950X3D 4.30GHz 16 Çekirdek 128MB Önbellek Soket AM5 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202503\/67d195f3edb3f7.59054030_nipkfeoqlmhgj_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-9-9950x3d-4-30ghz-16-cekirdek-128mb-onbellek-soket-am5-tray-islemci-fiyati-79452\/","price":34299,"quantity":1,"index":4,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":74310,"item_id":74310,"item_name":"AMD Ryzen 7 9700X 3.80GHz 8 Çekirdek 32MB Önbellek Soket AM5 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202412\/676d1c7ed37873.68567322_ghlnofmkpjiqe_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-7-9700x-3-80ghz-soket-am5-tray-islemci-fiyati-74310\/","price":13899,"quantity":1,"index":5,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":73976,"item_id":73976,"item_name":"AMD Ryzen 7 5700 3.7GHz (Max. 4.6GHz) 8 Çekirdek 16MB Önbellek Soket AM4 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202407\/66a7869e323f80.96910752_fjmqhlknigoep_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-7-5700-3-70ghz-soket-am4-tray-islemci-fiyati-73976\/","price":6519,"quantity":1,"index":6,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":78649,"item_id":78649,"item_name":"Intel Core Ultra 9 Processor 285K Arrow Lake 3.70 GHz 24 Çekirdek 36MB Önbellek Soket 1851 Tray İşlemci","item_brand":"Intel","image":"https:\/\/www.incehesap.com\/resim\/urun\/202504\/67ee8f62393703.87234058_gmkjheifpqoln_500.webp","url":"https:\/\/www.incehesap.com\/intel-core-ultra-9-processor-285k-arrow-lake-3-70-ghz-24-cekirdek-36mb-onbellek-soket-1851-tray-islemci-fiyati-78649\/","price":35319,"quantity":1,"index":7,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":74414,"item_id":74414,"item_name":"Intel Core i5-14600K 3.50GHz 14 Çekirdek 20MB L3 Önbellek Soket 1700 Tray İşlemci","item_brand":"Intel","image":"https:\/\/www.incehesap.com\/resim\/urun\/202505\/682ed5186717b1.03753195_gioljfenpqmkh_500.webp","url":"https:\/\/www.incehesap.com\/intel-core-i5-14600k-3-50ghz-14-cekirdek-20mb-l3-onbellek-soket-1700-tray-islemci-fiyati-74414\/","price":14649,"quantity":1,"index":8,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":71889,"item_id":71889,"item_name":"Intel Core i5-12400F 2.50GHz (Max 4.4GHz) 6 Çekirdek 18MB L3 Önbellek Soket 1700 Tray İşlemci","item_brand":"Intel","image":"https:\/\/www.incehesap.com\/resim\/urun\/202403\/6606bfffcb3e67.37617305_gqpfhjeonlkmi_500.webp","url":"https:\/\/www.incehesap.com\/intel-core-i5-12400f-2-50ghz-max-4-4ghz-lga-1700-tray-islemci-fiyati-71889\/","price":8099,"quantity":1,"index":9,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"}]}})'>
+</div>        <div class="card relative" x-data="{ items: [] }" x-intersect.full.once='$dispatch("viewItemList", {"event":"view_item_list","ecommerce":{"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","items":[{"id":66737,"item_id":66737,"item_name":"AMD Ryzen 7 7800X3D 4.20GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202412\/676d1de77918a0.07327168_gqjmolnfepkih_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-7-7800x3d-4-20ghz-8-cekirdek-96mb-onbellek-soket-am5-tray-islemci-fiyati-66737\/","price":17869,"quantity":1,"index":0,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":76603,"item_id":76603,"item_name":"AMD Ryzen 7 9800X3D 4.70GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202412\/67583ce66022a8.23281091_qpohljnmefikg_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-7-9800x3d-4-70ghz-soket-am5-tray-islemci-fiyati-76603\/","price":25509,"quantity":1,"index":1,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":68806,"item_id":68806,"item_name":"AMD Ryzen 7 5700X 3.40GHz 8 Çekirdek 36MB Önbellek Soket AM4 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202312\/65797dfa3b8212.94403502_fiemplhonqjgk_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-7-5700x-3-40ghz-soket-am4-tray-islemci-fiyati-68806\/","price":8749,"quantity":1,"index":2,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":74310,"item_id":74310,"item_name":"AMD Ryzen 7 9700X 3.80GHz 8 Çekirdek 32MB Önbellek Soket AM5 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202412\/676d1c7ed37873.68567322_ghlnofmkpjiqe_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-7-9700x-3-80ghz-soket-am5-tray-islemci-fiyati-74310\/","price":15539,"quantity":1,"index":3,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":79452,"item_id":79452,"item_name":"AMD Ryzen 9 9950X3D 4.30GHz 16 Çekirdek 128MB Önbellek Soket AM5 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202503\/67d195f3edb3f7.59054030_nipkfeoqlmhgj_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-9-9950x3d-4-30ghz-16-cekirdek-128mb-onbellek-soket-am5-tray-islemci-fiyati-79452\/","price":37809,"quantity":1,"index":4,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":71627,"item_id":71627,"item_name":"AMD Ryzen 5 5500 3.60GHz (Max 4.2GHz) 6 Çekirdek 16MB Önbellek Soket AM4 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202408\/66b0af9acabfe8.42889878_konjhfqpmgeli_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-5-5500-3-60ghz-soket-am4-tray-islemci-fiyati-71627\/","price":4029,"quantity":1,"index":5,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":73976,"item_id":73976,"item_name":"AMD Ryzen 7 5700 3.7GHz (Max. 4.6GHz) 8 Çekirdek 16MB Önbellek Soket AM4 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202407\/66a7869e323f80.96910752_fjmqhlknigoep_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-7-5700-3-70ghz-soket-am4-tray-islemci-fiyati-73976\/","price":6739,"quantity":1,"index":6,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":85601,"item_id":85601,"item_name":"AMD Ryzen 5 7500X3D 4.0GHz 6 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202511\/69146bda49b083.90602337_omphgjniqfelk_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-5-7500x3d-4-0ghz-6-cekirdek-96mb-onbellek-soket-am5-tray-islemci-fiyati-85601\/","price":13159,"quantity":1,"index":7,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":71889,"item_id":71889,"item_name":"Intel Core i5-12400F 2.50GHz (Max 4.4GHz) 6 Çekirdek 18MB L3 Önbellek Soket 1700 Tray İşlemci","item_brand":"Intel","image":"https:\/\/www.incehesap.com\/resim\/urun\/202403\/6606bfffcb3e67.37617305_gqpfhjeonlkmi_500.webp","url":"https:\/\/www.incehesap.com\/intel-core-i5-12400f-2-50ghz-max-4-4ghz-lga-1700-tray-islemci-fiyati-71889\/","price":6969,"quantity":1,"index":8,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"},{"id":75618,"item_id":75618,"item_name":"AMD Ryzen 5 8400F 4.20GHz (Max 4.70GHz) 6 Çekirdek 16MB Önbellek Soket AM5 Tray İşlemci","item_brand":"AMD","image":"https:\/\/www.incehesap.com\/resim\/urun\/202412\/676d229e3ca518.20611231_ohgmqpkeinflj_500.webp","url":"https:\/\/www.incehesap.com\/amd-ryzen-5-8400f-4-20ghz-soket-am5-tray-fansiz-kutusuz-islemci-fiyati-75618\/","price":5019,"quantity":1,"index":9,"item_list_name":"En Çok Satılan İşlemci Listesi","item_list_id":"en_cok_satilan_islemci_listesi","item_category":"Bilgisayar Bileşenleri","item_category2":"İşlemci"}]}})'>
         <div class="card-title">En Çok Satılan İşlemci Listesi</div>
         <ol class="divide-y">
             
                                 <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">1</span>
                     
-                    <a href="/amd-ryzen-7-7800x3d-4-20ghz-8-cekirdek-96mb-onbellek-soket-am5-tray-islemci-fiyati-66737/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":66737,"name":"AMD Ryzen 7 7800X3D 4.20GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"tags":"Günün Fırsatı,Çok Satıyor","price":16199,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":1}'>
+                    <a href="/amd-ryzen-7-7800x3d-4-20ghz-8-cekirdek-96mb-onbellek-soket-am5-tray-islemci-fiyati-66737/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":66737,"name":"AMD Ryzen 7 7800X3D 4.20GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"tags":"Günün Fırsatı,Çok Satıyor","price":17869,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":1}'>
                         <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202412/676d1de77918a0.07327168_gqjmolnfepkih_cropped_75.webp" alt="AMD Ryzen 7 7800X3D 4.20GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
                             <div class="leading-tight">AMD Ryzen 7 7800X3D 4.20GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">16.199 TL</span>
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">17.869 TL</span>
                         </div>
                     </a>
 
                                             <div class="hidden w-1/5 flex-none lg:block">
                             <div class="flex items-center space-x-3">
                                 <div class="w-full rounded-full bg-neutral-100">
-                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 30%"></div>
+                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 31%"></div>
                                 </div>
                                 <span class="text-sm font-medium text-neutral-500">
-                                    %30                                </span>
+                                    %31                                </span>
                             </div>
                         </div>
                     
@@ -1730,23 +1684,23 @@
                                 <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">2</span>
                     
-                    <a href="/amd-ryzen-7-9800x3d-4-70ghz-soket-am5-tray-islemci-fiyati-76603/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":76603,"name":"AMD Ryzen 7 9800X3D 4.70GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"tags":"Çok Satıyor","price":22999,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":2}'>
+                    <a href="/amd-ryzen-7-9800x3d-4-70ghz-soket-am5-tray-islemci-fiyati-76603/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":76603,"name":"AMD Ryzen 7 9800X3D 4.70GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"tags":"Çok Satıyor","price":25509,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":2}'>
                         <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202412/67583ce66022a8.23281091_qpohljnmefikg_cropped_75.webp" alt="AMD Ryzen 7 9800X3D 4.70GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
                             <div class="leading-tight">AMD Ryzen 7 9800X3D 4.70GHz Soket AM5 Tray İşlemci</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">22.999 TL</span>
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">25.509 TL</span>
                         </div>
                     </a>
 
                                             <div class="hidden w-1/5 flex-none lg:block">
                             <div class="flex items-center space-x-3">
                                 <div class="w-full rounded-full bg-neutral-100">
-                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 23%"></div>
+                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 24%"></div>
                                 </div>
                                 <span class="text-sm font-medium text-neutral-500">
-                                    %23                                </span>
+                                    %24                                </span>
                             </div>
                         </div>
                     
@@ -1760,23 +1714,23 @@
                                 <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">3</span>
                     
-                    <a href="/amd-ryzen-7-5700x-3-40ghz-soket-am4-tray-islemci-fiyati-68806/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":68806,"name":"AMD Ryzen 7 5700X 3.40GHz 8 Çekirdek 36MB Önbellek Soket AM4 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"tags":"","price":8259,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":3}'>
+                    <a href="/amd-ryzen-7-5700x-3-40ghz-soket-am4-tray-islemci-fiyati-68806/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":68806,"name":"AMD Ryzen 7 5700X 3.40GHz 8 Çekirdek 36MB Önbellek Soket AM4 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"tags":"Çok Satıyor","price":8749,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":3}'>
                         <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202312/65797dfa3b8212.94403502_fiemplhonqjgk_cropped_75.webp" alt="AMD Ryzen 7 5700X 3.40GHz 8 Çekirdek 36MB Önbellek Soket AM4 Tray İşlemci" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
                             <div class="leading-tight">AMD Ryzen 7 5700X 3.40GHz Soket AM4 Tray İşlemci</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">8.259 TL</span>
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">8.749 TL</span>
                         </div>
                     </a>
 
                                             <div class="hidden w-1/5 flex-none lg:block">
                             <div class="flex items-center space-x-3">
                                 <div class="w-full rounded-full bg-neutral-100">
-                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 15%"></div>
+                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 16%"></div>
                                 </div>
                                 <span class="text-sm font-medium text-neutral-500">
-                                    %15                                </span>
+                                    %16                                </span>
                             </div>
                         </div>
                     
@@ -1790,29 +1744,29 @@
                                 <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">4</span>
                     
-                    <a href="/amd-ryzen-5-5500-3-60ghz-soket-am4-tray-islemci-fiyati-71627/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":71627,"name":"AMD Ryzen 5 5500 3.60GHz (Max 4.2GHz) 6 Çekirdek 16MB Önbellek Soket AM4 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"tags":"","price":4159,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":4}'>
-                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202408/66b0af9acabfe8.42889878_konjhfqpmgeli_cropped_75.webp" alt="AMD Ryzen 5 5500 3.60GHz (Max 4.2GHz) 6 Çekirdek 16MB Önbellek Soket AM4 Tray İşlemci" width="75" height="75">
+                    <a href="/amd-ryzen-7-9700x-3-80ghz-soket-am5-tray-islemci-fiyati-74310/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":74310,"name":"AMD Ryzen 7 9700X 3.80GHz 8 Çekirdek 32MB Önbellek Soket AM5 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"tags":"Çok Satıyor","price":15539,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":4}'>
+                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202412/676d1c7ed37873.68567322_ghlnofmkpjiqe_cropped_75.webp" alt="AMD Ryzen 7 9700X 3.80GHz 8 Çekirdek 32MB Önbellek Soket AM5 Tray İşlemci" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
-                            <div class="leading-tight">AMD Ryzen 5 5500 3.60GHz Soket AM4 Tray İşlemci</div>
+                            <div class="leading-tight">AMD Ryzen 7 9700X 3.80GHz Soket AM5 Tray İşlemci</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">4.159 TL</span>
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">15.539 TL</span>
                         </div>
                     </a>
 
                                             <div class="hidden w-1/5 flex-none lg:block">
                             <div class="flex items-center space-x-3">
                                 <div class="w-full rounded-full bg-neutral-100">
-                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 9%"></div>
+                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 7%"></div>
                                 </div>
                                 <span class="text-sm font-medium text-neutral-500">
-                                    %9                                </span>
+                                    %7                                </span>
                             </div>
                         </div>
                     
                                             <div class="hidden w-12 flex-none text-center md:inline-block">
                             <label class="inline-flex items-center" aria-label="Karşılaştır">
-                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('71627')" value="71627" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
+                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('74310')" value="74310" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
                             </label>
                         </div>
                                     </li>
@@ -1820,13 +1774,13 @@
                                 <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">5</span>
                     
-                    <a href="/amd-ryzen-9-9950x3d-4-30ghz-16-cekirdek-128mb-onbellek-soket-am5-tray-islemci-fiyati-79452/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":79452,"name":"AMD Ryzen 9 9950X3D 4.30GHz 16 Çekirdek 128MB Önbellek Soket AM5 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"tags":"Çok Satıyor","price":34299,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":5}'>
+                    <a href="/amd-ryzen-9-9950x3d-4-30ghz-16-cekirdek-128mb-onbellek-soket-am5-tray-islemci-fiyati-79452/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":79452,"name":"AMD Ryzen 9 9950X3D 4.30GHz 16 Çekirdek 128MB Önbellek Soket AM5 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"tags":"Çok Satıyor","price":37809,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":5}'>
                         <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202503/67d195f3edb3f7.59054030_nipkfeoqlmhgj_cropped_75.webp" alt="AMD Ryzen 9 9950X3D 4.30GHz 16 Çekirdek 128MB Önbellek Soket AM5 Tray İşlemci" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
                             <div class="leading-tight">AMD Ryzen 9 9950X3D 4.30GHz 16 Çekirdek 128MB Önbellek Soket AM5 Tray İşlemci</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">34.299 TL</span>
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">37.809 TL</span>
                         </div>
                     </a>
 
@@ -1850,29 +1804,29 @@
                                 <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">6</span>
                     
-                    <a href="/amd-ryzen-7-9700x-3-80ghz-soket-am5-tray-islemci-fiyati-74310/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":74310,"name":"AMD Ryzen 7 9700X 3.80GHz 8 Çekirdek 32MB Önbellek Soket AM5 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"tags":"","price":13899,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":6}'>
-                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202412/676d1c7ed37873.68567322_ghlnofmkpjiqe_cropped_75.webp" alt="AMD Ryzen 7 9700X 3.80GHz 8 Çekirdek 32MB Önbellek Soket AM5 Tray İşlemci" width="75" height="75">
+                    <a href="/amd-ryzen-5-5500-3-60ghz-soket-am4-tray-islemci-fiyati-71627/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":71627,"name":"AMD Ryzen 5 5500 3.60GHz (Max 4.2GHz) 6 Çekirdek 16MB Önbellek Soket AM4 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"tags":"","price":4029,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":6}'>
+                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202408/66b0af9acabfe8.42889878_konjhfqpmgeli_cropped_75.webp" alt="AMD Ryzen 5 5500 3.60GHz (Max 4.2GHz) 6 Çekirdek 16MB Önbellek Soket AM4 Tray İşlemci" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
-                            <div class="leading-tight">AMD Ryzen 7 9700X 3.80GHz Soket AM5 Tray İşlemci</div>
+                            <div class="leading-tight">AMD Ryzen 5 5500 3.60GHz Soket AM4 Tray İşlemci</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">13.899 TL</span>
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">4.029 TL</span>
                         </div>
                     </a>
 
                                             <div class="hidden w-1/5 flex-none lg:block">
                             <div class="flex items-center space-x-3">
                                 <div class="w-full rounded-full bg-neutral-100">
-                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 5%"></div>
+                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 4%"></div>
                                 </div>
                                 <span class="text-sm font-medium text-neutral-500">
-                                    %5                                </span>
+                                    %4                                </span>
                             </div>
                         </div>
                     
                                             <div class="hidden w-12 flex-none text-center md:inline-block">
                             <label class="inline-flex items-center" aria-label="Karşılaştır">
-                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('74310')" value="74310" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
+                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('71627')" value="71627" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
                             </label>
                         </div>
                                     </li>
@@ -1880,13 +1834,13 @@
                                 <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">7</span>
                     
-                    <a href="/amd-ryzen-7-5700-3-70ghz-soket-am4-tray-islemci-fiyati-73976/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":73976,"name":"AMD Ryzen 7 5700 3.7GHz (Max. 4.6GHz) 8 Çekirdek 16MB Önbellek Soket AM4 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"tags":"","price":6519,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":7}'>
+                    <a href="/amd-ryzen-7-5700-3-70ghz-soket-am4-tray-islemci-fiyati-73976/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":73976,"name":"AMD Ryzen 7 5700 3.7GHz (Max. 4.6GHz) 8 Çekirdek 16MB Önbellek Soket AM4 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"tags":"","price":6739,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":7}'>
                         <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202407/66a7869e323f80.96910752_fjmqhlknigoep_cropped_75.webp" alt="AMD Ryzen 7 5700 3.7GHz (Max. 4.6GHz) 8 Çekirdek 16MB Önbellek Soket AM4 Tray İşlemci" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
                             <div class="leading-tight">AMD Ryzen 7 5700 3.70GHz Soket AM4 Tray İşlemci</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">6.519 TL</span>
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">6.739 TL</span>
                         </div>
                     </a>
 
@@ -1910,29 +1864,29 @@
                                 <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">8</span>
                     
-                    <a href="/intel-core-ultra-9-processor-285k-arrow-lake-3-70-ghz-24-cekirdek-36mb-onbellek-soket-1851-tray-islemci-fiyati-78649/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":78649,"name":"Intel Core Ultra 9 Processor 285K Arrow Lake 3.70 GHz 24 Çekirdek 36MB Önbellek Soket 1851 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"Intel","brand_id":58,"tags":"Çok Satıyor","price":35319,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":8}'>
-                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202504/67ee8f62393703.87234058_gmkjheifpqoln_cropped_75.webp" alt="Intel Core Ultra 9 Processor 285K Arrow Lake 3.70 GHz 24 Çekirdek 36MB Önbellek Soket 1851 Tray İşlemci" width="75" height="75">
+                    <a href="/amd-ryzen-5-7500x3d-4-0ghz-6-cekirdek-96mb-onbellek-soket-am5-tray-islemci-fiyati-85601/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":85601,"name":"AMD Ryzen 5 7500X3D 4.0GHz 6 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"tags":"","price":13159,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":8}'>
+                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202511/69146bda49b083.90602337_omphgjniqfelk_cropped_75.webp" alt="AMD Ryzen 5 7500X3D 4.0GHz 6 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
-                            <div class="leading-tight">Intel Core Ultra 9 Processor 285K Arrow Lake 3.70 GHz 24 Çekirdek 36MB Önbellek Soket 1851 Tray İşlemci</div>
+                            <div class="leading-tight">AMD Ryzen 5 7500X3D 4.0GHz 6 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">35.319 TL</span>
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">13.159 TL</span>
                         </div>
                     </a>
 
                                             <div class="hidden w-1/5 flex-none lg:block">
                             <div class="flex items-center space-x-3">
                                 <div class="w-full rounded-full bg-neutral-100">
-                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 4%"></div>
+                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 3%"></div>
                                 </div>
                                 <span class="text-sm font-medium text-neutral-500">
-                                    %4                                </span>
+                                    %3                                </span>
                             </div>
                         </div>
                     
                                             <div class="hidden w-12 flex-none text-center md:inline-block">
                             <label class="inline-flex items-center" aria-label="Karşılaştır">
-                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('78649')" value="78649" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
+                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('85601')" value="85601" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
                             </label>
                         </div>
                                     </li>
@@ -1940,29 +1894,29 @@
                                 <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">9</span>
                     
-                    <a href="/intel-core-i5-14600k-3-50ghz-14-cekirdek-20mb-l3-onbellek-soket-1700-tray-islemci-fiyati-74414/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":74414,"name":"Intel Core i5-14600K 3.50GHz 14 Çekirdek 20MB L3 Önbellek Soket 1700 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"Intel","brand_id":58,"tags":"","price":14649,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":9}'>
-                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202505/682ed5186717b1.03753195_gioljfenpqmkh_cropped_75.webp" alt="Intel Core i5-14600K 3.50GHz 14 Çekirdek 20MB L3 Önbellek Soket 1700 Tray İşlemci" width="75" height="75">
+                    <a href="/intel-core-i5-12400f-2-50ghz-max-4-4ghz-lga-1700-tray-islemci-fiyati-71889/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":71889,"name":"Intel Core i5-12400F 2.50GHz (Max 4.4GHz) 6 Çekirdek 18MB L3 Önbellek Soket 1700 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"Intel","brand_id":58,"tags":"","price":6969,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":9}'>
+                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202403/6606bfffcb3e67.37617305_gqpfhjeonlkmi_cropped_75.webp" alt="Intel Core i5-12400F 2.50GHz (Max 4.4GHz) 6 Çekirdek 18MB L3 Önbellek Soket 1700 Tray İşlemci" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
-                            <div class="leading-tight">Intel Core i5-14600K 3.50GHz 14 Çekirdek 20MB L3 Önbellek Soket 1700 Tray İşlemci</div>
+                            <div class="leading-tight">Intel Core i5-12400F 2.50GHz (Max 4.4GHz) LGA 1700 Tray İşlemci</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">14.649 TL</span>
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">6.969 TL</span>
                         </div>
                     </a>
 
                                             <div class="hidden w-1/5 flex-none lg:block">
                             <div class="flex items-center space-x-3">
                                 <div class="w-full rounded-full bg-neutral-100">
-                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 2%"></div>
+                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 3%"></div>
                                 </div>
                                 <span class="text-sm font-medium text-neutral-500">
-                                    %2                                </span>
+                                    %3                                </span>
                             </div>
                         </div>
                     
                                             <div class="hidden w-12 flex-none text-center md:inline-block">
                             <label class="inline-flex items-center" aria-label="Karşılaştır">
-                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('74414')" value="74414" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
+                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('71889')" value="71889" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
                             </label>
                         </div>
                                     </li>
@@ -1970,13 +1924,13 @@
                                 <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">10</span>
                     
-                    <a href="/intel-core-i5-12400f-2-50ghz-max-4-4ghz-lga-1700-tray-islemci-fiyati-71889/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":71889,"name":"Intel Core i5-12400F 2.50GHz (Max 4.4GHz) 6 Çekirdek 18MB L3 Önbellek Soket 1700 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"Intel","brand_id":58,"tags":"","price":8099,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":10}'>
-                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202403/6606bfffcb3e67.37617305_gqpfhjeonlkmi_cropped_75.webp" alt="Intel Core i5-12400F 2.50GHz (Max 4.4GHz) 6 Çekirdek 18MB L3 Önbellek Soket 1700 Tray İşlemci" width="75" height="75">
+                    <a href="/amd-ryzen-5-8400f-4-20ghz-soket-am5-tray-fansiz-kutusuz-islemci-fiyati-75618/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":75618,"name":"AMD Ryzen 5 8400F 4.20GHz (Max 4.70GHz) 6 Çekirdek 16MB Önbellek Soket AM5 Tray İşlemci","category":"İşlemci","category_id":783,"brand":"AMD","brand_id":11,"tags":"","price":5019,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan İşlemci Listesi","position":10}'>
+                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202412/676d229e3ca518.20611231_ohgmqpkeinflj_cropped_75.webp" alt="AMD Ryzen 5 8400F 4.20GHz (Max 4.70GHz) 6 Çekirdek 16MB Önbellek Soket AM5 Tray İşlemci" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
-                            <div class="leading-tight">Intel Core i5-12400F 2.50GHz (Max 4.4GHz) LGA 1700 Tray İşlemci</div>
+                            <div class="leading-tight">AMD Ryzen 5 8400F 4.20GHz Soket AM5 Tray (Fansız-Kutusuz) İşlemci</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">8.099 TL</span>
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">5.019 TL</span>
                         </div>
                     </a>
 
@@ -1992,7 +1946,7 @@
                     
                                             <div class="hidden w-12 flex-none text-center md:inline-block">
                             <label class="inline-flex items-center" aria-label="Karşılaştır">
-                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('71889')" value="71889" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
+                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('75618')" value="75618" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
                             </label>
                         </div>
                                     </li>
@@ -2179,14 +2133,14 @@
                         <div class="text-base font-medium lg:text-lg !leading-tight line-clamp-2 mb-2">
                             AMD Ryzen 7 7800X3D 4.20GHz 8 Çekirdek 96MB Önbellek Soket AM5 Tray İşlemci                        </div>
                         <div class="flex w-full justify-between">
-                            <p class="price text-orange-500 text-lg !leading-none lg:text-2xl font-semibold">16.199 TL</p>
+                            <p class="price text-orange-500 text-lg !leading-none lg:text-2xl font-semibold">17.869 TL</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="flex items-end gap-3">
                     <div class="hidden lg:grid p-2 place-items-center font-semibold rounded border-2 border-neutral-200 bg-white text-center text-sm leading-none text-neutral-400">
-                        <span class="text-neutral-700">1 saat 59 dakika</span> içerisinde sipariş ver, en geç 1 gün içinde kargoda!                    </div>
+                        Şimdi sipariş ver, en geç 1 gün içinde kargoda!                    </div>
 
                     <button aria-label="add to cart" class="btn btn-sky ml-3 !rounded-sm text-lg uppercase md:text-2xl" x-on:click="$dispatch('addToCart', { id: 66737, qty: 1, hsu: 0 })">
                         <svg class="lg:mr-3 h-7 w-7 fill-current">
@@ -2223,7 +2177,7 @@
     function reviewsData() {
         return {
             reviews: [],
-            totalReviews: 121,
+            totalReviews: 122,
             next_page_url: null,
             sortBy: 0,
             id: 66737,

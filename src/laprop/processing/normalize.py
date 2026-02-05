@@ -417,7 +417,16 @@ def parse_screen_size(value: Any) -> Optional[float]:
     s_raw = str(value).strip().lower()
     if not s_raw:
         return None
-    s_raw = s_raw.replace("in\u00e7", "inch").replace(",", ".")
+    s_raw = (
+        s_raw.replace("in\u00e7", "inch")
+        .replace("inc", "inch")
+        .replace("in ", "inch ")
+        .replace("in.", "inch ")
+        .replace("inç", "inch")
+        .replace(",", ".")
+        .replace("”", "\"")
+        .replace("″", "\"")
+    )
 
     s_simple = s_raw.replace("\"", "").replace("inch", "").strip()
     if re.fullmatch(r"\d{1,2}(?:\.\d+)?", s_simple or ""):
@@ -425,6 +434,18 @@ def parse_screen_size(value: Any) -> Optional[float]:
         return size if 10.0 <= size <= 20.0 else None
 
     for m in re.finditer(r"(\d{1,2}(?:\.\d+)?)\s*(?:\"|inch)", s_raw):
+        try:
+            size = float(m.group(1))
+        except ValueError:
+            continue
+        if 10.0 <= size <= 20.0:
+            return size
+
+    # Standalone sizes like "13.3" or "15.6 FHD" without unit.
+    for m in re.finditer(r"(?<!\d)(\d{1,2}(?:\.\d)?)\b(?!\.\s*[a-z])(?!=\s*[a-z])(?!\s*[x×]\s*\d)", s_raw):
+        prefix = s_raw[:m.start()]
+        if re.search(r"(windows|win)\s*$", prefix):
+            continue
         try:
             size = float(m.group(1))
         except ValueError:

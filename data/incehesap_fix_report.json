@@ -1,48 +1,48 @@
 {
   "row_count": 121,
   "fix_counts": {
-    "ssd": 81,
+    "ssd": 84,
     "cpu": 121,
-    "gpu": 70
+    "gpu": 72
   },
   "fix_examples": {
     "ssd": [
       {
         "row_index": 0,
-        "url": "https://www.incehesap.com/hp-probook-4-g1ah-cv0e7at-r5-220-8gb-512gb-ssd-16-freedos-notebook-fiyati-86820/",
-        "name": "HP PROBOOK 4 G1AH CV0E7AT R5-220 8GB 512GB SSD 16″ FREEDOS NOTEBOOK",
+        "url": "https://www.incehesap.com/lenovo-thinkpad-e14-21sx007ctx-u7-255h-16gb-512gb-ssd-14-fdos-fiyati-85145/",
+        "name": "LENOVO THINKPAD E14 21SX007CTX U7-255H 16GB 512GB SSD 14″FDOS",
         "before": null,
         "after": 512,
         "reason": "filled_missing_with_512"
       },
       {
         "row_index": 1,
-        "url": "https://www.incehesap.com/dell-vostro-n3409pvnb3530u-i5-1334u-8-gb-512-gb-ssd-iris-xe-graphics-15-6-full-hd-notebook-fiyati-78259/",
-        "name": "Dell Vostro N3409PVNB3530U i5-1334U 8 GB 512 GB SSD Iris Xe Graphics 15.6″ Full HD Notebook",
-        "before": null,
-        "after": 512,
-        "reason": "filled_missing_with_512"
-      },
-      {
-        "row_index": 2,
-        "url": "https://www.incehesap.com/hp-250-g10-b2ph1es-ci7-1355u-16gb-512gb-ob-ssd-15-6-freedos-notebook-fiyati-85139/",
-        "name": "HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
-        "before": null,
-        "after": 512,
-        "reason": "filled_missing_with_512"
-      },
-      {
-        "row_index": 3,
-        "url": "https://www.incehesap.com/hp-probook-450-g10-725s4ea-i7-1355u-32gb-1tb-ssd-15-6-w11pro-fiyati-86892/",
-        "name": "HP PROBOOK 450 G10 725S4EA i7-1355U 32GB 1TB SSD 15.6″ W11PRO NOTEBOOK",
+        "url": "https://www.incehesap.com/lenovo-v15-83a100nstx-i5-13420h-16gb-1tb-ssd-15-6-fdos-fiyati-85521/",
+        "name": "LENOVO V15 83A100NSTX i5-13420H 16GB 1TB SSD 15.6″ FDOS",
         "before": null,
         "after": 1024,
         "reason": "filled_missing_with_1024"
       },
       {
-        "row_index": 4,
-        "url": "https://www.incehesap.com/hp-probook-450-g10-725q0ea-i7-1355u-16gb-512gb-ssd-15-6-w11pro-full-hd-notebook-fiyati-78211/",
-        "name": "HP PROBOOK 450 G10 725Q0EA i7-1355U 16GB 512GB SSD 15.6″ W11PRO Full HD Notebook",
+        "row_index": 2,
+        "url": "https://www.incehesap.com/lenovo-e16-thinkpad-21sr007vtx-u7-255h-16gb-1tb-ssd-16-fdos-notebook-fiyati-86886/",
+        "name": "LENOVO E16 THINKPAD 21SR007VTX U7-255H 16GB 1TB SSD 16″ FDOS NOTEBOOK",
+        "before": null,
+        "after": 1024,
+        "reason": "filled_missing_with_1024"
+      },
+      {
+        "row_index": 3,
+        "url": "https://www.incehesap.com/hp-250-g10-9g1e4et-i5-1334u-8-gb-512-gb-ssd-iris-xe-graphics-15-6-full-hd-notebook-fiyati-80001/",
+        "name": "HP 250 G10 9G1E4ET i5-1334U 8 GB 512 GB SSD Iris Xe Graphics 15.6″ Full HD Notebook",
+        "before": null,
+        "after": 512,
+        "reason": "filled_missing_with_512"
+      },
+      {
+        "row_index": 6,
+        "url": "https://www.incehesap.com/lenovo-p14s-21mfs2mq00-r7-pro-8840hs-16g-512-fdo-fiyati-85703/",
+        "name": "LENOVO THINKPAD P14S 21MFS2MQ00 R7 PRO - 8840HS 16GB DDR5 512GB SSD 14″ FDOS",
         "before": null,
         "after": 512,
         "reason": "filled_missing_with_512"
@@ -51,83 +51,83 @@
     "cpu": [
       {
         "row_index": 0,
-        "url": "https://www.incehesap.com/hp-probook-4-g1ah-cv0e7at-r5-220-8gb-512gb-ssd-16-freedos-notebook-fiyati-86820/",
-        "name": "HP PROBOOK 4 G1AH CV0E7AT R5-220 8GB 512GB SSD 16″ FREEDOS NOTEBOOK",
-        "before": "HP PROBOOK 4 G1AH CV0E7AT R5-220 8GB 512GB SSD 16″ FREEDOS NOTEBOOK",
-        "after": "hp probook 4 g1ah cv0e7at r5-220 8gb 512gb ssd 16\" freedos notebook",
+        "url": "https://www.incehesap.com/lenovo-thinkpad-e14-21sx007ctx-u7-255h-16gb-512gb-ssd-14-fdos-fiyati-85145/",
+        "name": "LENOVO THINKPAD E14 21SX007CTX U7-255H 16GB 512GB SSD 14″FDOS",
+        "before": "LENOVO THINKPAD E14 21SX007CTX U7-255H 16GB 512GB SSD 14″FDOS",
+        "after": "ultra7-255h",
         "reason": "normalized_cpu"
       },
       {
         "row_index": 1,
-        "url": "https://www.incehesap.com/dell-vostro-n3409pvnb3530u-i5-1334u-8-gb-512-gb-ssd-iris-xe-graphics-15-6-full-hd-notebook-fiyati-78259/",
-        "name": "Dell Vostro N3409PVNB3530U i5-1334U 8 GB 512 GB SSD Iris Xe Graphics 15.6″ Full HD Notebook",
-        "before": "Dell Vostro N3409PVNB3530U i5-1334U 8 GB 512 GB SSD Iris Xe Graphics 15.6″ Full HD Notebook",
-        "after": "i5-1334u",
+        "url": "https://www.incehesap.com/lenovo-v15-83a100nstx-i5-13420h-16gb-1tb-ssd-15-6-fdos-fiyati-85521/",
+        "name": "LENOVO V15 83A100NSTX i5-13420H 16GB 1TB SSD 15.6″ FDOS",
+        "before": "LENOVO V15 83A100NSTX i5-13420H 16GB 1TB SSD 15.6″ FDOS",
+        "after": "i5-13420h",
         "reason": "normalized_cpu"
       },
       {
         "row_index": 2,
-        "url": "https://www.incehesap.com/hp-250-g10-b2ph1es-ci7-1355u-16gb-512gb-ob-ssd-15-6-freedos-notebook-fiyati-85139/",
-        "name": "HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
-        "before": "HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
-        "after": "i7-1355u",
+        "url": "https://www.incehesap.com/lenovo-e16-thinkpad-21sr007vtx-u7-255h-16gb-1tb-ssd-16-fdos-notebook-fiyati-86886/",
+        "name": "LENOVO E16 THINKPAD 21SR007VTX U7-255H 16GB 1TB SSD 16″ FDOS NOTEBOOK",
+        "before": "LENOVO E16 THINKPAD 21SR007VTX U7-255H 16GB 1TB SSD 16″ FDOS NOTEBOOK",
+        "after": "ultra7-255h",
         "reason": "normalized_cpu"
       },
       {
         "row_index": 3,
-        "url": "https://www.incehesap.com/hp-probook-450-g10-725s4ea-i7-1355u-32gb-1tb-ssd-15-6-w11pro-fiyati-86892/",
-        "name": "HP PROBOOK 450 G10 725S4EA i7-1355U 32GB 1TB SSD 15.6″ W11PRO NOTEBOOK",
-        "before": "HP PROBOOK 450 G10 725S4EA i7-1355U 32GB 1TB SSD 15.6″ W11PRO NOTEBOOK",
-        "after": "i7-1355u",
+        "url": "https://www.incehesap.com/hp-250-g10-9g1e4et-i5-1334u-8-gb-512-gb-ssd-iris-xe-graphics-15-6-full-hd-notebook-fiyati-80001/",
+        "name": "HP 250 G10 9G1E4ET i5-1334U 8 GB 512 GB SSD Iris Xe Graphics 15.6″ Full HD Notebook",
+        "before": "HP 250 G10 9G1E4ET i5-1334U 8 GB 512 GB SSD Iris Xe Graphics 15.6″ Full HD Notebook",
+        "after": "i5-1334u",
         "reason": "normalized_cpu"
       },
       {
         "row_index": 4,
-        "url": "https://www.incehesap.com/hp-probook-450-g10-725q0ea-i7-1355u-16gb-512gb-ssd-15-6-w11pro-full-hd-notebook-fiyati-78211/",
-        "name": "HP PROBOOK 450 G10 725Q0EA i7-1355U 16GB 512GB SSD 15.6″ W11PRO Full HD Notebook",
-        "before": "HP PROBOOK 450 G10 725Q0EA i7-1355U 16GB 512GB SSD 15.6″ W11PRO Full HD Notebook",
-        "after": "i7-1355u",
+        "url": "https://www.incehesap.com/msi-crosshair-17-hx-ai-d2xwgkg-018xtr-ultra-7-255hx-32gb-ddr5-rtx5070-gddr7-8gb-1tb-ssd-17-qhd-240hz-freedos-gaming-notebook-fiyati-81632/",
+        "name": "MSI CROSSHAIR 17 HX AI D2XWGKG-018XTR ULTRA 7 255HX 32GB DDR5 RTX5070 GDDR7 8GB 1TB SSD 17″ QHD+ 240Hz FREEDOS GAMİNG NOTEBOOK",
+        "before": "MSI CROSSHAIR 17 HX AI D2XWGKG-018XTR ULTRA 7 255HX 32GB DDR5 RTX5070 GDDR7 8GB 1TB SSD 17″ QHD+ 240Hz FREEDOS GAMİNG NOTEBOOK",
+        "after": "ultra7-255hx",
         "reason": "normalized_cpu"
       }
     ],
     "gpu": [
       {
         "row_index": 0,
-        "url": "https://www.incehesap.com/hp-probook-4-g1ah-cv0e7at-r5-220-8gb-512gb-ssd-16-freedos-notebook-fiyati-86820/",
-        "name": "HP PROBOOK 4 G1AH CV0E7AT R5-220 8GB 512GB SSD 16″ FREEDOS NOTEBOOK",
-        "before": "HP PROBOOK 4 G1AH CV0E7AT R5-220 8GB 512GB SSD 16″ FREEDOS NOTEBOOK",
+        "url": "https://www.incehesap.com/lenovo-thinkpad-e14-21sx007ctx-u7-255h-16gb-512gb-ssd-14-fdos-fiyati-85145/",
+        "name": "LENOVO THINKPAD E14 21SX007CTX U7-255H 16GB 512GB SSD 14″FDOS",
+        "before": "LENOVO THINKPAD E14 21SX007CTX U7-255H 16GB 512GB SSD 14″FDOS",
+        "after": "unknown",
+        "reason": "unparsed_gpu"
+      },
+      {
+        "row_index": 1,
+        "url": "https://www.incehesap.com/lenovo-v15-83a100nstx-i5-13420h-16gb-1tb-ssd-15-6-fdos-fiyati-85521/",
+        "name": "LENOVO V15 83A100NSTX i5-13420H 16GB 1TB SSD 15.6″ FDOS",
+        "before": "LENOVO V15 83A100NSTX i5-13420H 16GB 1TB SSD 15.6″ FDOS",
         "after": "unknown",
         "reason": "unparsed_gpu"
       },
       {
         "row_index": 2,
-        "url": "https://www.incehesap.com/hp-250-g10-b2ph1es-ci7-1355u-16gb-512gb-ob-ssd-15-6-freedos-notebook-fiyati-85139/",
-        "name": "HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
-        "before": "HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
+        "url": "https://www.incehesap.com/lenovo-e16-thinkpad-21sr007vtx-u7-255h-16gb-1tb-ssd-16-fdos-notebook-fiyati-86886/",
+        "name": "LENOVO E16 THINKPAD 21SR007VTX U7-255H 16GB 1TB SSD 16″ FDOS NOTEBOOK",
+        "before": "LENOVO E16 THINKPAD 21SR007VTX U7-255H 16GB 1TB SSD 16″ FDOS NOTEBOOK",
         "after": "unknown",
         "reason": "unparsed_gpu"
       },
       {
-        "row_index": 3,
-        "url": "https://www.incehesap.com/hp-probook-450-g10-725s4ea-i7-1355u-32gb-1tb-ssd-15-6-w11pro-fiyati-86892/",
-        "name": "HP PROBOOK 450 G10 725S4EA i7-1355U 32GB 1TB SSD 15.6″ W11PRO NOTEBOOK",
-        "before": "HP PROBOOK 450 G10 725S4EA i7-1355U 32GB 1TB SSD 15.6″ W11PRO NOTEBOOK",
-        "after": "unknown",
-        "reason": "unparsed_gpu"
-      },
-      {
-        "row_index": 4,
-        "url": "https://www.incehesap.com/hp-probook-450-g10-725q0ea-i7-1355u-16gb-512gb-ssd-15-6-w11pro-full-hd-notebook-fiyati-78211/",
-        "name": "HP PROBOOK 450 G10 725Q0EA i7-1355U 16GB 512GB SSD 15.6″ W11PRO Full HD Notebook",
-        "before": "HP PROBOOK 450 G10 725Q0EA i7-1355U 16GB 512GB SSD 15.6″ W11PRO Full HD Notebook",
-        "after": "unknown",
-        "reason": "unparsed_gpu"
+        "row_index": 5,
+        "url": "https://www.incehesap.com/msi-cyborg-17-b13wgkg-251xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-5070-8gb-17-3-inc-full-hd-144hz-freedos-gaming-notebook-fiyati-86937/",
+        "name": "MSI CYBORG 17 B13WGKG-251XTR Intel Core i7-13620H 16GB DDR5 1TB SSD RTX 5070 8GB 17.3″ Full HD 144Hz FREEDOS GAMİNG NOTEBOOK",
+        "before": "integrated",
+        "after": "rtx 5070",
+        "reason": "replaced_integrated_with_rtx 5070"
       },
       {
         "row_index": 6,
-        "url": "https://www.incehesap.com/hp-elitebook-650-g10-b2pk5es-i5-1335u-16gb-512gb-ssd-15-6-freedos-notebook-fiyati-83324/",
-        "name": "HP ELITEBOOK 650 G10 B2PK5ES i5-1335U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
-        "before": "HP ELITEBOOK 650 G10 B2PK5ES i5-1335U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
+        "url": "https://www.incehesap.com/lenovo-p14s-21mfs2mq00-r7-pro-8840hs-16g-512-fdo-fiyati-85703/",
+        "name": "LENOVO THINKPAD P14S 21MFS2MQ00 R7 PRO - 8840HS 16GB DDR5 512GB SSD 14″ FDOS",
+        "before": "LENOVO THINKPAD P14S 21MFS2MQ00 R7 PRO - 8840HS 16GB DDR5 512GB SSD 14″ FDOS",
         "after": "unknown",
         "reason": "unparsed_gpu"
       }
@@ -137,15 +137,15 @@
     "ssd": [
       [
         "filled_missing_with_512",
-        53
+        49
       ],
       [
         "filled_missing_with_1024",
-        20
+        26
       ],
       [
         "filled_missing_with_2048",
-        3
+        4
       ],
       [
         "filled_missing_with_4096",
@@ -166,18 +166,18 @@
     "gpu": [
       [
         "unparsed_gpu",
-        56
+        57
       ],
       [
         "replaced_integrated_with_rtx 4050",
-        4
+        5
+      ],
+      [
+        "replaced_integrated_with_rtx 5080",
+        3
       ],
       [
         "replaced_integrated_with_rtx 5070",
-        2
-      ],
-      [
-        "replaced_integrated_with_rtx 5090",
         2
       ],
       [
@@ -185,11 +185,11 @@
         2
       ],
       [
-        "replaced_integrated_with_rtx 5080",
-        2
+        "replaced_integrated_with_rtx 5000",
+        1
       ],
       [
-        "replaced_integrated_with_rtx 5000",
+        "replaced_integrated_with_rtx 5090",
         1
       ],
       [
@@ -199,8 +199,8 @@
     ]
   },
   "input_csv": "data/incehesap_laptops_raw.csv",
-  "output_csv": "data/incehesap_laptops.csv",
-  "generated_at": "2026-01-27T14:42:23Z",
+  "output_csv": "C:\\Users\\HUAWE\\OneDrive - Ankara Üniversitesi\\Masaüstü\\recommender_2\\data\\incehesap_laptops.csv",
+  "generated_at": "2026-02-04T19:22:04Z",
   "missing_invalid_before": {
     "price": {
       "missing": 0,
@@ -215,7 +215,7 @@
       "invalid": 0
     },
     "ram": {
-      "missing": 8,
+      "missing": 7,
       "invalid": 0
     },
     "cpu": {
@@ -237,11 +237,11 @@
       "invalid": 0
     },
     "ssd": {
-      "missing": 40,
+      "missing": 37,
       "invalid": 0
     },
     "ram": {
-      "missing": 8,
+      "missing": 7,
       "invalid": 0
     },
     "cpu": {
@@ -250,36 +250,36 @@
     },
     "gpu": {
       "missing": 0,
-      "invalid": 56
+      "invalid": 57
     }
   },
   "invalid_examples_after": {
     "gpu": {
-      "count": 56,
+      "count": 57,
       "examples": [
         {
-          "url": "https://www.incehesap.com/hp-probook-4-g1ah-cv0e7at-r5-220-8gb-512gb-ssd-16-freedos-notebook-fiyati-86820/",
-          "name": "HP PROBOOK 4 G1AH CV0E7AT R5-220 8GB 512GB SSD 16″ FREEDOS NOTEBOOK",
+          "url": "https://www.incehesap.com/lenovo-thinkpad-e14-21sx007ctx-u7-255h-16gb-512gb-ssd-14-fdos-fiyati-85145/",
+          "name": "LENOVO THINKPAD E14 21SX007CTX U7-255H 16GB 512GB SSD 14″FDOS",
           "gpu": "unknown"
         },
         {
-          "url": "https://www.incehesap.com/hp-250-g10-b2ph1es-ci7-1355u-16gb-512gb-ob-ssd-15-6-freedos-notebook-fiyati-85139/",
-          "name": "HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
+          "url": "https://www.incehesap.com/lenovo-v15-83a100nstx-i5-13420h-16gb-1tb-ssd-15-6-fdos-fiyati-85521/",
+          "name": "LENOVO V15 83A100NSTX i5-13420H 16GB 1TB SSD 15.6″ FDOS",
           "gpu": "unknown"
         },
         {
-          "url": "https://www.incehesap.com/hp-probook-450-g10-725s4ea-i7-1355u-32gb-1tb-ssd-15-6-w11pro-fiyati-86892/",
-          "name": "HP PROBOOK 450 G10 725S4EA i7-1355U 32GB 1TB SSD 15.6″ W11PRO NOTEBOOK",
+          "url": "https://www.incehesap.com/lenovo-e16-thinkpad-21sr007vtx-u7-255h-16gb-1tb-ssd-16-fdos-notebook-fiyati-86886/",
+          "name": "LENOVO E16 THINKPAD 21SR007VTX U7-255H 16GB 1TB SSD 16″ FDOS NOTEBOOK",
           "gpu": "unknown"
         },
         {
-          "url": "https://www.incehesap.com/hp-probook-450-g10-725q0ea-i7-1355u-16gb-512gb-ssd-15-6-w11pro-full-hd-notebook-fiyati-78211/",
-          "name": "HP PROBOOK 450 G10 725Q0EA i7-1355U 16GB 512GB SSD 15.6″ W11PRO Full HD Notebook",
+          "url": "https://www.incehesap.com/lenovo-p14s-21mfs2mq00-r7-pro-8840hs-16g-512-fdo-fiyati-85703/",
+          "name": "LENOVO THINKPAD P14S 21MFS2MQ00 R7 PRO - 8840HS 16GB DDR5 512GB SSD 14″ FDOS",
           "gpu": "unknown"
         },
         {
-          "url": "https://www.incehesap.com/hp-elitebook-650-g10-b2pk5es-i5-1335u-16gb-512gb-ssd-15-6-freedos-notebook-fiyati-83324/",
-          "name": "HP ELITEBOOK 650 G10 B2PK5ES i5-1335U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK",
+          "url": "https://www.incehesap.com/dell-inspiron-15-3530-i35303401u-i5-1334u-8gb-512gb-ssd-15-6-120hz-full-hd-ubuntu-fiyati-84770/",
+          "name": "DELL INSPIRON 15 3530 I35303401U i5-1334U 8GB 512GB SSD 15.6″ 120HZ FULL HD UBUNTU",
           "gpu": "unknown"
         }
       ]

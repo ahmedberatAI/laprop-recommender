@@ -1,13 +1,4 @@
 from pathlib import Path
-import sys
-
-# Ensure src-layout imports work before anything else
-REPO_ROOT = Path(__file__).resolve().parent
-SRC_DIR = REPO_ROOT / "src"
-if SRC_DIR.exists():
-    src_str = str(SRC_DIR)
-    if src_str not in sys.path:
-        sys.path.insert(0, src_str)
 
 import os
 import subprocess
@@ -16,6 +7,8 @@ from typing import Iterable, Optional, Tuple
 
 import pandas as pd
 import streamlit as st
+
+REPO_ROOT = Path(__file__).resolve().parent
 
 from laprop.config.rules import USAGE_OPTIONS, DEV_PRESETS, GAMING_TITLE_SCORES
 from laprop.config.settings import DATA_FILES

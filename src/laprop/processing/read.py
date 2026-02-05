@@ -5,6 +5,8 @@ from typing import Any, Dict
 import pandas as pd
 
 from ..config.settings import DATA_FILES, CACHE_FILE
+from ..utils.console import safe_print
+
 def _sanitize_column_name(name: Any) -> str:
     return str(name).replace("\ufeff", "").strip().lower()
 
@@ -83,8 +85,8 @@ def load_data(use_cache=True):
                         vatan_stats = (vatan_total, vatan_filled)
                     if vatan_stats is not None:
                         v_total, v_filled = vatan_stats
-                        print(f"Vatan load: rows {v_total}, url filled {v_filled}/{v_total}")
-                    print(f"✅ Önbellekten {len(df)} laptop yüklendi")
+                        safe_print(f"Vatan load: rows {v_total}, url filled {v_filled}/{v_total}")
+                    safe_print(f"[OK] Önbellekten {len(df)} laptop yüklendi")
                     return df
         except:
             pass
@@ -121,8 +123,8 @@ def load_data(use_cache=True):
                         has_name = 'name' in columns_lower
                         has_price = 'price' in columns_lower
                         if not (has_name and has_price):
-                            print(
-                                f"⚠️ {file_path.name}: beklenen kolonlar bulunamadı (name/price). "
+                            safe_print(
+                                f"[WARN] {file_path.name}: beklenen kolonlar bulunamadı (name/price). "
                                 f"Kolonlar: {list(df.columns)[:6]}..."
                             )
                             continue
@@ -130,15 +132,15 @@ def load_data(use_cache=True):
                     v_total = len(df)
                     v_filled = _count_filled_urls(df['url']) if 'url' in df.columns else 0
                     vatan_stats = (v_total, v_filled)
-                    print(f"Vatan load: rows {v_total}, url filled {v_filled}/{v_total}")
+                    safe_print(f"Vatan load: rows {v_total}, url filled {v_filled}/{v_total}")
                 all_data.append(df)
-                print(f"✅ {file_path.name}: {len(df)} ürün yüklendi")
+                safe_print(f"[OK] {file_path.name}: {len(df)} ürün yüklendi")
             except Exception as e:
-                print(f"⚠️ {file_path.name} okunamadı: {e}")
+                safe_print(f"[WARN] {file_path.name} okunamadı: {e}")
 
     if not all_data:
-        print("\n❌ Hiç veri dosyası bulunamadı!")
-        print("Önce scraper'ları çalıştırın: --run-scrapers")
+        safe_print("\n[ERROR] Hiç veri dosyası bulunamadı!")
+        safe_print("Önce scraper'ları çalıştırın: --run-scrapers")
         return None
 
     df = pd.concat(all_data, ignore_index=True)
@@ -148,7 +150,7 @@ def load_data(use_cache=True):
         v_total = int(vatan_mask.sum())
         v_filled = _count_filled_urls(df.loc[vatan_mask, 'url'])
         vatan_stats = (v_total, v_filled)
-        print(f"Vatan load: rows {v_total}, url filled {v_filled}/{v_total}")
+        safe_print(f"Vatan load: rows {v_total}, url filled {v_filled}/{v_total}")
 
     try:
         if hasattr(df, "attrs"):

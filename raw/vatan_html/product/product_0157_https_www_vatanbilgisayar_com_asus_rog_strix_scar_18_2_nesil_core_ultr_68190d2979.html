@@ -50,7 +50,7 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.vatanbilgisayar.com/images/frontend/apple-touch-icon.png">
 
 
-		<link rel="stylesheet" href="/assets/dist/css/app.css?v=20260126141528" />
+		<link rel="stylesheet" href="/assets/dist/css/app.css?v=20260128171048" />
 	<!-- Google Tag Manager -->
 	<script>
 		var dataLayer = [];
@@ -76,7 +76,7 @@
 
 	</script>
 	<!-- End Google Tag Manager -->
-	<script src="/Scripts/GTM.js?v=20260126141528"></script>
+	<script src="/Scripts/GTM.js?v=20260128171048"></script>
 
 
 	<!-- Google tag (gtag.js) -->
@@ -130,7 +130,7 @@
 
         <div class="wrapper-topbar-menu no-border-bottom">
             <!-- Global Container -->
-            <div class="global-container">
+            <div class="global-container topbar-container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <!-- Topbar Menu -->
@@ -204,6 +204,12 @@
                                 <a href="/iade-iptal" class="topbar-menu__link">
                                     <span class="icon-callcenter topbar-menu__icon"></span>
                                     <span class="topbar-menu__text">İade</span>
+                                </a>
+                            </li>
+                            <li class="topbar-menu__item">
+                                <a href="/servis-takip-formu" class="topbar-menu__link">
+                                    <span class="icon-callcenter topbar-menu__icon"></span>
+                                    <span class="topbar-menu__text">Servis Takip Formu</span>
                                 </a>
                             </li>
                             <li class="topbar-menu__item">
@@ -9152,35 +9158,24 @@
             </div>
         
         <div class="d-cell col-xs-12 short-basket-button">
-                    <a onclick="addBasket()" id="add-to-cart-button" class="btn btn-success detail-cart-button mobile-btn"><span class="icon-shopping-card" data-value="sepete ekle"></span>Sepete Ekle</a>
-                    <div class="basketMobile desktop-btn" >
+                <a data-productId="149838" class="btn btn-success detail-cart-button mobile-btn btn-stock stockBTN" data-value="Stoktaki Mağazalar"><span class="icon-shopping-card hidden-sm hidden-md hidden-lg"></span>Stoktaki Mağazalar</a>
+                <div class="basketMobile desktop-btn">
+                    <div class="basketMobile_price">
 
-                            <div class="basketMobile_price">
+                        <p id="mobilePrice">
+                            212.499
+                            <span>TL</span>
+                        </p>
 
-                                <p id="mobilePrice">
-
-                                    212.499,00
-                                    <span>TL</span>
-                                </p>
-                                    <p id="freeCargo">
-                                        Kargo Bedava
-                                    </p>
-                            </div>
-
-
-
-
-                        <div class="basketMobile_btn" >
-
-
-                                <a onclick="addBasket()" id="add-to-cart-button">Sepete Ekle</a>
-
-
-
-
-
-                        </div>
                     </div>
+
+                    <div class="basketMobile_btn">
+
+                            <a data-productId="149838" id="add-to-cart-button" class="btn-stock stockBTN" data-value="Stoktaki Mağazalar"><span class="icon-store-alt hidden-sm hidden-md hidden-lg"></span>Stoktaki Mağazalar</a>
+
+
+                    </div>
+                </div>
 
         </div>
     </div>
@@ -9217,37 +9212,28 @@
             </a>
         </div>
             <div class="d-cell col-sm-3 col-xs-3 short-price">
-                <span class="product-list__price">191.249</span> <span class="product-list__currency">TL</span>
+                <span class="product-list__price">212.499</span> <span class="product-list__currency">TL</span>
             </div>
 
         <div class="d-cell col-xs-12 short-basket-button">
-                    <a onclick="addBasket()" id="add-to-cart-button" class="btn btn-success detail-cart-button mobile-btn"><span class="icon-shopping-card" data-value="sepete ekle"></span>Sepete Ekle</a>
-                    <div class="basketMobile desktop-btn" >
-                       
-                            <div class="basketMobile_price">
-                               
-                                <p id="mobilePrice">
-212.499                                        <span>TL</span>
-                                </p>
-                                    <p id="freeCargo">
-                                        Kargo Bedava
-                                    </p>
-                            </div>
+                <a data-productId="149838" class="btn btn-success detail-cart-button mobile-btn btn-stock stockBTN" data-value="Stoktaki Mağazalar"><span class="icon-shopping-card hidden-sm hidden-md hidden-lg"></span>Stoktaki Mağazalar</a>
+                <div class="basketMobile desktop-btn">
+                    <div class="basketMobile_price">
 
+                        <p id="mobilePrice">
+                            212.499
+                            <span>TL</span>
+                        </p>
 
-
-
-                        <div class="basketMobile_btn" >
-
-
-                                <a onclick="addBasket()" id="add-to-cart-button">Sepete Ekle</a>
-
-
-
-
-
-                        </div>
                     </div>
+
+                    <div class="basketMobile_btn">
+
+                            <a data-productId="149838" id="add-to-cart-button" class="btn-stock stockBTN" data-value="Stoktaki Mağazalar"><span class="icon-store-alt hidden-sm hidden-md hidden-lg"></span>Stoktaki Mağazalar</a>
+
+
+                    </div>
+                </div>
 
         </div>
     </div>
@@ -9483,7 +9469,7 @@
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 pd-right">
 	<div id="demo-containers"></div>
 
-<div class='product-detail-discount basket-discount-top'><div class='discount_header desktop'><p><span id='webSpecial'>Web'e Özel</span>App'e özel <strong> Sepette</strong><span id='roundSpecial'> %10 İndirim</span> <span id='priceSpecial'> 191.249 <span> TL </span></span></p></div><div class='discount_header mobile'><p> App'e özel <strong> sepette</strong><span id='roundSpecial'> %10 İndirim</span><span id='priceSpecial'> 191.249 <span> TL </span></span></p></div><div class='discount_info'><p> Üyelikli alışverişlerde geçerlidir.</p></div></div>
+
 	<div class="product-specs-mob">
 		<div class="video-specs-mob">
 		</div>
@@ -9507,7 +9493,7 @@
 
 							</div>
 							<div href="javascript:void(0);" onclick="focusTab('yorumlar')" class="comment-count">
-								<span>(2)</span>
+								<span>(3)</span>
 							</div>
 						</div>
 						<!-- End Stars -->
@@ -9523,9 +9509,6 @@
 						<h1 class="product-list__product-name">
 							Asus Rog Strix Scar 18 2.Nesil Core Ultra 9 275HX-RTX5080 16Gb-64Gb-2Tb-18inc-W11
 						</h1>
-
-
-
 
 
 					<!-- Outlet -->
@@ -9554,14 +9537,6 @@
 
 
 						</div>
-								<div class="installment-flex ">
-
-
-									<span class="installment" onclick="focusTab('odeme-secenekleri')">
-										<u>18.525 TL</u>'den başlayan taksitlerle
-
-									</span>
-								</div>
 
 					<div class="fancy-modal fancy-modal-price" id="corporateOfferModal">
 
@@ -9624,36 +9599,6 @@
 				</div>
 
 
-					<div class="delivery-bar">
-						<div class="delivery-bar__left">
-							<div class="delivery-bar__icon">
-								<i class="icon-fast-delivery"></i>
-							</div>
-							<span class="delivery-bar__text">
-
-									<span id="freeCargo"><b>Kargo Bedava</b></span>
-
-							</span>
-
-
-
-						</div>
-
-
-							<div class="d-flex items-center">
-
-								<div class="delivery-bar__right">
-									<span class="delivery-bar__label">Tahmini Teslimat:</span>
-									<span class="delivery-bar__date"></span>
-								</div>
-
-								<i class="icon-info"
-								   data-toggle="tooltip"
-								   data-placement="top"
-								   title="Pazar günleri ve resmî tatiller teslimat süresine dahil değildir.">
-								</i>
-							</div>
-					</div>
 
 				<div class="d-flex align-center hidden-xs">
 					
@@ -9661,11 +9606,10 @@
 
 <div class="d-cell product-button--cell">
 
-            <button id="add-to-cart-button" onclick="addBasket()" data-value="Sepete Ekle" class="btn btn-success detail-cart-button basketBTN">
-                <span class="icon-shopping-card"></span>
-                <span>Sepete Ekle</span>
-
-            </button>
+        <button data-productId="149838" class="btn btn-success detail-cart-button btn-stock stockBTN" data-value="Stoktaki Mağazalar">
+            <span class="icon-store-alt"></span>
+            <span>Stoktaki Mağazalar</span>
+        </button>
 
 </div>
 
@@ -9700,7 +9644,7 @@
 
 
 					<div class="d-flex product-icon--cell">
-							<a id="fav_Icon" href="javascript:void(0)" data-message="Yukarıdaki Ürünün Fiyatı Düşünce Size Haber Verilecek" data-productTitle="Asus Rog Strix Scar 18 2.Nesil Core Ultra 9 275HX-RTX5080 16Gb-64Gb-2Tb-18inc-W11" data-type="2" data-productId="149838" data-url="/ProductDetail/AddProductToFavorites"
+							<a id="fav_Icon" href="javascript:void(0)" data-message="Yukarıdaki Ürün Stoğa Gelince Size Haber Verilecek" data-productTitle="Asus Rog Strix Scar 18 2.Nesil Core Ultra 9 275HX-RTX5080 16Gb-64Gb-2Tb-18inc-W11" data-type="2" data-productId="149838" data-url="/ProductDetail/AddProductToFavorites"
 							   data-isFavorite="false"
 							   class="detail-btn favoriteButton">
 								<span class="icon-heart detail-btn-icon" id="favoriteButtonIcon"></span>
@@ -9940,182 +9884,6 @@
 						</div>
 					</div>
 
-					<div class="extrawarrantyD">
-						<div class="extrawarrantyD_header">
-							<div class="extrawarrantyD_header--h">
-								<span>Ek Garanti İster Misiniz?</span>
-
-							</div>
-
-							<span class="fancybox-open" data-target="#extrawarrantyD-modal" id="extrawarrantyD_openModal">Ek Garanti Nedir?</span>
-						</div>
-						<div class="extrawarrantyD_section">
-								<div class="extrawarrantyD_box">
-									<input type="radio" name="chkBndURN_garanti" id="rdnBndURN_138797" data-forced="False" class="extrawarrantyD-input  bundle-check bundleProcess " >
-
-									<div class="extrawarrantyD_box-left">
-										<img alt="Keyifli Garanti Hizmeti Logo" src="https://cdn.vatanbilgisayar.com/images/frontend/keyifli-garanti-logo.png" />
-										<div class="extrawarrantyD_box-left__content">
-											<span>+1  Yıl Ek Garanti</span>
-											<div class="extrawarrantyD_price">
-												<p class="extrawarrantyD_price-basket">26.000 <span>TL</span></p>
-											</div>
-
-										</div>
-									</div>
-									<div class="extrawarrantyD_box-right">
-										<button data-attr="138797" class="btn btn-add" id="extrawarrantyD-add">Birlikte Al</button>
-									</div>
-									<label class="extrawarrantyD_option--box">
-
-										<input type="hidden" name="hdnUBN_KOD" id="hdnUBN_KOD_138797" class="inputCheck" value="138797">
-
-									</label>
-								</div>
-						</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-						<!--<div class="btn-group btn-group-toggle extrawarrantyD_option" data-toggle="buttons">
-
-																																												<div class="extrawarrantyD_section">
-
-																																													<input type="radio" name="chkBndURN_garanti" id="rdnBndURN_138797" data-forced="False" class="extrawarrantyD-input  bundle-check bundleProcess " >
-
-																																													<div class="saz">
-																																														<div class="warrantyText">
-																																															<h5>+1  Yıl Ek Garanti</h5>
-																																																																																<p class="oneYearExtra">İlk Yıl Sigorta Dahil <span class="tlt-blue tlt-wid tlt-nonopacity tlt-textleft tlt-delay" data-toggle="tooltip" data-placement="bottom" data-html="true" data-original-title="Fatura tarihinden itibaren 1 yıl boyunca kazaen kırılma, sıvı teması ve çalınmalara karşı koruma altına alabilirsiniz.">i</span></p>
-
-
-																																														</div>
-
-																																														<span> 26.000 TL</span>
-																																														<button data-attr="rdnBndURN_138797" class="btn btn-add btn-sm" id="extrawarrantyD-add">SEÇ</button>
-
-																																													</div>
-																																													<label class="extrawarrantyD_option--box">
-
-																																														<input type="hidden" name="hdnUBN_KOD" id="hdnUBN_KOD_138797" class="inputCheck" value="138797">
-
-																																													</label>
-																																												</div>
-																																												<div class="extrawarrantyD_section">
-
-																																													<input type="radio" name="chkBndURN_garanti" id="rdnBndURN_138798" data-forced="False" class="extrawarrantyD-input  bundle-check bundleProcess " >
-
-																																													<div class="saz">
-																																														<div class="warrantyText">
-																																															<h5>+2  Yıl Ek Garanti</h5>
-																																																																																<p class="oneYearExtra">İlk Yıl Sigorta Dahil <span class="tlt-blue tlt-wid tlt-nonopacity tlt-textleft tlt-delay" data-toggle="tooltip" data-placement="bottom" data-html="true" data-original-title="Fatura tarihinden itibaren 1 yıl boyunca kazaen kırılma, sıvı teması ve çalınmalara karşı koruma altına alabilirsiniz.">i</span></p>
-
-
-																																														</div>
-
-																																														<span> 37.000 TL</span>
-																																														<button data-attr="rdnBndURN_138798" class="btn btn-add btn-sm" id="extrawarrantyD-add">SEÇ</button>
-
-																																													</div>
-																																													<label class="extrawarrantyD_option--box">
-
-																																														<input type="hidden" name="hdnUBN_KOD" id="hdnUBN_KOD_138798" class="inputCheck" value="138798">
-
-																																													</label>
-																																												</div>
-																																												<div class="extrawarrantyD_section">
-
-																																													<input type="radio" name="chkBndURN_garanti" id="rdnBndURN_138799" data-forced="False" class="extrawarrantyD-input  bundle-check bundleProcess " >
-
-																																													<div class="saz">
-																																														<div class="warrantyText">
-																																															<h5>+3  Yıl Ek Garanti</h5>
-																																																																																<p class="oneYearExtra">İlk Yıl Sigorta Dahil <span class="tlt-blue tlt-wid tlt-nonopacity tlt-textleft tlt-delay" data-toggle="tooltip" data-placement="bottom" data-html="true" data-original-title="Fatura tarihinden itibaren 1 yıl boyunca kazaen kırılma, sıvı teması ve çalınmalara karşı koruma altına alabilirsiniz.">i</span></p>
-
-
-																																														</div>
-
-																																														<span> 47.000 TL</span>
-																																														<button data-attr="rdnBndURN_138799" class="btn btn-add btn-sm" id="extrawarrantyD-add">SEÇ</button>
-
-																																													</div>
-																																													<label class="extrawarrantyD_option--box">
-
-																																														<input type="hidden" name="hdnUBN_KOD" id="hdnUBN_KOD_138799" class="inputCheck" value="138799">
-
-																																													</label>
-																																												</div>
-						-->
-						<!--</div>-->
-					</div>
-					<div class="fancy-modal fancy-modal-price extrawarrantyD-modal" id="extrawarrantyD-modal">
-						<div class="fancy-modal-price-body">
-							<div class="extrawarrantyD-modal-header">
-								<b>Keyifli Garanti Nedir?</b>
-							</div>
-							<div class="extrawarrantyD-modal-content">
-								<div class="modal-box">
-									<div class="modal-box-left">
-										<img src="https://cdn.vatanbilgisayar.com/images/frontend/extraicon-1.png" />
-									</div>
-									<div class="modal-box-right">
-										<b>Garanti Süresi Uzatma:</b>
-										<p>Cihazınızın mevcut garanti süresini seçtiğiniz ek yıllar kadar uzatabilirsiniz.</p>
-									</div>
-								</div>
-								<div class="modal-box">
-									<div class="modal-box-left">
-										<img src="https://cdn.vatanbilgisayar.com/images/frontend/extraicon-2.png" />
-									</div>
-									<div class="modal-box-right">
-										<b>Kazaen Hasar ve Hırsızlık Koruması:</b>
-										<p>Satın alma tarihinden itibaren ilk 1 yıl boyunca, cihazınızın kaza sonucu zarar görmesi veya çalınması durumlarında koruma sağlar.</p>
-									</div>
-								</div>
-								<div class="modal-box">
-									<div class="modal-box-left">
-										<img src="https://cdn.vatanbilgisayar.com/images/frontend/extraicon-3.png" />
-									</div>
-									<div class="modal-box-right">
-										<b>Elektrik,Rutubet ve Tozlanma Arızaları Koruması:</b>
-										<p>Satın alma tarihinden itibaren belirli bir süre boyunca, cihazınızın elektriksel arızaları, rutubet ve tozlanma kaynaklı sorunlarına karşı koruma sağlar.</p>
-									</div>
-								</div>
-								<a href="/keyifli-garanti">Detaylı Bilgi ></a>
-							</div>
-							<div class="extrawarrantyD-modal-footer">
-
-								<button id="extrawarrantyD-modal-btn">+1 Yıl Ek Garanti Ürünü Ekle</button>
-								<button id="extrawarrantyD-modal-close">
-									<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none">
-										<g clip-path="url(#clip0_429_11067)">
-											<path d="M15 4.00098H5V18.001C5 19.1055 5.89543 20.001 7 20.001H15" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-											<path d="M16 15.001L19 12.001M19 12.001L16 9.00098M19 12.001H9" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-										</g>
-										<defs>
-											<clipPath id="clip0_429_11067">
-												<rect width="24" height="24" fill="white" transform="translate(0 0.000976562)" />
-											</clipPath>
-										</defs>
-									</svg>
-									Alışverişe Devam Et
-								</button>
-							</div>
-
-
-						</div>
-					</div>
 
 <div class="discount-prod-detail">
 	<div class="discount-text clearfix">
@@ -10126,43 +9894,6 @@
 
 
 
-				<div class="bundleitem">
-					<div class="bundleitem_top">
-
-						<div class="bundleitem_top-left">
-							<a href="online-microsoft-office-home-2024.html" target="_blank" rel="nofollow noreferrer">
-								<div class="bundleitem_pbox">
-									<div class="bundleitem_pbox-left">
-										<img alt="ONLINE MICROSOFT OFFICE EV 2024 T&#xDC;RK&#xC7;E PC/MAC (Dijital &#x130;ndirilebilir Lisans)" fetchpriority="low" src="https://cdn.vatanbilgisayar.com/Upload/Product/microsoft/thumb/147553-1_small.jpg" />
-
-									</div>
-									<div class="bundleitem_pbox-right">
-										<div class="bundleitem_title">
-											<p>
-
-												ONLINE MICROSOFT OFFICE EV 2024 T&#xDC;RK&#xC7;E PC/MAC (Dijital &#x130;ndirilebilir Lisans)
-
-											</p>
-
-
-										</div>
-										<div class="bundleitem_price">
-												<p>5699 <span>TL</span></p>
-												<p id="oldprice">6099 <span>TL</span></p>
-										</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="bundleitem_top-right">
-							<input type="checkbox" class="hidden-check bundle-check bundleProcess "  name="chkBndURN_147553" id="chkBndURN_147553" data-forced="False">
-							<label class="btn btn-add btn-sm " for="chkBndURN_147553">Birlikte Al</label>
-							<input type="hidden" name="hdnUBN_KOD" id="hdnUBN_KOD_147553" class="inputCheck" value="147553">
-						</div>
-
-					</div>
-
-				</div>
 				<div class="bundleitem">
 					<div class="bundleitem_top">
 
@@ -10192,9 +9923,118 @@
 							</a>
 						</div>
 						<div class="bundleitem_top-right">
-							<input type="checkbox" class="hidden-check bundle-check bundleProcess "  name="chkBndURN_152370" id="chkBndURN_152370" data-forced="False">
-							<label class="btn btn-add btn-sm " for="chkBndURN_152370">Birlikte Al</label>
+							<input type="checkbox" class="hidden-check bundle-check bundleProcess disabled"  name="chkBndURN_152370" id="chkBndURN_152370" data-forced="False">
+							<label class="btn btn-add btn-sm disabled" for="chkBndURN_152370">Ma&#x11F;azada</label>
 							<input type="hidden" name="hdnUBN_KOD" id="hdnUBN_KOD_152370" class="inputCheck" value="152370">
+						</div>
+
+					</div>
+
+				</div>
+				<div class="bundleitem">
+					<div class="bundleitem_top">
+
+						<div class="bundleitem_top-left">
+							<a href="online-microsoft-office-home-2024.html" target="_blank" rel="nofollow noreferrer">
+								<div class="bundleitem_pbox">
+									<div class="bundleitem_pbox-left">
+										<img alt="ONLINE MICROSOFT OFFICE EV 2024 T&#xDC;RK&#xC7;E PC/MAC (Dijital &#x130;ndirilebilir Lisans)" fetchpriority="low" src="https://cdn.vatanbilgisayar.com/Upload/Product/microsoft/thumb/147553-1_small.jpg" />
+
+									</div>
+									<div class="bundleitem_pbox-right">
+										<div class="bundleitem_title">
+											<p>
+
+												ONLINE MICROSOFT OFFICE EV 2024 T&#xDC;RK&#xC7;E PC/MAC (Dijital &#x130;ndirilebilir Lisans)
+
+											</p>
+
+
+										</div>
+										<div class="bundleitem_price">
+												<p>5699 <span>TL</span></p>
+												<p id="oldprice">6099 <span>TL</span></p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="bundleitem_top-right">
+							<input type="checkbox" class="hidden-check bundle-check bundleProcess disabled"  name="chkBndURN_147553" id="chkBndURN_147553" data-forced="False">
+							<label class="btn btn-add btn-sm disabled" for="chkBndURN_147553">Ma&#x11F;azada</label>
+							<input type="hidden" name="hdnUBN_KOD" id="hdnUBN_KOD_147553" class="inputCheck" value="147553">
+						</div>
+
+					</div>
+
+				</div>
+				<div class="bundleitem">
+					<div class="bundleitem_top">
+
+						<div class="bundleitem_top-left">
+							<a href="ugreen-nexode-pro-65w-gan-hizli-sarj-cihazi-100w-1-5m-uzay-grisi.html" target="_blank" rel="nofollow noreferrer">
+								<div class="bundleitem_pbox">
+									<div class="bundleitem_pbox-left">
+										<img alt="UGREEN Nexode Pro 65W GaN H&#x131;zl&#x131; &#x15E;arj Cihaz&#x131; 100W 1.5m - Uzay Grisi" fetchpriority="low" src="https://cdn.vatanbilgisayar.com/Upload/Product/ugreen/thumb/152202-1-1_small.jpg" />
+
+									</div>
+									<div class="bundleitem_pbox-right">
+										<div class="bundleitem_title">
+											<p>
+
+												UGREEN Nexode Pro 65W GaN H&#x131;zl&#x131; &#x15E;arj Cihaz&#x131; 100W 1.5m - Uzay Grisi
+
+											</p>
+
+
+										</div>
+										<div class="bundleitem_price">
+												<p>2959 <span>TL</span></p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="bundleitem_top-right">
+							<input type="checkbox" class="hidden-check bundle-check bundleProcess disabled"  name="chkBndURN_152202" id="chkBndURN_152202" data-forced="False">
+							<label class="btn btn-add btn-sm disabled" for="chkBndURN_152202">Ma&#x11F;azada</label>
+							<input type="hidden" name="hdnUBN_KOD" id="hdnUBN_KOD_152202" class="inputCheck" value="152202">
+						</div>
+
+					</div>
+
+				</div>
+				<div class="bundleitem">
+					<div class="bundleitem_top">
+
+						<div class="bundleitem_top-left">
+							<a href="baseus-enerfill-fc31-pbnk-10-000-mah-powerbank-siyah.html" target="_blank" rel="nofollow noreferrer">
+								<div class="bundleitem_pbox">
+									<div class="bundleitem_pbox-left">
+										<img alt="Baseus EnerFill FC31 10.000 mAh 45W Powerbank - Siyah" fetchpriority="low" src="https://cdn.vatanbilgisayar.com/Upload/Product/baseus/thumb/154004-1_small.jpg" />
+
+									</div>
+									<div class="bundleitem_pbox-right">
+										<div class="bundleitem_title">
+											<p>
+
+												Baseus EnerFill FC31 10.000 mAh 45W Powerbank - Siyah
+
+											</p>
+
+
+										</div>
+										<div class="bundleitem_price">
+												<p>3231,88 <span>TL</span></p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="bundleitem_top-right">
+							<input type="checkbox" class="hidden-check bundle-check bundleProcess disabled"  name="chkBndURN_154004" id="chkBndURN_154004" data-forced="False">
+							<label class="btn btn-add btn-sm disabled" for="chkBndURN_154004">Ma&#x11F;azada</label>
+							<input type="hidden" name="hdnUBN_KOD" id="hdnUBN_KOD_154004" class="inputCheck" value="154004">
 						</div>
 
 					</div>
@@ -10228,45 +10068,9 @@
 							</a>
 						</div>
 						<div class="bundleitem_top-right">
-							<input type="checkbox" class="hidden-check bundle-check bundleProcess "  name="chkBndURN_154610" id="chkBndURN_154610" data-forced="False">
-							<label class="btn btn-add btn-sm " for="chkBndURN_154610">Birlikte Al</label>
+							<input type="checkbox" class="hidden-check bundle-check bundleProcess disabled"  name="chkBndURN_154610" id="chkBndURN_154610" data-forced="False">
+							<label class="btn btn-add btn-sm disabled" for="chkBndURN_154610">Ma&#x11F;azada</label>
 							<input type="hidden" name="hdnUBN_KOD" id="hdnUBN_KOD_154610" class="inputCheck" value="154610">
-						</div>
-
-					</div>
-
-				</div>
-				<div class="bundleitem">
-					<div class="bundleitem_top">
-
-						<div class="bundleitem_top-left">
-							<a href="ugreen-nexode-pro-65w-gan-hizli-sarj-cihazi-100w-1-5m-uzay-grisi.html" target="_blank" rel="nofollow noreferrer">
-								<div class="bundleitem_pbox">
-									<div class="bundleitem_pbox-left">
-										<img alt="UGREEN Nexode Pro 65W GaN H&#x131;zl&#x131; &#x15E;arj Cihaz&#x131; 100W 1.5m - Uzay Grisi" fetchpriority="low" src="https://cdn.vatanbilgisayar.com/Upload/Product/ugreen/thumb/152202-1-1_small.jpg" />
-
-									</div>
-									<div class="bundleitem_pbox-right">
-										<div class="bundleitem_title">
-											<p>
-
-												UGREEN Nexode Pro 65W GaN H&#x131;zl&#x131; &#x15E;arj Cihaz&#x131; 100W 1.5m - Uzay Grisi
-
-											</p>
-
-
-										</div>
-										<div class="bundleitem_price">
-												<p>2799 <span>TL</span></p>
-										</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="bundleitem_top-right">
-							<input type="checkbox" class="hidden-check bundle-check bundleProcess "  name="chkBndURN_152202" id="chkBndURN_152202" data-forced="False">
-							<label class="btn btn-add btn-sm " for="chkBndURN_152202">Birlikte Al</label>
-							<input type="hidden" name="hdnUBN_KOD" id="hdnUBN_KOD_152202" class="inputCheck" value="152202">
 						</div>
 
 					</div>
@@ -10293,15 +10097,15 @@
 
 										</div>
 										<div class="bundleitem_price">
-												<p>647,17 <span>TL</span></p>
+												<p>1201,75 <span>TL</span></p>
 										</div>
 									</div>
 								</div>
 							</a>
 						</div>
 						<div class="bundleitem_top-right">
-							<input type="checkbox" class="hidden-check bundle-check bundleProcess "  name="chkBndURN_103904" id="chkBndURN_103904" data-forced="False">
-							<label class="btn btn-add btn-sm " for="chkBndURN_103904">Birlikte Al</label>
+							<input type="checkbox" class="hidden-check bundle-check bundleProcess disabled"  name="chkBndURN_103904" id="chkBndURN_103904" data-forced="False">
+							<label class="btn btn-add btn-sm disabled" for="chkBndURN_103904">Ma&#x11F;azada</label>
 							<input type="hidden" name="hdnUBN_KOD" id="hdnUBN_KOD_103904" class="inputCheck" value="103904">
 						</div>
 
@@ -10336,8 +10140,8 @@
 							</a>
 						</div>
 						<div class="bundleitem_top-right">
-							<input type="checkbox" class="hidden-check bundle-check bundleProcess "  name="chkBndURN_141920" id="chkBndURN_141920" data-forced="False">
-							<label class="btn btn-add btn-sm " for="chkBndURN_141920">Birlikte Al</label>
+							<input type="checkbox" class="hidden-check bundle-check bundleProcess disabled"  name="chkBndURN_141920" id="chkBndURN_141920" data-forced="False">
+							<label class="btn btn-add btn-sm disabled" for="chkBndURN_141920">Ma&#x11F;azada</label>
 							<input type="hidden" name="hdnUBN_KOD" id="hdnUBN_KOD_141920" class="inputCheck" value="141920">
 						</div>
 
@@ -10473,7 +10277,7 @@
 
 				</li>
 			
-					<li id="prdCommentsButton" class="mobile-hide" data-url="/ProductDetail/Comments" data-productId="149838" role="presentation"><a href="#yorumlar" role="tab" data-toggle="tab">Yorumlar (2)</a></li>
+					<li id="prdCommentsButton" class="mobile-hide" data-url="/ProductDetail/Comments" data-productId="149838" role="presentation"><a href="#yorumlar" role="tab" data-toggle="tab">Yorumlar (3)</a></li>
 					<li id="prdInstallmentsButton" class="mobile-hide" data-productPrice="212499" data-url="/ProductDetail/CreditInstallments" data-productId="149838" role="presentation"><a href="#odeme-secenekleri" role="tab" data-toggle="tab">Ödeme Seçenekleri</a></li>
 				<li role="presentation" class="mobile-hide"><a href="#teslimat-iade" role="tab" data-toggle="tab">Teslimat ve İade</a></li>
 
@@ -11386,7 +11190,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h4 class="tab-pane--title">Bu ürünle toplam <a href="#">2 yorum</a> yapıldı.</h4>
+                    <h4 class="tab-pane--title">Bu ürünle toplam <a href="#">3 yorum</a> yapıldı.</h4>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
@@ -11410,7 +11214,7 @@
                                     <span class="score" id="averageRank" style="width:100%;"></span>
                                 </div>
 
-                                <span>(2)</span>
+                                <span>(3)</span>
 
                                 <span>Bu Ürün <strong id="averageRankNum">5</strong> Puan Almıştır</span>
                             </div>
@@ -11651,11 +11455,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        2 x  95.624,50 TL
+                                                                        2 x  106.249,50 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11664,11 +11468,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        3 x  63.749,67 TL
+                                                                        3 x  70.833,00 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11677,11 +11481,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        4 x  47.812,25 TL
+                                                                        4 x  53.124,75 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11690,11 +11494,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        6 x  31.874,83 TL
+                                                                        6 x  35.416,50 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11702,11 +11506,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        9 x  24.154,75 TL
+                                                                        9 x  26.838,62 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        217.392,74 TL
+                                                                        241.547,61 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11714,11 +11518,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        12 x  18.630,84 TL
+                                                                        12 x  20.700,94 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        223.570,08 TL
+                                                                        248.411,33 TL
                                                                     </td>
                                                                 </tr>
                                                     </tbody>
@@ -11741,11 +11545,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        2 x  95.624,50 TL
+                                                                        2 x  106.249,50 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11754,11 +11558,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        3 x  63.749,67 TL
+                                                                        3 x  70.833,00 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11766,11 +11570,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        4 x  53.286,75 TL
+                                                                        4 x  59.207,54 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        213.147,01 TL
+                                                                        236.830,14 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11778,11 +11582,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        6 x  37.414,68 TL
+                                                                        6 x  41.571,89 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        224.488,08 TL
+                                                                        249.431,33 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11790,11 +11594,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        9 x  27.110,61 TL
+                                                                        9 x  30.122,91 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        243.995,47 TL
+                                                                        271.106,22 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11802,11 +11606,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        12 x  22.269,35 TL
+                                                                        12 x  24.743,74 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        267.232,23 TL
+                                                                        296.924,85 TL
                                                                     </td>
                                                                 </tr>
                                                     </tbody>
@@ -11829,11 +11633,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        2 x  95.624,50 TL
+                                                                        2 x  106.249,50 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11842,11 +11646,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        3 x  63.749,67 TL
+                                                                        3 x  70.833,00 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11854,11 +11658,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        4 x  52.655,63 TL
+                                                                        4 x  58.506,29 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        210.622,52 TL
+                                                                        234.025,15 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11866,11 +11670,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        5 x  43.161,07 TL
+                                                                        5 x  47.956,77 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        215.805,37 TL
+                                                                        239.783,87 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11878,11 +11682,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        6 x  36.888,75 TL
+                                                                        6 x  40.987,51 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        221.332,47 TL
+                                                                        245.925,09 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11890,11 +11694,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        7 x  32.444,03 TL
+                                                                        7 x  36.048,94 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        227.108,19 TL
+                                                                        252.342,56 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11902,11 +11706,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        8 x  29.146,35 TL
+                                                                        8 x  32.384,85 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        233.170,78 TL
+                                                                        259.078,78 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11914,11 +11718,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        9 x  26.619,74 TL
+                                                                        9 x  29.577,50 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        239.577,62 TL
+                                                                        266.197,50 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11926,11 +11730,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        10 x  24.640,52 TL
+                                                                        10 x  27.378,37 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        246.405,21 TL
+                                                                        273.783,71 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11938,11 +11742,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        11 x  23.048,98 TL
+                                                                        11 x  25.609,99 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        253.538,80 TL
+                                                                        281.709,92 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11950,11 +11754,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        12 x  21.762,54 TL
+                                                                        12 x  24.180,62 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        261.150,51 TL
+                                                                        290.167,38 TL
                                                                     </td>
                                                                 </tr>
                                                     </tbody>
@@ -11977,11 +11781,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        2 x  95.624,50 TL
+                                                                        2 x  106.249,50 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -11990,11 +11794,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        3 x  63.749,67 TL
+                                                                        3 x  70.833,00 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12002,11 +11806,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        4 x  50.872,24 TL
+                                                                        4 x  56.524,74 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        203.488,94 TL
+                                                                        226.098,94 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12014,11 +11818,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        6 x  34.067,82 TL
+                                                                        6 x  37.853,15 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        204.406,93 TL
+                                                                        227.118,93 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12026,11 +11830,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        9 x  24.020,87 TL
+                                                                        9 x  26.689,87 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        216.187,87 TL
+                                                                        240.208,87 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12038,11 +11842,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        12 x  18.525,65 TL
+                                                                        12 x  20.584,07 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        222.307,84 TL
+                                                                        247.008,84 TL
                                                                     </td>
                                                                 </tr>
                                                     </tbody>
@@ -12062,7 +11866,7 @@
                                                                 <tr>
                                                                     <td></td>
                                                                   <td>Peşin</td>
-                                                                    <td data-label="Toplam Tutar (TL)">191.249 TL</td>
+                                                                    <td data-label="Toplam Tutar (TL)">212.499 TL</td>
                                                                     
                                                                 </tr>
                                                     </tbody>
@@ -12082,7 +11886,7 @@
                                                                 <tr>
                                                                     <td></td>
                                                                   <td>Peşin</td>
-                                                                    <td data-label="Toplam Tutar (TL)">191.249 TL</td>
+                                                                    <td data-label="Toplam Tutar (TL)">212.499 TL</td>
                                                                     
                                                                 </tr>
                                                     </tbody>
@@ -12105,11 +11909,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        3 x  63.749,67 TL
+                                                                        3 x  70.833,00 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12117,11 +11921,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        4 x  52.014,95 TL
+                                                                        4 x  57.794,42 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        208.059,79 TL
+                                                                        231.177,66 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12129,11 +11933,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        6 x  35.913,38 TL
+                                                                        6 x  39.903,77 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        215.480,25 TL
+                                                                        239.422,62 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12141,11 +11945,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        9 x  25.476,49 TL
+                                                                        9 x  28.307,23 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        229.288,43 TL
+                                                                        254.765,05 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12153,11 +11957,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        12 x  20.913,08 TL
+                                                                        12 x  23.236,77 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        250.956,94 TL
+                                                                        278.841,19 TL
                                                                     </td>
                                                                 </tr>
                                                     </tbody>
@@ -12180,11 +11984,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        3 x  63.749,67 TL
+                                                                        3 x  70.833,00 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12192,11 +11996,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        4 x  52.483,51 TL
+                                                                        4 x  58.315,04 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        209.934,03 TL
+                                                                        233.260,15 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12204,11 +12008,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        6 x  36.276,75 TL
+                                                                        6 x  40.307,52 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        217.660,49 TL
+                                                                        241.845,11 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12216,11 +12020,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        9 x  25.980,11 TL
+                                                                        9 x  28.866,81 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        233.821,03 TL
+                                                                        259.801,28 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12228,11 +12032,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        12 x  21.046,95 TL
+                                                                        12 x  23.385,51 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        252.563,43 TL
+                                                                        280.626,18 TL
                                                                     </td>
                                                                 </tr>
                                                     </tbody>
@@ -12254,11 +12058,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        4 x  53.200,69 TL
+                                                                        4 x  59.111,91 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        212.802,76 TL
+                                                                        236.447,64 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12266,11 +12070,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        6 x  37.354,12 TL
+                                                                        6 x  41.504,60 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        224.124,70 TL
+                                                                        249.027,58 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12278,11 +12082,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        9 x  27.085,11 TL
+                                                                        9 x  30.094,58 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        243.765,98 TL
+                                                                        270.851,23 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12290,11 +12094,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        12 x  22.224,73 TL
+                                                                        12 x  24.694,15 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        266.696,73 TL
+                                                                        296.329,86 TL
                                                                     </td>
                                                                 </tr>
                                                     </tbody>
@@ -12316,11 +12120,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        4 x  52.923,38 TL
+                                                                        4 x  58.803,79 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        211.693,52 TL
+                                                                        235.215,14 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12328,11 +12132,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        6 x  37.118,24 TL
+                                                                        6 x  41.242,51 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        222.709,46 TL
+                                                                        247.455,09 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12340,11 +12144,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        9 x  26.910,86 TL
+                                                                        9 x  29.900,97 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        242.197,73 TL
+                                                                        269.108,73 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -12352,11 +12156,11 @@
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        12 x  22.114,76 TL
+                                                                        12 x  24.571,97 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        265.377,11 TL
+                                                                        294.863,61 TL
                                                                     </td>
                                                                 </tr>
                                                     </tbody>
@@ -12430,10 +12234,10 @@ Siparişinizi mağaza teslim se&ccedil;eneği ile vermek istiyorsanız aşağıd
 &nbsp;
 
 <p><strong>Siparişiniz hen&uuml;z faturalanmadıysa;</strong>;<br />
-Hesabım Siparişlerim b&ouml;l&uuml;m&uuml;nden sipariş iptal talebinizi iletebilirsiniz. Aynı zamanda &ccedil;ağrı merkezimizden 0850 222 56 56 (1), Whatsapp destek 0850 222 56 56 hattımızdan veya <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5930373f36192f382d38373b30353e302a3820382b773a3634">[email&#160;protected]</a> mail adresimizden iptal talebinizi iletebilirsiniz. İadeniz ortalama 1-2 iş g&uuml;n&uuml;nde bankanıza bildirilmiş olacaktır.</p>
+Hesabım Siparişlerim b&ouml;l&uuml;m&uuml;nden sipariş iptal talebinizi iletebilirsiniz. Aynı zamanda &ccedil;ağrı merkezimizden 0850 222 56 56 (1), Whatsapp destek 0850 222 56 56 hattımızdan veya <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2e474048416e584f5a4f404c474249475d4f574f5c004d4143">[email&#160;protected]</a> mail adresimizden iptal talebinizi iletebilirsiniz. İadeniz ortalama 1-2 iş g&uuml;n&uuml;nde bankanıza bildirilmiş olacaktır.</p>
 
 <p><strong>Siparişiniz kargo s&uuml;recindeyse</strong>;<br />
-0850 222 56 56 numaralı &ccedil;ağrı merkezimizi arayıp dahili 1&rsquo;i tuşlayarak, 0850 222 56 56 numaralı Whatsapp Hattımız&rsquo;a veya <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eb82858d84ab9d8a9f8a858982878c82988a928a99c5888486">[email&#160;protected]</a> mail adresimizden iptal talebinizi iletebilirsiniz. Bu durumda g&ouml;nderi tarafımızca kargodan geri &ccedil;ekilecektir. &Uuml;r&uuml;n tarafımıza ulaştığında iade işlemleriniz başlatılacak ve ortalama 3 iş g&uuml;n&uuml;nde iadeniz bankanıza bildirilecektir. <strong>&nbsp;</strong></p>
+0850 222 56 56 numaralı &ccedil;ağrı merkezimizi arayıp dahili 1&rsquo;i tuşlayarak, 0850 222 56 56 numaralı Whatsapp Hattımız&rsquo;a veya <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="731a1d151c33051207121d111a1f141a00120a12015d101c1e">[email&#160;protected]</a> mail adresimizden iptal talebinizi iletebilirsiniz. Bu durumda g&ouml;nderi tarafımızca kargodan geri &ccedil;ekilecektir. &Uuml;r&uuml;n tarafımıza ulaştığında iade işlemleriniz başlatılacak ve ortalama 3 iş g&uuml;n&uuml;nde iadeniz bankanıza bildirilecektir. <strong>&nbsp;</strong></p>
 
 <p><strong>Siparişinizi teslim aldıysanız</strong>;<br />
 Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan sonra 14 g&uuml;n i&ccedil;erisinde aşağıdaki şekillerde tarafımıza başvurabilirsiniz.</p>
@@ -12441,10 +12245,10 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
 <ol>
 	<li>0850 222 56 56 numaralı &ccedil;ağrı merkezimizi arayıp dahili 1&rsquo;i tuşlayarak arayabilirsiniz.</li>
 	<li>0850 222 56 56 numaralı Whatsapp hattımıza yazabilirsiniz.</li>
-	<li><a href="/cdn-cgi/l/email-protection#8fe6e1e9e0cff9eefbeee1ede6e3e8e6fceef6eefda1ece0e2"><span class="__cf_email__" data-cfemail="5f363139301f293e2b3e313d363338362c3e263e2d713c3032">[email&#160;protected]</span></a> adresimize e posta g&ouml;nderebilirsiniz.</li>
+	<li><a href="/cdn-cgi/l/email-protection#264f484049665047524748444f4a414f55475f47540845494b"><span class="__cf_email__" data-cfemail="056c6b636a45736471646b676c69626c76647c64772b666a68">[email&#160;protected]</span></a> adresimize e posta g&ouml;nderebilirsiniz.</li>
 	<li>Size en yakın mağazamıza &uuml;r&uuml;n&uuml; g&ouml;t&uuml;rebilirsiniz.</li>
 	<li><a href="/uyeBilgi/siparistakip/">Hesabım &gt; Siparişlerim</a> b&ouml;l&uuml;m&uuml;nden ilgili siparişinizi se&ccedil;erek, Kolay İade se&ccedil;eneğini kullanabilirsiniz. Size verilen iade kodu ile &uuml;r&uuml;n&uuml; Yurti&ccedil;i Kargo aracılığıyla &uuml;cretsiz olarak tarafımıza g&ouml;nderebilirsiniz. Ayrıca, <a href="/iade-iptal/"> İade ve İptal </a>sayfasındaki Kurye &Ccedil;ağır butonunu kullanarak adresinize &uuml;cretsiz olarak kurye &ccedil;ağırabilirsiniz.</li>
-	<li>Televizyon ve klima iadeleriniz i&ccedil;in &ccedil;ağrı merkezimizden 0850 222 56 56 (1), 0850 222 56 56 numaralı Whatsapp Destek Hattımızdan veya <a href="/cdn-cgi/l/email-protection#026b6c646d42746376636c606b6e656b71637b63702c616d6f"> <span class="__cf_email__" data-cfemail="0c65626a634c7a6d786d626e65606b657f6d756d7e226f6361">[email&#160;protected]</span> </a> mail adresimizden bilgi ve destek alabilirsiniz.</li>
+	<li>Televizyon ve klima iadeleriniz i&ccedil;in &ccedil;ağrı merkezimizden 0850 222 56 56 (1), 0850 222 56 56 numaralı Whatsapp Destek Hattımızdan veya <a href="/cdn-cgi/l/email-protection#5d34333b321d2b3c293c333f34313a342e3c243c2f733e3230"> <span class="__cf_email__" data-cfemail="c4adaaa2ab84b2a5b0a5aaa6ada8a3adb7a5bda5b6eaa7aba9">[email&#160;protected]</span> </a> mail adresimizden bilgi ve destek alabilirsiniz.</li>
 </ol>
 <br />
 <br />
@@ -13415,7 +13219,7 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
 						<div class="panel-heading" role="tab" id="headingComments">
 							<h4 class="panel-title">
 								<a class="accordion-toggle collapsed" role="button" data-toggle="collapse" data-parent="#productDetailAccordion" href="#collapseComments" aria-expanded="false" aria-controls="collapseComments">
-									<span class="accordion-title-text">Yorumlar (2)</span>
+									<span class="accordion-title-text">Yorumlar (3)</span>
 									<span class="accordion-icon">
 										<span class="icon-angle-down accordion-icon-arrow"></span>
 									</span>
@@ -13430,7 +13234,7 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h4 class="tab-pane--title">Bu ürünle toplam <a href="#">2 yorum</a> yapıldı.</h4>
+                    <h4 class="tab-pane--title">Bu ürünle toplam <a href="#">3 yorum</a> yapıldı.</h4>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
@@ -13454,7 +13258,7 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                     <span class="score" id="averageRank" style="width:100%;"></span>
                                 </div>
 
-                                <span>(2)</span>
+                                <span>(3)</span>
 
                                 <span>Bu Ürün <strong id="averageRankNum">5</strong> Puan Almıştır</span>
                             </div>
@@ -13715,11 +13519,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        2 x  95.624,50 TL
+                                                                        2 x  106.249,50 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13728,11 +13532,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        3 x  63.749,67 TL
+                                                                        3 x  70.833,00 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13741,11 +13545,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        4 x  47.812,25 TL
+                                                                        4 x  53.124,75 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13754,11 +13558,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        6 x  31.874,83 TL
+                                                                        6 x  35.416,50 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13766,11 +13570,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        9 x  24.154,75 TL
+                                                                        9 x  26.838,62 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        217.392,74 TL
+                                                                        241.547,61 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13778,11 +13582,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        12 x  18.630,84 TL
+                                                                        12 x  20.700,94 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        223.570,08 TL
+                                                                        248.411,33 TL
                                                                     </td>
                                                                 </tr>
                                                     </tbody>
@@ -13805,11 +13609,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        2 x  95.624,50 TL
+                                                                        2 x  106.249,50 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13818,11 +13622,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        3 x  63.749,67 TL
+                                                                        3 x  70.833,00 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13830,11 +13634,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        4 x  53.286,75 TL
+                                                                        4 x  59.207,54 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        213.147,01 TL
+                                                                        236.830,14 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13842,11 +13646,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        6 x  37.414,68 TL
+                                                                        6 x  41.571,89 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        224.488,08 TL
+                                                                        249.431,33 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13854,11 +13658,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        9 x  27.110,61 TL
+                                                                        9 x  30.122,91 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        243.995,47 TL
+                                                                        271.106,22 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13866,11 +13670,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        12 x  22.269,35 TL
+                                                                        12 x  24.743,74 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        267.232,23 TL
+                                                                        296.924,85 TL
                                                                     </td>
                                                                 </tr>
                                                     </tbody>
@@ -13893,11 +13697,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        2 x  95.624,50 TL
+                                                                        2 x  106.249,50 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13906,11 +13710,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        3 x  63.749,67 TL
+                                                                        3 x  70.833,00 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13918,11 +13722,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        4 x  52.655,63 TL
+                                                                        4 x  58.506,29 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        210.622,52 TL
+                                                                        234.025,15 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13930,11 +13734,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        5 x  43.161,07 TL
+                                                                        5 x  47.956,77 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        215.805,37 TL
+                                                                        239.783,87 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13942,11 +13746,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        6 x  36.888,75 TL
+                                                                        6 x  40.987,51 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        221.332,47 TL
+                                                                        245.925,09 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13954,11 +13758,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        7 x  32.444,03 TL
+                                                                        7 x  36.048,94 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        227.108,19 TL
+                                                                        252.342,56 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13966,11 +13770,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        8 x  29.146,35 TL
+                                                                        8 x  32.384,85 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        233.170,78 TL
+                                                                        259.078,78 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13978,11 +13782,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        9 x  26.619,74 TL
+                                                                        9 x  29.577,50 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        239.577,62 TL
+                                                                        266.197,50 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -13990,11 +13794,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        10 x  24.640,52 TL
+                                                                        10 x  27.378,37 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        246.405,21 TL
+                                                                        273.783,71 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14002,11 +13806,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        11 x  23.048,98 TL
+                                                                        11 x  25.609,99 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        253.538,80 TL
+                                                                        281.709,92 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14014,11 +13818,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        12 x  21.762,54 TL
+                                                                        12 x  24.180,62 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        261.150,51 TL
+                                                                        290.167,38 TL
                                                                     </td>
                                                                 </tr>
                                                     </tbody>
@@ -14041,11 +13845,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        2 x  95.624,50 TL
+                                                                        2 x  106.249,50 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14054,11 +13858,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        3 x  63.749,67 TL
+                                                                        3 x  70.833,00 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14066,11 +13870,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        4 x  50.872,24 TL
+                                                                        4 x  56.524,74 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        203.488,94 TL
+                                                                        226.098,94 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14078,11 +13882,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        6 x  34.067,82 TL
+                                                                        6 x  37.853,15 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        204.406,93 TL
+                                                                        227.118,93 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14090,11 +13894,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        9 x  24.020,87 TL
+                                                                        9 x  26.689,87 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        216.187,87 TL
+                                                                        240.208,87 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14102,11 +13906,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        12 x  18.525,65 TL
+                                                                        12 x  20.584,07 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        222.307,84 TL
+                                                                        247.008,84 TL
                                                                     </td>
                                                                 </tr>
                                                     </tbody>
@@ -14126,7 +13930,7 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                 <tr>
                                                                     <td></td>
                                                                   <td>Peşin</td>
-                                                                    <td data-label="Toplam Tutar (TL)">191.249 TL</td>
+                                                                    <td data-label="Toplam Tutar (TL)">212.499 TL</td>
                                                                     
                                                                 </tr>
                                                     </tbody>
@@ -14146,7 +13950,7 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                 <tr>
                                                                     <td></td>
                                                                   <td>Peşin</td>
-                                                                    <td data-label="Toplam Tutar (TL)">191.249 TL</td>
+                                                                    <td data-label="Toplam Tutar (TL)">212.499 TL</td>
                                                                     
                                                                 </tr>
                                                     </tbody>
@@ -14169,11 +13973,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        3 x  63.749,67 TL
+                                                                        3 x  70.833,00 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14181,11 +13985,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        4 x  52.014,95 TL
+                                                                        4 x  57.794,42 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        208.059,79 TL
+                                                                        231.177,66 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14193,11 +13997,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        6 x  35.913,38 TL
+                                                                        6 x  39.903,77 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        215.480,25 TL
+                                                                        239.422,62 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14205,11 +14009,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        9 x  25.476,49 TL
+                                                                        9 x  28.307,23 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        229.288,43 TL
+                                                                        254.765,05 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14217,11 +14021,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        12 x  20.913,08 TL
+                                                                        12 x  23.236,77 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        250.956,94 TL
+                                                                        278.841,19 TL
                                                                     </td>
                                                                 </tr>
                                                     </tbody>
@@ -14244,11 +14048,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        3 x  63.749,67 TL
+                                                                        3 x  70.833,00 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        191.249,00 TL
+                                                                        212.499,00 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14256,11 +14060,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        4 x  52.483,51 TL
+                                                                        4 x  58.315,04 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        209.934,03 TL
+                                                                        233.260,15 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14268,11 +14072,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        6 x  36.276,75 TL
+                                                                        6 x  40.307,52 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        217.660,49 TL
+                                                                        241.845,11 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14280,11 +14084,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        9 x  25.980,11 TL
+                                                                        9 x  28.866,81 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        233.821,03 TL
+                                                                        259.801,28 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14292,11 +14096,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        12 x  21.046,95 TL
+                                                                        12 x  23.385,51 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        252.563,43 TL
+                                                                        280.626,18 TL
                                                                     </td>
                                                                 </tr>
                                                     </tbody>
@@ -14318,11 +14122,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        4 x  53.200,69 TL
+                                                                        4 x  59.111,91 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        212.802,76 TL
+                                                                        236.447,64 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14330,11 +14134,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        6 x  37.354,12 TL
+                                                                        6 x  41.504,60 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        224.124,70 TL
+                                                                        249.027,58 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14342,11 +14146,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        9 x  27.085,11 TL
+                                                                        9 x  30.094,58 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        243.765,98 TL
+                                                                        270.851,23 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14354,11 +14158,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        12 x  22.224,73 TL
+                                                                        12 x  24.694,15 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        266.696,73 TL
+                                                                        296.329,86 TL
                                                                     </td>
                                                                 </tr>
                                                     </tbody>
@@ -14380,11 +14184,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        4 x  52.923,38 TL
+                                                                        4 x  58.803,79 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        211.693,52 TL
+                                                                        235.215,14 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14392,11 +14196,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        6 x  37.118,24 TL
+                                                                        6 x  41.242,51 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        222.709,46 TL
+                                                                        247.455,09 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14404,11 +14208,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        9 x  26.910,86 TL
+                                                                        9 x  29.900,97 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        242.197,73 TL
+                                                                        269.108,73 TL
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -14416,11 +14220,11 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     </td>
                                                                     <td data-label="Taksit Sayısı">
                                                                       
-                                                                        12 x  22.114,76 TL
+                                                                        12 x  24.571,97 TL
                                                                     </td>
                                                                    
                                                                     <td data-label="Toplam Tutar (TL)">
-                                                                        265.377,11 TL
+                                                                        294.863,61 TL
                                                                     </td>
                                                                 </tr>
                                                     </tbody>
@@ -14511,10 +14315,10 @@ Siparişinizi mağaza teslim se&ccedil;eneği ile vermek istiyorsanız aşağıd
 &nbsp;
 
 <p><strong>Siparişiniz hen&uuml;z faturalanmadıysa;</strong>;<br />
-Hesabım Siparişlerim b&ouml;l&uuml;m&uuml;nden sipariş iptal talebinizi iletebilirsiniz. Aynı zamanda &ccedil;ağrı merkezimizden 0850 222 56 56 (1), Whatsapp destek 0850 222 56 56 hattımızdan veya <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="066f686069467067726768646f6a616f75677f67742865696b">[email&#160;protected]</a> mail adresimizden iptal talebinizi iletebilirsiniz. İadeniz ortalama 1-2 iş g&uuml;n&uuml;nde bankanıza bildirilmiş olacaktır.</p>
+Hesabım Siparişlerim b&ouml;l&uuml;m&uuml;nden sipariş iptal talebinizi iletebilirsiniz. Aynı zamanda &ccedil;ağrı merkezimizden 0850 222 56 56 (1), Whatsapp destek 0850 222 56 56 hattımızdan veya <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="721b1c141d32041306131c101b1e151b01130b13005c111d1f">[email&#160;protected]</a> mail adresimizden iptal talebinizi iletebilirsiniz. İadeniz ortalama 1-2 iş g&uuml;n&uuml;nde bankanıza bildirilmiş olacaktır.</p>
 
 <p><strong>Siparişiniz kargo s&uuml;recindeyse</strong>;<br />
-0850 222 56 56 numaralı &ccedil;ağrı merkezimizi arayıp dahili 1&rsquo;i tuşlayarak, 0850 222 56 56 numaralı Whatsapp Hattımız&rsquo;a veya <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1970777f76596f786d78777b70757e706a7860786b377a7674">[email&#160;protected]</a> mail adresimizden iptal talebinizi iletebilirsiniz. Bu durumda g&ouml;nderi tarafımızca kargodan geri &ccedil;ekilecektir. &Uuml;r&uuml;n tarafımıza ulaştığında iade işlemleriniz başlatılacak ve ortalama 3 iş g&uuml;n&uuml;nde iadeniz bankanıza bildirilecektir. <strong>&nbsp;</strong></p>
+0850 222 56 56 numaralı &ccedil;ağrı merkezimizi arayıp dahili 1&rsquo;i tuşlayarak, 0850 222 56 56 numaralı Whatsapp Hattımız&rsquo;a veya <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7d14131b123d0b1c091c131f14111a140e1c041c0f531e1210">[email&#160;protected]</a> mail adresimizden iptal talebinizi iletebilirsiniz. Bu durumda g&ouml;nderi tarafımızca kargodan geri &ccedil;ekilecektir. &Uuml;r&uuml;n tarafımıza ulaştığında iade işlemleriniz başlatılacak ve ortalama 3 iş g&uuml;n&uuml;nde iadeniz bankanıza bildirilecektir. <strong>&nbsp;</strong></p>
 
 <p><strong>Siparişinizi teslim aldıysanız</strong>;<br />
 Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan sonra 14 g&uuml;n i&ccedil;erisinde aşağıdaki şekillerde tarafımıza başvurabilirsiniz.</p>
@@ -14522,10 +14326,10 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
 <ol>
 	<li>0850 222 56 56 numaralı &ccedil;ağrı merkezimizi arayıp dahili 1&rsquo;i tuşlayarak arayabilirsiniz.</li>
 	<li>0850 222 56 56 numaralı Whatsapp hattımıza yazabilirsiniz.</li>
-	<li><a href="/cdn-cgi/l/email-protection#dcb5b2bab39caabda8bdb2beb5b0bbb5afbda5bdaef2bfb3b1"><span class="__cf_email__" data-cfemail="b0d9ded6dff0c6d1c4d1ded2d9dcd7d9c3d1c9d1c29ed3dfdd">[email&#160;protected]</span></a> adresimize e posta g&ouml;nderebilirsiniz.</li>
+	<li><a href="/cdn-cgi/l/email-protection#7c15121a133c0a1d081d121e15101b150f1d051d0e521f1311"><span class="__cf_email__" data-cfemail="056c6b636a45736471646b676c69626c76647c64772b666a68">[email&#160;protected]</span></a> adresimize e posta g&ouml;nderebilirsiniz.</li>
 	<li>Size en yakın mağazamıza &uuml;r&uuml;n&uuml; g&ouml;t&uuml;rebilirsiniz.</li>
 	<li><a href="/uyeBilgi/siparistakip/">Hesabım &gt; Siparişlerim</a> b&ouml;l&uuml;m&uuml;nden ilgili siparişinizi se&ccedil;erek, Kolay İade se&ccedil;eneğini kullanabilirsiniz. Size verilen iade kodu ile &uuml;r&uuml;n&uuml; Yurti&ccedil;i Kargo aracılığıyla &uuml;cretsiz olarak tarafımıza g&ouml;nderebilirsiniz. Ayrıca, <a href="/iade-iptal/"> İade ve İptal </a>sayfasındaki Kurye &Ccedil;ağır butonunu kullanarak adresinize &uuml;cretsiz olarak kurye &ccedil;ağırabilirsiniz.</li>
-	<li>Televizyon ve klima iadeleriniz i&ccedil;in &ccedil;ağrı merkezimizden 0850 222 56 56 (1), 0850 222 56 56 numaralı Whatsapp Destek Hattımızdan veya <a href="/cdn-cgi/l/email-protection#95fcfbf3fad5e3f4e1f4fbf7fcf9f2fce6f4ecf4e7bbf6faf8"> <span class="__cf_email__" data-cfemail="7e171018113e081f0a1f101c171219170d1f071f0c501d1113">[email&#160;protected]</span> </a> mail adresimizden bilgi ve destek alabilirsiniz.</li>
+	<li>Televizyon ve klima iadeleriniz i&ccedil;in &ccedil;ağrı merkezimizden 0850 222 56 56 (1), 0850 222 56 56 numaralı Whatsapp Destek Hattımızdan veya <a href="/cdn-cgi/l/email-protection#afc6c1c9c0efd9cedbcec1cdc6c3c8c6dcced6cedd81ccc0c2"> <span class="__cf_email__" data-cfemail="066f686069467067726768646f6a616f75677f67742865696b">[email&#160;protected]</span> </a> mail adresimizden bilgi ve destek alabilirsiniz.</li>
 </ol>
 <br />
 <br />
@@ -14679,100 +14483,6 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
         </div>
 
         <div class="sliders-container">
-                <div id="garantiList" class="extrawarrantyD" data-productLineId="0">
-                    <div class="extrawarrantyD_header">
-                        <div class="extrawarrantyD_header--h">
-                            <span class="f-bold">Ek garanti ister misiniz ?<span />
-                        </div>
-
-                    </div>
-
-                    <div class="btn-group btn-group-toggle extrawarrantyD_option" data-toggle="buttons">
-
-
-                        <div class="owl-carousel owl-theme basketmodal-installment-carousel garanti-carousel  ">
-
-
-                                <div class="item-garanti">
-
-                                    <div class="extrawarrantyD_section">
-                                        <input type="radio" class="basketModalGaranti" data-forced="false"
-                                                 name="warranty_f1912121-d031-4a08-a29a-f8958e0d068a"
-                                               data-GIID="138797" data-mainProductId="0" />
-                                        <div class="saz">
-                                            <div class="text-center">
-                                                <h5>+ 1 Yıl Ek Garanti</h5>
-
-                                            </div>
-                                            <div class="garanti-price-footer">
-
-
-                                                <span> 26.000 TL</span>
-                                                <div class="">
-                                                    <button data-attr="138797"  class="btn btn-add"  id="extrawarrantyD-add">Se&#xE7;</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <label class="extrawarrantyD_option--box">
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="item-garanti">
-
-                                    <div class="extrawarrantyD_section">
-                                        <input type="radio" class="basketModalGaranti" data-forced="false"
-                                                 name="warranty_f1912121-d031-4a08-a29a-f8958e0d068a"
-                                               data-GIID="138798" data-mainProductId="0" />
-                                        <div class="saz">
-                                            <div class="text-center">
-                                                <h5>+ 2 Yıl Ek Garanti</h5>
-
-                                            </div>
-                                            <div class="garanti-price-footer">
-
-
-                                                <span> 37.000 TL</span>
-                                                <div class="">
-                                                    <button data-attr="138798"  class="btn btn-add"  id="extrawarrantyD-add">Se&#xE7;</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <label class="extrawarrantyD_option--box">
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="item-garanti">
-
-                                    <div class="extrawarrantyD_section">
-                                        <input type="radio" class="basketModalGaranti" data-forced="false"
-                                                 name="warranty_f1912121-d031-4a08-a29a-f8958e0d068a"
-                                               data-GIID="138799" data-mainProductId="0" />
-                                        <div class="saz">
-                                            <div class="text-center">
-                                                <h5>+ 3 Yıl Ek Garanti</h5>
-
-                                            </div>
-                                            <div class="garanti-price-footer">
-
-
-                                                <span> 47.000 TL</span>
-                                                <div class="">
-                                                    <button data-attr="138799"  class="btn btn-add"  id="extrawarrantyD-add">Se&#xE7;</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <label class="extrawarrantyD_option--box">
-                                        </label>
-                                    </div>
-                                </div>
-
-
-                        </div>
-
-
-
-                    </div>
-                </div>
                 <div class="fancy-modal-body fancy-modal-list">
                     <div class="container-fluid">
                         <div class="row">
@@ -14783,6 +14493,39 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                             <div class="col-xs-12">
                                 <div id="popupBundleList" class="owl-modal-slider-bundle owl-carousel owl-theme  " data-productLineId="0">
 
+                                            <div class="item-bundle" id="152370">
+
+                                                <div class="basket-modal-prod-begeni">
+                                                    <a href="online-microsoft-365-aile-6-kullanici-1-yil-dijital-indirilebilir-lisans.html">
+                                                        <div class="basket-modal-prod-begeni-image">
+                                                            <picture>
+                                                                <img src="https://cdn.vatanbilgisayar.com/Upload/Product/microsoft/thumb/152370-1_small.jpg" class="img-responsive" alt="online-microsoft-365-aile-6-kullanici-1-yil-dijital-indirilebilir-lisans.html" title="online-microsoft-365-aile-6-kullanici-1-yil-dijital-indirilebilir-lisans.html" />
+                                                            </picture>
+                                                        </div>
+                                                    </a>
+                                                    <div class="basket-modal-prod-begeni-detail">
+                                                        <a href="online-microsoft-365-aile-6-kullanici-1-yil-dijital-indirilebilir-lisans.html">
+                                                            <p class="">
+                                                                <span class="i-title">ONLINE MICROSOFT 365 A&#x130;LE (6 Kullan&#x131;c&#x131; -1 Y&#x131;l ) ( Dijital &#x130;ndirilebilir Lisans )</span>
+                                                            </p>
+                                                        </a>
+                                                        <div class="basket-modal-prod-begeni-price">
+                                                            <a href="online-microsoft-365-aile-6-kullanici-1-yil-dijital-indirilebilir-lisans.html">
+                                                                <p class="basket-price-container">
+                                                                    
+                                                                        <span class="old-price">5.199 TL</span>
+
+                                                                    <span class="price">3.999 <span>TL</span></span>
+                                                                </p>
+                                                            </a>
+
+                                                            <span id="add-to-bundle-cart"
+                                                                  onclick="AddBundleFromPopUp(152370, 0, 0,149838,3.999,'EP2-32296')" class="btn btn-success">Ekle</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                             <div class="item-bundle" id="147553">
 
                                                 <div class="basket-modal-prod-begeni">
@@ -14816,34 +14559,67 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                 </div>
 
                                             </div>
-                                            <div class="item-bundle" id="152370">
+                                            <div class="item-bundle" id="152202">
 
                                                 <div class="basket-modal-prod-begeni">
-                                                    <a href="online-microsoft-365-aile-6-kullanici-1-yil-dijital-indirilebilir-lisans.html">
+                                                    <a href="ugreen-nexode-pro-65w-gan-hizli-sarj-cihazi-100w-1-5m-uzay-grisi.html">
                                                         <div class="basket-modal-prod-begeni-image">
                                                             <picture>
-                                                                <img src="https://cdn.vatanbilgisayar.com/Upload/Product/microsoft/thumb/152370-1_small.jpg" class="img-responsive" alt="online-microsoft-365-aile-6-kullanici-1-yil-dijital-indirilebilir-lisans.html" title="online-microsoft-365-aile-6-kullanici-1-yil-dijital-indirilebilir-lisans.html" />
+                                                                <img src="https://cdn.vatanbilgisayar.com/Upload/Product/ugreen/thumb/152202-1-1_small.jpg" class="img-responsive" alt="ugreen-nexode-pro-65w-gan-hizli-sarj-cihazi-100w-1-5m-uzay-grisi.html" title="ugreen-nexode-pro-65w-gan-hizli-sarj-cihazi-100w-1-5m-uzay-grisi.html" />
                                                             </picture>
                                                         </div>
                                                     </a>
                                                     <div class="basket-modal-prod-begeni-detail">
-                                                        <a href="online-microsoft-365-aile-6-kullanici-1-yil-dijital-indirilebilir-lisans.html">
+                                                        <a href="ugreen-nexode-pro-65w-gan-hizli-sarj-cihazi-100w-1-5m-uzay-grisi.html">
                                                             <p class="">
-                                                                <span class="i-title">ONLINE MICROSOFT 365 A&#x130;LE (6 Kullan&#x131;c&#x131; -1 Y&#x131;l ) ( Dijital &#x130;ndirilebilir Lisans )</span>
+                                                                <span class="i-title">UGREEN Nexode Pro 65W GaN H&#x131;zl&#x131; &#x15E;arj Cihaz&#x131; 100W 1.5m - Uzay Grisi</span>
                                                             </p>
                                                         </a>
                                                         <div class="basket-modal-prod-begeni-price">
-                                                            <a href="online-microsoft-365-aile-6-kullanici-1-yil-dijital-indirilebilir-lisans.html">
+                                                            <a href="ugreen-nexode-pro-65w-gan-hizli-sarj-cihazi-100w-1-5m-uzay-grisi.html">
                                                                 <p class="basket-price-container">
                                                                     
-                                                                        <span class="old-price">5.199 TL</span>
+                                                                <span class="old-price"></span>
 
-                                                                    <span class="price">3.999 <span>TL</span></span>
+                                                                    <span class="price">2.959 <span>TL</span></span>
                                                                 </p>
                                                             </a>
 
                                                             <span id="add-to-bundle-cart"
-                                                                  onclick="AddBundleFromPopUp(152370, 0, 0,149838,3.999,'EP2-32296')" class="btn btn-success">Ekle</span>
+                                                                  onclick="AddBundleFromPopUp(152202, 0, 0,149838,2.959,'25871')" class="btn btn-success">Ekle</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="item-bundle" id="154004">
+
+                                                <div class="basket-modal-prod-begeni">
+                                                    <a href="baseus-enerfill-fc31-pbnk-10-000-mah-powerbank-siyah.html">
+                                                        <div class="basket-modal-prod-begeni-image">
+                                                            <picture>
+                                                                <img src="https://cdn.vatanbilgisayar.com/Upload/Product/baseus/thumb/154004-1_small.jpg" class="img-responsive" alt="baseus-enerfill-fc31-pbnk-10-000-mah-powerbank-siyah.html" title="baseus-enerfill-fc31-pbnk-10-000-mah-powerbank-siyah.html" />
+                                                            </picture>
+                                                        </div>
+                                                    </a>
+                                                    <div class="basket-modal-prod-begeni-detail">
+                                                        <a href="baseus-enerfill-fc31-pbnk-10-000-mah-powerbank-siyah.html">
+                                                            <p class="">
+                                                                <span class="i-title">Baseus EnerFill FC31 10.000 mAh 45W Powerbank - Siyah</span>
+                                                            </p>
+                                                        </a>
+                                                        <div class="basket-modal-prod-begeni-price">
+                                                            <a href="baseus-enerfill-fc31-pbnk-10-000-mah-powerbank-siyah.html">
+                                                                <p class="basket-price-container">
+                                                                    
+                                                                <span class="old-price"></span>
+
+                                                                    <span class="price">3.231 <span>TL</span></span>
+                                                                </p>
+                                                            </a>
+
+                                                            <span id="add-to-bundle-cart"
+                                                                  onclick="AddBundleFromPopUp(154004, 0, 0,149838,3.231,'P10082102123-00')" class="btn btn-success">Ekle</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -14882,39 +14658,6 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                 </div>
 
                                             </div>
-                                            <div class="item-bundle" id="152202">
-
-                                                <div class="basket-modal-prod-begeni">
-                                                    <a href="ugreen-nexode-pro-65w-gan-hizli-sarj-cihazi-100w-1-5m-uzay-grisi.html">
-                                                        <div class="basket-modal-prod-begeni-image">
-                                                            <picture>
-                                                                <img src="https://cdn.vatanbilgisayar.com/Upload/Product/ugreen/thumb/152202-1-1_small.jpg" class="img-responsive" alt="ugreen-nexode-pro-65w-gan-hizli-sarj-cihazi-100w-1-5m-uzay-grisi.html" title="ugreen-nexode-pro-65w-gan-hizli-sarj-cihazi-100w-1-5m-uzay-grisi.html" />
-                                                            </picture>
-                                                        </div>
-                                                    </a>
-                                                    <div class="basket-modal-prod-begeni-detail">
-                                                        <a href="ugreen-nexode-pro-65w-gan-hizli-sarj-cihazi-100w-1-5m-uzay-grisi.html">
-                                                            <p class="">
-                                                                <span class="i-title">UGREEN Nexode Pro 65W GaN H&#x131;zl&#x131; &#x15E;arj Cihaz&#x131; 100W 1.5m - Uzay Grisi</span>
-                                                            </p>
-                                                        </a>
-                                                        <div class="basket-modal-prod-begeni-price">
-                                                            <a href="ugreen-nexode-pro-65w-gan-hizli-sarj-cihazi-100w-1-5m-uzay-grisi.html">
-                                                                <p class="basket-price-container">
-                                                                    
-                                                                <span class="old-price"></span>
-
-                                                                    <span class="price">2.799 <span>TL</span></span>
-                                                                </p>
-                                                            </a>
-
-                                                            <span id="add-to-bundle-cart"
-                                                                  onclick="AddBundleFromPopUp(152202, 0, 0,149838,2.799,'25871')" class="btn btn-success">Ekle</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
                                             <div class="item-bundle" id="103904">
 
                                                 <div class="basket-modal-prod-begeni">
@@ -14937,12 +14680,12 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
                                                                     
                                                                 <span class="old-price"></span>
 
-                                                                    <span class="price">647 <span>TL</span></span>
+                                                                    <span class="price">1.201 <span>TL</span></span>
                                                                 </p>
                                                             </a>
 
                                                             <span id="add-to-bundle-cart"
-                                                                  onclick="AddBundleFromPopUp(103904, 0, 0,149838,647,'300458')" class="btn btn-success">Ekle</span>
+                                                                  onclick="AddBundleFromPopUp(103904, 0, 0,149838,1.201,'300458')" class="btn btn-success">Ekle</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -15114,7 +14857,7 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
         <span class="icon-check-circle-alt"></span>
         <div class="alert-msg">Ürün, favori listenize eklendi.</div>
         <div class="fancy-modal-price-footer">
-                <p>Bu ürün fiyatı düştüğünde size haber verilebilmesi için e-posta izni vermeniz gerekiyor.</p>
+                <p>Bu ürün stoğa gelince size haber verilebilmesi için e-posta izni vermeniz gerekiyor.</p>
             <div class="form-group">
                 <label class="wrapper-checkbox d-block-chc">
                     <input class="check-box" data-val="true" id="TermsAndConditions" name="TermsAndConditions" type="checkbox" value="true"><input name="TermsAndConditions" type="hidden" value="true">
@@ -15246,7 +14989,7 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
         "url": "https://www.vatanbilgisayar.com/asus-rog-strix-scar-18-2-nesil-core-ultra-9-275hx-rtx5090-24gb-64gb-2tb-18inc-w11.html",
         "priceCurrency": "TRY",
         "price": "212499",
-        "availability": "https://schema.org/InStock",
+        "availability": "https://schema.org/OutOfStock",
         "itemCondition": "https://schema.org/NewCondition",
         "validThrough": "2050-11-20",
         "seller": {
@@ -15259,7 +15002,7 @@ Cayma hakkınızı kullanmak i&ccedil;in &uuml;r&uuml;n&uuml; teslim aldıktan s
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "5",
-              "ratingCount": "2",
+              "ratingCount": "3",
               "bestRating": "5"
             },
             "review": [
@@ -15315,6 +15058,20 @@ Ekip çok yardımcı oldu hepsine teşekkürler",
                           "@type": "Person"
 ,"name": "Y&#xDC;KSEL D****"                        },
                         "datePublished": "2025-11-27",
+                        "reviewRating": {
+                          "@type": "Rating",
+                          "ratingValue": "5"
+                        }
+                      }
+                
+                    ,
+                      {
+                        "@type": "Review",
+                        "reviewBody": "Ürüne çanta dahil mi ?",
+"name": "Çanta sorusu",                        "author": {
+                          "@type": "Person"
+,"name": "C&#x130;HAD K******"                        },
+                        "datePublished": "2026-01-27",
                         "reviewRating": {
                           "@type": "Rating",
                           "ratingValue": "5"
@@ -17615,18 +17372,18 @@ if (document.getElementById('build-pc-container')) {
 	<script src="/Scripts/mfs-client.min.js"></script>
 	<script src="/Scripts/mpass.js"></script>
 
-		<script src="/assets/dist/js/bundle.js?v=20260126141528"></script>
+		<script src="/assets/dist/js/bundle.js?v=20260128171048"></script>
 
 	
 	
-    <script id="engine" data-module="productDetail" type="text/javascript" src="/Scripts/custom.js?v=20260126141528"></script>
+    <script id="engine" data-module="productDetail" type="text/javascript" src="/Scripts/custom.js?v=20260128171048"></script>
 
 	
 	
 	
 	
 	
-	<input type="hidden" id="lastServerTime" value="17:48:44" />
+	<input type="hidden" id="lastServerTime" value="00:34:54" />
 
 
 

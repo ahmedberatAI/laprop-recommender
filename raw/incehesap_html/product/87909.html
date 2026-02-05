@@ -111,29 +111,6 @@
         <!-- End Google Tag Manager (noscript) -->
     
     
-    <div class="relative w-full aspect-[640/90] lg:aspect-auto lg:h-16" x-data='{
-            activeKey: 0,
-            bars: [{"id":228,"aciklama":"Hesapl\u0131 Ocak Kampanyas\u0131","url":"\/hesapli-ocak","image":"\/resim\/topbars\/69660df3e429e4.84788541_lonipehqfjgkm.webp","image_expanded":null,"image_mobile":"\/resim\/topbars\/69660df4563cf6.80352070_lphmkinoqgefj.webp","image_mobile_expanded":null,"bg":"\/resim\/topbars\/69660f1f6bca12.66607833_klqhgimofepjn.webp","baslangic_tarihi":"2026-01-13T09:00:00.000000Z","bitis_tarihi":"2026-01-31T20:59:00.000000Z","eklenme_tarihi":"2026-01-13T09:18:43.000000Z","duzenleme_tarihi":"2026-01-13T09:23:43.000000Z","ekleyen_id":301640,"duzenleyen_id":301640,"expandable":null,"test_mode":false,"bar_olmayan_sayfalarda_goster":true,"kategori_id":[],"marka_id":[],"urun_id":[],"keyword":null,"gosterilecek_sayfalar":[],"show_mobil_app":0}],
-            init() {
-                setInterval(() => {
-                    if (this.activeKey >= this.bars.length) {
-                        this.activeKey = 0;
-                    } else {
-                        this.activeKey = (this.activeKey + 1) % this.bars.length;
-                    }
-                }, 5000);
-            }
-        }'>
-        <template x-for="(item, key) in bars">
-            <a x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" :style="item.bg ? 'background-image: url('+item.bg+')' : ''" x-show="key == activeKey" :href="item.url" class="absolute w-full flex justify-center aspect-[640/90] lg:aspect-auto" :style="item.css" :title="item.aciklama">
-                <picture>
-                    <source media="(max-width: 1023px)" :srcset="item.image_mobile" width="768" height="90">
-                    <source media="(min-width: 1024px)" :srcset="item.image" width="1903" height="64">
-                    <img :src="item.image" class="object-contain lg:object-none h-full lg:h-16" :alt="item.aciklama">
-                </picture>
-            </a>
-        </template>
-    </div>
 
 <div x-data="{showSearch : false}">
     <div class="relative border-b-gray-300 bg-white lg:border-b">
@@ -397,29 +374,6 @@
 </div>
 
 
-    <div class="relative w-full aspect-[640/90] lg:aspect-auto lg:h-12 " x-data='{
-            activeKey: 0,
-            bars: [{"id":144,"baslik":"Paraf Kart ile Yapaca\u011f\u0131n\u0131z Al\u0131\u015fveri\u015flerde 1500\u20ba e varan ParafPara Pe\u015fin fiyat\u0131na 3 Taksit","icerik_url":"https:\/\/www.incehesap.com\/icerik\/paraf-kart-ile-yapacaginiz-alisverislerde-pesin-fiyatina-3-taksit-ve-1500tl-parafpara\/","banner_default":"\/resim\/banka\/6955094a64e7c0.70193677_lgohijpmkfqen.webp","banner_mobile":"\/resim\/banka\/6955094a916218.55968593_ngkjqeolmpifh.webp","css":"background: #044f93"}],
-            init() {
-                setInterval(() => {
-                    if (this.activeKey >= this.bars.length) {
-                        this.activeKey = 0;
-                    } else {
-                        this.activeKey = (this.activeKey + 1) % this.bars.length;
-                    }
-                }, 12000);
-            }
-        }'>
-        <template x-for="(item, key) in bars">
-            <a x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" x-show="key == activeKey" :href="item.icerik_url" class="absolute w-full flex justify-center" :style="item.css" :title="item.baslik">
-                <picture>
-                    <source media="(max-width: 1023px)" :srcset="item.banner_mobile" width="768" height="90">
-                    <source media="(min-width: 1024px)" :srcset="item.banner_default" width="1903" height="48">
-                    <img :src="item.banner_default" class="object-contain lg:object-none h-full lg:h-12" :alt="item.baslik">
-                </picture>
-            </a>
-        </template>
-    </div>
 
     <main class="bg-top bg-no-repeat relative flex-1" >
 
@@ -461,7 +415,7 @@
 
 <script>
     dataLayer.push({ ecommerce: null });
-    window.dataLayer.push({"event":"view_item","ecommerce":{"currency":"TRY","value":43909,"items":[{"id":87909,"item_id":87909,"item_name":"HP B9YW5ET PROBOOK 4 G1i AI U5-225U 8GB 512GB SSD 14″ W11P NOTEBOOK","item_brand":"HP","image":"https:\/\/www.incehesap.com\/resim\/urun\/202601\/69721efe8a3433.23205580_mhkilfopgjnqe_500.webp","url":"https:\/\/www.incehesap.com\/hp-b9yw5et-probook-4-g1i-ai-u5-225u-8gb-512gb-ssd-14-w11p-notebook-fiyati-87909\/","price":43909,"quantity":1,"index":0,"item_category":"Bilgisayar","item_category2":"Notebook"}]}});
+    window.dataLayer.push({"event":"view_item","ecommerce":{"currency":"TRY","value":43939,"items":[{"id":87909,"item_id":87909,"item_name":"HP B9YW5ET PROBOOK 4 G1i AI U5-225U 8GB 512GB SSD 14″ W11P NOTEBOOK","item_brand":"HP","image":"https:\/\/www.incehesap.com\/resim\/urun\/202601\/69721efe8a3433.23205580_mhkilfopgjnqe_500.webp","url":"https:\/\/www.incehesap.com\/hp-b9yw5et-probook-4-g1i-ai-u5-225u-8gb-512gb-ssd-14-w11p-notebook-fiyati-87909\/","price":43939,"quantity":1,"index":0,"item_category":"Bilgisayar","item_category2":"Notebook"}]}});
 </script><div class="container space-y-5 pb-5">
     
 
@@ -470,17 +424,17 @@
 
 <div hidden>
     <meta itemprop="priceCurrency" content="TRY" />
-    <meta itemprop="price" content="43909.00" />
+    <meta itemprop="price" content="43939.00" />
     <div itemprop="offers" itemtype="https://schema.org/AggregateOffer" itemscope>
         <link itemprop="itemCondition" href="https://schema.org/NewCondition" />
         <meta itemprop="availability" content="https://schema.org/InStock" />
-        <meta itemprop="lowPrice" content="43909" />
-        <meta itemprop="highPrice" content="43913.29" />
+        <meta itemprop="lowPrice" content="43939" />
+        <meta itemprop="highPrice" content="43935.55" />
         <meta itemprop="priceCurrency" content="TRY" />
         <meta itemprop="offerCount" content="1" />
     </div>
     
-    <meta itemprop="description" content="HP B9YW5ET PROBOOK 4 G1i AI U5-225U 8GB 512GB SSD 14″ W11P NOTEBOOK Fiyatı : 43,909.00 TRY." />
+    <meta itemprop="description" content="HP B9YW5ET PROBOOK 4 G1i AI U5-225U 8GB 512GB SSD 14″ W11P NOTEBOOK Fiyatı : 43,939.00 TRY." />
 
     
     
@@ -497,12 +451,12 @@
 <div>
     <div class="swiper singleSwiperAuto">
         <div class="swiper-wrapper">
-            <div class="swiper-slide [&:nth-child(1n)]:bg-lime-500 [&:nth-child(2n)]:bg-sky-400 [&:nth-child(3n)]:bg-orange-500 text-white font-semibold text-center p-2 lg:p-3 text-xs lg:text-lg">Maximum Karta Peşin Fiyatına 3 Taksit</div><div class="swiper-slide [&:nth-child(1n)]:bg-lime-500 [&:nth-child(2n)]:bg-sky-400 [&:nth-child(3n)]:bg-orange-500 text-white font-semibold text-center p-2 lg:p-3 text-xs lg:text-lg">Paraf Karta Peşin Fiyatına 3 Taksit</div><div class="swiper-slide [&:nth-child(1n)]:bg-lime-500 [&:nth-child(2n)]:bg-sky-400 [&:nth-child(3n)]:bg-orange-500 text-white font-semibold text-center p-2 lg:p-3 text-xs lg:text-lg">HP Türkiye Garantili</div><script>var abtests='749'</script>
+            <div class="swiper-slide [&:nth-child(1n)]:bg-lime-500 [&:nth-child(2n)]:bg-sky-400 [&:nth-child(3n)]:bg-orange-500 text-white font-semibold text-center p-2 lg:p-3 text-xs lg:text-lg">Paraf Karta Peşin Fiyatına 3 Taksit</div><div class="swiper-slide [&:nth-child(1n)]:bg-lime-500 [&:nth-child(2n)]:bg-sky-400 [&:nth-child(3n)]:bg-orange-500 text-white font-semibold text-center p-2 lg:p-3 text-xs lg:text-lg">HP Türkiye Garantili</div><script>var abtests='749'</script>
 	        </div>
     </div>
 
-    <div data-product='{"name":"HP B9YW5ET PROBOOK 4 G1i AI U5-225U 8GB 512GB SSD 14″ W11P NOTEBOOK","id":87909,"price":43909,"category":"Notebook","category_id":834,"brand":"HP","brand_id":52,"review_count":0,"rating":0,"tags":"","item_list_name":"Ürün Detay","position":1,"location":null,"event":"product_view"}'
-        data-gaitem='{"id":87909,"item_id":87909,"item_name":"HP B9YW5ET PROBOOK 4 G1i AI U5-225U 8GB 512GB SSD 14″ W11P NOTEBOOK","item_brand":"HP","image":"https://www.incehesap.com/resim/urun/202601/69721efe8a3433.23205580_mhkilfopgjnqe_500.webp","url":"https://www.incehesap.com/hp-b9yw5et-probook-4-g1i-ai-u5-225u-8gb-512gb-ssd-14-w11p-notebook-fiyati-87909/","price":43909,"quantity":1,"index":0,"item_category":"Bilgisayar","item_category2":"Notebook"}'
+    <div data-product='{"name":"HP B9YW5ET PROBOOK 4 G1i AI U5-225U 8GB 512GB SSD 14″ W11P NOTEBOOK","id":87909,"price":43939,"category":"Notebook","category_id":834,"brand":"HP","brand_id":52,"review_count":0,"rating":0,"tags":"","item_list_name":"Ürün Detay","position":1,"location":null,"event":"product_view"}'
+        data-gaitem='{"id":87909,"item_id":87909,"item_name":"HP B9YW5ET PROBOOK 4 G1i AI U5-225U 8GB 512GB SSD 14″ W11P NOTEBOOK","item_brand":"HP","image":"https://www.incehesap.com/resim/urun/202601/69721efe8a3433.23205580_mhkilfopgjnqe_500.webp","url":"https://www.incehesap.com/hp-b9yw5et-probook-4-g1i-ai-u5-225u-8gb-512gb-ssd-14-w11p-notebook-fiyati-87909/","price":43939,"quantity":1,"index":0,"item_category":"Bilgisayar","item_category2":"Notebook"}'
         x-intersect.once="$dispatch('product-shown');"
         class="prod grid grid-cols-1 justify-start gap-x-px border-l border-r border-b drop-shadow-sm lg:grid-cols-2 mb-5 bg-neutral-200" x-data="{
                             id: 87909,
@@ -785,16 +739,16 @@
                     <div class="flex items-end gap-x-3 pt-5">
                         <!-- <span class="font-semibold !leading-none md:text-xl">Tek Çekim / Havale:</span> -->
                         <div class="price whitespace-nowrap text-2xl font-semibold !leading-none tracking-tight text-orange-500 md:text-4xl">
-                            43.909 TL                        </div>
+                            43.939 TL                        </div>
                     </div>
 
                     <!-- taksit -->
                     <div class="text-sm leading-none mt-2">
                                                     <div class="inline-flex items-center">
                                 <img src="/assets/img/card-blue.webp" alt="card">
-                                <p class="ml-2"><span class="font-semibold">4.834 TL</span>'den başlayan taksit <span class="font-semibold cursor-pointer" @click="document.querySelector('#tabs').scrollIntoView( true ); $dispatch('select-tab', 'Ödeme Seçenekleri')">seçenekleri</span></p>
+                                <p class="ml-2"><span class="font-semibold">4.837 TL</span>'den başlayan taksit <span class="font-semibold cursor-pointer" @click="document.querySelector('#tabs').scrollIntoView( true ); $dispatch('select-tab', 'Ödeme Seçenekleri')">seçenekleri</span></p>
                             </div>
-                                                <div>Maximum ve Paraf Karta Peşin Fiyatına 3 Taksit (14.636 TL x 3)</div>
+                                                <div>Maximum ve Paraf Karta Peşin Fiyatına 3 Taksit (14.646 TL x 3)</div>
                     </div>
 
                     <!-- ogrenci indirimi -->
@@ -802,7 +756,7 @@
 
                 <!-- puan -->
                                     <p class="bg-white px-5 leading-tight lg:order-6 text-xs">
-                        Ürünü aldığınızda <span class="font-semibold text-orange-500">365,91 TL</span>
+                        Ürünü aldığınızda <span class="font-semibold text-orange-500">366,16 TL</span>
                         değerinde puan kazanacaksınız
                     </p>
                 
@@ -851,7 +805,7 @@
                 <div class="grid grid-cols-2 gap-3 bg-white xl:grid-cols-4 px-5">
                     <div class="col-span-full bg-gray-50 py-1 inline-flex items-center space-x-2 text-sm font-semibold text-neutral-500">
                                                     <img src="/assets/img/product/rush.webp" alt="kargo">
-                                                <span>29 Ocak Perşembe'ye kadar kargoda!</span>
+                                                <span>Şimdi sipariş ver, yarın kargoda!</span>
                     </div>
                                                                         <div class="col-span-2 xl:col-span-2 justify-between flex h-16 items-center justify-center rounded border p-3">
                                 <div>
@@ -886,53 +840,7 @@
                 <!-- varyant urunler -->
                 
                 <div class="w-full space-y-3 bg-white px-5">
-                        <!-- Stoktaki son ürün -->
-    <div class="swiper singleSwiper rounded border bg-white">
-        <div class="swiper-wrapper">
-                            <div class="swiper-slide flex items-center py-5 px-7">
-                    <div class="h-20 w-20 place-items-center lg:grid">
-                        <img class="object-contain md:block" src="/resim/urun/202510/68f8cb5676cae3.04964219_iengofkphmljq_cropped_75.webp" alt="Baseus WKQX050101 Type-C 6 in 1 Laptop Docking Station " />
-                    </div>
-                    <div class="flex-1 md:ml-3">
-                        <p class="leading-none md:text-xl font-semibold">
-                            Bu üründen 1 Adet alana                        </p>
-                        <p class="text-sm md:text-base">
-                                                            <a href="/baseus-wkqx050101-type-c-6-in-1-laptop-docking-station-fiyati-85163/">
-                                    Baseus WKQX050101 Type-C 6 in 1 Laptop Docking Station                                </a>
-                            
-                                                                                                sadece
-                                    <span class="whitespace-nowrap font-medium text-orange-500">939 TL</span>
-                                
-                                                    </p>
-                    </div>
                     
-                </div>
-                            <div class="swiper-slide flex items-center py-5 px-7">
-                    <div class="h-20 w-20 place-items-center lg:grid">
-                        <img class="object-contain md:block" src="/resim/urun/202508/68a4248e1ad789.57930658_fqeijgohnlpmk_cropped_75.webp" alt="Unitek 65W Universal Travel Adaptör (P1122ABK01)" />
-                    </div>
-                    <div class="flex-1 md:ml-3">
-                        <p class="leading-none md:text-xl font-semibold">
-                            Bu üründen 1 Adet alana                        </p>
-                        <p class="text-sm md:text-base">
-                                                            <a href="/unitek-65w-universal-travel-adaptor-p1122abk01-fiyati-83718/">
-                                    Unitek 65W Universal Travel Adaptör (P1122ABK01)                                </a>
-                            
-                                                                                                sadece
-                                    <span class="whitespace-nowrap font-medium text-orange-500">1.499 TL</span>
-                                
-                                                    </p>
-                    </div>
-                    
-                </div>
-                    </div>
-                    <div class="swiper-pagination !bottom-0"></div>
-            <div class="" style="--swiper-navigation-size: 16px;">
-                <div class="swiper-button-prev !bg-transparent !flex !h-full !border-none !shadow-none !rounded-none !w-6"></div>
-                <div class="swiper-button-next !bg-transparent !flex !h-full !border-none !shadow-none !rounded-none !w-6"></div>
-            </div>
-            </div>
-
 
 
                     <div class="flex">
@@ -1336,8 +1244,8 @@
     <div x-data='{
         selectedTurIndex: 0,
         turler: [
-            {"adi": "Bireysel", kartlar: [{"color":"#FFB71B","logo":"axess-light","kart_adi":"Axess","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43909,"taksit_fiyat":43909},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46518.69901472614,"taksit_fiyat":23259.34950736307},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47458.927799394725,"taksit_fiyat":15819.642599798242},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48437.94815223387,"taksit_fiyat":12109.487038058467},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49452.64106318279,"taksit_fiyat":9890.528212636558},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50516.566958122414,"taksit_fiyat":8419.427826353736},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":51627.27807172251,"taksit_fiyat":7375.325438817502},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":52787.9297908151,"taksit_fiyat":6598.491223851887},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":54001.96777764113,"taksit_fiyat":6000.218641960126},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":55273.162134944614,"taksit_fiyat":5527.316213494461},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":56605.64651282712,"taksit_fiyat":5145.967864802466},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":58003.963011889035,"taksit_fiyat":4833.6635843240865}}},{"color":"#782A90","logo":"world-light","kart_adi":"Worldcard-Yap\u0131kredi","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43909,"taksit_fiyat":43909},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46568.0347862976,"taksit_fiyat":23284.0173931488},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47510.2791603549,"taksit_fiyat":15836.7597201183},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48491.44119271121,"taksit_fiyat":12122.860298177802},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49508.40004510091,"taksit_fiyat":9901.680009020183},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50574.752361207095,"taksit_fiyat":8429.125393534516},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":51688.05179517363,"taksit_fiyat":7384.007399310519},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":52851.46846413096,"taksit_fiyat":6606.43355801637},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":54068.46447481837,"taksit_fiyat":6007.607163868708},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":55342.82833375347,"taksit_fiyat":5534.282833375347},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":56678.714341035244,"taksit_fiyat":5152.610394639568},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":58080.68783068783,"taksit_fiyat":4840.057319223985}}},{"color":"#EB008B","logo":"maximum-light","kart_adi":"Maximum","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43909,"taksit_fiyat":43909},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46307.740982915,"taksit_fiyat":23153.8704914575},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":43909,"taksit_fiyat":14636.333333333334},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48230.44815465729,"taksit_fiyat":12057.612038664323},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49247.420367877974,"taksit_fiyat":9849.484073575595},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50383.24727481354,"taksit_fiyat":8397.20787913559},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":51506.15835777126,"taksit_fiyat":7358.022622538751},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":52743.54354354354,"taksit_fiyat":6592.942942942943},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":53968.780727630285,"taksit_fiyat":5996.53119195892}}},{"color":"#00633a","logo":"bonus-light","kart_adi":"Bonus","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43909,"taksit_fiyat":43909},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46543.353826584695,"taksit_fiyat":23271.676913292347},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47072.255574614064,"taksit_fiyat":15690.751858204689},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48464.67991169978,"taksit_fiyat":12116.169977924945},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49480.50484561641,"taksit_fiyat":9896.100969123281},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":49839.95459704881,"taksit_fiyat":8306.659099508135},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":51657.64705882353,"taksit_fiyat":7379.663865546218},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":52819.68001924697,"taksit_fiyat":6602.460002405871},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":54035.19566822545,"taksit_fiyat":6003.910629802828}}},{"color":"#1665A1","logo":"qnb-light","kart_adi":"CardFinans","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43909,"taksit_fiyat":43909},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46518.69901472614,"taksit_fiyat":23259.34950736307},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47458.927799394725,"taksit_fiyat":15819.642599798242},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48437.94815223387,"taksit_fiyat":12109.487038058467},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49452.64106318279,"taksit_fiyat":9890.528212636558},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50516.566958122414,"taksit_fiyat":8419.427826353736},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":51627.27807172251,"taksit_fiyat":7375.325438817502},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":52787.9297908151,"taksit_fiyat":6598.491223851887},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":54001.96777764113,"taksit_fiyat":6000.218641960126},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":55273.162134944614,"taksit_fiyat":5527.316213494461},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":56605.64651282712,"taksit_fiyat":5145.967864802466},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":58003.963011889035,"taksit_fiyat":4833.6635843240865}}},{"color":"#EC6608","logo":"advantage-light","kart_adi":"Advantage","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43909,"taksit_fiyat":43909},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46518.69901472614,"taksit_fiyat":23259.34950736307},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47458.927799394725,"taksit_fiyat":15819.642599798242},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48437.94815223387,"taksit_fiyat":12109.487038058467},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49452.64106318279,"taksit_fiyat":9890.528212636558},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50516.566958122414,"taksit_fiyat":8419.427826353736},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":51627.27807172251,"taksit_fiyat":7375.325438817502},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":52787.9297908151,"taksit_fiyat":6598.491223851887},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":54001.96777764113,"taksit_fiyat":6000.218641960126},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":55273.162134944614,"taksit_fiyat":5527.316213494461},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":56605.64651282712,"taksit_fiyat":5145.967864802466},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":58003.963011889035,"taksit_fiyat":4833.6635843240865}}},{"color":"#00B1DD","logo":"paraf-light","kart_adi":"Paraf","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43909,"taksit_fiyat":43909},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46351.73651430381,"taksit_fiyat":23175.868257151906},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":43909,"taksit_fiyat":14636.333333333334},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48267.56073430802,"taksit_fiyat":12066.890183577005},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49286.11516444045,"taksit_fiyat":9857.22303288809},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50348.58387799565,"taksit_fiyat":8391.430646332608},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":51457.86944802532,"taksit_fiyat":7351.12420686076},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":52623.44199424736,"taksit_fiyat":6577.93024928092},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":53836.43943109368,"taksit_fiyat":5981.826603454853}}},{"color":"#E11931","logo":"bankkart-light","kart_adi":"Bankkart Combo","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43909,"taksit_fiyat":43909},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46220,"taksit_fiyat":23110},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47036.957686127476,"taksit_fiyat":15678.985895375825},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":47893.76090750436,"taksit_fiyat":11973.44022687609},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":48776.93845812042,"taksit_fiyat":9755.387691624084},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":49721.435850979506,"taksit_fiyat":8286.90597516325},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":50650.59407082709,"taksit_fiyat":7235.799152975298},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":51669.80465991998,"taksit_fiyat":6458.725582489998},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":52673.9443378119,"taksit_fiyat":5852.6604819791}}},{"color":"#00633a","logo":"kuveyt-light","kart_adi":"Sa\u011flam Kart","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43909,"taksit_fiyat":43909},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46293.094359515024,"taksit_fiyat":23146.547179757512},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47153.13573883162,"taksit_fiyat":15717.711912943872},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48035.22590526201,"taksit_fiyat":12008.806476315502},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":48961.864406779656,"taksit_fiyat":9792.372881355932},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":49913.60691144708,"taksit_fiyat":8318.93448524118},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":50914.88868274582,"taksit_fiyat":7273.555526106546},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":51944.8716432036,"taksit_fiyat":6493.10895540045},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":53030.19323671497,"taksit_fiyat":5892.24369296833}}}]},
-            {"adi": "Ticari", kartlar: [{"color":"#00633a","logo":"bonus-light","kart_adi":"Garanti Miles TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43909,"taksit_fiyat":43909},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46543.353826584695,"taksit_fiyat":23271.676913292347},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47072.255574614064,"taksit_fiyat":15690.751858204689},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48464.67991169978,"taksit_fiyat":12116.169977924945}}},{"color":"#00633a","logo":"kuveyt-light","kart_adi":"Kuveyt T\u00fcrk (TCR)","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43909,"taksit_fiyat":43909},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46293.094359515024,"taksit_fiyat":23146.547179757512},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47153.13573883162,"taksit_fiyat":15717.711912943872},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48035.22590526201,"taksit_fiyat":12008.806476315502},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":48961.864406779656,"taksit_fiyat":9792.372881355932},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":49913.60691144708,"taksit_fiyat":8318.93448524118},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":50914.88868274582,"taksit_fiyat":7273.555526106546},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":51944.8716432036,"taksit_fiyat":6493.10895540045},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":53030.19323671497,"taksit_fiyat":5892.24369296833},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":54148.47700086324,"taksit_fiyat":5414.847700086324},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":55328.8810483871,"taksit_fiyat":5029.8982771261},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":56547.327752736644,"taksit_fiyat":4712.277312728053}}},{"color":"#EB008B","logo":"maximum-light","kart_adi":"Maximum TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43909,"taksit_fiyat":43909},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46307.740982915,"taksit_fiyat":23153.8704914575},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":43909,"taksit_fiyat":14636.333333333334},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48230.44815465729,"taksit_fiyat":12057.612038664323},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49247.420367877974,"taksit_fiyat":9849.484073575595},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50383.24727481354,"taksit_fiyat":8397.20787913559}}},{"color":"#00B1DD","logo":"paraf-light","kart_adi":"Paraf TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43909,"taksit_fiyat":43909},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46351.73651430381,"taksit_fiyat":23175.868257151906},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":43909,"taksit_fiyat":14636.333333333334},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48267.56073430802,"taksit_fiyat":12066.890183577005},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49286.11516444045,"taksit_fiyat":9857.22303288809},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50348.58387799565,"taksit_fiyat":8391.430646332608},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":51457.86944802532,"taksit_fiyat":7351.12420686076},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":52623.44199424736,"taksit_fiyat":6577.93024928092}}},{"color":"#1665A1","logo":"qnb-light","kart_adi":"CardFinans TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43909,"taksit_fiyat":43909},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46518.69901472614,"taksit_fiyat":23259.34950736307},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47458.927799394725,"taksit_fiyat":15819.642599798242},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48437.94815223387,"taksit_fiyat":12109.487038058467},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49452.64106318279,"taksit_fiyat":9890.528212636558},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50516.566958122414,"taksit_fiyat":8419.427826353736}}},{"color":"#EC6608","logo":"advantage-light","kart_adi":"Advantage TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43909,"taksit_fiyat":43909},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46518.69901472614,"taksit_fiyat":23259.34950736307},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47458.927799394725,"taksit_fiyat":15819.642599798242},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48437.94815223387,"taksit_fiyat":12109.487038058467},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49452.64106318279,"taksit_fiyat":9890.528212636558},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50516.566958122414,"taksit_fiyat":8419.427826353736}}},{"color":"#E11931","logo":"bankkart-light","kart_adi":"Bankkart Combo TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43909,"taksit_fiyat":43909},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46220,"taksit_fiyat":23110},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47036.957686127476,"taksit_fiyat":15678.985895375825}}}]},
+            {"adi": "Bireysel", kartlar: [{"color":"#FFB71B","logo":"axess-light","kart_adi":"Axess","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43939,"taksit_fiyat":43939},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46550.48204258926,"taksit_fiyat":23275.24102129463},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47491.3532209252,"taksit_fiyat":15830.451073641734},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48471.04247104247,"taksit_fiyat":12117.760617760618},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49486.42865187521,"taksit_fiyat":9897.285730375042},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50551.08145421077,"taksit_fiyat":8425.180242368462},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":51662.55144032922,"taksit_fiyat":7380.364491475602},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":52823.996152921376,"taksit_fiyat":6602.999519115172},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":54038.863608412255,"taksit_fiyat":6004.318178712473},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":55310.92648539779,"taksit_fiyat":5531.092648539779},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":56644.32125821838,"taksit_fiyat":5149.483750747125},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":58043.593130779394,"taksit_fiyat":4836.966094231616}}},{"color":"#782A90","logo":"world-light","kart_adi":"Worldcard-Yap\u0131kredi","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43939,"taksit_fiyat":43939},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46599.85152190052,"taksit_fiyat":23299.92576095026},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47542.7396667388,"taksit_fiyat":15847.579888912935},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48524.57205963556,"taksit_fiyat":12131.14301490889},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49542.22573007103,"taksit_fiyat":9908.445146014206},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50609.30661137987,"taksit_fiyat":8434.884435229978},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":51723.36668628605,"taksit_fiyat":7389.05238375515},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":52887.578237843045,"taksit_fiyat":6610.947279730381},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":54105.40573820958,"taksit_fiyat":6011.711748689953},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":55380.640282329216,"taksit_fiyat":5538.064028232921},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":56717.439008648515,"taksit_fiyat":5156.130818968047},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":58120.37037037037,"taksit_fiyat":4843.364197530865}}},{"color":"#EB008B","logo":"maximum-light","kart_adi":"Maximum","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43939,"taksit_fiyat":43939},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46339.37987766294,"taksit_fiyat":23169.68993883147},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":43939,"taksit_fiyat":14646.333333333334},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48263.400702987696,"taksit_fiyat":12065.850175746924},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49281.067743382686,"taksit_fiyat":9856.213548676536},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50417.670682730924,"taksit_fiyat":8402.945113788488},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":51541.34897360703,"taksit_fiyat":7363.049853372433},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":52779.57957957958,"taksit_fiyat":6597.447447447447},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":54005.65388397247,"taksit_fiyat":6000.628209330274}}},{"color":"#00633a","logo":"bonus-light","kart_adi":"Bonus","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43939,"taksit_fiyat":43939},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46575.1536993852,"taksit_fiyat":23287.5768496926},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47104.41680960549,"taksit_fiyat":15701.472269868498},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48497.79249448123,"taksit_fiyat":12124.448123620308},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49514.311471715126,"taksit_fiyat":9902.862294343025},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":49874.006810442675,"taksit_fiyat":8312.334468407113},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":51692.94117647059,"taksit_fiyat":7384.705882352941},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":52855.76807410081,"taksit_fiyat":6606.971009262601},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":54072.11420132907,"taksit_fiyat":6008.012689036563}}},{"color":"#1665A1","logo":"qnb-light","kart_adi":"CardFinans","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43939,"taksit_fiyat":43939},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46550.48204258926,"taksit_fiyat":23275.24102129463},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47491.3532209252,"taksit_fiyat":15830.451073641734},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48471.04247104247,"taksit_fiyat":12117.760617760618},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49486.42865187521,"taksit_fiyat":9897.285730375042},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50551.08145421077,"taksit_fiyat":8425.180242368462},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":51662.55144032922,"taksit_fiyat":7380.364491475602},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":52823.996152921376,"taksit_fiyat":6602.999519115172},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":54038.863608412255,"taksit_fiyat":6004.318178712473},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":55310.92648539779,"taksit_fiyat":5531.092648539779},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":56644.32125821838,"taksit_fiyat":5149.483750747125},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":58043.593130779394,"taksit_fiyat":4836.966094231616}}},{"color":"#EC6608","logo":"advantage-light","kart_adi":"Advantage","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43939,"taksit_fiyat":43939},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46550.48204258926,"taksit_fiyat":23275.24102129463},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47491.3532209252,"taksit_fiyat":15830.451073641734},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48471.04247104247,"taksit_fiyat":12117.760617760618},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49486.42865187521,"taksit_fiyat":9897.285730375042},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50551.08145421077,"taksit_fiyat":8425.180242368462},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":51662.55144032922,"taksit_fiyat":7380.364491475602},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":52823.996152921376,"taksit_fiyat":6602.999519115172},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":54038.863608412255,"taksit_fiyat":6004.318178712473},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":55310.92648539779,"taksit_fiyat":5531.092648539779},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":56644.32125821838,"taksit_fiyat":5149.483750747125},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":58043.593130779394,"taksit_fiyat":4836.966094231616}}},{"color":"#00B1DD","logo":"paraf-light","kart_adi":"Paraf","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43939,"taksit_fiyat":43939},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46383.4054681727,"taksit_fiyat":23191.70273408635},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":43939,"taksit_fiyat":14646.333333333334},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48300.5386391118,"taksit_fiyat":12075.13465977795},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49319.78897743854,"taksit_fiyat":9863.957795487708},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50382.983602797845,"taksit_fiyat":8397.16393379964},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":51493.02707136998,"taksit_fiyat":7356.146724481426},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":52659.39597315436,"taksit_fiyat":6582.424496644295},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":53873.22216772928,"taksit_fiyat":5985.913574192142}}},{"color":"#E11931","logo":"bankkart-light","kart_adi":"Bankkart Combo","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43939,"taksit_fiyat":43939},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46251.57894736842,"taksit_fiyat":23125.78947368421},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47069.0948044992,"taksit_fiyat":15689.6982681664},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":47926.483420593366,"taksit_fiyat":11981.620855148341},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":48810.26438569207,"taksit_fiyat":9762.052877138414},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":49755.40708866493,"taksit_fiyat":8292.56784811082},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":50685.20013842427,"taksit_fiyat":7240.742876917752},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":51705.10708401977,"taksit_fiyat":6463.1383855024715},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":52709.93282149712,"taksit_fiyat":5856.659202388569}}},{"color":"#00633a","logo":"kuveyt-light","kart_adi":"Sa\u011flam Kart","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43939,"taksit_fiyat":43939},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46324.72324723247,"taksit_fiyat":23162.361623616234},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47185.352233676975,"taksit_fiyat":15728.450744558992},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48068.04507165518,"taksit_fiyat":12017.011267913795},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":48995.31668153434,"taksit_fiyat":9799.063336306868},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":49947.70944640218,"taksit_fiyat":8324.61824106703},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":50949.67532467532,"taksit_fiyat":7278.5250463821885},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":51980.36200165622,"taksit_fiyat":6497.5452502070275},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":53066.42512077294,"taksit_fiyat":5896.26945786366}}}]},
+            {"adi": "Ticari", kartlar: [{"color":"#00633a","logo":"bonus-light","kart_adi":"Garanti Miles TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43939,"taksit_fiyat":43939},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46575.1536993852,"taksit_fiyat":23287.5768496926},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47104.41680960549,"taksit_fiyat":15701.472269868498},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48497.79249448123,"taksit_fiyat":12124.448123620308}}},{"color":"#00633a","logo":"kuveyt-light","kart_adi":"Kuveyt T\u00fcrk (TCR)","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43939,"taksit_fiyat":43939},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46324.72324723247,"taksit_fiyat":23162.361623616234},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47185.352233676975,"taksit_fiyat":15728.450744558992},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48068.04507165518,"taksit_fiyat":12017.011267913795},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":48995.31668153434,"taksit_fiyat":9799.063336306868},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":49947.70944640218,"taksit_fiyat":8324.61824106703},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":50949.67532467532,"taksit_fiyat":7278.5250463821885},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":51980.36200165622,"taksit_fiyat":6497.5452502070275},"9":{"arti_taksit":0,"taksit_sayisi":9,"toplam_fiyat":53066.42512077294,"taksit_fiyat":5896.26945786366},"10":{"arti_taksit":0,"taksit_sayisi":10,"toplam_fiyat":54185.47293131089,"taksit_fiyat":5418.547293131089},"11":{"arti_taksit":0,"taksit_sayisi":11,"toplam_fiyat":55366.68346774194,"taksit_fiyat":5033.334860703812},"12":{"arti_taksit":0,"taksit_sayisi":12,"toplam_fiyat":56585.96265292982,"taksit_fiyat":4715.4968877441515}}},{"color":"#EB008B","logo":"maximum-light","kart_adi":"Maximum TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43939,"taksit_fiyat":43939},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46339.37987766294,"taksit_fiyat":23169.68993883147},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":43939,"taksit_fiyat":14646.333333333334},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48263.400702987696,"taksit_fiyat":12065.850175746924},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49281.067743382686,"taksit_fiyat":9856.213548676536},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50417.670682730924,"taksit_fiyat":8402.945113788488}}},{"color":"#00B1DD","logo":"paraf-light","kart_adi":"Paraf TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43939,"taksit_fiyat":43939},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46383.4054681727,"taksit_fiyat":23191.70273408635},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":43939,"taksit_fiyat":14646.333333333334},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48300.5386391118,"taksit_fiyat":12075.13465977795},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49319.78897743854,"taksit_fiyat":9863.957795487708},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50382.983602797845,"taksit_fiyat":8397.16393379964},"7":{"arti_taksit":0,"taksit_sayisi":7,"toplam_fiyat":51493.02707136998,"taksit_fiyat":7356.146724481426},"8":{"arti_taksit":0,"taksit_sayisi":8,"toplam_fiyat":52659.39597315436,"taksit_fiyat":6582.424496644295}}},{"color":"#1665A1","logo":"qnb-light","kart_adi":"CardFinans TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43939,"taksit_fiyat":43939},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46550.48204258926,"taksit_fiyat":23275.24102129463},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47491.3532209252,"taksit_fiyat":15830.451073641734},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48471.04247104247,"taksit_fiyat":12117.760617760618},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49486.42865187521,"taksit_fiyat":9897.285730375042},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50551.08145421077,"taksit_fiyat":8425.180242368462}}},{"color":"#EC6608","logo":"advantage-light","kart_adi":"Advantage TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43939,"taksit_fiyat":43939},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46550.48204258926,"taksit_fiyat":23275.24102129463},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47491.3532209252,"taksit_fiyat":15830.451073641734},"4":{"arti_taksit":0,"taksit_sayisi":4,"toplam_fiyat":48471.04247104247,"taksit_fiyat":12117.760617760618},"5":{"arti_taksit":0,"taksit_sayisi":5,"toplam_fiyat":49486.42865187521,"taksit_fiyat":9897.285730375042},"6":{"arti_taksit":0,"taksit_sayisi":6,"toplam_fiyat":50551.08145421077,"taksit_fiyat":8425.180242368462}}},{"color":"#E11931","logo":"bankkart-light","kart_adi":"Bankkart Combo TCR","taksitler":{"1":{"arti_taksit":0,"taksit_sayisi":1,"toplam_fiyat":43939,"taksit_fiyat":43939},"2":{"arti_taksit":0,"taksit_sayisi":2,"toplam_fiyat":46251.57894736842,"taksit_fiyat":23125.78947368421},"3":{"arti_taksit":0,"taksit_sayisi":3,"toplam_fiyat":47069.0948044992,"taksit_fiyat":15689.6982681664}}}]},
         ]
     }'>
 
@@ -1366,7 +1274,7 @@
                                 </thead>
                                 <tbody>
                                     <template x-for="taksit in kart.taksitler">
-                                        <tr x-bind:class="(taksit.taksit_sayisi > 1 && Math.round(taksit.toplam_fiyat) == 43909) ? 'font-semibold' : ''">
+                                        <tr x-bind:class="(taksit.taksit_sayisi > 1 && Math.round(taksit.toplam_fiyat) == 43939) ? 'font-semibold' : ''">
                                             <td>
                                                 <span x-text="taksit.taksit_sayisi"></span>
                                                 <span x-text="taksit.arti_taksit ? '+ ' + taksit.arti_taksit : ''"></span>
@@ -1386,7 +1294,7 @@
                     TEK ÇEKİM / HAVALE / EFT
                 </div>
                 <div class="flex flex-1 flex-col items-center justify-center px-5">
-                    <p>43.909 TL</p>
+                    <p>43.939 TL</p>
                     <img src="/assets/img/product/taksit-atm.png" class="object-contain" alt="Tek Çekim">
                 </div>
             </div>
@@ -1641,36 +1549,36 @@
     </p>
 </div> -->        </template>
     </div>
-</div>        <div class="card relative" x-data="{ items: [] }" x-intersect.full.once='$dispatch("viewItemList", {"event":"view_item_list","ecommerce":{"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","items":[{"id":85274,"item_id":85274,"item_name":"GIGABYTE A16 INTEL CORE I5-13420H 16GB DDR5 RAM 512GB M.2 SSD RTX4050-6GB 75W 16″ FHD+165HZ FREEDOS GAMING NOTEBOOK","item_brand":"GIGABYTE","image":"https:\/\/www.incehesap.com\/resim\/urun\/202510\/68fb73f5eb4761.80177577_ngmlokpfqjieh_500.webp","url":"https:\/\/www.incehesap.com\/gigabyte-a16-intel-core-i5-13420h-16gb-ddr5-ram-512gb-m-2-ssd-rtx4050-6gb-75w-16-fhd-165hz-freedos-gaming-notebook-fiyati-85274\/","price":38999,"quantity":1,"index":0,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":84770,"item_id":84770,"item_name":"DELL INSPIRON 15 3530 I35303401U i5-1334U 8GB 512GB SSD 15.6″ 120HZ FULL HD UBUNTU","item_brand":"Dell","image":"https:\/\/www.incehesap.com\/resim\/urun\/202510\/68e613c0814939.36342058_pkjfinmglhoeq_500.webp","url":"https:\/\/www.incehesap.com\/dell-inspiron-15-3530-i35303401u-i5-1334u-8gb-512gb-ssd-15-6-120hz-full-hd-ubuntu-fiyati-84770\/","price":21999,"quantity":1,"index":1,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":85143,"item_id":85143,"item_name":"LENOVO THINKBOOK 21U00013TX R9-8940HX 32GB 1TB SSD 8GB RTX5060 16″ FREEDOS NOTEBOOK","item_brand":"Lenovo","image":"https:\/\/www.incehesap.com\/resim\/urun\/202510\/68f895248d79e2.63075036_njqfhiplemgok_500.webp","url":"https:\/\/www.incehesap.com\/lenovo-thinkbook-21u00013tx-r9-8940hx-32gb-1tb-ssd-8gb-rtx5060-16-freedos-notebook-fiyati-85143\/","price":76159,"quantity":1,"index":2,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":85160,"item_id":85160,"item_name":"MSI CYBORG 15 B13WFKG-490XTR i7-13620H 16GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 15.6″ FHD 144HZ FREEDOS GAMING NOTEBOOK","item_brand":"MSI","image":"https:\/\/www.incehesap.com\/resim\/urun\/202510\/68f8ce013612d0.57895503_eplfogqmkhnij_500.webp","url":"https:\/\/www.incehesap.com\/msi-cyborg-15-b13wfkg-490xtr-i7-13620h-16gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-15-6-fhd-144hz-freedos-gaming-notebook-fiyati-85160\/","price":55199,"quantity":1,"index":3,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":86688,"item_id":86688,"item_name":"MSI CYBORG 15 B13WGKG-847XTR INTEL CORE I7-13620H 16GB DDR5 1TB SSD RTX 5070 8GB 15.6″ 144HZ FREEDOS GAMING NOTEBOOK","item_brand":"MSI","image":"https:\/\/www.incehesap.com\/resim\/urun\/202512\/694409468e79c2.43629846_mglpnfieojqhk_500.webp","url":"https:\/\/www.incehesap.com\/msi-cyborg-15-b13wgkg-847xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-5070-8gb-15-6-144hz-freedos-gaming-notebook-fiyati-86688\/","price":63899,"quantity":1,"index":4,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":80692,"item_id":80692,"item_name":"GİGABYTE A16 INTEL CORE I7-13620H 16GB DDR5 RAM 1TB M.2 SSD RTX4050-6GB 75W 16″ FHD+165HZ FREEDOS GAMING NOTEBOOK","item_brand":"GIGABYTE","image":"https:\/\/www.incehesap.com\/resim\/urun\/202504\/68061f32077bb2.02607669_mgeifnqpokjhl_500.webp","url":"https:\/\/www.incehesap.com\/gigabyte-a16-intel-core-i7-13620h-16gb-ddr5-ram-1tb-m-2-ssd-rtx4050-6gb-75w-16-fhd-165hz-freedos-gaming-notebook-fiyati-80692\/","price":42999,"quantity":1,"index":5,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":85139,"item_id":85139,"item_name":"HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK","item_brand":"HP","image":"https:\/\/www.incehesap.com\/resim\/urun\/202510\/68f890eebecab3.23410229_iqfghnmkolejp_500.webp","url":"https:\/\/www.incehesap.com\/hp-250-g10-b2ph1es-ci7-1355u-16gb-512gb-ob-ssd-15-6-freedos-notebook-fiyati-85139\/","price":30999,"quantity":1,"index":6,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":85211,"item_id":85211,"item_name":"MSI KATANA 17 HX B14WFK-248XTR I7-14650HX 16GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 17.3″ 240HZ FREEDOS GAMING NOTEBOOK","item_brand":"MSI","image":"https:\/\/www.incehesap.com\/resim\/urun\/202510\/68f8df170eea94.59315783_efglphjniqokm_500.webp","url":"https:\/\/www.incehesap.com\/msi-katana-17-hx-b14wfk-248xtr-i7-14650hx-16gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-17-3-240hz-freedos-gaming-notebook-fiyati-85211\/","price":76599,"quantity":1,"index":7,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":85286,"item_id":85286,"item_name":"HP 250 G10 B39W3AT i5-1334U 16GB 512GB SSD 15.6″ FDOS","item_brand":"HP","image":"https:\/\/www.incehesap.com\/resim\/urun\/202510\/68fa1e54d301b6.73567752_ogjpqkmfnehil_500.webp","url":"https:\/\/www.incehesap.com\/hp-250-g10-b39w3at-i5-1334u-16gb-512gb-ssd-15-6-fdos-fiyati-85286\/","price":25499,"quantity":1,"index":8,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":84966,"item_id":84966,"item_name":"MSI CYBORG 15 B13WFKG-495XTR I7-13620H 32GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 15.6 FHD 144Hz FREEDOS GAMİNG NOTEBOOK","item_brand":"MSI","image":"https:\/\/www.incehesap.com\/resim\/urun\/202510\/68f08f9da384b6.99515721_hjplgiefokmnq_500.webp","url":"https:\/\/www.incehesap.com\/msi-cyborg-15-b13wfkg-495xtr-i7-13620h-32gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-15-6-fhd-144hz-freedos-gaming-notebook-fiyati-84966\/","price":65699,"quantity":1,"index":9,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"}]}})'>
+</div>        <div class="card relative" x-data="{ items: [] }" x-intersect.full.once='$dispatch("viewItemList", {"event":"view_item_list","ecommerce":{"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","items":[{"id":85160,"item_id":85160,"item_name":"MSI CYBORG 15 B13WFKG-490XTR i7-13620H 16GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 15.6″ FHD 144HZ FREEDOS GAMING NOTEBOOK","item_brand":"MSI","image":"https:\/\/www.incehesap.com\/resim\/urun\/202510\/68f8ce013612d0.57895503_eplfogqmkhnij_500.webp","url":"https:\/\/www.incehesap.com\/msi-cyborg-15-b13wfkg-490xtr-i7-13620h-16gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-15-6-fhd-144hz-freedos-gaming-notebook-fiyati-85160\/","price":63079,"quantity":1,"index":0,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":85143,"item_id":85143,"item_name":"LENOVO THINKBOOK 21U00013TX R9-8940HX 32GB 1TB SSD 8GB RTX5060 16″ FREEDOS NOTEBOOK","item_brand":"Lenovo","image":"https:\/\/www.incehesap.com\/resim\/urun\/202510\/68f895248d79e2.63075036_njqfhiplemgok_500.webp","url":"https:\/\/www.incehesap.com\/lenovo-thinkbook-21u00013tx-r9-8940hx-32gb-1tb-ssd-8gb-rtx5060-16-freedos-notebook-fiyati-85143\/","price":77499,"quantity":1,"index":1,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":84770,"item_id":84770,"item_name":"DELL INSPIRON 15 3530 I35303401U i5-1334U 8GB 512GB SSD 15.6″ 120HZ FULL HD UBUNTU","item_brand":"Dell","image":"https:\/\/www.incehesap.com\/resim\/urun\/202510\/68e613c0814939.36342058_pkjfinmglhoeq_500.webp","url":"https:\/\/www.incehesap.com\/dell-inspiron-15-3530-i35303401u-i5-1334u-8gb-512gb-ssd-15-6-120hz-full-hd-ubuntu-fiyati-84770\/","price":22699,"quantity":1,"index":2,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":86688,"item_id":86688,"item_name":"MSI CYBORG 15 B13WGKG-847XTR INTEL CORE I7-13620H 16GB DDR5 1TB SSD RTX 5070 8GB 15.6″ 144HZ FREEDOS GAMING NOTEBOOK","item_brand":"MSI","image":"https:\/\/www.incehesap.com\/resim\/urun\/202512\/694409468e79c2.43629846_mglpnfieojqhk_500.webp","url":"https:\/\/www.incehesap.com\/msi-cyborg-15-b13wgkg-847xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-5070-8gb-15-6-144hz-freedos-gaming-notebook-fiyati-86688\/","price":65999,"quantity":1,"index":3,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":85274,"item_id":85274,"item_name":"GIGABYTE A16 INTEL CORE I5-13420H 16GB DDR5 RAM 512GB M.2 SSD RTX4050-6GB 75W 16″ FHD+165HZ FREEDOS GAMING NOTEBOOK","item_brand":"GIGABYTE","image":"https:\/\/www.incehesap.com\/resim\/urun\/202510\/68fb73f5eb4761.80177577_ngmlokpfqjieh_500.webp","url":"https:\/\/www.incehesap.com\/gigabyte-a16-intel-core-i5-13420h-16gb-ddr5-ram-512gb-m-2-ssd-rtx4050-6gb-75w-16-fhd-165hz-freedos-gaming-notebook-fiyati-85274\/","price":38999,"quantity":1,"index":4,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":80692,"item_id":80692,"item_name":"GİGABYTE A16 INTEL CORE I7-13620H 16GB DDR5 RAM 1TB M.2 SSD RTX4050-6GB 75W 16″ FHD+165HZ FREEDOS GAMING NOTEBOOK","item_brand":"GIGABYTE","image":"https:\/\/www.incehesap.com\/resim\/urun\/202504\/68061f32077bb2.02607669_mgeifnqpokjhl_500.webp","url":"https:\/\/www.incehesap.com\/gigabyte-a16-intel-core-i7-13620h-16gb-ddr5-ram-1tb-m-2-ssd-rtx4050-6gb-75w-16-fhd-165hz-freedos-gaming-notebook-fiyati-80692\/","price":42999,"quantity":1,"index":5,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":85139,"item_id":85139,"item_name":"HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK","item_brand":"HP","image":"https:\/\/www.incehesap.com\/resim\/urun\/202510\/68f890eebecab3.23410229_iqfghnmkolejp_500.webp","url":"https:\/\/www.incehesap.com\/hp-250-g10-b2ph1es-ci7-1355u-16gb-512gb-ob-ssd-15-6-freedos-notebook-fiyati-85139\/","price":30699,"quantity":1,"index":6,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":86937,"item_id":86937,"item_name":"MSI CYBORG 17 B13WGKG-251XTR Intel Core i7-13620H 16GB DDR5 1TB SSD RTX 5070 8GB 17.3″ Full HD 144Hz FREEDOS GAMİNG NOTEBOOK","item_brand":"MSI","image":"https:\/\/www.incehesap.com\/resim\/urun\/202512\/695243c1dcd9e9.35953052_lphjoifgkemqn_500.webp","url":"https:\/\/www.incehesap.com\/msi-cyborg-17-b13wgkg-251xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-5070-8gb-17-3-inc-full-hd-144hz-freedos-gaming-notebook-fiyati-86937\/","price":66299,"quantity":1,"index":7,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":85703,"item_id":85703,"item_name":"LENOVO THINKPAD P14S 21MFS2MQ00 R7 PRO - 8840HS 16GB DDR5 512GB SSD 14″ FDOS","item_brand":"Lenovo","image":"https:\/\/www.incehesap.com\/resim\/urun\/202511\/691c7bd4705194.06204298_ejmfokqlniphg_500.webp","url":"https:\/\/www.incehesap.com\/lenovo-p14s-21mfs2mq00-r7-pro-8840hs-16g-512-fdo-fiyati-85703\/","price":41999,"quantity":1,"index":8,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"},{"id":82157,"item_id":82157,"item_name":"MSI KATANA 17 HX B14WGK-046XTR I7-14650HX 32GB DDR5 RTX5070 GDDR7 8GB 1TB SSD 17.3″ QHD 240HZ DOS GAMING NOTEBOOK","item_brand":"MSI","image":"https:\/\/www.incehesap.com\/resim\/urun\/202506\/685d7fa636bd92.25337168_iqepghomnjfkl_500.webp","url":"https:\/\/www.incehesap.com\/msi-katana-17-hx-b14wgk-046xtr-i7-14650hx-32gb-ddr5-rtx5070-gddr7-8gb-1tb-ssd-17-3-qhd-240hz-dos-gaming-notebook-fiyati-82157\/","price":84999,"quantity":1,"index":9,"item_list_name":"En Çok Satılan Notebook Listesi","item_list_id":"en_cok_satilan_notebook_listesi","item_category":"Bilgisayar","item_category2":"Notebook"}]}})'>
         <div class="card-title">En Çok Satılan Notebook Listesi</div>
         <ol class="divide-y">
             
                                 <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">1</span>
                     
-                    <a href="/gigabyte-a16-intel-core-i5-13420h-16gb-ddr5-ram-512gb-m-2-ssd-rtx4050-6gb-75w-16-fhd-165hz-freedos-gaming-notebook-fiyati-85274/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":85274,"name":"GIGABYTE A16 INTEL CORE I5-13420H 16GB DDR5 RAM 512GB M.2 SSD RTX4050-6GB 75W 16″ FHD+165HZ FREEDOS GAMING NOTEBOOK","category":"Notebook","category_id":834,"brand":"GIGABYTE","brand_id":46,"tags":"Çok Satıyor","price":38999,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":1}'>
-                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202510/68fb73f5eb4761.80177577_ngmlokpfqjieh_cropped_75.webp" alt="GIGABYTE A16 INTEL CORE I5-13420H 16GB DDR5 RAM 512GB M.2 SSD RTX4050-6GB 75W 16″ FHD+165HZ FREEDOS GAMING NOTEBOOK" width="75" height="75">
+                    <a href="/msi-cyborg-15-b13wfkg-490xtr-i7-13620h-16gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-15-6-fhd-144hz-freedos-gaming-notebook-fiyati-85160/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":85160,"name":"MSI CYBORG 15 B13WFKG-490XTR i7-13620H 16GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 15.6″ FHD 144HZ FREEDOS GAMING NOTEBOOK","category":"Notebook","category_id":834,"brand":"MSI","brand_id":75,"tags":"","price":63079,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":1}'>
+                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202510/68f8ce013612d0.57895503_eplfogqmkhnij_cropped_75.webp" alt="MSI CYBORG 15 B13WFKG-490XTR i7-13620H 16GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 15.6″ FHD 144HZ FREEDOS GAMING NOTEBOOK" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
-                            <div class="leading-tight">GIGABYTE A16 INTEL CORE I5-13420H 16GB DDR5 RAM 512GB M.2 SSD RTX4050-6GB 75W 16″ FHD+165HZ FREEDOS GAMING NOTEBOOK</div>
+                            <div class="leading-tight">MSI CYBORG 15 B13WFKG-490XTR i7-13620H 16GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 15.6″ FHD 144HZ FREEDOS GAMING NOTEBOOK</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">38.999 TL</span>
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">63.079 TL</span>
                         </div>
                     </a>
 
                                             <div class="hidden w-1/5 flex-none lg:block">
                             <div class="flex items-center space-x-3">
                                 <div class="w-full rounded-full bg-neutral-100">
-                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 23%"></div>
+                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 18%"></div>
                                 </div>
                                 <span class="text-sm font-medium text-neutral-500">
-                                    %23                                </span>
+                                    %18                                </span>
                             </div>
                         </div>
                     
                                             <div class="hidden w-12 flex-none text-center md:inline-block">
                             <label class="inline-flex items-center" aria-label="Karşılaştır">
-                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('85274')" value="85274" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
+                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('85160')" value="85160" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
                             </label>
                         </div>
                                     </li>
@@ -1678,13 +1586,13 @@
                                 <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">2</span>
                     
-                    <a href="/dell-inspiron-15-3530-i35303401u-i5-1334u-8gb-512gb-ssd-15-6-120hz-full-hd-ubuntu-fiyati-84770/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":84770,"name":"DELL INSPIRON 15 3530 I35303401U i5-1334U 8GB 512GB SSD 15.6″ 120HZ FULL HD UBUNTU","category":"Notebook","category_id":834,"brand":"Dell","brand_id":148,"tags":"","price":21999,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":2}'>
-                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202510/68e613c0814939.36342058_pkjfinmglhoeq_cropped_75.webp" alt="DELL INSPIRON 15 3530 I35303401U i5-1334U 8GB 512GB SSD 15.6″ 120HZ FULL HD UBUNTU" width="75" height="75">
+                    <a href="/lenovo-thinkbook-21u00013tx-r9-8940hx-32gb-1tb-ssd-8gb-rtx5060-16-freedos-notebook-fiyati-85143/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":85143,"name":"LENOVO THINKBOOK 21U00013TX R9-8940HX 32GB 1TB SSD 8GB RTX5060 16″ FREEDOS NOTEBOOK","category":"Notebook","category_id":834,"brand":"Lenovo","brand_id":208,"tags":"Çok Satıyor","price":77499,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":2}'>
+                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202510/68f895248d79e2.63075036_njqfhiplemgok_cropped_75.webp" alt="LENOVO THINKBOOK 21U00013TX R9-8940HX 32GB 1TB SSD 8GB RTX5060 16″ FREEDOS NOTEBOOK" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
-                            <div class="leading-tight">DELL INSPIRON 15 3530 I35303401U i5-1334U 8GB 512GB SSD 15.6″ 120HZ FULL HD UBUNTU</div>
+                            <div class="leading-tight">LENOVO THINKBOOK 21U00013TX R9-8940HX 32GB 1TB SSD 8GB RTX5060 16″ FREEDOS NOTEBOOK</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">21.999 TL</span>
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">77.499 TL</span>
                         </div>
                     </a>
 
@@ -1700,7 +1608,7 @@
                     
                                             <div class="hidden w-12 flex-none text-center md:inline-block">
                             <label class="inline-flex items-center" aria-label="Karşılaştır">
-                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('84770')" value="84770" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
+                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('85143')" value="85143" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
                             </label>
                         </div>
                                     </li>
@@ -1708,29 +1616,29 @@
                                 <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">3</span>
                     
-                    <a href="/lenovo-thinkbook-21u00013tx-r9-8940hx-32gb-1tb-ssd-8gb-rtx5060-16-freedos-notebook-fiyati-85143/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":85143,"name":"LENOVO THINKBOOK 21U00013TX R9-8940HX 32GB 1TB SSD 8GB RTX5060 16″ FREEDOS NOTEBOOK","category":"Notebook","category_id":834,"brand":"Lenovo","brand_id":208,"tags":"Çok Satıyor","price":76159,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":3}'>
-                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202510/68f895248d79e2.63075036_njqfhiplemgok_cropped_75.webp" alt="LENOVO THINKBOOK 21U00013TX R9-8940HX 32GB 1TB SSD 8GB RTX5060 16″ FREEDOS NOTEBOOK" width="75" height="75">
+                    <a href="/dell-inspiron-15-3530-i35303401u-i5-1334u-8gb-512gb-ssd-15-6-120hz-full-hd-ubuntu-fiyati-84770/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":84770,"name":"DELL INSPIRON 15 3530 I35303401U i5-1334U 8GB 512GB SSD 15.6″ 120HZ FULL HD UBUNTU","category":"Notebook","category_id":834,"brand":"Dell","brand_id":148,"tags":"","price":22699,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":3}'>
+                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202510/68e613c0814939.36342058_pkjfinmglhoeq_cropped_75.webp" alt="DELL INSPIRON 15 3530 I35303401U i5-1334U 8GB 512GB SSD 15.6″ 120HZ FULL HD UBUNTU" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
-                            <div class="leading-tight">LENOVO THINKBOOK 21U00013TX R9-8940HX 32GB 1TB SSD 8GB RTX5060 16″ FREEDOS NOTEBOOK</div>
+                            <div class="leading-tight">DELL INSPIRON 15 3530 I35303401U i5-1334U 8GB 512GB SSD 15.6″ 120HZ FULL HD UBUNTU</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">76.159 TL</span>
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">22.699 TL</span>
                         </div>
                     </a>
 
                                             <div class="hidden w-1/5 flex-none lg:block">
                             <div class="flex items-center space-x-3">
                                 <div class="w-full rounded-full bg-neutral-100">
-                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 13%"></div>
+                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 14%"></div>
                                 </div>
                                 <span class="text-sm font-medium text-neutral-500">
-                                    %13                                </span>
+                                    %14                                </span>
                             </div>
                         </div>
                     
                                             <div class="hidden w-12 flex-none text-center md:inline-block">
                             <label class="inline-flex items-center" aria-label="Karşılaştır">
-                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('85143')" value="85143" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
+                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('84770')" value="84770" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
                             </label>
                         </div>
                                     </li>
@@ -1738,53 +1646,23 @@
                                 <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">4</span>
                     
-                    <a href="/msi-cyborg-15-b13wfkg-490xtr-i7-13620h-16gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-15-6-fhd-144hz-freedos-gaming-notebook-fiyati-85160/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":85160,"name":"MSI CYBORG 15 B13WFKG-490XTR i7-13620H 16GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 15.6″ FHD 144HZ FREEDOS GAMING NOTEBOOK","category":"Notebook","category_id":834,"brand":"MSI","brand_id":75,"tags":"Günün Fırsatı,Popüler Ürün","price":55199,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":4}'>
-                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202510/68f8ce013612d0.57895503_eplfogqmkhnij_cropped_75.webp" alt="MSI CYBORG 15 B13WFKG-490XTR i7-13620H 16GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 15.6″ FHD 144HZ FREEDOS GAMING NOTEBOOK" width="75" height="75">
-
-                        <div class="flex flex-1 flex-col justify-evenly">
-                            <div class="leading-tight">MSI CYBORG 15 B13WFKG-490XTR i7-13620H 16GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 15.6″ FHD 144HZ FREEDOS GAMING NOTEBOOK</div>
-                            <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">55.199 TL</span>
-                        </div>
-                    </a>
-
-                                            <div class="hidden w-1/5 flex-none lg:block">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-full rounded-full bg-neutral-100">
-                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 13%"></div>
-                                </div>
-                                <span class="text-sm font-medium text-neutral-500">
-                                    %13                                </span>
-                            </div>
-                        </div>
-                    
-                                            <div class="hidden w-12 flex-none text-center md:inline-block">
-                            <label class="inline-flex items-center" aria-label="Karşılaştır">
-                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('85160')" value="85160" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
-                            </label>
-                        </div>
-                                    </li>
-            
-                                <li class="flex w-full items-center space-x-3 py-3">
-                                            <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">5</span>
-                    
-                    <a href="/msi-cyborg-15-b13wgkg-847xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-5070-8gb-15-6-144hz-freedos-gaming-notebook-fiyati-86688/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":86688,"name":"MSI CYBORG 15 B13WGKG-847XTR INTEL CORE I7-13620H 16GB DDR5 1TB SSD RTX 5070 8GB 15.6″ 144HZ FREEDOS GAMING NOTEBOOK","category":"Notebook","category_id":834,"brand":"MSI","brand_id":75,"tags":"","price":63899,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":5}'>
+                    <a href="/msi-cyborg-15-b13wgkg-847xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-5070-8gb-15-6-144hz-freedos-gaming-notebook-fiyati-86688/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":86688,"name":"MSI CYBORG 15 B13WGKG-847XTR INTEL CORE I7-13620H 16GB DDR5 1TB SSD RTX 5070 8GB 15.6″ 144HZ FREEDOS GAMING NOTEBOOK","category":"Notebook","category_id":834,"brand":"MSI","brand_id":75,"tags":"","price":65999,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":4}'>
                         <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202512/694409468e79c2.43629846_mglpnfieojqhk_cropped_75.webp" alt="MSI CYBORG 15 B13WGKG-847XTR INTEL CORE I7-13620H 16GB DDR5 1TB SSD RTX 5070 8GB 15.6″ 144HZ FREEDOS GAMING NOTEBOOK" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
                             <div class="leading-tight">MSI CYBORG 15 B13WGKG-847XTR INTEL CORE I7-13620H 16GB DDR5 1TB SSD RTX 5070 8GB 15.6″ 144HZ FREEDOS GAMING NOTEBOOK</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">63.899 TL</span>
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">65.999 TL</span>
                         </div>
                     </a>
 
                                             <div class="hidden w-1/5 flex-none lg:block">
                             <div class="flex items-center space-x-3">
                                 <div class="w-full rounded-full bg-neutral-100">
-                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 11%"></div>
+                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 12%"></div>
                                 </div>
                                 <span class="text-sm font-medium text-neutral-500">
-                                    %11                                </span>
+                                    %12                                </span>
                             </div>
                         </div>
                     
@@ -1796,15 +1674,75 @@
                                     </li>
             
                                 <li class="flex w-full items-center space-x-3 py-3">
+                                            <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">5</span>
+                    
+                    <a href="/gigabyte-a16-intel-core-i5-13420h-16gb-ddr5-ram-512gb-m-2-ssd-rtx4050-6gb-75w-16-fhd-165hz-freedos-gaming-notebook-fiyati-85274/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":85274,"name":"GIGABYTE A16 INTEL CORE I5-13420H 16GB DDR5 RAM 512GB M.2 SSD RTX4050-6GB 75W 16″ FHD+165HZ FREEDOS GAMING NOTEBOOK","category":"Notebook","category_id":834,"brand":"GIGABYTE","brand_id":46,"tags":"","price":38999,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":5}'>
+                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202510/68fb73f5eb4761.80177577_ngmlokpfqjieh_cropped_75.webp" alt="GIGABYTE A16 INTEL CORE I5-13420H 16GB DDR5 RAM 512GB M.2 SSD RTX4050-6GB 75W 16″ FHD+165HZ FREEDOS GAMING NOTEBOOK" width="75" height="75">
+
+                        <div class="flex flex-1 flex-col justify-evenly">
+                            <div class="leading-tight">GIGABYTE A16 INTEL CORE I5-13420H 16GB DDR5 RAM 512GB M.2 SSD RTX4050-6GB 75W 16″ FHD+165HZ FREEDOS GAMING NOTEBOOK</div>
+                            <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">38.999 TL</span>
+                        </div>
+                    </a>
+
+                                            <div class="hidden w-1/5 flex-none lg:block">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-full rounded-full bg-neutral-100">
+                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 8%"></div>
+                                </div>
+                                <span class="text-sm font-medium text-neutral-500">
+                                    %8                                </span>
+                            </div>
+                        </div>
+                    
+                                            <div class="hidden w-12 flex-none text-center md:inline-block">
+                            <label class="inline-flex items-center" aria-label="Karşılaştır">
+                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('85274')" value="85274" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
+                            </label>
+                        </div>
+                                    </li>
+            
+                                <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">6</span>
                     
-                    <a href="/gigabyte-a16-intel-core-i7-13620h-16gb-ddr5-ram-1tb-m-2-ssd-rtx4050-6gb-75w-16-fhd-165hz-freedos-gaming-notebook-fiyati-80692/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":80692,"name":"GİGABYTE A16 INTEL CORE I7-13620H 16GB DDR5 RAM 1TB M.2 SSD RTX4050-6GB 75W 16″ FHD+165HZ FREEDOS GAMING NOTEBOOK","category":"Notebook","category_id":834,"brand":"GIGABYTE","brand_id":46,"tags":"Günün Fırsatı,Çok Satıyor","price":42999,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":6}'>
+                    <a href="/gigabyte-a16-intel-core-i7-13620h-16gb-ddr5-ram-1tb-m-2-ssd-rtx4050-6gb-75w-16-fhd-165hz-freedos-gaming-notebook-fiyati-80692/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":80692,"name":"GİGABYTE A16 INTEL CORE I7-13620H 16GB DDR5 RAM 1TB M.2 SSD RTX4050-6GB 75W 16″ FHD+165HZ FREEDOS GAMING NOTEBOOK","category":"Notebook","category_id":834,"brand":"GIGABYTE","brand_id":46,"tags":"Günün Fırsatı,Popüler Ürün","price":42999,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":6}'>
                         <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202504/68061f32077bb2.02607669_mgeifnqpokjhl_cropped_75.webp" alt="GİGABYTE A16 INTEL CORE I7-13620H 16GB DDR5 RAM 1TB M.2 SSD RTX4050-6GB 75W 16″ FHD+165HZ FREEDOS GAMING NOTEBOOK" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
                             <div class="leading-tight">GİGABYTE A16 INTEL CORE I7-13620H 16GB DDR5 RAM 1TB M.2 SSD RTX4050-6GB 75W 16″ FHD+165HZ FREEDOS GAMING NOTEBOOK</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
                             <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">42.999 TL</span>
+                        </div>
+                    </a>
+
+                                            <div class="hidden w-1/5 flex-none lg:block">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-full rounded-full bg-neutral-100">
+                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 8%"></div>
+                                </div>
+                                <span class="text-sm font-medium text-neutral-500">
+                                    %8                                </span>
+                            </div>
+                        </div>
+                    
+                                            <div class="hidden w-12 flex-none text-center md:inline-block">
+                            <label class="inline-flex items-center" aria-label="Karşılaştır">
+                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('80692')" value="80692" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
+                            </label>
+                        </div>
+                                    </li>
+            
+                                <li class="flex w-full items-center space-x-3 py-3">
+                                            <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">7</span>
+                    
+                    <a href="/hp-250-g10-b2ph1es-ci7-1355u-16gb-512gb-ob-ssd-15-6-freedos-notebook-fiyati-85139/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":85139,"name":"HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK","category":"Notebook","category_id":834,"brand":"HP","brand_id":52,"tags":"","price":30699,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":7}'>
+                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202510/68f890eebecab3.23410229_iqfghnmkolejp_cropped_75.webp" alt="HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK" width="75" height="75">
+
+                        <div class="flex flex-1 flex-col justify-evenly">
+                            <div class="leading-tight">HP 250 G10 B2PH1ES CI7-1355U 16GB 512GB OB SSD 15.6″ FREEDOS NOTEBOOK</div>
+                            <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">30.699 TL</span>
                         </div>
                     </a>
 
@@ -1820,36 +1758,6 @@
                     
                                             <div class="hidden w-12 flex-none text-center md:inline-block">
                             <label class="inline-flex items-center" aria-label="Karşılaştır">
-                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('80692')" value="80692" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
-                            </label>
-                        </div>
-                                    </li>
-            
-                                <li class="flex w-full items-center space-x-3 py-3">
-                                            <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">7</span>
-                    
-                    <a href="/hp-250-g10-b2ph1es-ci7-1355u-16gb-512gb-ob-ssd-15-6-freedos-notebook-fiyati-85139/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":85139,"name":"HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK","category":"Notebook","category_id":834,"brand":"HP","brand_id":52,"tags":"","price":30999,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":7}'>
-                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202510/68f890eebecab3.23410229_iqfghnmkolejp_cropped_75.webp" alt="HP 250 G10 B2PH1ES i7-1355U 16GB 512GB SSD 15.6″ FREEDOS NOTEBOOK" width="75" height="75">
-
-                        <div class="flex flex-1 flex-col justify-evenly">
-                            <div class="leading-tight">HP 250 G10 B2PH1ES CI7-1355U 16GB 512GB OB SSD 15.6″ FREEDOS NOTEBOOK</div>
-                            <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">30.999 TL</span>
-                        </div>
-                    </a>
-
-                                            <div class="hidden w-1/5 flex-none lg:block">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-full rounded-full bg-neutral-100">
-                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 5%"></div>
-                                </div>
-                                <span class="text-sm font-medium text-neutral-500">
-                                    %5                                </span>
-                            </div>
-                        </div>
-                    
-                                            <div class="hidden w-12 flex-none text-center md:inline-block">
-                            <label class="inline-flex items-center" aria-label="Karşılaştır">
                                 <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('85139')" value="85139" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
                             </label>
                         </div>
@@ -1858,13 +1766,43 @@
                                 <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">8</span>
                     
-                    <a href="/msi-katana-17-hx-b14wfk-248xtr-i7-14650hx-16gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-17-3-240hz-freedos-gaming-notebook-fiyati-85211/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":85211,"name":"MSI KATANA 17 HX B14WFK-248XTR I7-14650HX 16GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 17.3″ 240HZ FREEDOS GAMING NOTEBOOK","category":"Notebook","category_id":834,"brand":"MSI","brand_id":75,"tags":"","price":76599,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":8}'>
-                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202510/68f8df170eea94.59315783_efglphjniqokm_cropped_75.webp" alt="MSI KATANA 17 HX B14WFK-248XTR I7-14650HX 16GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 17.3″ 240HZ FREEDOS GAMING NOTEBOOK" width="75" height="75">
+                    <a href="/msi-cyborg-17-b13wgkg-251xtr-intel-core-i7-13620h-16gb-ddr5-1tb-ssd-rtx-5070-8gb-17-3-inc-full-hd-144hz-freedos-gaming-notebook-fiyati-86937/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":86937,"name":"MSI CYBORG 17 B13WGKG-251XTR Intel Core i7-13620H 16GB DDR5 1TB SSD RTX 5070 8GB 17.3″ Full HD 144Hz FREEDOS GAMİNG NOTEBOOK","category":"Notebook","category_id":834,"brand":"MSI","brand_id":75,"tags":"","price":66299,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":8}'>
+                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202512/695243c1dcd9e9.35953052_lphjoifgkemqn_cropped_75.webp" alt="MSI CYBORG 17 B13WGKG-251XTR Intel Core i7-13620H 16GB DDR5 1TB SSD RTX 5070 8GB 17.3″ Full HD 144Hz FREEDOS GAMİNG NOTEBOOK" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
-                            <div class="leading-tight">MSI KATANA 17 HX B14WFK-248XTR I7-14650HX 16GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 17.3″ 240HZ FREEDOS GAMING NOTEBOOK</div>
+                            <div class="leading-tight">MSI CYBORG 17 B13WGKG-251XTR Intel Core i7-13620H 16GB DDR5 1TB SSD RTX 5070 8GB 17.3 inç Full HD 144Hz FREEDOS GAMİNG NOTEBOOK</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">76.599 TL</span>
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">66.299 TL</span>
+                        </div>
+                    </a>
+
+                                            <div class="hidden w-1/5 flex-none lg:block">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-full rounded-full bg-neutral-100">
+                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 6%"></div>
+                                </div>
+                                <span class="text-sm font-medium text-neutral-500">
+                                    %6                                </span>
+                            </div>
+                        </div>
+                    
+                                            <div class="hidden w-12 flex-none text-center md:inline-block">
+                            <label class="inline-flex items-center" aria-label="Karşılaştır">
+                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('86937')" value="86937" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
+                            </label>
+                        </div>
+                                    </li>
+            
+                                <li class="flex w-full items-center space-x-3 py-3">
+                                            <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">9</span>
+                    
+                    <a href="/lenovo-p14s-21mfs2mq00-r7-pro-8840hs-16g-512-fdo-fiyati-85703/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":85703,"name":"LENOVO THINKPAD P14S 21MFS2MQ00 R7 PRO - 8840HS 16GB DDR5 512GB SSD 14″ FDOS","category":"Notebook","category_id":834,"brand":"Lenovo","brand_id":208,"tags":"Çok Satıyor","price":41999,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":9}'>
+                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202511/691c7bd4705194.06204298_ejmfokqlniphg_cropped_75.webp" alt="LENOVO THINKPAD P14S 21MFS2MQ00 R7 PRO - 8840HS 16GB DDR5 512GB SSD 14″ FDOS" width="75" height="75">
+
+                        <div class="flex flex-1 flex-col justify-evenly">
+                            <div class="leading-tight">LENOVO P14S 21MFS2MQ00 R7 PRO - 8840HS 16G 512 FDO</div>
+                            <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">41.999 TL</span>
                         </div>
                     </a>
 
@@ -1880,37 +1818,7 @@
                     
                                             <div class="hidden w-12 flex-none text-center md:inline-block">
                             <label class="inline-flex items-center" aria-label="Karşılaştır">
-                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('85211')" value="85211" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
-                            </label>
-                        </div>
-                                    </li>
-            
-                                <li class="flex w-full items-center space-x-3 py-3">
-                                            <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">9</span>
-                    
-                    <a href="/hp-250-g10-b39w3at-i5-1334u-16gb-512gb-ssd-15-6-fdos-fiyati-85286/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":85286,"name":"HP 250 G10 B39W3AT i5-1334U 16GB 512GB SSD 15.6″ FDOS","category":"Notebook","category_id":834,"brand":"HP","brand_id":52,"tags":"","price":25499,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":9}'>
-                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202510/68fa1e54d301b6.73567752_ogjpqkmfnehil_cropped_75.webp" alt="HP 250 G10 B39W3AT i5-1334U 16GB 512GB SSD 15.6″ FDOS" width="75" height="75">
-
-                        <div class="flex flex-1 flex-col justify-evenly">
-                            <div class="leading-tight">HP 250 G10 B39W3AT i5-1334U 16GB 512GB SSD 15.6″ FDOS</div>
-                            <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">25.499 TL</span>
-                        </div>
-                    </a>
-
-                                            <div class="hidden w-1/5 flex-none lg:block">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-full rounded-full bg-neutral-100">
-                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 3%"></div>
-                                </div>
-                                <span class="text-sm font-medium text-neutral-500">
-                                    %3                                </span>
-                            </div>
-                        </div>
-                    
-                                            <div class="hidden w-12 flex-none text-center md:inline-block">
-                            <label class="inline-flex items-center" aria-label="Karşılaştır">
-                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('85286')" value="85286" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
+                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('85703')" value="85703" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
                             </label>
                         </div>
                                     </li>
@@ -1918,29 +1826,29 @@
                                 <li class="flex w-full items-center space-x-3 py-3">
                                             <span class="ml-3 hidden h-10 w-10 place-items-center rounded-full bg-neutral-200 text-right text-xl text-white md:grid">10</span>
                     
-                    <a href="/msi-cyborg-15-b13wfkg-495xtr-i7-13620h-32gb-ddr5-rtx5060-gddr7-8gb-1tb-ssd-15-6-fhd-144hz-freedos-gaming-notebook-fiyati-84966/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":84966,"name":"MSI CYBORG 15 B13WFKG-495XTR I7-13620H 32GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 15.6 FHD 144Hz FREEDOS GAMİNG NOTEBOOK","category":"Notebook","category_id":834,"brand":"MSI","brand_id":75,"tags":"","price":65699,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":10}'>
-                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202510/68f08f9da384b6.99515721_hjplgiefokmnq_cropped_75.webp" alt="MSI CYBORG 15 B13WFKG-495XTR I7-13620H 32GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 15.6 FHD 144Hz FREEDOS GAMİNG NOTEBOOK" width="75" height="75">
+                    <a href="/msi-katana-17-hx-b14wgk-046xtr-i7-14650hx-32gb-ddr5-rtx5070-gddr7-8gb-1tb-ssd-17-3-qhd-240hz-dos-gaming-notebook-fiyati-82157/" x-data="{ shown: false }" x-intersect.once="shown = true; $dispatch('product-shown');" class="product flex flex-1 space-x-3" data-product='{"id":82157,"name":"MSI KATANA 17 HX B14WGK-046XTR I7-14650HX 32GB DDR5 RTX5070 GDDR7 8GB 1TB SSD 17.3″ QHD 240HZ DOS GAMING NOTEBOOK","category":"Notebook","category_id":834,"brand":"MSI","brand_id":75,"tags":"Çok Satıyor","price":84999,"rating":0,"rating_count":null,"item_list_name":"En Çok Satılan Notebook Listesi","position":10}'>
+                        <img x-cloak x-show="shown" loading="lazy" class="h-20 w-20 object-none" src="/resim/urun/202506/685d7fa636bd92.25337168_iqepghomnjfkl_cropped_75.webp" alt="MSI KATANA 17 HX B14WGK-046XTR I7-14650HX 32GB DDR5 RTX5070 GDDR7 8GB 1TB SSD 17.3″ QHD 240HZ DOS GAMING NOTEBOOK" width="75" height="75">
 
                         <div class="flex flex-1 flex-col justify-evenly">
-                            <div class="leading-tight">MSI CYBORG 15 B13WFKG-495XTR I7-13620H 32GB DDR5 RTX5060 GDDR7 8GB 1TB SSD 15.6 FHD 144Hz FREEDOS GAMİNG NOTEBOOK</div>
+                            <div class="leading-tight">MSI KATANA 17 HX B14WGK-046XTR I7-14650HX 32GB DDR5 RTX5070 GDDR7 8GB 1TB SSD 17.3″ QHD 240HZ DOS GAMING NOTEBOOK</div>
                             <!-- <x-product.stars class="hidden items-center xl:flex" :rating="round($item->yorum_puan / 2)" :review-count="$item->yorum_adet" /> -->
-                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">65.699 TL</span>
+                            <span class="whitespace-nowrap text-xl font-bold !leading-none tracking-tight text-orange-500">84.999 TL</span>
                         </div>
                     </a>
 
                                             <div class="hidden w-1/5 flex-none lg:block">
                             <div class="flex items-center space-x-3">
                                 <div class="w-full rounded-full bg-neutral-100">
-                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 3%"></div>
+                                    <div class="bg-amber-400 text-xs font-medium  text-white text-center p-0.5 leading-none rounded-l-full h-3" style="width: 5%"></div>
                                 </div>
                                 <span class="text-sm font-medium text-neutral-500">
-                                    %3                                </span>
+                                    %5                                </span>
                             </div>
                         </div>
                     
                                             <div class="hidden w-12 flex-none text-center md:inline-block">
                             <label class="inline-flex items-center" aria-label="Karşılaştır">
-                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('84966')" value="84966" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
+                                <input type="checkbox" x-model="items" :disabled="items.length > 3 && !items.includes('82157')" value="82157" class="rounded border-gray-300 text-orange-500 shadow-sm focus:border-orange-300 focus:ring focus:ring-offset-0 focus:ring-orange-200 focus:ring-opacity-50">
                             </label>
                         </div>
                                     </li>
@@ -2127,14 +2035,14 @@
                         <div class="text-base font-medium lg:text-lg !leading-tight line-clamp-2 mb-2">
                             HP B9YW5ET PROBOOK 4 G1i AI U5-225U 8GB 512GB SSD 14″ W11P NOTEBOOK                        </div>
                         <div class="flex w-full justify-between">
-                            <p class="price text-orange-500 text-lg !leading-none lg:text-2xl font-semibold">43.909 TL</p>
+                            <p class="price text-orange-500 text-lg !leading-none lg:text-2xl font-semibold">43.939 TL</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="flex items-end gap-3">
                     <div class="hidden lg:grid p-2 place-items-center font-semibold rounded border-2 border-neutral-200 bg-white text-center text-sm leading-none text-neutral-400">
-                        29 Ocak Perşembe'ye kadar kargoda!                    </div>
+                        Şimdi sipariş ver, yarın kargoda!                    </div>
 
                     <button aria-label="add to cart" class="btn btn-sky ml-3 !rounded-sm text-lg uppercase md:text-2xl" x-on:click="$dispatch('addToCart', { id: 87909, qty: 1, hsu: 0 })">
                         <svg class="lg:mr-3 h-7 w-7 fill-current">

@@ -7,14 +7,18 @@ try:
 except Exception:
     pass
 
-from recommender import parse_screen_size
+from laprop.processing.normalize import parse_screen_size
 
 
 class TestScreenSizeParsing(unittest.TestCase):
     def test_parse_screen_size_examples(self):
         cases = [
             ("Lenovo Ideapad 15.6\" FHD", 15.6),
-            ("14 in\u00e7", 14.0),
+            ("15.6\"", 15.6),
+            ("16 in\u00e7", 16.0),
+            ("14\"", 14.0),
+            ("13.3", 13.3),
+            ("17,3\"", 17.3),
             ("16.0-inch QHD", 16.0),
             ("13.Nesil i5 15.6 FHD", 15.6),
             ("144Hz 15.6 FHD", 15.6),

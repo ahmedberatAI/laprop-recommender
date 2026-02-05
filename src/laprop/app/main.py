@@ -1,5 +1,5 @@
-from .cli import main as cli_main
-
+﻿from .cli import main as cli_main
+from ..utils.console import safe_print
 
 
 def main():
@@ -10,9 +10,9 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\n\nğŸ‘‹ Program sonlandÄ±rÄ±ldÄ±!")
+        safe_print("\n[INFO] Program terminated.")
     except Exception as e:
-        print(f"\nâŒ Hata: {e}")
+        safe_print(f"\n[ERROR] Hata: {e}")
         import traceback
 
         traceback.print_exc()

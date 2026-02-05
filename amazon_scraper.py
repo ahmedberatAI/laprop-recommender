@@ -784,11 +784,12 @@ class AmazonLaptopScraper:
 
         print(f"\n{'=' * 50}\nTarama tamamlandı: {successful_pages} sayfa başarılı")
 
-    def save_to_csv(self, filename='amazon_laptops.csv'):
+    def save_to_csv(self, filename='data/amazon_laptops.csv'):
         """CSV'ye kaydet"""
         import numpy as np
         script_dir = os.path.dirname(os.path.abspath(__file__))
         full_path = os.path.join(script_dir, filename)
+        os.makedirs(os.path.dirname(full_path) or ".", exist_ok=True)
         required = ['url', 'name', 'price', 'screen_size', 'ssd', 'cpu', 'ram', 'os', 'gpu']
 
         if self.laptops_data:
@@ -828,7 +829,7 @@ def main():
     parser.add_argument('--search', default='laptop', help='Arama terimi')
     parser.add_argument('--max-pages', type=int, default=10, help='Max sayfa')
     parser.add_argument('--max-products', type=int, help='Max ürün')
-    parser.add_argument('--output', default='amazon_laptops.csv', help='Çıktı')
+    parser.add_argument('--output', default='data/amazon_laptops.csv', help='Çıktı')
     parser.add_argument('--dry-run', action='store_true', help='Test modu')
 
     args = parser.parse_args()
