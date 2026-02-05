@@ -13,7 +13,6 @@ DATA_FILES = [
     DATA_DIR / "amazon_laptops.csv",
     DATA_DIR / "vatan_laptops.csv",
     DATA_DIR / "incehesap_laptops.csv",
-    DATA_DIR / "teknosa_laptops.csv",
 ]
 
 CACHE_FILE = BASE_DIR / "laptop_cache.pkl"

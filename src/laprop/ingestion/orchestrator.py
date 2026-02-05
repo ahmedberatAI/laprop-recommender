@@ -28,7 +28,6 @@ def run_scrapers():
         "amazon": os.path.join(str(data_dir or "."), "amazon_laptops.csv"),
         "incehesap": os.path.join(str(data_dir or "."), "incehesap_laptops.csv"),
         "vatan": os.path.join(str(data_dir or "."), "vatan_laptops.csv"),
-        "teknosa": os.path.join(str(data_dir or "."), "teknosa_laptops.csv"),
     }
 
     before_mtime = {p.name: _mtime(p) for p in DATA_FILES}
@@ -53,8 +52,6 @@ def run_scrapers():
                     cmd += ["--out", output_paths["vatan"]]
                 elif name == "incehesap":
                     cmd += ["scrape", "--output", output_paths["incehesap"]]
-                elif name == "teknosa":
-                    cmd += ["--output", output_paths["teknosa"]]
 
                 result = subprocess.run(
                     cmd,
