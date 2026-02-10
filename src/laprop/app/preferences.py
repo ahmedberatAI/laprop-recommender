@@ -6,6 +6,7 @@ from .nlp import (
     normalize_and_complete_preferences,
     parse_design_profile_from_text,
 )
+from .llm_prefs import parse_preferences_hybrid
 
 
 def _prompt_design_details() -> dict:
@@ -188,12 +189,10 @@ def ask_missing_preferences(p: dict) -> dict:
 
 def get_user_preferences_free_text() -> dict:
     """Serbest metinle tercih toplama akışı."""
-    from .nlp import parse_free_text_to_preferences
-
     safe_print("\nİhtiyacını tek cümlede yaz (örn: 35-55k, oyun + okul, 15.6, RTX 4060 olsun, pil önemli)")
     raw = input("Tercihin: ").strip()
 
-    prefs = parse_free_text_to_preferences(raw)
+    prefs = parse_preferences_hybrid(raw)
     prefs = normalize_and_complete_preferences(prefs)
 
     min_b = prefs.get('min_budget')
