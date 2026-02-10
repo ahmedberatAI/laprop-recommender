@@ -1,0 +1,15 @@
+# Training artifacts (keep out of git)
+artifacts/
+data/
+runs/
+wandb/
+
+# Notebook caches
+.ipynb_checkpoints/
+
+# Common weight/checkpoint files
+*.bin
+*.pt
+*.ckpt
+*.safetensors
+

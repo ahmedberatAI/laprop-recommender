@@ -16,6 +16,9 @@ htmlcov/
 # Local tooling
 .claude/
 
+# Jupyter / Colab
+.ipynb_checkpoints/
+
 # Data artifacts (keep test fixtures)
 *.csv
 *.jsonl
