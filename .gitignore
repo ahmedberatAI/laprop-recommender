@@ -2,12 +2,26 @@
 __pycache__/
 *.pyc
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .venv/
+*.egg-info/
+build/
+dist/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Local tooling
+.claude/
 
 # Data artifacts (keep test fixtures)
 *.csv
 *.jsonl
 *.pkl
+*.parquet
+*.meta.json
 !tests/fixtures/**
 
 # Runtime artifacts

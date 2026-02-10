@@ -1,16 +1,17 @@
-﻿import os
+import os
 import subprocess
 import sys
 
 from ..config.settings import SCRAPERS, DATA_FILES, CACHE_FILE
 from ..storage.repository import append_to_all_data
-from ..utils.console import safe_print
+from ..utils.logging import get_logger
+
+logger = get_logger(__name__)
 
 
 def run_scrapers():
     """Run scrapers and refresh master dataset."""
-    safe_print("\n[INFO] Scrapers are running...")
-    safe_print("-" * 50)
+    logger.info("Scrapers are running...")
 
     def _mtime(p):
         try:
@@ -35,11 +36,11 @@ def run_scrapers():
     try:
         for name, script_path in SCRAPERS.items():
             if not script_path.exists():
-                safe_print(f"[WARN] {script_path} not found")
+                logger.warning("%s not found", script_path)
                 continue
 
             try:
-                safe_print(f"[INFO] Fetching {name.title()} data...")
+                logger.info("Fetching %s data...", name.title())
 
                 env = os.environ.copy()
                 env.setdefault("FAST_SCRAPE", "1")
@@ -64,7 +65,8 @@ def run_scrapers():
                 )
 
                 ok = (result.returncode == 0)
-                safe_print(
+                logger.info(
+                    "%s %s %s",
                     "[OK]" if ok else "[WARN]",
                     name.title(),
                     "done" if ok else f"failed (code {result.returncode})",
@@ -73,25 +75,31 @@ def run_scrapers():
                 stdout = (result.stdout or "").strip()
                 stderr = (result.stderr or "").strip()
                 if stdout and len(stdout) > 100:
-                    safe_print(f"   [STDOUT] {stdout[:800]}")
+                    logger.debug("[STDOUT] %s", stdout[:800])
                 if stderr and len(stderr) > 100:
-                    safe_print(f"   [STDERR] {stderr[:800]}")
+                    logger.warning("[STDERR] %s", stderr[:800])
 
             except subprocess.TimeoutExpired as e:
-                safe_print(f"[WARN] {name.title()} timed out (> {e.timeout}s)")
+                logger.warning("%s timed out (> %ss)", name.title(), e.timeout)
             except Exception as e:
-                safe_print(f"[ERROR] {name.title()} failed to run: {e}")
+                logger.error("%s failed to run: %s", name.title(), e)
     finally:
         append_to_all_data()
 
     if CACHE_FILE.exists():
         CACHE_FILE.unlink()
-        safe_print("\n[INFO] Cache cleared")
+        logger.info("Cache cleared")
+
+    # Also clean up legacy pickle if it still exists
+    legacy_pkl = CACHE_FILE.with_suffix(".pkl")
+    if legacy_pkl.exists():
+        legacy_pkl.unlink(missing_ok=True)
+        logger.info("Legacy pickle cache removed: %s", legacy_pkl)
 
     after_mtime = {p.name: _mtime(p) for p in DATA_FILES}
     for p in DATA_FILES:
         nm = p.name
         if after_mtime[nm] > before_mtime[nm]:
-            safe_print(f"[OK] {nm} updated")
+            logger.info("[OK] %s updated", nm)
         else:
-            safe_print(f"[INFO]  {nm} not updated")
+            logger.info("%s not updated", nm)

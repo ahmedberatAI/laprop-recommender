@@ -765,8 +765,6 @@ def build_products_clean(catalog: List[Dict[str, Any]], offers_latest: List[Dict
                 "screen_resolution_px": entry.get("screen_resolution_px"),
                 "os_norm": entry.get("os_norm"),
                 "title_raw": entry.get("title_raw"),
-                "epey_url": entry.get("epey_url"),
-                "epey_slug": entry.get("epey_slug"),
             }
         )
     return rows
@@ -942,8 +940,6 @@ def run_collect(args: argparse.Namespace) -> None:
             "screen_resolution_px",
             "os_norm",
             "title_raw",
-            "epey_url",
-            "epey_slug",
         ],
     )
     logger.info("output_written", extra={"path": products_clean_path, "records": len(products_clean)})

@@ -377,25 +377,26 @@ def sanitize_ram(product) -> float:
         return float(max(matches))
     return 64.0
 
-def parse_ssd_gb(title: str) -> Optional[int]:
-    s = _normalize_title_text(title)
-    if not s:
-        return None
-
+def _pick_best_ssd(text: str) -> Optional[int]:
+    """
+    Ortak SSD aday-skorlama mantığı.
+    Normalize edilmiş metinden en iyi SSD GB değerini döndürür.
+    parse_ssd_gb() ve clean_ssd_value() tarafından paylaşılır.
+    """
     candidates: List[Tuple[int, int]] = []
 
-    for gb, start, end in _extract_capacity_candidates(s):
+    for gb, start, end in _extract_capacity_candidates(text):
         if not _is_valid_ssd_value(gb):
             continue
-        score = _score_ssd_candidate(s, start, end, gb)
+        score = _score_ssd_candidate(text, start, end, gb)
         candidates.append((score, gb))
 
-    for gb, start, end in _extract_no_unit_ssd_candidates(s):
+    for gb, start, end in _extract_no_unit_ssd_candidates(text):
         if gb not in SSD_COMMON_GB:
             continue
         if not _is_valid_ssd_value(gb):
             continue
-        score = _score_ssd_candidate(s, start, end, gb) + 3
+        score = _score_ssd_candidate(text, start, end, gb) + 3
         candidates.append((score, gb))
 
     if not candidates:
@@ -404,6 +405,13 @@ def parse_ssd_gb(title: str) -> Optional[int]:
     if best_score <= 0:
         return None
     return best_gb
+
+
+def parse_ssd_gb(title: str) -> Optional[int]:
+    s = _normalize_title_text(title)
+    if not s:
+        return None
+    return _pick_best_ssd(s)
 
 def parse_screen_size(value: Any) -> Optional[float]:
     if value is None:

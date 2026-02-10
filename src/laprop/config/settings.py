@@ -15,5 +15,5 @@ DATA_FILES = [
     DATA_DIR / "incehesap_laptops.csv",
 ]
 
-CACHE_FILE = BASE_DIR / "laptop_cache.pkl"
+CACHE_FILE = BASE_DIR / "laptop_cache.parquet"
 ALL_DATA_FILE = DATA_DIR / "all_data.csv"

@@ -1,13 +1,12 @@
 ﻿# Proje Mimari Raporu (recommender_2)
 
 **Executive Summary**
-- Proje; scraping (Amazon/InceHesap/Vatan/Epey), veri temizleme/normalize ve öneri motoru katmanlarından oluşuyor.
+- Proje; scraping (Amazon/InceHesap/Vatan), veri temizleme/normalize ve öneri motoru katmanlarından oluşuyor.
 - Gerçek giriş noktaları: `recommender.py` (CLI), `streamlit_app.py` (UI), `simulation.py` (senaryo çalıştırma) ve bağımsız scraper scriptleri.
 - `data/` klasörü güncel çıktıların merkezi; `load_data` CSV’leri birleştirip `laptop_cache.pkl` ile önbellekliyor.
 - `processing` modülleri RAM/SSD/ekran/CPU/GPU çıkarımı yapıyor ve kalite uyarıları ekliyor.
 - Skorlama ve filtreleme çekirdeği `recommend/engine.py` içinde; kurallar/presetler `config/rules.py` ile yönetiliyor.
 - Scraper orkestrasyonu `ingestion/orchestrator.py` üzerinden subprocess ile yürütülüyor ve `all_data.csv` güncelleniyor.
-- Epey scraper ayrı bir akış; `state.json` ile resume ediyor ve `out/` altına yazıyor.
 - `raw/` büyük HTML dump’ları içeriyor; bu raporda tek tek listelenmedi (yalnızca klasör düzeyi belirtildi).
 
 **Folder Tree**
@@ -15,7 +14,6 @@
 recommender_2/
   amazon_scraper.py            # Amazon.com.tr scraper
   amazon_scraper_debug.py      # Amazon bot/captcha debug aracı
-  epey_scraper.py              # Epey.com scraper (ayrı akış)
   incehesap_scraper.py         # InceHesap scraper + fix pipeline
   vatan_scraper.py             # VatanBilgisayar scraper
   price_collect.py             # Fiyat toplama ve eşleştirme aracı
@@ -23,7 +21,6 @@ recommender_2/
   streamlit_app.py             # Streamlit UI entrypoint
   simulation.py                # Senaryo/simülasyon entrypoint
   data/                        # Güncel CSV/JSON çıktıları
-  out/                         # Epey çıktı klasörü
   logs/                        # Çalışma logları/raporlar
   raw/                         # Büyük HTML dump’ları (tek tek listelenmedi)
   legacy/                      # Eski CSV snapshot’ları
@@ -37,9 +34,9 @@ recommender_2/
 ```
 
 **System Map**
-Kontrol akışı (dependency graph): `recommender.py` → `src/laprop/app/main.py` → `src/laprop/app/cli.py`. CLI, `processing/read.py` ile veriyi yükler, `processing/clean.py` ile temizler ve `recommend/engine.py` ile öneri üretir. `streamlit_app.py` aynı çekirdek modülleri (`processing` + `recommend`) kullanır. `simulation.py` → `laprop.app.cli.run_simulation` → `recommend.engine.get_recommendations` akışıyla toplu senaryoları çalıştırır. Scraper çalıştırma ise `ingestion/orchestrator.py` üzerinden `amazon_scraper.py`, `incehesap_scraper.py`, `vatan_scraper.py` subprocess’leriyle yapılır ve sonrasında `storage/repository.py` ile `data/all_data.csv` güncellenir. `epey_scraper.py` bağımsızdır; orkestratör tarafından çağrılmaz. `price_collect.py` ayrı bir fiyat toplama/matching hattıdır ve `processing.normalize` yardımcılarını kullanır.
+Kontrol akışı (dependency graph): `recommender.py` → `src/laprop/app/main.py` → `src/laprop/app/cli.py`. CLI, `processing/read.py` ile veriyi yükler, `processing/clean.py` ile temizler ve `recommend/engine.py` ile öneri üretir. `streamlit_app.py` aynı çekirdek modülleri (`processing` + `recommend`) kullanır. `simulation.py` → `laprop.app.cli.run_simulation` → `recommend.engine.get_recommendations` akışıyla toplu senaryoları çalıştırır. Scraper çalıştırma ise `ingestion/orchestrator.py` üzerinden `amazon_scraper.py`, `incehesap_scraper.py`, `vatan_scraper.py` subprocess’leriyle yapılır ve sonrasında `storage/repository.py` ile `data/all_data.csv` güncellenir. `price_collect.py` ayrı bir fiyat toplama/matching hattıdır ve `processing.normalize` yardımcılarını kullanır.
 
-Veri akışı: Web sayfaları → `raw/` ve `cache_html/` (HTML dump/cache) → scraper CSV/JSON çıktıları (`data/*.csv`, `out/*.jsonl`) → `load_data()` ile birleşik DataFrame → `clean_data()` ile normalize/sayısallaştırma → `get_recommendations()` ile skor ve sıralama → CLI/Streamlit sonuçları veya `simulation_outputs.jsonl` çıktı dosyası. Ek olarak `append_to_all_data()` geçmiş scrape sonuçlarını `data/all_data.csv` içine deduplikasyonla ekler; `laptop_cache.pkl` hızlandırma için yazılır.
+Veri akışı: Web sayfaları → `raw/` ve `cache_html/` (HTML dump/cache) → scraper CSV çıktıları (`data/*.csv`) → `load_data()` ile birleşik DataFrame → `clean_data()` ile normalize/sayısallaştırma → `get_recommendations()` ile skor ve sıralama → CLI/Streamlit sonuçları veya `simulation_outputs.jsonl` çıktı dosyası. Ek olarak `append_to_all_data()` geçmiş scrape sonuçlarını `data/all_data.csv` içine deduplikasyonla ekler; `laptop_cache.pkl` hızlandırma için yazılır.
 
 **File Cards**
 
@@ -165,15 +162,6 @@ Veri akışı: Web sayfaları → `raw/` ve `cache_html/` (HTML dump/cache) → 
 - Side effects: `amazon_debug.log` yazar; opsiyonel HTML dump dosyaları oluşturur.
 - How to test/run: `python amazon_scraper_debug.py --search laptop --start-page 1 --end-page 3`.
 
-**File Card: `epey_scraper.py`**
-- Path: `epey_scraper.py`
-- Purpose: Epey.com laptop listesini/ürünlerini tarar, JSONL ve CSV çıktı üretir.
-- Key functions/classes: `StateManager`, `HtmlCache`, `Fetcher`, `EpeyParser`, `process_product`.
-- Control flow / how it works: Liste sayfaları taranır → ürün URL’leri toplanır → ürün sayfaları paralel işlenir → `out/epey_products.jsonl` ve `out/epey_laptops.csv` yazılır.
-- Dependencies: `requests`, `bs4`, `threading`, `concurrent.futures`.
-- Side effects: Ağ istekleri; `state.json` güncellenir; `cache_html/` ve `out/` dosyaları yazılır.
-- How to test/run: `python epey_scraper.py --max-pages 10 --workers 4`.
-
 **File Card: `incehesap_scraper.py`**
 - Path: `incehesap_scraper.py`
 - Purpose: InceHesap liste/ürün sayfalarını tarar; ayrıca CSV fix/normalize pipeline’ı içerir.
@@ -200,15 +188,6 @@ Veri akışı: Web sayfaları → `raw/` ve `cache_html/` (HTML dump/cache) → 
 - Dependencies: stdlib (`sys`, `os`, `pathlib`).
 - Side effects: `sys.path` ve stream encoding’i değiştirir.
 - How to test/run: Uygulanamaz; Python başlangıcında otomatik yüklenir.
-
-**File Card: `state.json`**
-- Path: `state.json`
-- Purpose: `epey_scraper.py` için incremental crawl state dosyası.
-- Key functions/classes: (yok)
-- Control flow / how it works: `StateManager` tarafından okunur/yazılır.
-- Dependencies: Üreten/Tüketen: `epey_scraper.py`.
-- Side effects: (yok)
-- How to test/run: Uygulanamaz.
 
 **File Card: `laptop_cache.pkl`**
 - Path: `laptop_cache.pkl`
@@ -334,26 +313,6 @@ Veri akışı: Web sayfaları → `raw/` ve `cache_html/` (HTML dump/cache) → 
 - Key functions/classes: (yok)
 - Control flow / how it works: `vatan_scraper.py` yazar.
 - Dependencies: Üreten: `vatan_scraper.py`.
-- Side effects: (yok)
-- How to test/run: Uygulanamaz.
-
-**out/**
-
-**File Card: `out/epey_products.jsonl`**
-- Path: `out/epey_products.jsonl`
-- Purpose: Epey ürün JSONL çıktısı (ham kayıtlar).
-- Key functions/classes: (yok)
-- Control flow / how it works: `epey_scraper.py` yazar.
-- Dependencies: Üreten: `epey_scraper.py`.
-- Side effects: (yok)
-- How to test/run: Uygulanamaz.
-
-**File Card: `out/epey_laptops.csv`**
-- Path: `out/epey_laptops.csv`
-- Purpose: Epey ürünlerinin normalize CSV çıktısı.
-- Key functions/classes: (yok)
-- Control flow / how it works: `epey_scraper.py` JSONL’den CSV üretir.
-- Dependencies: Üreten: `epey_scraper.py`.
 - Side effects: (yok)
 - How to test/run: Uygulanamaz.
 
@@ -756,15 +715,6 @@ Veri akışı: Web sayfaları → `raw/` ve `cache_html/` (HTML dump/cache) → 
 - Side effects: `sys.path` günceller.
 - How to test/run: `pytest` ile otomatik.
 
-**File Card: `tests/test_epey_csv_write.py`**
-- Path: `tests/test_epey_csv_write.py`
-- Purpose: `epey_scraper.generate_csv_from_jsonl` fonksiyonunun CSV çıktısını doğrular.
-- Key functions/classes: `TestEpeyCsvWrite`.
-- Control flow / how it works: Geçici JSONL yazar → CSV oluşturur → header/row doğrular.
-- Dependencies: `unittest`, `tempfile`, `epey_scraper`.
-- Side effects: Geçici dosya oluşturur.
-- How to test/run: `pytest tests/test_epey_csv_write.py`.
-
 **File Card: `tests/test_scraper_smoke.py`**
 - Path: `tests/test_scraper_smoke.py`
 - Purpose: Scraper scriptlerinin `--help` çıktısını smoke test eder; InceHesap fixture parse testini içerir.
@@ -807,7 +757,6 @@ Veri akışı: Web sayfaları → `raw/` ve `cache_html/` (HTML dump/cache) → 
 
 **Gotchas & Maintenance Notes**
 - Scraper’lar bot/captcha engellerine takılabilir; Amazon için `amazon_scraper_debug.py` ile teşhis yapın.
-- `epey_scraper.py` robots.txt ve 403 blokları nedeniyle sık kesilebilir; `logs/run.log` ve `logs/scrape.log` takip edin.
 - `streamlit_app.py` içinde `sys` importu eksik görünüyor; UI’dan scraper çalıştırma kısmı hata verebilir.
 - `DATA_FILES` listesinde `teknosa_laptops.csv` var ancak scraper yok; bu dosya yoksa `load_data()` uyarı verebilir.
 - `bench_cpu.csv` / `bench_gpu.csv` dosyaları opsiyonel; yoksa `benchmarks.py` uyarı basar.

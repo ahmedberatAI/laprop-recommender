@@ -1,8 +1,10 @@
-﻿from pathlib import Path
+from pathlib import Path
 import pandas as pd
 
-from ..utils.console import safe_print
+from ..utils.logging import get_logger
 from .settings import BASE_DIR
+
+logger = get_logger(__name__)
 
 BENCH_GPU_PATH = BASE_DIR / "bench_gpu.csv"
 BENCH_CPU_PATH = BASE_DIR / "bench_cpu.csv"
@@ -15,7 +17,7 @@ def _warn_once(key: str, msg: str) -> None:
     if key in _WARNED_KEYS:
         return
     _WARNED_KEYS.add(key)
-    safe_print(msg)
+    logger.warning(msg)
 
 
 def _safe_load_bench(path: Path):
@@ -31,7 +33,7 @@ def _safe_load_bench(path: Path):
             if "model" not in df.columns:
                 _warn_once(
                     f"missing_model:{path.name}",
-                    f"[WARN] {path.name} missing required 'model' column.",
+                    f"{path.name} missing required 'model' column.",
                 )
                 return None
 
@@ -52,7 +54,7 @@ def _safe_load_bench(path: Path):
             if score_col is None:
                 _warn_once(
                     f"missing_score:{path.name}",
-                    f"[WARN] {path.name} missing score column (score_0_10/perf_idx/...).",
+                    f"{path.name} missing score column (score_0_10/perf_idx/...).",
                 )
                 return None
 
@@ -68,14 +70,14 @@ def _safe_load_bench(path: Path):
 
         _warn_once(
             f"missing_file:{path.name}",
-            f"[WARN] {path.name} not found; skipping benchmark table.",
+            f"{path.name} not found; skipping benchmark table.",
         )
         return None
 
     except Exception as e:
         _warn_once(
             f"read_error:{path.name}",
-            f"[WARN] {path.name} could not be read: {e}",
+            f"{path.name} could not be read: {e}",
         )
         return None
 

@@ -7,11 +7,9 @@ import pandas as pd
 from .normalize import (
     _normalize_title_text,
     _normalize_capacity_gb,
-    _extract_capacity_candidates,
-    _extract_no_unit_ssd_candidates,
-    _score_ssd_candidate,
     _coerce_int,
     _is_valid_ssd_value,
+    _pick_best_ssd,
     _find_larger_ssd_in_title,
     parse_ram_gb,
     sanitize_ram,
@@ -19,7 +17,6 @@ from .normalize import (
     parse_screen_size,
     normalize_cpu,
     normalize_gpu,
-    normalize_gpu_model,
     SSD_COMMON_GB,
     SSD_TINY_GB,
     SSD_FORM_FACTOR_GB,
@@ -29,8 +26,10 @@ from .normalize import (
 )
 from .validate import validate_record
 from .read import _standardize_columns
-from ..recommend.engine import get_cpu_score, get_gpu_score
-from ..utils.console import safe_print
+from ..recommend.engine import get_cpu_score, get_gpu_score, gpu_normalize_and_score
+from ..utils.logging import get_logger
+
+logger = get_logger(__name__)
 
 def clean_ram_value(ram_str):
     """RAM değerini düzgün temizle"""
@@ -69,33 +68,15 @@ def clean_ssd_value(storage_str):
     if not s:
         return np.nan
 
+    # Düz sayı girişi (kolon verisinde "512" gibi)
     if re.fullmatch(r"\d+(?:\.\d+)?", s):
         gb_val = _normalize_capacity_gb(float(s))
         gb_int = _coerce_int(gb_val)
         return gb_int if _is_valid_ssd_value(gb_int) else np.nan
 
-    candidates: List[Tuple[int, int]] = []
-
-    for gb, start, end in _extract_capacity_candidates(s):
-        if not _is_valid_ssd_value(gb):
-            continue
-        score = _score_ssd_candidate(s, start, end, gb)
-        candidates.append((score, gb))
-
-    for gb, start, end in _extract_no_unit_ssd_candidates(s):
-        if gb not in SSD_COMMON_GB:
-            continue
-        if not _is_valid_ssd_value(gb):
-            continue
-        score = _score_ssd_candidate(s, start, end, gb) + 3
-        candidates.append((score, gb))
-
-    if not candidates:
-        return np.nan
-    best_score, best_gb = max(candidates, key=lambda x: (x[0], x[1]))
-    if best_score <= 0:
-        return np.nan
-    return best_gb
+    # Ortak aday-skorlama mantığına delege et
+    result = _pick_best_ssd(s)
+    return result if result is not None else np.nan
 
 def clean_price(price_str):
     """Fiyat temizleme"""
@@ -113,7 +94,7 @@ def clean_price(price_str):
         if price < 1000 or price > 500000:
             return None
         return price
-    except:
+    except (ValueError, TypeError):
         return None
 
 def extract_brand(name):
@@ -148,7 +129,7 @@ def extract_brand(name):
 
 def clean_data(df):
     """Veriyi temizle - OS tespiti + başlıktan normalize parsing"""
-    safe_print("\n🔧 Veriler temizleniyor...")
+    logger.info("Veriler temizleniyor...")
 
     df = _standardize_columns(df)
 
@@ -169,7 +150,7 @@ def clean_data(df):
             df = df.loc[~vatan_mask | product_mask].copy()
             removed = before - len(df)
             if removed > 0:
-                safe_print(f"Vatan filter: removed {removed} non-product rows")
+                logger.info("Vatan filter: removed %d non-product rows", removed)
 
     # Marka çıkar
     df['brand'] = df['name'].apply(extract_brand)
@@ -306,9 +287,10 @@ def clean_data(df):
     # CPU ve GPU skorlama
     df['cpu_score'] = df['cpu'].apply(get_cpu_score)
 
-    # GPU: önce normalize et, sonra skoru hesapla (tekilleştirildi)
-    df['gpu_norm'] = df['gpu'].apply(normalize_gpu_model)
-    df['gpu_score'] = df['gpu_norm'].apply(get_gpu_score)
+    # GPU: tek pass'ta normalize + skor hesapla
+    _gpu_pairs = df['gpu'].apply(gpu_normalize_and_score)
+    df['gpu_norm'] = _gpu_pairs.apply(lambda t: t[0])
+    df['gpu_score'] = _gpu_pairs.apply(lambda t: t[1])
 
     # OS temizleme
     def detect_os(row):
@@ -349,7 +331,7 @@ def clean_data(df):
     df['cpu_score'] = df['cpu_score'].fillna(5.0)
     df['gpu_score'] = df['gpu_score'].fillna(3.0)
 
-    safe_print("\nData quality report")
+    logger.info("Data quality report")
     if 'url' in df.columns:
         def _infer_vendor(url: Any) -> str:
             u = str(url or "").lower()
@@ -373,21 +355,19 @@ def clean_data(df):
         screen_missing = df.loc[mask, 'screen_size'].isna().mean() * 100
         ram_missing = df.loc[mask, 'ram_gb'].isna().mean() * 100
         ssd_missing = df.loc[mask, 'ssd_gb'].isna().mean() * 100
-        safe_print(
-            f"  {vendor}: rows={total}, "
-            f"missing screen={screen_missing:.1f}%, "
-            f"ram={ram_missing:.1f}%, "
-            f"ssd={ssd_missing:.1f}%"
+        logger.info(
+            "  %s: rows=%d, missing screen=%.1f%%, ram=%.1f%%, ssd=%.1f%%",
+            vendor, total, screen_missing, ram_missing, ssd_missing,
         )
 
-    safe_print(
-        f"  implausible_ssd_count={implausible_ssd_count}, "
-        f"invalid_ssd_count={invalid_ssd_count}"
+    logger.info(
+        "  implausible_ssd_count=%d, invalid_ssd_count=%d",
+        implausible_ssd_count, invalid_ssd_count,
     )
-    safe_print(
-        f"  ssd_overrides_small_to_large={ssd_overrides_small_to_large}, "
-        f"ssd_swap_fixes={ssd_swap_fixes}"
+    logger.info(
+        "  ssd_overrides_small_to_large=%d, ssd_swap_fixes=%d",
+        ssd_overrides_small_to_large, ssd_swap_fixes,
     )
 
-    safe_print(f"✅ Temizleme tamamlandı: {len(df)} laptop")
+    logger.info("Temizleme tamamlandı: %d laptop", len(df))
     return df

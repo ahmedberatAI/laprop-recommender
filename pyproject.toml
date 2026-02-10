@@ -4,6 +4,55 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "laprop"
-version = "0.0.0"
-description = "Laptop recommender (refactored)"
+version = "0.1.0"
+description = "Laptop recommender for the Turkish market"
 requires-python = ">=3.9"
+dependencies = [
+    "streamlit>=1.30,<2.0",
+    "pandas>=2.0,<3.0",
+    "numpy>=1.24,<3.0",
+    "requests>=2.31,<3.0",
+    "beautifulsoup4>=4.12,<5.0",
+    "urllib3>=2.0,<3.0",
+    "pyarrow>=14.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-v",
+    "--tb=short",
+    "--strict-markers",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks integration tests",
+]
+
+[tool.coverage.run]
+source_pkgs = ["laprop"]
+omit = [
+    "*/tests/*",
+    "*/__pycache__/*",
+]
+
+[tool.coverage.report]
+show_missing = true
+precision = 1
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__",
+    "raise NotImplementedError",
+]

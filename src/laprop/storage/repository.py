@@ -7,7 +7,9 @@ from typing import Set
 import pandas as pd
 
 from ..config.settings import DATA_FILES, ALL_DATA_FILE
-from ..utils.console import safe_print
+from ..utils.logging import get_logger
+
+logger = get_logger(__name__)
 
 FALLBACK_FIELDS = ("name", "price", "cpu", "gpu", "ram", "ssd", "screen_size")
 
@@ -62,8 +64,9 @@ def _iter_existing_keys(path: Path, chunksize: int = 50000) -> Set[str]:
                     chunk[field] = ""
             for _, row in chunk.iterrows():
                 keys.add(_build_row_key(row.get("source"), row.get("url"), row))
-    except Exception:
+    except Exception as exc:
         # If the file is unreadable for some reason, fall back to an empty set.
+        logger.warning("Mevcut anahtar dosyası okunamadı: %s", exc)
         return set()
 
     return keys
@@ -97,7 +100,7 @@ def _dedupe_dataframe(df: pd.DataFrame, existing_keys: Set[str]) -> tuple[pd.Dat
 
 def append_to_all_data():
     """Yeni scraping verilerini all_data.csv'ye ekler (tarih damgası ile)"""
-    safe_print("\n[INFO] all_data.csv güncelleniyor...")
+    logger.info("all_data.csv güncelleniyor...")
 
     current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     new_data_list = []
@@ -117,17 +120,17 @@ def append_to_all_data():
                 df['scraped_at'] = current_time  # Tarih damgası ekle
                 df['source'] = file_path.stem.replace('_laptops', '')  # Kaynak bilgisi
                 new_data_list.append(df)
-                safe_print(f"  [OK] {file_path.name}: {len(df)} kayıt eklendi")
+                logger.info("  [OK] %s: %d kayıt eklendi", file_path.name, len(df))
             except Exception as e:
-                safe_print(f"  [WARN] {file_path.name} okunamadı: {e}")
+                logger.warning("  %s okunamadı: %s", file_path.name, e)
 
     if not new_data_list:
         if not ALL_DATA_FILE.exists():
             empty = pd.DataFrame(columns=["source", "scraped_at"])
             empty.to_csv(ALL_DATA_FILE, index=False, encoding="utf-8-sig")
-            safe_print("  [INFO] all_data.csv oluşturuldu (boş)")
+            logger.info("  all_data.csv oluşturuldu (boş)")
         else:
-            safe_print("  [INFO] Eklenecek yeni veri yok")
+            logger.info("  Eklenecek yeni veri yok")
         return
 
     # Yeni verileri birleştir
@@ -138,12 +141,12 @@ def append_to_all_data():
     deduped_data, deduped_count = _dedupe_dataframe(new_data, existing_keys)
     added_count = len(deduped_data)
 
-    safe_print(f"  [INFO] Gelen satır: {incoming_count}")
-    safe_print(f"  [OK] Eklenecek satır: {added_count}")
-    safe_print(f"  [ERROR] Dedupe edilen: {deduped_count}")
+    logger.info("  Gelen satır: %d", incoming_count)
+    logger.info("  Eklenecek satır: %d", added_count)
+    logger.info("  Dedupe edilen: %d", deduped_count)
 
     if added_count == 0:
-        safe_print("  [INFO] Eklenecek yeni veri yok (tümü dedupe edildi)")
+        logger.info("  Eklenecek yeni veri yok (tümü dedupe edildi)")
         return
 
     # Kaydet (append)
@@ -157,9 +160,9 @@ def append_to_all_data():
             header=write_header,
         )
         total_note = "append edildi" if not write_header else "oluşturuldu"
-        safe_print(f"  [OK] all_data.csv {total_note}: {added_count} satır")
+        logger.info("  all_data.csv %s: %d satır", total_note, added_count)
     except Exception as e:
-        safe_print(f"  [ERROR] all_data.csv kaydedilemedi: {e}")
+        logger.error("  all_data.csv kaydedilemedi: %s", e)
 
 
 def _self_test_dedupe() -> None:
@@ -189,6 +192,6 @@ def _self_test_dedupe() -> None:
 
         existing_keys = _iter_existing_keys(tmp_path)
         filtered, deduped = _dedupe_dataframe(new_data, existing_keys)
-        safe_print("[self-test] incoming:", len(new_data))
-        safe_print("[self-test] added:", len(filtered))
-        safe_print("[self-test] deduped:", deduped)
+        logger.info("[self-test] incoming: %d", len(new_data))
+        logger.info("[self-test] added: %d", len(filtered))
+        logger.info("[self-test] deduped: %d", deduped)

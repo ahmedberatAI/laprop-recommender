@@ -1,228 +1,30 @@
-"""laprop public API."""
+"""laprop — Laptop Recommendation Engine for the Turkish market.
 
-try:
-    from .config.settings import BASE_DIR, SCRAPERS, DATA_FILES, CACHE_FILE, ALL_DATA_FILE
-    from .config.rules import (
-        DEV_PRESETS,
-        GAMING_TITLE_SCORES,
-        CPU_SCORES,
-        GPU_SCORES,
-        BRAND_PARAM_SCORES,
-        BRAND_SCORES,
-        USAGE_OPTIONS,
-        BASE_WEIGHTS,
-        RTX_MODEL_SCORES,
-        GTX_MODEL_SCORES,
-        MX_MODEL_SCORES,
-        RX_MODEL_SCORES,
-        IMPORTANCE_MULT,
-        MIN_REQUIREMENTS,
-    )
-    from .config.benchmarks import (
-        BENCH_GPU_PATH,
-        BENCH_CPU_PATH,
-        GPU_BENCH,
-        CPU_BENCH,
-        _safe_load_bench,
-    )
-    from .recommend.scenarios import SCENARIOS
-    from .processing.normalize import (
-        _normalize_title_text,
-        normalize_cpu,
-        normalize_gpu,
-        normalize_gpu_model,
-        _normalize_capacity_gb,
-        _extract_capacity_candidates,
-        _extract_no_unit_ssd_candidates,
-        _window_has_any,
-        _score_ssd_candidate,
-        _coerce_int,
-        _is_valid_ssd_value,
-        _find_larger_ssd_in_title,
-        parse_ram_gb,
-        sanitize_ram,
-        parse_ssd_gb,
-        parse_screen_size,
-        _find_ram_candidates,
-        _find_screen_candidates,
-        SSD_COMMON_GB,
-        SSD_TINY_GB,
-        SSD_FORM_FACTOR_GB,
-        SSD_MIN_GB,
-        SSD_MAX_GB,
-        RAM_STORAGE_SWAP_GB,
-        SSD_ANCHORS,
-        RAM_HINTS,
-        GPU_HINTS,
-        HDD_HINTS,
-    )
-    from .processing.validate import validate_record
-    from .processing.read import (
-        _sanitize_column_name,
-        _standardize_columns,
-        _count_filled_urls,
-        _get_domain_counts,
-        read_csv_robust,
-        load_data,
-    )
-    from .processing.clean import (
-        clean_ram_value,
-        clean_ssd_value,
-        clean_price,
-        extract_brand,
-        clean_data,
-    )
-    from .ingestion.orchestrator import run_scrapers
-    from .storage.repository import append_to_all_data
-    from .recommend.engine import (
-        get_cpu_score,
-        get_gpu_score,
-        _cpu_suffix,
-        _has_dgpu,
-        _is_nvidia_cuda,
-        _rtx_tier,
-        _is_heavy_dgpu_for_dev,
-        compute_dev_fit,
-        _safe_num,
-        _series_with_default,
-        calculate_score,
-        get_dynamic_weights,
-        filter_by_usage,
-        get_recommendations,
-    )
-    from .app.cli import (
-        _prompt_design_details,
-        _prompt_gaming_titles,
-        _prompt_productivity_details,
-        _safe_float,
-        _row_to_result_dict,
-        run_simulation,
-        detect_budget,
-        detect_usage_intent,
-        detect_dev_mode,
-        fuzzy_match_game_titles,
-        parse_design_profile_from_text,
-        parse_free_text_to_preferences,
-        normalize_and_complete_preferences,
-        ask_missing_preferences,
-        get_user_preferences_free_text,
-        get_user_preferences,
-        display_recommendations,
-        inspect_data,
-        save_data,
-        inspect_scrapers_separately,
-        main as cli_main,
-    )
-    def main():
-        from .app.main import main as _main
-        return _main()
-except Exception as e:
-    raise ImportError(
-        "laprop failed to import. Ensure dependencies are installed and src is on sys.path.",
-    ) from e
+Public API surface — import submodules directly for full access:
+  laprop.config.rules        — scoring weights, usage options
+  laprop.config.settings     — paths, file locations
+  laprop.processing.clean    — data cleaning pipeline
+  laprop.processing.read     — CSV loading utilities
+  laprop.recommend.engine    — scoring + recommendations
+  laprop.app.cli             — CLI entry point
+"""
+
+from .processing.read import load_data
+from .processing.clean import clean_data
+from .recommend.engine import get_recommendations
+from .config.rules import USAGE_OPTIONS
+
+
+def main():
+    """CLI entry point."""
+    from .app.main import main as _main
+    return _main()
+
 
 __all__ = [
-    'BASE_DIR',
-    'DEV_PRESETS',
-    'GAMING_TITLE_SCORES',
-    'SCRAPERS',
-    'DATA_FILES',
-    'CACHE_FILE',
-    'ALL_DATA_FILE',
-    'CPU_SCORES',
-    'GPU_SCORES',
-    'BENCH_GPU_PATH',
-    'BENCH_CPU_PATH',
-    'GPU_BENCH',
-    'CPU_BENCH',
-    'BRAND_PARAM_SCORES',
-    'BRAND_SCORES',
-    'USAGE_OPTIONS',
-    'BASE_WEIGHTS',
-    'RTX_MODEL_SCORES',
-    'GTX_MODEL_SCORES',
-    'MX_MODEL_SCORES',
-    'RX_MODEL_SCORES',
-    'IMPORTANCE_MULT',
-    'MIN_REQUIREMENTS',
-    'SCENARIOS',
-    'SSD_COMMON_GB',
-    'SSD_TINY_GB',
-    'SSD_FORM_FACTOR_GB',
-    'SSD_MIN_GB',
-    'SSD_MAX_GB',
-    'RAM_STORAGE_SWAP_GB',
-    'SSD_ANCHORS',
-    'RAM_HINTS',
-    'GPU_HINTS',
-    'HDD_HINTS',
-    '_safe_load_bench',
-    '_prompt_design_details',
-    'get_cpu_score',
-    'get_gpu_score',
-    'normalize_gpu_model',
-    '_prompt_productivity_details',
-    '_cpu_suffix',
-    '_has_dgpu',
-    '_is_nvidia_cuda',
-    '_rtx_tier',
-    '_is_heavy_dgpu_for_dev',
-    'compute_dev_fit',
-    '_safe_num',
-    '_series_with_default',
-    '_normalize_title_text',
-    'normalize_cpu',
-    'normalize_gpu',
-    '_normalize_capacity_gb',
-    '_extract_capacity_candidates',
-    '_extract_no_unit_ssd_candidates',
-    '_window_has_any',
-    '_score_ssd_candidate',
-    '_coerce_int',
-    '_is_valid_ssd_value',
-    '_find_larger_ssd_in_title',
-    'parse_ram_gb',
-    'sanitize_ram',
-    'parse_ssd_gb',
-    'parse_screen_size',
-    '_find_ram_candidates',
-    '_find_screen_candidates',
-    'validate_record',
-    'clean_ram_value',
-    'clean_ssd_value',
-    'run_scrapers',
-    'append_to_all_data',
-    '_sanitize_column_name',
-    '_standardize_columns',
-    '_count_filled_urls',
-    '_get_domain_counts',
-    'read_csv_robust',
-    'load_data',
-    'clean_price',
-    'extract_brand',
-    'clean_data',
-    '_prompt_gaming_titles',
-    'calculate_score',
-    'get_dynamic_weights',
-    'filter_by_usage',
-    'get_recommendations',
-    '_safe_float',
-    '_row_to_result_dict',
-    'run_simulation',
-    'detect_budget',
-    'detect_usage_intent',
-    'detect_dev_mode',
-    'fuzzy_match_game_titles',
-    'parse_design_profile_from_text',
-    'parse_free_text_to_preferences',
-    'normalize_and_complete_preferences',
-    'ask_missing_preferences',
-    'get_user_preferences_free_text',
-    'get_user_preferences',
-    'display_recommendations',
-    'inspect_data',
-    'save_data',
-    'inspect_scrapers_separately',
-    'main',
-    'cli_main',
+    "load_data",
+    "clean_data",
+    "get_recommendations",
+    "USAGE_OPTIONS",
+    "main",
 ]

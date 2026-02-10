@@ -1,6 +1,10 @@
 from typing import List, Optional
 
 from .normalize import _find_ram_candidates, _find_screen_candidates
+from ..utils.logging import get_logger
+
+logger = get_logger(__name__)
+
 def validate_record(
     title: str,
     cpu: Optional[str],
