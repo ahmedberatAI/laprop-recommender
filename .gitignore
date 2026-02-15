@@ -26,6 +26,9 @@ htmlcov/
 *.parquet
 *.meta.json
 !tests/fixtures/**
+!data/amazon_laptops.csv
+!data/incehesap_laptops.csv
+!data/vatan_laptops.csv
 
 # Runtime artifacts
 raw/
